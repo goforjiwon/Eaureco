@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AlertTriangle, Trash2, TrendingUp } from "lucide-react";
+import { AlertTriangle, Trash2 } from "lucide-react";
 
 export default function Problem() {
   return (
@@ -77,43 +77,6 @@ export default function Problem() {
             </div>
           </motion.div>
         </div>
-
-        {/* Growing Demand Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100">
-            <div className="flex items-center gap-4 mb-8">
-              <TrendingUp className="w-12 h-12 text-cyan-600" strokeWidth={2} />
-              <h2 className="text-4xl font-bold neo-text text-gray-900">
-                Demand is Growing
-              </h2>
-            </div>
-            <p className="text-xl text-gray-700 mb-8">
-              Online food delivery is exploding, creating unprecedented demand for ice packs
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-xl shadow-md p-6 border border-cyan-100">
-                <p className="text-sm font-semibold text-gray-600 mb-2">2020</p>
-                <p className="text-4xl font-bold neo-text text-cyan-700">$150B</p>
-                <p className="text-sm text-gray-600 mt-2">US Food Delivery Market</p>
-              </div>
-              <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-xl shadow-md p-6 border border-teal-100">
-                <p className="text-sm font-semibold text-gray-600 mb-2">2025</p>
-                <p className="text-4xl font-bold neo-text text-teal-700">$430B</p>
-                <p className="text-sm text-gray-600 mt-2">Projected Growth</p>
-              </div>
-              <div className="bg-gradient-to-br from-emerald-50 to-lime-50 rounded-xl shadow-md p-6 border border-emerald-100">
-                <p className="text-sm font-semibold text-gray-600 mb-2">2030</p>
-                <p className="text-4xl font-bold neo-text text-emerald-700">$602B</p>
-                <p className="text-sm text-gray-600 mt-2">Future Demand</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         {/* The Issues */}
         <motion.div
