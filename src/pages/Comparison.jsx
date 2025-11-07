@@ -49,7 +49,7 @@ export default function Comparison() {
   ];
 
   return (
-    <div className="py-12 px-4">
+    <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -57,12 +57,12 @@ export default function Comparison() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-cyan-400 border-4 border-black px-8 py-4 transform -rotate-1 neo-shadow mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold neo-text text-black">
-              COMPARISON
+          <div className="inline-block bg-gradient-to-r from-cyan-500 to-teal-500 px-8 py-3 rounded-full mb-6 shadow-lg">
+            <h1 className="text-5xl md:text-6xl font-bold neo-text text-white">
+              Comparison
             </h1>
           </div>
-          <p className="text-2xl font-semibold text-gray-800 max-w-3xl mx-auto">
+          <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
             See how eaureco outperforms traditional ice pack solutions
           </p>
         </motion.div>
@@ -74,25 +74,25 @@ export default function Comparison() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-4 border-black p-12 transform rotate-1 neo-shadow">
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl shadow-2xl p-12 border border-emerald-100">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-6">
-                EAURECO IS CHEAPER & MORE EFFECTIVE
+                Eaureco is Cheaper & More Effective
               </h2>
-              <p className="text-xl text-gray-700 font-semibold mb-8">
+              <p className="text-xl text-gray-700 mb-8">
                 Our ice packs deliver superior performance while being better for the environment 
                 and your bottom line
               </p>
               
-              <div className="inline-block bg-white border-4 border-black p-8 transform -rotate-1">
+              <div className="inline-block bg-white rounded-2xl shadow-xl p-8">
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
-                    <DollarSign className="w-12 h-12 text-emerald-600 mx-auto mb-3" strokeWidth={3} />
-                    <p className="text-3xl font-bold neo-text text-emerald-600">CHEAP</p>
+                    <DollarSign className="w-12 h-12 text-emerald-600 mx-auto mb-3" strokeWidth={2} />
+                    <p className="text-3xl font-bold neo-text text-emerald-600">Cheap</p>
                   </div>
                   <div className="text-center">
-                    <TrendingUp className="w-12 h-12 text-cyan-600 mx-auto mb-3" strokeWidth={3} />
-                    <p className="text-3xl font-bold neo-text text-cyan-600">EFFECTIVE</p>
+                    <TrendingUp className="w-12 h-12 text-cyan-600 mx-auto mb-3" strokeWidth={2} />
+                    <p className="text-3xl font-bold neo-text text-cyan-600">Effective</p>
                   </div>
                 </div>
               </div>
@@ -107,13 +107,13 @@ export default function Comparison() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="nav-glass border-4 border-black p-8 h-full">
-              <Timer className="w-12 h-12 text-emerald-600 mb-4" strokeWidth={3} />
-              <h3 className="text-2xl font-bold neo-text text-emerald-600 mb-3">
-                FREEZES FASTER
+            <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
+              <Timer className="w-12 h-12 text-emerald-600 mb-4" strokeWidth={2} />
+              <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">
+                Freezes Faster
               </h3>
               <p className="text-6xl font-bold neo-text text-gray-900 mb-2">4x</p>
-              <p className="text-gray-700 font-semibold">
+              <p className="text-gray-600 font-medium">
                 Faster freezing than water-based ice packs
               </p>
             </div>
@@ -125,13 +125,13 @@ export default function Comparison() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <div className="nav-glass border-4 border-black p-8 h-full">
-              <Thermometer className="w-12 h-12 text-cyan-600 mb-4" strokeWidth={3} />
-              <h3 className="text-2xl font-bold neo-text text-cyan-600 mb-3">
-                LASTS LONGER
+            <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
+              <Thermometer className="w-12 h-12 text-cyan-600 mb-4" strokeWidth={2} />
+              <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-3">
+                Lasts Longer
               </h3>
               <p className="text-6xl font-bold neo-text text-gray-900 mb-2">260</p>
-              <p className="text-gray-700 font-semibold">
+              <p className="text-gray-600 font-medium">
                 Minutes of cooling retention time
               </p>
             </div>
@@ -143,13 +143,13 @@ export default function Comparison() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="nav-glass border-4 border-black p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50">
-              <CheckCircle className="w-12 h-12 text-lime-600 mb-4" strokeWidth={3} />
-              <h3 className="text-2xl font-bold neo-text text-lime-600 mb-3">
-                100% GREEN
+            <div className="nav-glass rounded-2xl shadow-xl p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50 hover:shadow-2xl transition-shadow">
+              <CheckCircle className="w-12 h-12 text-lime-600 mb-4" strokeWidth={2} />
+              <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent mb-3">
+                100% Green
               </h3>
-              <p className="text-4xl font-bold neo-text text-gray-900 mb-2">BIODEGRADABLE</p>
-              <p className="text-gray-700 font-semibold">
+              <p className="text-3xl font-bold neo-text text-gray-900 mb-2">Biodegradable</p>
+              <p className="text-gray-600 font-medium">
                 Content and packaging both break down naturally
               </p>
             </div>
@@ -163,80 +163,80 @@ export default function Comparison() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="inline-block bg-yellow-400 border-4 border-black px-6 py-3 mb-8 transform rotate-1">
-            <h2 className="text-2xl font-bold neo-text text-black">DETAILED COMPARISON</h2>
+          <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
+            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">Detailed Comparison</h2>
           </div>
 
-          <div className="bg-white border-4 border-black overflow-hidden transform -rotate-1 neo-shadow">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b-4 border-black">
-                    <th className="px-6 py-4 text-left bg-gray-100">
-                      <span className="font-bold text-lg">Feature</span>
+                  <tr className="border-b-2 border-gray-200">
+                    <th className="px-6 py-5 text-left bg-gray-50">
+                      <span className="font-bold text-lg text-gray-900">Feature</span>
                     </th>
-                    <th className="px-6 py-4 text-center bg-gradient-to-br from-emerald-100 to-lime-100 border-l-4 border-black">
+                    <th className="px-6 py-5 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l border-gray-200">
                       <div className="font-bold text-xl neo-text text-emerald-600">EAURECO</div>
                     </th>
-                    <th className="px-6 py-4 text-center bg-gray-50 border-l-4 border-black">
-                      <div className="font-bold text-lg">SAP (Plastic)</div>
+                    <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
+                      <div className="font-semibold text-gray-900">SAP (Plastic)</div>
                     </th>
-                    <th className="px-6 py-4 text-center bg-gray-50 border-l-4 border-black">
-                      <div className="font-bold text-lg">Water</div>
+                    <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
+                      <div className="font-semibold text-gray-900">Water</div>
                     </th>
-                    <th className="px-6 py-4 text-center bg-gray-50 border-l-4 border-black">
-                      <div className="font-bold text-lg">Compost</div>
+                    <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
+                      <div className="font-semibold text-gray-900">Compost</div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((row, index) => (
-                    <tr key={index} className="border-b-3 border-black">
-                      <td className="px-6 py-4 font-semibold bg-gray-50">
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
+                      <td className="px-6 py-4 font-semibold text-gray-900 bg-gray-50">
                         {row.feature}
                       </td>
-                      <td className="px-6 py-4 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l-4 border-black">
+                      <td className="px-6 py-4 text-center bg-gradient-to-br from-emerald-50/50 to-lime-50/50 border-l border-gray-200">
                         {typeof row.eaureco === 'boolean' ? (
                           row.eaureco ? (
-                            <CheckCircle className="w-8 h-8 text-emerald-600 mx-auto" strokeWidth={3} />
+                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} />
                           ) : (
-                            <XCircle className="w-8 h-8 text-red-500 mx-auto" strokeWidth={3} />
+                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} />
                           )
                         ) : (
                           <span className="font-bold text-lg text-emerald-600">{row.eaureco}</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-center border-l-4 border-black">
+                      <td className="px-6 py-4 text-center border-l border-gray-200">
                         {typeof row.sap === 'boolean' ? (
                           row.sap ? (
-                            <CheckCircle className="w-8 h-8 text-emerald-600 mx-auto" strokeWidth={3} />
+                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} />
                           ) : (
-                            <XCircle className="w-8 h-8 text-red-500 mx-auto" strokeWidth={3} />
+                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} />
                           )
                         ) : (
-                          <span className="font-semibold text-gray-700">{row.sap}</span>
+                          <span className="font-medium text-gray-700">{row.sap}</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-center border-l-4 border-black">
+                      <td className="px-6 py-4 text-center border-l border-gray-200">
                         {typeof row.water === 'boolean' ? (
                           row.water ? (
-                            <CheckCircle className="w-8 h-8 text-emerald-600 mx-auto" strokeWidth={3} />
+                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} />
                           ) : (
-                            <XCircle className="w-8 h-8 text-red-500 mx-auto" strokeWidth={3} />
+                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} />
                           )
                         ) : (
-                          <span className="font-semibold text-gray-700">{row.water}</span>
+                          <span className="font-medium text-gray-700">{row.water}</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-center border-l-4 border-black">
+                      <td className="px-6 py-4 text-center border-l border-gray-200">
                         {typeof row.compost === 'boolean' ? (
                           row.compost ? (
-                            <CheckCircle className="w-8 h-8 text-emerald-600 mx-auto" strokeWidth={3} />
+                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} />
                           ) : (
-                            <XCircle className="w-8 h-8 text-red-500 mx-auto" strokeWidth={3} />
+                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} />
                           )
                         ) : (
-                          <span className="font-semibold text-gray-700">{row.compost}</span>
+                          <span className="font-medium text-gray-700">{row.compost}</span>
                         )}
                       </td>
                     </tr>
@@ -247,80 +247,17 @@ export default function Comparison() {
           </div>
         </motion.div>
 
-        {/* Effectiveness Chart */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-cyan-50 to-teal-50 border-4 border-black p-10 transform rotate-1 neo-shadow">
-            <h2 className="text-3xl font-bold neo-text text-gray-900 mb-8 text-center">
-              COST VS EFFECTIVENESS
-            </h2>
-            
-            <div className="bg-white border-3 border-black p-8">
-              <div className="relative h-96">
-                {/* Axes */}
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black"></div>
-                <div className="absolute bottom-0 left-0 w-0.5 h-full bg-black"></div>
-                
-                {/* Labels */}
-                <div className="absolute -bottom-8 right-0 text-sm font-bold">Cost →</div>
-                <div className="absolute -left-16 top-0 text-sm font-bold transform -rotate-90">Effectiveness →</div>
-                
-                {/* Data Points */}
-                <div className="absolute bottom-[25%] left-[40%] transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <div className="w-20 h-20 bg-gray-400 border-4 border-black rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold text-center">Water</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-[40%] left-[60%] transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <div className="w-24 h-24 bg-cyan-400 border-4 border-black rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold text-center">SAP</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-[35%] left-[35%] transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <div className="w-16 h-16 bg-teal-400 border-4 border-black rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold text-center">Compost</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-[75%] left-[30%] transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative animate-pulse">
-                    <div className="w-32 h-32 bg-gradient-to-br from-emerald-400 to-lime-400 border-4 border-black rounded-full flex items-center justify-center shadow-[8px_8px_0px_rgba(0,0,0,0.3)]">
-                      <span className="text-lg font-bold neo-text text-center">EAURECO</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-center text-lg font-semibold text-gray-700 mt-8">
-              eaureco delivers the best balance of cost and effectiveness
-            </p>
-          </div>
-        </motion.div>
-
         {/* Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-emerald-500 to-teal-500 border-4 border-black p-12 transform -rotate-1 neo-shadow text-center">
+          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              THE CLEAR WINNER
+              The Clear Winner
             </h2>
-            <p className="text-xl text-white font-semibold mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               eaureco outperforms traditional ice packs in every category that matters: 
               sustainability, performance, and cost-effectiveness
             </p>
@@ -330,9 +267,9 @@ export default function Comparison() {
                 e.preventDefault();
                 window.location.href = '/Contact';
               }}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 border-4 border-black font-bold text-lg neo-text hover:bg-lime-300 transition-all transform hover:translate-y-[-4px] shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_rgba(0,0,0,1)]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              GET IN TOUCH →
+              Get in Touch →
             </a>
           </div>
         </motion.div>

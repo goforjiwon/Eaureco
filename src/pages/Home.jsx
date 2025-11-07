@@ -16,21 +16,21 @@ export default function Home() {
             backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-teal-900/70 to-cyan-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-teal-900/75 to-cyan-900/85"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-7xl md:text-9xl font-bold neo-text text-white mb-6 transform -rotate-1">
+            <h1 className="text-7xl md:text-9xl font-bold neo-text text-white mb-6">
               eaureco
             </h1>
-            <div className="inline-block bg-lime-400 border-4 border-black px-8 py-4 transform rotate-1 neo-shadow mb-8">
-              <p className="text-2xl md:text-4xl font-bold neo-text text-black">
-                STAY COOL, STAY GREEN.
+            <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-4 rounded-2xl shadow-2xl mb-8">
+              <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
+                Stay Cool, Stay Green
               </p>
             </div>
           </motion.div>
@@ -39,7 +39,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white font-semibold mb-12 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto"
           >
             Transforming sargassum waste into sustainable ice packs for a greener future
           </motion.p>
@@ -51,28 +51,28 @@ export default function Home() {
           >
             <Link
               to={createPageUrl("Solution")}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 border-4 border-black font-bold text-lg neo-text hover:bg-lime-300 transition-all transform hover:translate-y-[-4px] shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_rgba(0,0,0,1)]"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
             >
-              DISCOVER OUR SOLUTION
-              <ArrowRight className="w-6 h-6" strokeWidth={3} />
+              Discover Our Solution
+              <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
             </Link>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-white border-y-4 border-black">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative group"
             >
-              <div className="nav-glass border-4 border-black p-8 transform rotate-1">
-                <div className="absolute -top-6 -left-6 w-16 h-16 bg-emerald-400 border-4 border-black flex items-center justify-center">
-                  <Recycle className="w-8 h-8 text-black" strokeWidth={3} />
+              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <Recycle className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-5xl font-bold neo-text text-emerald-600 mb-2 mt-4">100%</h3>
                 <p className="text-lg font-semibold text-gray-800">Biodegradable</p>
@@ -85,11 +85,11 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative"
+              className="relative group"
             >
-              <div className="nav-glass border-4 border-black p-8 transform -rotate-1">
-                <div className="absolute -top-6 -left-6 w-16 h-16 bg-cyan-400 border-4 border-black flex items-center justify-center">
-                  <Snowflake className="w-8 h-8 text-black" strokeWidth={3} />
+              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <Snowflake className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-5xl font-bold neo-text text-cyan-600 mb-2 mt-4">4x</h3>
                 <p className="text-lg font-semibold text-gray-800">Faster Freezing</p>
@@ -102,11 +102,11 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="relative"
+              className="relative group"
             >
-              <div className="nav-glass border-4 border-black p-8 transform rotate-1">
-                <div className="absolute -top-6 -left-6 w-16 h-16 bg-lime-400 border-4 border-black flex items-center justify-center">
-                  <Leaf className="w-8 h-8 text-black" strokeWidth={3} />
+              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <Leaf className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-5xl font-bold neo-text text-lime-600 mb-2 mt-4">260</h3>
                 <p className="text-lg font-semibold text-gray-800">Minutes Cooling</p>
@@ -118,7 +118,7 @@ export default function Home() {
       </section>
 
       {/* Why Eaureco Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-emerald-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -126,11 +126,12 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-emerald-400 to-teal-500 border-4 border-black p-2 transform -rotate-2 neo-shadow">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
                 <img
                   src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=800&q=80"
                   alt="Sargassum seaweed on beach"
-                  className="w-full h-[400px] object-cover border-2 border-black"
+                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl"
                 />
               </div>
             </motion.div>
@@ -140,41 +141,47 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-block bg-lime-400 border-4 border-black px-6 py-3 mb-6 transform -rotate-1">
-                <h2 className="text-xl font-bold neo-text text-black">WHY EAURECO?</h2>
+              <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6">
+                <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">Why Eaureco?</h2>
               </div>
               
               <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
                 We turn trash into treasure
               </h3>
               
-              <p className="text-xl text-gray-700 font-medium mb-6 leading-relaxed">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Millions of tons of sargassum seaweed wash up on beaches, costing millions 
                 in disposal fees. We transform this ocean waste into high-performance, 
                 sustainable ice packs.
               </p>
 
               <div className="space-y-4">
-                <div className="nav-glass border-3 border-black p-4">
-                  <h4 className="font-bold text-lg mb-2">♻️ Sustainable</h4>
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
+                    <span className="text-emerald-600">♻️</span> Sustainable
+                  </h4>
                   <p className="text-gray-700">Made from renewable sargassum waste</p>
                 </div>
-                <div className="nav-glass border-3 border-black p-4">
-                  <h4 className="font-bold text-lg mb-2">❄️ Superior Performance</h4>
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
+                    <span className="text-cyan-600">❄️</span> Superior Performance
+                  </h4>
                   <p className="text-gray-700">Freezes faster and lasts longer</p>
                 </div>
-                <div className="nav-glass border-3 border-black p-4">
-                  <h4 className="font-bold text-lg mb-2">💚 Cost-Effective</h4>
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
+                    <span className="text-lime-600">💚</span> Cost-Effective
+                  </h4>
                   <p className="text-gray-700">Cheaper than traditional alternatives</p>
                 </div>
               </div>
 
               <Link
                 to={createPageUrl("Solution")}
-                className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-emerald-500 border-3 border-black font-bold text-white hover:bg-emerald-600 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]"
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl font-bold text-white hover:shadow-xl transition-all"
               >
-                LEARN MORE
-                <ArrowRight className="w-5 h-5" strokeWidth={3} />
+                Learn More
+                <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
               </Link>
             </motion.div>
           </div>
@@ -182,20 +189,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 border-y-4 border-black">
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-bold neo-text text-white mb-6">
-            READY TO GO GREEN?
+            Ready to Go Green?
           </h2>
-          <p className="text-xl text-white font-semibold mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Join us in revolutionizing sustainable cooling solutions
           </p>
           <Link
             to={createPageUrl("Contact")}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-lime-400 border-4 border-black font-bold text-lg neo-text hover:bg-lime-300 transition-all transform hover:translate-y-[-4px] shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_rgba(0,0,0,1)]"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
           >
-            GET IN TOUCH
-            <ArrowRight className="w-6 h-6" strokeWidth={3} />
+            Get in Touch
+            <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
           </Link>
         </div>
       </section>

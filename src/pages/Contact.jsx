@@ -16,7 +16,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
     console.log("Form submitted:", formData);
     setSubmitted(true);
     setTimeout(() => {
@@ -33,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="py-12 px-4">
+    <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -41,12 +40,12 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-lime-400 border-4 border-black px-8 py-4 transform rotate-1 neo-shadow mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold neo-text text-black">
-              CONTACT US
+          <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-3 rounded-full mb-6 shadow-lg">
+            <h1 className="text-5xl md:text-6xl font-bold neo-text text-gray-900">
+              Contact Us
             </h1>
           </div>
-          <p className="text-2xl font-semibold text-gray-800 max-w-3xl mx-auto">
+          <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
             Ready to make the switch to sustainable cooling? Let's talk!
           </p>
         </motion.div>
@@ -58,82 +57,82 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="nav-glass border-4 border-black p-8 transform -rotate-1 neo-shadow">
-              <div className="inline-block bg-emerald-400 border-3 border-black px-4 py-2 mb-6">
-                <h2 className="text-xl font-bold neo-text text-black">SEND US A MESSAGE</h2>
+            <div className="nav-glass rounded-2xl shadow-2xl p-8 border border-gray-100">
+              <div className="inline-block bg-gradient-to-r from-emerald-400 to-teal-400 px-5 py-2 rounded-full mb-6 shadow-md">
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">Send us a Message</h2>
               </div>
 
               {submitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-emerald-50 to-lime-50 border-3 border-black p-8 text-center"
+                  className="bg-gradient-to-br from-emerald-50 to-lime-50 rounded-2xl p-8 text-center border border-emerald-200"
                 >
-                  <CheckCircle className="w-16 h-16 text-emerald-600 mx-auto mb-4" strokeWidth={3} />
+                  <CheckCircle className="w-16 h-16 text-emerald-600 mx-auto mb-4" strokeWidth={2} />
                   <h3 className="text-2xl font-bold neo-text text-emerald-600 mb-2">
-                    MESSAGE SENT!
+                    Message Sent!
                   </h3>
-                  <p className="text-gray-700 font-semibold">
+                  <p className="text-gray-700 font-medium">
                     We'll get back to you as soon as possible.
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block font-bold mb-2 text-gray-900">Your Name</label>
+                    <label className="block font-semibold mb-2 text-gray-900">Your Name</label>
                     <Input
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="border-3 border-black focus:ring-0 focus:border-emerald-500 bg-white font-semibold"
+                      className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                       placeholder="John Doe"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-bold mb-2 text-gray-900">Email Address</label>
+                    <label className="block font-semibold mb-2 text-gray-900">Email Address</label>
                     <Input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="border-3 border-black focus:ring-0 focus:border-emerald-500 bg-white font-semibold"
+                      className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                       placeholder="john@company.com"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-bold mb-2 text-gray-900">Company Name</label>
+                    <label className="block font-semibold mb-2 text-gray-900">Company Name</label>
                     <Input
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="border-3 border-black focus:ring-0 focus:border-emerald-500 bg-white font-semibold"
+                      className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                       placeholder="Your Company"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-bold mb-2 text-gray-900">Message</label>
+                    <label className="block font-semibold mb-2 text-gray-900">Message</label>
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="border-3 border-black focus:ring-0 focus:border-emerald-500 bg-white font-semibold resize-none"
+                      className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium resize-none"
                       placeholder="Tell us about your cooling needs..."
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-emerald-500 hover:bg-emerald-600 border-4 border-black font-bold text-lg py-6 neo-text shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] transition-all"
+                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl font-bold text-lg py-6 text-white shadow-lg hover:shadow-xl transition-all"
                   >
-                    <Send className="w-5 h-5 mr-2" strokeWidth={3} />
-                    SEND MESSAGE
+                    <Send className="w-5 h-5 mr-2" strokeWidth={2.5} />
+                    Send Message
                   </Button>
                 </form>
               )}
@@ -148,21 +147,21 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Contact Info Card */}
-            <div className="bg-white border-4 border-black p-8 transform rotate-1 neo-shadow">
-              <div className="inline-block bg-cyan-400 border-3 border-black px-4 py-2 mb-6">
-                <h2 className="text-xl font-bold neo-text text-black">GET IN TOUCH</h2>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+              <div className="inline-block bg-gradient-to-r from-cyan-400 to-teal-400 px-5 py-2 rounded-full mb-6 shadow-md">
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">Get in Touch</h2>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-400 border-3 border-black flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-black" strokeWidth={3} />
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Mail className="w-6 h-6 text-white" strokeWidth={2.5} />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Email</h3>
                     <a 
                       href="mailto:goforjiwon@kaist.ac.kr"
-                      className="text-gray-700 font-semibold hover:text-emerald-600 transition-colors"
+                      className="text-gray-600 font-medium hover:text-emerald-600 transition-colors"
                     >
                       goforjiwon@kaist.ac.kr
                     </a>
@@ -170,41 +169,41 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-cyan-400 border-3 border-black flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-black" strokeWidth={3} />
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                    <MapPin className="w-6 h-6 text-white" strokeWidth={2.5} />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Location</h3>
-                    <p className="text-gray-700 font-semibold">Texas, USA</p>
+                    <p className="text-gray-600 font-medium">Texas, USA</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Why Contact Us */}
-            <div className="nav-glass border-4 border-black p-8 transform -rotate-1 neo-shadow">
-              <div className="inline-block bg-lime-400 border-3 border-black px-4 py-2 mb-6">
-                <h2 className="text-xl font-bold neo-text text-black">WHY WORK WITH US</h2>
+            <div className="nav-glass rounded-2xl shadow-xl p-8 border border-gray-100">
+              <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-5 py-2 rounded-full mb-6 shadow-md">
+                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Why Work With Us</h2>
               </div>
 
               <div className="space-y-4">
-                <div className="bg-white border-2 border-black p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
                   <h4 className="font-bold mb-2">🌱 Sustainable Solution</h4>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-600">
                     100% biodegradable ice packs that help clean our oceans
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
                   <h4 className="font-bold mb-2">⚡ Better Performance</h4>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-600">
                     Superior cooling that lasts longer and freezes faster
                   </p>
                 </div>
 
-                <div className="bg-white border-2 border-black p-4">
+                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
                   <h4 className="font-bold mb-2">💰 Cost Effective</h4>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-600">
                     Competitive pricing without compromising quality
                   </p>
                 </div>
@@ -212,11 +211,11 @@ export default function Contact() {
             </div>
 
             {/* CTA Box */}
-            <div className="bg-gradient-to-r from-emerald-500 to-teal-500 border-4 border-black p-8 transform rotate-1 neo-shadow text-center">
+            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl shadow-xl p-8 text-center">
               <h3 className="text-3xl font-bold neo-text text-white mb-4">
-                READY TO GO GREEN?
+                Ready to Go Green?
               </h3>
-              <p className="text-white font-semibold text-lg">
+              <p className="text-white/90 font-medium text-lg">
                 Join us in revolutionizing sustainable cooling solutions
               </p>
             </div>
@@ -230,12 +229,12 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <div className="bg-gradient-to-br from-lime-50 to-emerald-50 border-4 border-black p-12 text-center transform -rotate-1 neo-shadow">
-            <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
+          <div className="bg-gradient-to-br from-lime-50 to-emerald-50 rounded-3xl shadow-xl p-12 text-center border border-emerald-100">
+            <h2 className="text-4xl font-bold neo-text text-gray-900 mb-2">
               eaureco
             </h2>
-            <p className="text-2xl font-bold text-emerald-600 mb-6">STAY COOL, STAY GREEN.</p>
-            <p className="text-lg text-gray-700 font-semibold max-w-2xl mx-auto">
+            <p className="text-2xl font-bold text-emerald-600 mb-4">Stay Cool, Stay Green</p>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               We're transforming sargassum waste into sustainable ice packs. 
               Let's work together to create a greener future for food delivery and cold chain logistics.
             </p>
