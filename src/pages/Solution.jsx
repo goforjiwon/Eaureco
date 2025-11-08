@@ -205,7 +205,6 @@ export default function Solution() {
                 in enormous quantities, costing communities millions in cleanup and disposal. 
                 We transform this waste into a valuable resource.
               </p>
-
               <div className="space-y-4">
                 <div className="nav-glass rounded-xl shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-shadow">
                   <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" strokeWidth={2.5} />
