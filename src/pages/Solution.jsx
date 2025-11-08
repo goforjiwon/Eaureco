@@ -199,10 +199,8 @@ export default function Solution() {
                 Higher Turnover Rate
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                Thanks to our <span className="font-bold text-emerald-600">4x faster freezing time</span>, 
-                your ice packs are ready to use much quicker. This means you can process more orders, 
-                increase your operational efficiency, and <span className="font-bold text-indigo-600">maximize your business throughput</span> without 
-                investing in additional freezer space or inventory.
+                <span className="font-bold text-emerald-600">4x faster freezing</span> means your ice packs are ready quicker. 
+                Process more orders and <span className="font-bold text-indigo-600">boost efficiency</span> without extra freezer space.
               </p>
             </div>
           </div>
