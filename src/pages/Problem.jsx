@@ -1,7 +1,6 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { AlertTriangle, Trash2, Skull, Droplets, Snowflake, TrendingDown } from "lucide-react";
+import { AlertTriangle, Trash2, Skull, Droplets, Snowflake, TrendingDown, XCircle, DollarSign } from "lucide-react";
 
 export default function Problem() {
   return (
@@ -19,218 +18,228 @@ export default function Problem() {
             </h1>
           </div>
           <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
-            SAP ice packs are destroying our environment
+            The cold chain industry is stuck with unsustainable options
           </p>
         </motion.div>
 
-        {/* Main Problem Statement */}
+        {/* The Scale of the Problem */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-16"
         >
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl shadow-2xl p-12 border-2 border-red-200">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-4 mb-6">
-                <AlertTriangle className="w-20 h-20 text-red-600" strokeWidth={2.5} />
+          <div className="bg-gradient-to-br from-red-600 to-orange-600 rounded-3xl shadow-2xl p-12 text-center">
+            <AlertTriangle className="w-16 h-16 text-white mx-auto mb-6" strokeWidth={2} />
+            <div className="text-9xl font-bold neo-text text-white mb-4">1B</div>
+            <p className="text-3xl font-bold text-white mb-2">
+              Ice packs in circulation
+            </p>
+            <p className="text-xl text-white/90">
+              In North America alone, every single year
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Current Options Breakdown */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl font-bold neo-text text-center mb-4 text-gray-900">
+            Today's Options
+          </h2>
+          <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Every existing solution has critical flaws
+          </p>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {/* SAP Ice Packs */}
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-red-200 overflow-hidden">
+              <div className="bg-gradient-to-br from-red-500 to-red-600 p-6 text-center">
+                <Skull className="w-12 h-12 text-white mx-auto mb-3" strokeWidth={2.5} />
+                <h3 className="text-2xl font-bold text-white">SAP Ice Packs</h3>
+                <p className="text-white/90 text-sm mt-2">Plastic-based polymers</p>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-6">
-                Super Absorbent Polymer (SAP) Ice Packs
-              </h2>
-              <p className="text-2xl font-bold text-red-600 mb-4">
-                Made from plastic-based materials that are harming our planet
-              </p>
-              <div className="bg-white rounded-2xl shadow-xl p-8 mt-8 max-w-2xl mx-auto">
-                <div className="text-8xl font-bold neo-text bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-4">
-                  1 Billion
+              <div className="p-6">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Good performance</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Long lasting</span>
+                  </div>
                 </div>
-                <p className="text-xl font-semibold text-gray-900">
-                  SAP ice packs in circulation in North America alone
-                </p>
+                <div className="border-t-2 border-red-200 pt-6 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Toxic to nature</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Clogs sewage plants</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Ends up in landfills</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Takes 100+ years to decompose</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Water Ice Packs */}
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-blue-200 overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-center">
+                <Droplets className="w-12 h-12 text-white mx-auto mb-3" strokeWidth={2.5} />
+                <h3 className="text-2xl font-bold text-white">Water Packs</h3>
+                <p className="text-white/90 text-sm mt-2">100% water based</p>
+              </div>
+              <div className="p-6">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Eco-friendly</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Safe disposal</span>
+                  </div>
+                </div>
+                <div className="border-t-2 border-blue-200 pt-6 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Much slower to freeze</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Poor retention time</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Can't meet cold chain standards</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Inefficient for businesses</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Other Eco Packs */}
+            <div className="bg-white rounded-2xl shadow-xl border-2 border-yellow-200 overflow-hidden">
+              <div className="bg-gradient-to-br from-yellow-500 to-amber-600 p-6 text-center">
+                <DollarSign className="w-12 h-12 text-white mx-auto mb-3" strokeWidth={2.5} />
+                <h3 className="text-2xl font-bold text-white">Other Eco-Gels</h3>
+                <p className="text-white/90 text-sm mt-2">Alternative solutions</p>
+              </div>
+              <div className="p-6">
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Biodegradable</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <span className="text-gray-900 font-semibold">Sustainable materials</span>
+                  </div>
+                </div>
+                <div className="border-t-2 border-yellow-200 pt-6 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Too expensive</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Don't last as long as SAP</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Limited availability</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Hard to scale</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Environmental Issues Grid */}
+        {/* The Impossible Choice */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
-        >
-          <div className="inline-block bg-gradient-to-r from-red-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-white uppercase tracking-wider">Environmental Hazards</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Toxic to Nature */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-red-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <Skull className="w-8 h-8 text-white" strokeWidth={2.5} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Toxic to Nature</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                SAP contains harmful chemicals that leach into soil and water systems.
-                When disposed of improperly, these toxins contaminate ecosystems and harm wildlife.
-              </p>
-            </div>
-
-            {/* Blocks Sewage Treatment */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-orange-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <Droplets className="w-8 h-8 text-white" strokeWidth={2.5} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Clogs Treatment Plants</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                When SAP gel is flushed down drains, it expands and blocks sewage treatment plants,
-                causing expensive damage to municipal water systems and infrastructure.
-              </p>
-            </div>
-
-            {/* Poor Performance */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-yellow-100 hover:shadow-2xl transition-all hover:-translate-y-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <Snowflake className="w-8 h-8 text-white" strokeWidth={2.5} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Slow Freezing</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                SAP ice packs take significantly longer to freeze compared to alternatives,
-                wasting energy and reducing operational efficiency for businesses.
-              </p>
-            </div>
-
-            {/* Landfill Crisis */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200 hover:shadow-2xl transition-all hover:-translate-y-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <Trash2 className="w-8 h-8 text-white" strokeWidth={2.5} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Landfill Crisis</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                Most SAP ice packs end up in landfills where they take hundreds of years to decompose,
-                releasing microplastics and pollutants into the environment.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Current Alternatives Fall Short */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <div className="inline-block bg-gradient-to-r from-yellow-400 to-amber-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">What About Alternatives?</h2>
-          </div>
-
-          <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-200">
-            <h3 className="text-3xl font-bold neo-text text-gray-900 mb-8 text-center">
-              Current alternatives can't compete with SAP performance
-            </h3>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Water Ice Packs */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-md">
-                    <Droplets className="w-6 h-6 text-white" strokeWidth={2.5} />
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">100% Water Packs</h4>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Take significantly longer to freeze</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Cooling retention time is much shorter</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Can't maintain cold chain standards effectively</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Eco-Gel Packs */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shadow-md">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900">Other Eco-Gel Packs</h4>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Prohibitively expensive for most businesses</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Don't last as long as SAP ice packs</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✕</span>
-                    </div>
-                    <p className="text-gray-700 font-medium">Limited availability and scalability</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-6 text-center border border-orange-200">
-              <p className="text-xl font-bold text-gray-900">
-                The industry is stuck: Choose between performance or sustainability
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* The Cycle of Waste */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
+          className="mb-16"
         >
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl p-12 text-center">
-            <TrendingDown className="w-20 h-20 text-red-400 mx-auto mb-6" strokeWidth={2} />
+            <TrendingDown className="w-16 h-16 text-red-400 mx-auto mb-6" strokeWidth={2} />
             <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              The Vicious Cycle
+              The Industry is Stuck
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Every day, millions of SAP ice packs are used once and discarded. They pile up in landfills,
-              leach toxins into our water supply, clog our sewage systems, and persist in the environment
-              for generations. This is not sustainable.
+            <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Companies must choose between environmental responsibility and operational efficiency
             </p>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <p className="text-5xl font-bold text-red-400 mb-2">100+</p>
-                <p className="text-white font-semibold">Years to Decompose</p>
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              <div className="bg-red-500/20 backdrop-blur rounded-2xl p-6 border-2 border-red-500/50">
+                <h3 className="text-2xl font-bold text-red-300 mb-3">Choose Performance?</h3>
+                <p className="text-white/80">Harm the environment with plastic SAP packs</p>
               </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <p className="text-5xl font-bold text-orange-400 mb-2">1B</p>
-                <p className="text-white font-semibold">Used Annually</p>
+              <div className="bg-blue-500/20 backdrop-blur rounded-2xl p-6 border-2 border-blue-500/50">
+                <h3 className="text-2xl font-bold text-blue-300 mb-3">Choose Sustainability?</h3>
+                <p className="text-white/80">Sacrifice efficiency and increase costs</p>
               </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                <p className="text-5xl font-bold text-yellow-400 mb-2">$M</p>
-                <p className="text-white font-semibold">In Cleanup Costs</p>
-              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Impact Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h2 className="text-4xl font-bold neo-text text-center mb-12 text-gray-900">
+            The Environmental Cost
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200">
+              <div className="text-6xl font-bold neo-text text-red-600 mb-3">100+</div>
+              <p className="text-lg font-semibold text-gray-900 mb-2">Years to Decompose</p>
+              <p className="text-gray-600">SAP packs persist in landfills for generations</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200">
+              <div className="text-6xl font-bold neo-text text-orange-600 mb-3">$M</div>
+              <p className="text-lg font-semibold text-gray-900 mb-2">In Cleanup Costs</p>
+              <p className="text-gray-600">Municipal sewage damage and landfill management</p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200">
+              <div className="text-6xl font-bold neo-text text-gray-600 mb-3">∞</div>
+              <p className="text-lg font-semibold text-gray-900 mb-2">Lasting Damage</p>
+              <p className="text-gray-600">Microplastics and toxins contaminate ecosystems</p>
             </div>
           </div>
         </motion.div>
@@ -243,11 +252,10 @@ export default function Problem() {
         >
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              There's a Better Way
+              But What If You Didn't Have to Choose?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              We don't have to sacrifice performance for sustainability.
-              Discover how eaureco is revolutionizing ice packs with a solution that's better for business and the planet.
+              Discover how eaureco delivers superior performance, sustainability, and affordability — all in one solution.
             </p>
             <a
               href="#"
