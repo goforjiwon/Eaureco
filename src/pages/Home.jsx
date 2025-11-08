@@ -105,11 +105,10 @@ and cold chain companies
               transition={{ delay: 0.2 }}
               className="relative group">
 
-              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow flex flex-col justify-center items-center text-center min-h-[200px]">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Leaf className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
-                <div className="h-16 mt-4"></div>
                 <p className="text-lg font-semibold text-gray-800">Longer Retention</p>
                 <p className="text-sm text-gray-600 mt-2">Keeps things cool for longer</p>
               </div>
