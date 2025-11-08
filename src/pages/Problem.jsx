@@ -32,7 +32,7 @@ export default function Problem() {
         >
           <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl shadow-2xl p-12 text-center border border-orange-200">
             <AlertTriangle className="w-16 h-16 text-orange-600 mx-auto mb-6" strokeWidth={2} />
-            <div className="text-9xl font-bold neo-text text-gray-900 mb-4">1B</div>
+            <div className="text-9xl font-bold neo-text text-gray-900 mb-4">1 Billion</div>
             <p className="text-3xl font-bold text-gray-900 mb-2">
               Ice packs in circulation
             </p>
