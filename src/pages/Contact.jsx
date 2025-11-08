@@ -180,36 +180,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Why Contact Us */}
-            <div className="nav-glass rounded-2xl shadow-xl p-8 border border-gray-100">
-              <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-5 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Why Work With Us</h2>
-              </div>
-
-              <div className="space-y-4">
-                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">🌱 Sustainable Solution</h4>
-                  <p className="text-sm text-gray-600">
-                    100% biodegradable ice packs that help clean our oceans
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">⚡ Better Performance</h4>
-                  <p className="text-sm text-gray-600">
-                    Superior cooling that lasts longer and freezes faster
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">💰 Cost Effective</h4>
-                  <p className="text-sm text-gray-600">
-                    Competitive pricing without compromising quality
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* CTA Box */}
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl shadow-xl p-8 text-center">
               <h3 className="text-3xl font-bold neo-text text-white mb-4">
