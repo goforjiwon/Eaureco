@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, CheckCircle, XCircle, DollarSign, Timer, Thermometer } from "lucide-react";
@@ -176,7 +177,7 @@ export default function Comparison() {
                       <span className="font-bold text-lg text-gray-900">Feature</span>
                     </th>
                     <th className="px-6 py-5 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l border-gray-200">
-                      <div className="font-bold text-xl neo-text text-emerald-600">EAURECO</div>
+                      <div className="font-bold text-xl neo-text text-emerald-600">eaureco</div>
                     </th>
                     <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
                       <div className="font-semibold text-gray-900">SAP (Plastic)</div>
