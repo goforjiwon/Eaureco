@@ -229,8 +229,8 @@ export default function Solution() {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80"
-                  alt="Beach cleanup"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/51931e2c4_image.png"
+                  alt="Sargassum seaweed on beach"
                   className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
 
               </div>
