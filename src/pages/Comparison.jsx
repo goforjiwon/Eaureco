@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, CheckCircle, XCircle, DollarSign, Timer, Thermometer } from "lucide-react";
@@ -39,13 +38,6 @@ export default function Comparison() {
       sap: "Negative",
       water: "Neutral",
       compost: "Positive",
-    },
-    {
-      feature: "Reusable",
-      eaureco: true,
-      sap: true,
-      water: true,
-      compost: false,
     },
   ];
 
