@@ -39,10 +39,9 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }} className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto">Transforming ocean waste into sustainable ice packs
-
-
-
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto">
+            Sustainable ice packs for fresh food delivery and cold chain companies
           </motion.p>
 
           <motion.div
@@ -145,17 +144,16 @@ export default function Home() {
               viewport={{ once: true }}>
 
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6">
-                <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">Why Eaureco?</h2>
+                <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">For Food Delivery & Cold Chain</h2>
               </div>
               
               <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
                 We turn trash into treasure
               </h3>
               
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">Millions of tons of sargassum seaweed wash up on beaches, costing millions in disposal fees.
-We transform this ocean waste into high-performance, sustainable, and cheap ice packs.
-
-
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                Millions of tons of sargassum seaweed wash up on beaches, costing millions in disposal fees.
+                We transform this ocean waste into high-performance ice packs for grocery delivery and cold chain logistics.
               </p>
 
               <div className="space-y-4">
@@ -198,7 +196,7 @@ We transform this ocean waste into high-performance, sustainable, and cheap ice 
             Ready to Go Green?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join us in revolutionizing sustainable cooling solutions
+            Perfect for food delivery services, grocery businesses, and cold chain logistics
           </p>
           <Link
             to={createPageUrl("Contact")}
