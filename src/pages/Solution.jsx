@@ -177,6 +177,9 @@ export default function Solution() {
                 </div>
               </div>
             </div>
+            <p className="text-sm text-gray-500 text-center mt-6">
+              * Experiments conducted in laboratory conditions using 4% solution for SAP and eaureco
+            </p>
           </div>
         </motion.div>
 
