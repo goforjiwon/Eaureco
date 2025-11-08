@@ -11,8 +11,8 @@ export default function Solution() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
+
           <div className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 rounded-full mb-6 shadow-lg">
             <h1 className="text-5xl md:text-6xl font-bold neo-text text-white">
               Our Solution
@@ -28,8 +28,8 @@ export default function Solution() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mb-20"
-        >
+          className="mb-20">
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6 shadow-md">
@@ -80,8 +80,8 @@ export default function Solution() {
                   <img
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
                     alt="eaureco ice pack - Stay cool, Stay green"
-                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
-                  />
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+
                 </div>
               </div>
             </div>
@@ -93,8 +93,8 @@ export default function Solution() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
-        >
+          className="mb-20">
+
           <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100">
             <h2 className="text-4xl font-bold neo-text text-gray-900 mb-8 text-center">
               Superior Performance
@@ -188,16 +188,16 @@ export default function Solution() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
-        >
+          className="mb-20">
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-gradient-to-r from-teal-400 to-cyan-400 px-6 py-2 rounded-full mb-6 shadow-md">
                 <h2 className="text-sm font-bold text-white uppercase tracking-wider">From Waste to Wonder</h2>
               </div>
               
-              <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
-                Millions of tons washed up, millions of US$ lost for disposal
+              <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">Millions of tons washed up, millions of wasted tax for disposal
+
               </h3>
 
               <p className="text-xl text-gray-600 mb-8">
@@ -239,8 +239,8 @@ export default function Solution() {
                 <img
                   src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80"
                   alt="Beach cleanup"
-                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl"
-                />
+                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
+
               </div>
             </div>
           </div>
@@ -250,8 +250,8 @@ export default function Solution() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+          viewport={{ once: true }}>
+
           <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
             <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">Why Choose Eaureco</h2>
           </div>
@@ -289,6 +289,6 @@ export default function Solution() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
