@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles } from "lucide-react";
+import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp } from "lucide-react";
 
 export default function Solution() {
   return (
@@ -180,6 +180,31 @@ export default function Solution() {
             <p className="text-sm text-gray-500 text-center mt-6">
               * Experiments conducted in laboratory conditions using 4% solution for SAP and eaureco
             </p>
+          </div>
+        </motion.div>
+
+        {/* Business Benefit - Higher Turnover */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20">
+
+          <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-3xl shadow-2xl p-10 border border-indigo-100">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <TrendingUp className="w-8 h-8 text-white" strokeWidth={2.5} />
+              </div>
+              <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
+                Higher Turnover Rate
+              </h2>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Thanks to our <span className="font-bold text-emerald-600">4x faster freezing time</span>, 
+                your ice packs are ready to use much quicker. This means you can process more orders, 
+                increase your operational efficiency, and <span className="font-bold text-indigo-600">maximize your business throughput</span> without 
+                investing in additional freezer space or inventory.
+              </p>
+            </div>
           </div>
         </motion.div>
 
