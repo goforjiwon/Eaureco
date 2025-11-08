@@ -109,8 +109,8 @@ and cold chain companies
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Leaf className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
-                {/* Removed the h3 element as per the instruction */}
-                <p className="text-lg font-semibold text-gray-800 mt-4">Longer Retention</p>
+                <div className="h-16 mt-4"></div>
+                <p className="text-lg font-semibold text-gray-800">Longer Retention</p>
                 <p className="text-sm text-gray-600 mt-2">Keeps things cool for longer</p>
               </div>
             </motion.div>
