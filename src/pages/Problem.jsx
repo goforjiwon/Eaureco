@@ -30,13 +30,13 @@ export default function Problem() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl shadow-2xl p-12 text-center">
-            <AlertTriangle className="w-16 h-16 text-white mx-auto mb-6" strokeWidth={2} />
-            <div className="text-9xl font-bold neo-text text-white mb-4">1B</div>
-            <p className="text-3xl font-bold text-white mb-2">
+          <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl shadow-2xl p-12 text-center border border-orange-200">
+            <AlertTriangle className="w-16 h-16 text-orange-600 mx-auto mb-6" strokeWidth={2} />
+            <div className="text-9xl font-bold neo-text text-gray-900 mb-4">1B</div>
+            <p className="text-3xl font-bold text-gray-900 mb-2">
               Ice packs in circulation
             </p>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-gray-700">
               In North America alone, every single year
             </p>
           </div>
