@@ -109,9 +109,9 @@ and cold chain companies
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Leaf className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-5xl font-bold neo-text text-lime-600 mb-2 mt-4">260</h3>
-                <p className="text-lg font-semibold text-gray-800">Minutes Cooling</p>
-                <p className="text-sm text-gray-600 mt-2">Longer retention time</p>
+                <h3 className="text-5xl font-bold neo-text text-lime-600 mb-2 mt-4">+</h3>
+                <p className="text-lg font-semibold text-gray-800">Longer Retention</p>
+                <p className="text-sm text-gray-600 mt-2">Keeps things cool for longer</p>
               </div>
             </motion.div>
           </div>
