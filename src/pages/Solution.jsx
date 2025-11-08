@@ -210,14 +210,6 @@ export default function Solution() {
                 <div className="nav-glass rounded-xl shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-shadow">
                   <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" strokeWidth={2.5} />
                   <div>
-                    <h4 className="font-bold mb-1">Free Raw Material</h4>
-                    <p className="text-gray-600 text-sm">Collected from beaches at no cost</p>
-                  </div>
-                </div>
-
-                <div className="nav-glass rounded-xl shadow-md p-4 flex items-start gap-4 hover:shadow-lg transition-shadow">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" strokeWidth={2.5} />
-                  <div>
                     <h4 className="font-bold mb-1">Circular Economy</h4>
                     <p className="text-gray-600 text-sm">Creating value from what was once waste</p>
                   </div>
@@ -281,6 +273,6 @@ export default function Solution() {
           </div>
         </motion.div>
       </div>
-    </div>);
-
+    </div>
+  );
 }
