@@ -126,14 +126,27 @@ and cold chain companies
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}>
 
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
-                <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl">
-                  <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
-                    alt="eaureco ice pack - Stay cool, Stay green"
-                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+              <div className="space-y-6">
+                {/* New Beach Image */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 via-blue-100 to-teal-100 rounded-3xl blur-2xl opacity-60"></div>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/5f7b251c8_image.png"
+                      alt="Sargassum seaweed on beach"
+                      className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+                  </div>
+                </div>
 
+                {/* Product Image */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
+                  <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl">
+                    <img
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
+                      alt="eaureco ice pack - Stay cool, Stay green"
+                      className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+                  </div>
                 </div>
               </div>
             </motion.div>
