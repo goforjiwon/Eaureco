@@ -10,12 +10,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center px-4 py-20 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80')",
-          }}
-        >
+            backgroundImage: "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80')"
+          }}>
+
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-teal-900/75 to-cyan-900/85"></div>
         </div>
 
@@ -23,8 +23,8 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+            transition={{ duration: 0.8 }}>
+
             <h1 className="text-7xl md:text-9xl font-bold neo-text text-white mb-6">
               eaureco
             </h1>
@@ -38,21 +38,21 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto"
-          >
-            Transforming sargassum waste into sustainable ice packs for a greener future
+            transition={{ duration: 0.8, delay: 0.2 }} className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto">Transforming ocean waste into sustainable ice packs
+
+
+
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+            transition={{ duration: 0.8, delay: 0.4 }}>
+
             <Link
               to={createPageUrl("Solution")}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
-            >
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105">
+
               Discover Our Solution
               <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
             </Link>
@@ -68,8 +68,8 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative group"
-            >
+              className="relative group">
+
               <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Recycle className="w-6 h-6 text-white" strokeWidth={2.5} />
@@ -85,8 +85,8 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative group"
-            >
+              className="relative group">
+
               <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Snowflake className="w-6 h-6 text-white" strokeWidth={2.5} />
@@ -102,8 +102,8 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="relative group"
-            >
+              className="relative group">
+
               <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Leaf className="w-6 h-6 text-white" strokeWidth={2.5} />
@@ -124,23 +124,23 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
+
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
                 <img
                   src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=800&q=80"
                   alt="Sargassum seaweed on beach"
-                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl"
-                />
+                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
+
               </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
+
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6">
                 <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">Why Eaureco?</h2>
               </div>
@@ -178,8 +178,8 @@ export default function Home() {
 
               <Link
                 to={createPageUrl("Solution")}
-                className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl font-bold text-white hover:shadow-xl transition-all"
-              >
+                className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl font-bold text-white hover:shadow-xl transition-all">
+
                 Learn More
                 <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
               </Link>
@@ -199,13 +199,13 @@ export default function Home() {
           </p>
           <Link
             to={createPageUrl("Contact")}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
-          >
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105">
+
             Get in Touch
             <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
