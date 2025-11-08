@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles } from "lucide-react";
@@ -74,19 +75,11 @@ export default function Solution() {
 
             <div className="order-1 md:order-2">
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-lime-400 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
-                <div className="relative bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl shadow-2xl p-8 md:p-12 text-center">
-                  <div className="bg-gradient-to-br from-lime-400 to-emerald-400 rounded-2xl shadow-xl p-6 md:p-8 inline-block mb-4">
-                    <Sparkles className="w-16 h-16 md:w-20 md:h-20 text-white" strokeWidth={2} />
-                  </div>
-                  <h3 className="text-5xl md:text-6xl font-bold neo-text text-white mb-4">
-                    eaureco
-                  </h3>
-                  <p className="text-xl font-medium text-white/90">Stay cool, Stay green</p>
-                  <div className="mt-6 flex justify-center">
-                    <Droplets className="w-12 h-12 text-white/40" strokeWidth={2} />
-                  </div>
-                </div>
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
+                  alt="eaureco ice pack - Stay cool, Stay green"
+                  className="relative w-full h-auto rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform"
+                />
               </div>
             </div>
           </div>

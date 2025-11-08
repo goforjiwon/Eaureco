@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -127,11 +128,10 @@ export default function Home() {
               viewport={{ once: true }}>
 
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=800&q=80"
-                  alt="Sargassum seaweed on beach"
-                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/7ff3e7584_image.png"
+                  alt="eaureco ice pack product"
+                  className="relative w-full h-auto rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform" />
 
               </div>
             </motion.div>
