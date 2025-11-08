@@ -185,7 +185,7 @@ We transform this ocean waste into high-performance, sustainable, and cheap ice 
                 </div>
                 <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
-                    <span className="text-lime-600">💚</span> Cost-Effective
+                    <span className="text-lime-600">$</span> Cost-Effective
                   </h4>
                   <p className="text-gray-700">Cheaper than traditional alternatives</p>
                 </div>
