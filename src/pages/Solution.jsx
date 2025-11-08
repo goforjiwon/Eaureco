@@ -1,7 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp } from "lucide-react";
+import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2 } from "lucide-react";
 
 export default function Solution() {
   return (
@@ -201,6 +201,29 @@ export default function Solution() {
               <p className="text-xl text-gray-700 leading-relaxed">
                 <span className="font-bold text-emerald-600">4x faster freezing</span> means your ice packs are ready quicker. 
                 Process more orders and <span className="font-bold text-indigo-600">boost efficiency</span> without extra freezer space.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Easy Disposal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20">
+
+          <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 rounded-3xl shadow-2xl p-10 border border-emerald-100">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Trash2 className="w-8 h-8 text-white" strokeWidth={2.5} />
+              </div>
+              <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
+                Simple Disposal
+              </h2>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                <span className="font-bold text-emerald-600">100% biodegradable</span> from gel to outer package — no cutting, 
+                no separating. Just <span className="font-bold text-teal-600">toss it away</span> and let nature do the rest.
               </p>
             </div>
           </div>

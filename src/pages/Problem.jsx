@@ -137,6 +137,10 @@ export default function Problem() {
                   </div>
                   <div className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Requires cutting and separating for disposal</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <span className="text-gray-700 font-medium">Inefficient for businesses</span>
                   </div>
                 </div>
@@ -173,6 +177,10 @@ export default function Problem() {
                   <div className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                     <span className="text-gray-700 font-medium">Don't last as long as SAP</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                    <span className="text-gray-700 font-medium">Requires cutting and separating for disposal</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <XCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
