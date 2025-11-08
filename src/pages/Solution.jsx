@@ -104,36 +104,36 @@ export default function Solution() {
               {/* Freezes Faster */}
               <div>
                 <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">
-                  Freezes Faster
+                  Freezing Time
                 </h3>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-gray-700">Water</span>
-                      <span className="text-lg font-bold text-gray-900">1.0</span>
+                      <span className="text-lg font-bold text-gray-900">4.0</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
-                      <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '25%' }}></div>
+                      <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '100%' }}></div>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-gray-700">SAP (Plastic)</span>
-                      <span className="text-lg font-bold text-gray-900">1.3</span>
+                      <span className="text-lg font-bold text-gray-900">3.0</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
-                      <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '33%' }}></div>
+                      <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '75%' }}></div>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-bold text-emerald-600">eaureco</span>
-                      <span className="text-lg font-bold text-emerald-600">4.0</span>
+                      <span className="text-lg font-bold text-emerald-600">1.0</span>
                     </div>
                     <div className="h-8 bg-emerald-100 rounded-lg overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-r-lg shadow-inner" style={{ width: '100%' }}></div>
+                      <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-r-lg shadow-inner" style={{ width: '25%' }}></div>
                     </div>
                   </div>
                 </div>
