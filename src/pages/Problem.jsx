@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Trash2 } from "lucide-react";
@@ -88,7 +89,7 @@ export default function Problem() {
             <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">Key Issues</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-14 h-14 bg-gradient-to-br from-red-400 to-red-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">🏭</span>
@@ -106,16 +107,6 @@ export default function Problem() {
               <h3 className="text-xl font-bold mb-3">Non-Biodegradable</h3>
               <p className="text-gray-600">
                 Traditional ice packs take centuries to break down in landfills
-              </p>
-            </div>
-
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
-                <span className="text-3xl">🌊</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Ocean Impact</h3>
-              <p className="text-gray-600">
-                Improper disposal leads to plastic waste entering our oceans and waterways
               </p>
             </div>
           </div>
