@@ -133,8 +133,8 @@ export default function Home() {
                   <img
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
                     alt="eaureco ice pack - Stay cool, Stay green"
-                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300"
-                  />
+                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
+
                 </div>
               </div>
             </motion.div>
@@ -152,10 +152,10 @@ export default function Home() {
                 We turn trash into treasure
               </h3>
               
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Millions of tons of sargassum seaweed wash up on beaches, costing millions 
-                in disposal fees. We transform this ocean waste into high-performance, 
-                sustainable ice packs.
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">Millions of tons of sargassum seaweed wash up on beaches, costing millions in disposal fees.
+We transform this ocean waste into high-performance, sustainable, and cheap ice packs.
+
+
               </p>
 
               <div className="space-y-4">
