@@ -110,7 +110,7 @@ export default function Solution() {
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-gray-700">Water</span>
-                      <span className="text-lg font-bold text-gray-900">0.025</span>
+                      <span className="text-lg font-bold text-gray-900">1.0</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
                       <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '25%' }}></div>
@@ -120,7 +120,7 @@ export default function Solution() {
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-gray-700">SAP (Plastic)</span>
-                      <span className="text-lg font-bold text-gray-900">0.033</span>
+                      <span className="text-lg font-bold text-gray-900">1.3</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
                       <div className="h-full bg-gray-400 rounded-r-lg" style={{ width: '33%' }}></div>
@@ -130,7 +130,7 @@ export default function Solution() {
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-bold text-emerald-600">eaureco</span>
-                      <span className="text-lg font-bold text-emerald-600">0.10</span>
+                      <span className="text-lg font-bold text-emerald-600">4.0</span>
                     </div>
                     <div className="h-8 bg-emerald-100 rounded-lg overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-r-lg shadow-inner" style={{ width: '100%' }}></div>
