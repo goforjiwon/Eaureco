@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Trash2, Skull, Droplets, Snowflake, TrendingDown, XCircle, DollarSign } from "lucide-react";
@@ -187,34 +188,6 @@ export default function Problem() {
           </div>
         </motion.div>
 
-        {/* The Impossible Choice */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl shadow-2xl p-12 text-center">
-            <TrendingDown className="w-16 h-16 text-orange-300 mx-auto mb-6" strokeWidth={2} />
-            <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              The Industry is Stuck
-            </h2>
-            <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Companies must choose between environmental responsibility and operational efficiency
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold text-orange-200 mb-3">Choose Performance?</h3>
-                <p className="text-white/80">Harm the environment with plastic SAP packs</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold text-blue-200 mb-3">Choose Sustainability?</h3>
-                <p className="text-white/80">Sacrifice efficiency and increase costs</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Impact Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -240,6 +213,34 @@ export default function Problem() {
               <div className="text-6xl font-bold neo-text text-gray-500 mb-3">∞</div>
               <p className="text-lg font-semibold text-gray-900 mb-2">Lasting Damage</p>
               <p className="text-gray-600">Microplastics and toxins contaminate ecosystems</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* The Impossible Choice */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl shadow-2xl p-12 text-center">
+            <TrendingDown className="w-16 h-16 text-orange-300 mx-auto mb-6" strokeWidth={2} />
+            <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
+              The Industry is Stuck
+            </h2>
+            <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Companies must choose between environmental responsibility and operational efficiency
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-orange-200 mb-3">Choose Performance?</h3>
+                <p className="text-white/80">Harm the environment with plastic SAP packs</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold text-blue-200 mb-3">Choose Sustainability?</h3>
+                <p className="text-white/80">Sacrifice efficiency and increase costs</p>
+              </div>
             </div>
           </div>
         </motion.div>
