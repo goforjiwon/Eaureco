@@ -205,9 +205,9 @@ export default function Contact() {
               eaureco
             </h2>
             <p className="text-2xl font-bold text-emerald-600 mb-4">Stay Cool, Stay Green</p>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              We're transforming sargassum waste into sustainable ice packs. 
-              Let's work together to create a greener future for food delivery and cold chain logistics.
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">Let's work together to create a greener future 
+for food delivery and cold chain logistics.
+
             </p>
           </div>
         </motion.div>
