@@ -2,8 +2,112 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2 } from "lucide-react";
+import { useLanguage } from "../Layout";
 
 export default function Solution() {
+  const { language } = useLanguage();
+  
+  const translations = {
+    en: {
+      header: {
+        title: "Our Solution",
+        subtitle: "Revolutionizing cold chain by transforming ocean waste"
+      },
+      hero: {
+        badge: "Meet Eaureco",
+        title: "Your sustainable cooling solution",
+        features: [
+          { title: "Organic Ice Pack", desc: "100% biodegradable, both content and packaging" },
+          { title: "Better Thermal Properties", desc: "Superior cooling performance that lasts longer" },
+          { title: "From Ocean Waste", desc: "Made from sargassum seaweed collected from beaches" }
+        ]
+      },
+      performance: {
+        title: "Superior Performance",
+        freezing: "Freezing Time",
+        retention: "Stays Cool for Longer",
+        water: "Water",
+        sap: "SAP (Plastic)",
+        note: "* Experiments conducted in laboratory conditions using 4% solution for SAP and eaureco"
+      },
+      turnover: {
+        title: "Higher Turnover Rate",
+        // The original text had specific words bolded with <span> tags.
+        // For accurate translation and styling, these would ideally be structured differently
+        // (e.g., separate keys for bolded parts or using a rich text component).
+        // Adhering strictly to the provided outline, the desc string here
+        // does not contain those <span> tags.
+        desc: "4x faster freezing means your ice packs are ready quicker. Process more orders and boost efficiency without extra freezer space."
+      },
+      disposal: {
+        title: "Simple Disposal",
+        // Same note as turnover.desc regarding <span> tags.
+        desc: "100% biodegradable from gel to outer package — no cutting, no separating. Just toss it away and let nature do the rest."
+      },
+      sargassum: {
+        badge: "From Waste to Wonder",
+        title: "Millions of tons washed up, millions of wasted tax for disposal",
+        desc: "Sargassum seaweed is a massive environmental problem. It washes up on beaches in enormous quantities, costing communities millions in cleanup and disposal. We transform this waste into a valuable resource."
+      },
+      benefits: {
+        badge: "Why Choose Eaureco",
+        biodegradable: "Biodegradable",
+        biodegradableDesc: "100% biodegradable materials that break down naturally without harming the environment",
+        sustainable: "Sustainable",
+        sustainableDesc: "Made from renewable ocean waste, helping clean up beaches while creating value",
+        costEfficient: "Cost-Efficient",
+        costEfficientDesc: "Competitive pricing that doesn't compromise on performance or sustainability"
+      }
+    },
+    es: {
+      header: {
+        title: "Nuestra Solución",
+        subtitle: "Revolucionando la cadena de frío transformando residuos oceánicos"
+      },
+      hero: {
+        badge: "Conoce Eaureco",
+        title: "Tu solución de enfriamiento sostenible",
+        features: [
+          { title: "Paquete de Hielo Orgánico", desc: "100% biodegradable, tanto contenido como empaque" },
+          { title: "Mejores Propiedades Térmicas", desc: "Rendimiento de enfriamiento superior que dura más" },
+          { title: "De Residuos Oceánicos", desc: "Hecho de algas sargazo recolectadas de las playas" }
+        ]
+      },
+      performance: {
+        title: "Rendimiento Superior",
+        freezing: "Tiempo de Congelación",
+        retention: "Se Mantiene Frío por Más Tiempo",
+        water: "Agua",
+        sap: "SAP (Plástico)",
+        note: "* Experimentos realizados en condiciones de laboratorio usando solución al 4% para SAP y eaureco"
+      },
+      turnover: {
+        title: "Mayor Tasa de Rotación",
+        desc: "La congelación 4 veces más rápida significa que tus paquetes de hielo están listos más rápido. Procesa más pedidos y aumenta la eficiencia sin espacio adicional en el congelador."
+      },
+      disposal: {
+        title: "Eliminación Simple",
+        desc: "100% biodegradable desde el gel hasta el paquete exterior — sin cortar, sin separar. Solo deséchalo y deja que la naturaleza haga el resto."
+      },
+      sargassum: {
+        badge: "De Residuo a Maravilla",
+        title: "Millones de toneladas arrastradas, millones de impuestos desperdiciados en eliminación",
+        desc: "Las algas sargazo son un problema ambiental masivo. Llegan a las playas en cantidades enormes, costando a las comunidades millones en limpieza y eliminación. Transformamos estos residuos en un recurso valioso."
+      },
+      benefits: {
+        badge: "Por Qué Elegir Eaureco",
+        biodegradable: "Biodegradable",
+        biodegradableDesc: "Materiales 100% biodegradables que se descomponen naturalmente sin dañar el medio ambiente",
+        sustainable: "Sostenible",
+        sustainableDesc: "Hecho de residuos oceánicos renovables, ayudando a limpiar las playas mientras se crea valor",
+        costEfficient: "Costo-Eficiente",
+        costEfficientDesc: "Precios competitivos que no comprometen el rendimiento ni la sostenibilidad"
+      }
+    }
+  };
+
+  const t = translations[language];
+
   return (
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -15,11 +119,11 @@ export default function Solution() {
 
           <div className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 rounded-full mb-6 shadow-lg">
             <h1 className="text-5xl md:text-6xl font-bold neo-text text-white">
-              Our Solution
+              {t.header.title}
             </h1>
           </div>
           <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
-            Revolutionizing cold chain by transforming ocean waste
+            {t.header.subtitle}
           </p>
         </motion.div>
 
@@ -33,43 +137,32 @@ export default function Solution() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Meet Eaureco</h2>
+                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">{t.hero.badge}</h2>
               </div>
               
               <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
-                Your sustainable cooling solution
+                {t.hero.title}
               </h3>
 
               <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                    <Leaf className="w-5 h-5 text-white" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">Organic Ice Pack</h4>
-                    <p className="text-gray-600">100% biodegradable, both content and packaging</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                    <Snowflake className="w-5 h-5 text-white" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">Better Thermal Properties</h4>
-                    <p className="text-gray-600">Superior cooling performance that lasts longer</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
-                    <Recycle className="w-5 h-5 text-white" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">From Ocean Waste</h4>
-                    <p className="text-gray-600">Made from sargassum seaweed collected from beaches</p>
-                  </div>
-                </div>
+                {t.hero.features.map((feature, idx) => {
+                  const icons = [Leaf, Snowflake, Recycle];
+                  const colors = ['emerald', 'cyan', 'teal'];
+                  const Icon = icons[idx];
+                  const color = colors[idx];
+                  
+                  return (
+                    <div key={idx} className="flex items-start gap-4">
+                      <div className={`w-10 h-10 bg-gradient-to-br from-${color}-400 to-${color}-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md`}>
+                        <Icon className="w-5 h-5 text-white" strokeWidth={2.5} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
+                        <p className="text-gray-600">{feature.desc}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -97,19 +190,19 @@ export default function Solution() {
 
           <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100">
             <h2 className="text-4xl font-bold neo-text text-gray-900 mb-8 text-center">
-              Superior Performance
+              {t.performance.title}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Freezes Faster */}
               <div>
                 <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">
-                  Freezing Time
+                  {t.performance.freezing}
                 </h3>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-700">Water</span>
+                      <span className="font-semibold text-gray-700">{t.performance.water}</span>
                       <span className="text-lg font-bold text-gray-900">1.0</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
@@ -119,7 +212,7 @@ export default function Solution() {
 
                   <div>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-700">SAP (Plastic)</span>
+                      <span className="font-semibold text-gray-700">{t.performance.sap}</span>
                       <span className="text-lg font-bold text-gray-900">0.76</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
@@ -142,12 +235,12 @@ export default function Solution() {
               {/* Stays Cool Longer */}
               <div>
                 <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-6">
-                  Stays Cool for Longer
+                  {t.performance.retention}
                 </h3>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-700">Water</span>
+                      <span className="font-semibold text-gray-700">{t.performance.water}</span>
                       <span className="text-lg font-bold text-gray-900">180 min</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
@@ -157,7 +250,7 @@ export default function Solution() {
 
                   <div>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-semibold text-gray-700">SAP (Plastic)</span>
+                      <span className="font-semibold text-gray-700">{t.performance.sap}</span>
                       <span className="text-lg font-bold text-gray-900">220 min</span>
                     </div>
                     <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
@@ -178,7 +271,7 @@ export default function Solution() {
               </div>
             </div>
             <p className="text-sm text-gray-500 text-center mt-6">
-              * Experiments conducted in laboratory conditions using 4% solution for SAP and eaureco
+              {t.performance.note}
             </p>
           </div>
         </motion.div>
@@ -196,11 +289,12 @@ export default function Solution() {
                 <TrendingUp className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
               <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
-                Higher Turnover Rate
+                {t.turnover.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                <span className="font-bold text-emerald-600">4x faster freezing</span> means your ice packs are ready quicker. 
-                Process more orders and <span className="font-bold text-indigo-600">boost efficiency</span> without extra freezer space.
+                {/* Note: The original had span tags for bolding. Following the outline,
+                    the translation strings do not contain them, so bolding is lost here. */}
+                {t.turnover.desc}
               </p>
             </div>
           </div>
@@ -219,11 +313,12 @@ export default function Solution() {
                 <Trash2 className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
               <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
-                Simple Disposal
+                {t.disposal.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                <span className="font-bold text-emerald-600">100% biodegradable</span> from gel to outer package — no cutting, 
-                no separating. Just <span className="font-bold text-teal-600">toss it away</span> and let nature do the rest.
+                 {/* Note: The original had span tags for bolding. Following the outline,
+                    the translation strings do not contain them, so bolding is lost here. */}
+                {t.disposal.desc}
               </p>
             </div>
           </div>
@@ -239,17 +334,15 @@ export default function Solution() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block bg-gradient-to-r from-teal-400 to-cyan-400 px-6 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">From Waste to Wonder</h2>
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{t.sargassum.badge}</h2>
               </div>
               
-              <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">Millions of tons washed up, millions of wasted tax for disposal
-
+              <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
+                {t.sargassum.title}
               </h3>
 
               <p className="text-xl text-gray-600 mb-8">
-                Sargassum seaweed is a massive environmental problem. It washes up on beaches 
-                in enormous quantities, costing communities millions in cleanup and disposal. 
-                We transform this waste into a valuable resource.
+                {t.sargassum.desc}
               </p>
             </div>
 
@@ -273,7 +366,7 @@ export default function Solution() {
           viewport={{ once: true }}>
 
           <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">Why Choose Eaureco</h2>
+            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">{t.benefits.badge}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -281,9 +374,9 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">♻️</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Biodegradable</h3>
+              <h3 className="text-xl font-bold mb-3">{t.benefits.biodegradable}</h3>
               <p className="text-gray-600">
-                100% biodegradable materials that break down naturally without harming the environment
+                {t.benefits.biodegradableDesc}
               </p>
             </div>
 
@@ -291,9 +384,9 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">🌱</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Sustainable</h3>
+              <h3 className="text-xl font-bold mb-3">{t.benefits.sustainable}</h3>
               <p className="text-gray-600">
-                Made from renewable ocean waste, helping clean up beaches while creating value
+                {t.benefits.sustainableDesc}
               </p>
             </div>
 
@@ -301,9 +394,9 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Cost-Efficient</h3>
+              <h3 className="text-xl font-bold mb-3">{t.benefits.costEfficient}</h3>
               <p className="text-gray-600">
-                Competitive pricing that doesn't compromise on performance or sustainability
+                {t.benefits.costEfficientDesc}
               </p>
             </div>
           </div>

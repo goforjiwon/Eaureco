@@ -6,8 +6,104 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { base44 } from "@/api/base44Client";
+import { useLanguage } from "../Layout";
 
 export default function Contact() {
+  const { language } = useLanguage();
+  
+  const translations = {
+    en: {
+      header: {
+        title: "Contact Us",
+        subtitle: "Ready to make the switch to sustainable cooling? Let's talk!"
+      },
+      form: {
+        badge: "Send us a Message",
+        name: "Your Name",
+        namePlaceholder: "John Doe",
+        email: "Email Address",
+        emailPlaceholder: "john@company.com",
+        company: "Company Name",
+        companyPlaceholder: "Your Company",
+        message: "Message",
+        messagePlaceholder: "Tell us about your cooling needs...",
+        sending: "Sending...",
+        send: "Send Message",
+        success: "Message Sent!",
+        successDesc: "We'll get back to you as soon as possible."
+      },
+      info: {
+        badge: "Get in Touch",
+        email: "Email",
+        location: "Location",
+        locationValue: "Texas, USA"
+      },
+      why: {
+        badge: "Why Work With Us",
+        sustainable: "Sustainable Solution",
+        sustainableDesc: "100% biodegradable ice packs that help clean our oceans",
+        performance: "Better Performance",
+        performanceDesc: "Superior cooling that lasts longer and freezes faster",
+        cost: "Cost Effective",
+        costDesc: "Competitive pricing without compromising quality"
+      },
+      cta: {
+        title: "Ready to Go Green?",
+        subtitle: "Join us in revolutionizing sustainable cooling solutions"
+      },
+      bottom: {
+        tagline: "Stay Cool, Stay Green",
+        desc: "Let's work together to create a green future for food delivery and cold chain logistics."
+      }
+    },
+    es: {
+      header: {
+        title: "Contáctanos",
+        subtitle: "¿Listo para cambiar a enfriamiento sostenible? ¡Hablemos!"
+      },
+      form: {
+        badge: "Envíanos un Mensaje",
+        name: "Tu Nombre",
+        namePlaceholder: "Juan Pérez",
+        email: "Correo Electrónico",
+        emailPlaceholder: "juan@empresa.com",
+        company: "Nombre de la Empresa",
+        companyPlaceholder: "Tu Empresa",
+        message: "Mensaje",
+        messagePlaceholder: "Cuéntanos sobre tus necesidades de enfriamiento...",
+        sending: "Enviando...",
+        send: "Enviar Mensaje",
+        success: "¡Mensaje Enviado!",
+        successDesc: "Te responderemos lo antes posible."
+      },
+      info: {
+        badge: "Ponte en Contacto",
+        email: "Correo Electrónico",
+        location: "Ubicación",
+        locationValue: "Texas, EE.UU."
+      },
+      why: {
+        badge: "Por Qué Trabajar Con Nosotros",
+        sustainable: "Solución Sostenible",
+        sustainableDesc: "Paquetes de hielo 100% biodegradables que ayudan a limpiar nuestros océanos",
+        performance: "Mejor Rendimiento",
+        performanceDesc: "Enfriamiento superior que dura más y se congela más rápido",
+        cost: "Costo Efectivo",
+        costDesc: "Precios competitivos sin comprometer la calidad"
+      },
+      cta: {
+        title: "¿Listo para Ser Ecológico?",
+        subtitle: "Únete a nosotros en la revolución de soluciones de enfriamiento sostenibles"
+      },
+      bottom: {
+        tagline: "Mantente Fresco, Mantente Verde",
+        desc: "Trabajemos juntos para crear un futuro verde para la entrega de alimentos y la logística de cadena de frío."
+      }
+    }
+  };
+
+  const t = translations[language];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -62,11 +158,11 @@ ${formData.message}
 
           <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-3 rounded-full mb-6 shadow-lg">
             <h1 className="text-5xl md:text-6xl font-bold neo-text text-gray-900">
-              Contact Us
+              {t.header.title}
             </h1>
           </div>
           <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
-            Ready to make the switch to sustainable cooling? Let's talk!
+            {t.header.subtitle}
           </p>
         </motion.div>
 
@@ -79,7 +175,7 @@ ${formData.message}
 
             <div className="nav-glass rounded-2xl shadow-2xl p-8 border border-gray-100">
               <div className="inline-block bg-gradient-to-r from-emerald-400 to-teal-400 px-5 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">Send us a Message</h2>
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{t.form.badge}</h2>
               </div>
 
               {submitted ?
@@ -90,16 +186,16 @@ ${formData.message}
 
                   <CheckCircle className="w-16 h-16 text-emerald-600 mx-auto mb-4" strokeWidth={2} />
                   <h3 className="text-2xl font-bold neo-text text-emerald-600 mb-2">
-                    Message Sent!
+                    {t.form.success}
                   </h3>
                   <p className="text-gray-700 font-medium">
-                    We'll get back to you as soon as possible.
+                    {t.form.successDesc}
                   </p>
                 </motion.div> :
 
               <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block font-semibold mb-2 text-gray-900">Your Name</label>
+                    <label className="block font-semibold mb-2 text-gray-900">{t.form.name}</label>
                     <Input
                     name="name"
                     value={formData.name}
@@ -107,12 +203,12 @@ ${formData.message}
                     required
                     disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
-                    placeholder="John Doe" />
+                    placeholder={t.form.namePlaceholder} />
 
                   </div>
 
                   <div>
-                    <label className="block font-semibold mb-2 text-gray-900">Email Address</label>
+                    <label className="block font-semibold mb-2 text-gray-900">{t.form.email}</label>
                     <Input
                     type="email"
                     name="email"
@@ -121,24 +217,24 @@ ${formData.message}
                     required
                     disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
-                    placeholder="john@company.com" />
+                    placeholder={t.form.emailPlaceholder} />
 
                   </div>
 
                   <div>
-                    <label className="block font-semibold mb-2 text-gray-900">Company Name</label>
+                    <label className="block font-semibold mb-2 text-gray-900">{t.form.company}</label>
                     <Input
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
-                    placeholder="Your Company" />
+                    placeholder={t.form.companyPlaceholder} />
 
                   </div>
 
                   <div>
-                    <label className="block font-semibold mb-2 text-gray-900">Message</label>
+                    <label className="block font-semibold mb-2 text-gray-900">{t.form.message}</label>
                     <Textarea
                     name="message"
                     value={formData.message}
@@ -147,7 +243,7 @@ ${formData.message}
                     disabled={isSubmitting}
                     rows={5}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium resize-none"
-                    placeholder="Tell us about your cooling needs..." />
+                    placeholder={t.form.messagePlaceholder} />
 
                   </div>
 
@@ -157,7 +253,7 @@ ${formData.message}
                   className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl font-bold text-lg py-6 text-white shadow-lg hover:shadow-xl transition-all disabled:opacity-50">
 
                     <Send className="w-5 h-5 mr-2" strokeWidth={2.5} />
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t.form.sending : t.form.send}
                   </Button>
                 </form>
               }
@@ -174,7 +270,7 @@ ${formData.message}
             {/* Contact Info Card */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
               <div className="inline-block bg-gradient-to-r from-cyan-400 to-teal-400 px-5 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">Get in Touch</h2>
+                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{t.info.badge}</h2>
               </div>
 
               <div className="space-y-6">
@@ -183,7 +279,7 @@ ${formData.message}
                     <Mail className="w-6 h-6 text-white" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Email</h3>
+                    <h3 className="font-bold text-lg mb-1">{t.info.email}</h3>
                     <a
                       href="mailto:goforjiwon@kaist.ac.kr"
                       className="text-gray-600 font-medium hover:text-emerald-600 transition-colors">
@@ -198,8 +294,8 @@ ${formData.message}
                     <MapPin className="w-6 h-6 text-white" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Location</h3>
-                    <p className="text-gray-600 font-medium">Texas, USA</p>
+                    <h3 className="font-bold text-lg mb-1">{t.info.location}</h3>
+                    <p className="text-gray-600 font-medium">{t.info.locationValue}</p>
                   </div>
                 </div>
               </div>
@@ -208,28 +304,28 @@ ${formData.message}
             {/* Why Contact Us */}
             <div className="nav-glass rounded-2xl shadow-xl p-8 border border-gray-100">
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-5 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Why Work With Us</h2>
+                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">{t.why.badge}</h2>
               </div>
 
               <div className="space-y-4">
                 <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">🌱 Sustainable Solution</h4>
+                  <h4 className="font-bold mb-2">🌱 {t.why.sustainable}</h4>
                   <p className="text-sm text-gray-600">
-                    100% biodegradable ice packs that help clean our oceans
+                    {t.why.sustainableDesc}
                   </p>
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">⚡ Better Performance</h4>
+                  <h4 className="font-bold mb-2">⚡ {t.why.performance}</h4>
                   <p className="text-sm text-gray-600">
-                    Superior cooling that lasts longer and freezes faster
+                    {t.why.performanceDesc}
                   </p>
                 </div>
 
                 <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
-                  <h4 className="font-bold mb-2">💰 Cost Effective</h4>
+                  <h4 className="font-bold mb-2">💰 {t.why.cost}</h4>
                   <p className="text-sm text-gray-600">
-                    Competitive pricing without compromising quality
+                    {t.why.costDesc}
                   </p>
                 </div>
               </div>
@@ -238,10 +334,10 @@ ${formData.message}
             {/* CTA Box */}
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl shadow-xl p-8 text-center">
               <h3 className="text-3xl font-bold neo-text text-white mb-4">
-                Ready to Go Green?
+                {t.cta.title}
               </h3>
               <p className="text-white/90 font-medium text-lg">
-                Join us in revolutionizing sustainable cooling solutions
+                {t.cta.subtitle}
               </p>
             </div>
           </motion.div>
@@ -258,11 +354,8 @@ ${formData.message}
             <h2 className="text-4xl font-bold neo-text text-gray-900 mb-2">
               eaureco
             </h2>
-            <p className="text-2xl font-bold text-emerald-600 mb-4">Stay Cool, Stay Green</p>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">Let's work together to create a green future 
-for food delivery and cold chain logistics.
-
-            </p>
+            <p className="text-2xl font-bold text-emerald-600 mb-4">{t.bottom.tagline}</p>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t.bottom.desc}</p>
           </div>
         </motion.div>
       </div>
