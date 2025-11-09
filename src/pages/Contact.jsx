@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { base44 } from "@/api/base44Client";
 import { useLanguage } from "../Layout";
+import { toast } from "sonner";
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -30,7 +31,8 @@ export default function Contact() {
         sending: "Sending...",
         send: "Send Message",
         success: "Message Sent!",
-        successDesc: "We'll get back to you as soon as possible."
+        successDesc: "We'll get back to you as soon as possible.",
+        error: "Failed to send message. Please try again."
       },
       info: {
         badge: "Get in Touch",
@@ -74,7 +76,8 @@ export default function Contact() {
         sending: "Enviando...",
         send: "Enviar Mensaje",
         success: "¡Mensaje Enviado!",
-        successDesc: "Te responderemos lo antes posible."
+        successDesc: "Te responderemos lo antes posible.",
+        error: "Error al enviar mensaje. Por favor intenta de nuevo."
       },
       info: {
         badge: "Ponte en Contacto",
@@ -117,27 +120,38 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Send email using the SendEmail integration
-    await base44.integrations.Core.SendEmail({
-      from_name: "Eaureco Contact Form",
-      to: "goforjiwon@kaist.ac.kr",
-      subject: `New Contact Form Message from ${formData.name}`,
-      body: `
+    try {
+      // Send email using the SendEmail integration
+      await base44.integrations.Core.SendEmail({
+        from_name: "Eaureco Contact Form",
+        to: "goforjiwon@kaist.ac.kr",
+        subject: `New Contact Form Message from ${formData.name}`,
+        body: `
 Name: ${formData.name}
 Email: ${formData.email}
 Company: ${formData.company || "Not provided"}
 
 Message:
 ${formData.message}
-      `
-    });
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", company: "", message: "" });
-    }, 3000);
+
+---
+Sent from eaureco website contact form
+        `
+      });
+      
+      setSubmitted(true);
+      toast.success(t.form.success);
+      
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", company: "", message: "" });
+      }, 3000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error(t.form.error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
