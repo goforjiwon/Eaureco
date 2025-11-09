@@ -36,7 +36,7 @@ export default function Contact() {
         badge: "Get in Touch",
         email: "Email",
         location: "Location",
-        locationValue: "Texas, USA"
+        locationValue: "Daejeon, South Korea"
       },
       why: {
         badge: "Why Work With Us",
@@ -80,7 +80,7 @@ export default function Contact() {
         badge: "Ponte en Contacto",
         email: "Correo Electrónico",
         location: "Ubicación",
-        locationValue: "Texas, EE.UU."
+        locationValue: "Daejeon, Corea del Sur"
       },
       why: {
         badge: "Por Qué Trabajar Con Nosotros",
