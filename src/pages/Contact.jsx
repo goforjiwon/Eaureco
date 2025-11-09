@@ -371,6 +371,13 @@ Sent from eaureco website contact form
             <p className="text-2xl font-bold text-emerald-600 mb-4">{t.bottom.tagline}</p>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t.bottom.desc}</p>
           </div>
+          
+          {/* Copyright Notice */}
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600">
+              © 2025 eaureco. All rights reserved. Content may not be copied or reproduced without permission.
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>);
