@@ -1,9 +1,11 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { base44 } from "@/api/base44Client";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,10 +15,28 @@ export default function Contact() {
     message: ""
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    
+    // Send email using the SendEmail integration
+    await base44.integrations.Core.SendEmail({
+      from_name: "Eaureco Contact Form",
+      to: "goforjiwon@kaist.ac.kr",
+      subject: `New Contact Form Message from ${formData.name}`,
+      body: `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || "Not provided"}
+
+Message:
+${formData.message}
+      `
+    });
+    
+    setIsSubmitting(false);
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -85,6 +105,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                     placeholder="John Doe" />
 
@@ -98,6 +119,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                     placeholder="john@company.com" />
 
@@ -109,6 +131,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
+                    disabled={isSubmitting}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium"
                     placeholder="Your Company" />
 
@@ -121,6 +144,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                     rows={5}
                     className="border-2 border-gray-200 focus:border-emerald-500 rounded-xl bg-white font-medium resize-none"
                     placeholder="Tell us about your cooling needs..." />
@@ -129,10 +153,11 @@ export default function Contact() {
 
                   <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl font-bold text-lg py-6 text-white shadow-lg hover:shadow-xl transition-all">
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 rounded-xl font-bold text-lg py-6 text-white shadow-lg hover:shadow-xl transition-all disabled:opacity-50">
 
                     <Send className="w-5 h-5 mr-2" strokeWidth={2.5} />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               }
