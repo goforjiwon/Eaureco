@@ -1,7 +1,8 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ArrowRight, Recycle, Snowflake, Leaf } from "lucide-react";
+import { ArrowRight, Recycle, Snowflake, Leaf, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../Layout";
 
