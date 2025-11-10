@@ -17,10 +17,8 @@ export default function Contact() {
         badge: "Get in Touch",
         email: "Email Us",
         emailValue: "goforjiwon@kaist.ac.kr",
-        emailDesc: "Send us an email and we'll respond as soon as possible",
         phone: "Call Us",
         phoneValue: "+82 10 9404 1548",
-        phoneDesc: "Give us a call during business hours",
         location: "Location",
         locationValue: "Daejeon, South Korea",
         locationDesc: "Visit us at KAIST campus"
@@ -61,10 +59,8 @@ export default function Contact() {
         badge: "Ponte en Contacto",
         email: "Envíanos un Email",
         emailValue: "goforjiwon@kaist.ac.kr",
-        emailDesc: "Envíanos un correo y responderemos lo antes posible",
         phone: "Llámanos",
         phoneValue: "+82 10 9404 1548",
-        phoneDesc: "Llámanos durante el horario de oficina",
         location: "Ubicación",
         locationValue: "Daejeon, Corea del Sur",
         locationDesc: "Visítanos en el campus KAIST"
@@ -136,13 +132,10 @@ export default function Contact() {
               </h2>
               <a
                 href="mailto:goforjiwon@kaist.ac.kr"
-                className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors mb-4"
+                className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
               >
                 {t.info.emailValue}
               </a>
-              <p className="text-center text-gray-600 font-medium">
-                {t.info.emailDesc}
-              </p>
             </div>
           </motion.div>
 
@@ -162,13 +155,10 @@ export default function Contact() {
               </h2>
               <a
                 href="tel:+821094041548"
-                className="block text-center text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors mb-4"
+                className="block text-center text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
                 {t.info.phoneValue}
               </a>
-              <p className="text-center text-gray-600 font-medium">
-                {t.info.phoneDesc}
-              </p>
             </div>
           </motion.div>
 
@@ -188,6 +178,9 @@ export default function Contact() {
               </h2>
               <p className="text-center text-xl font-bold text-cyan-600 mb-4">
                 {t.info.locationValue}
+              </p>
+              <p className="text-center text-gray-600 font-medium">
+                {t.info.locationDesc}
               </p>
             </div>
           </motion.div>
