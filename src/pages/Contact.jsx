@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, MessageSquare } from "lucide-react";
@@ -187,9 +188,6 @@ export default function Contact() {
               </h2>
               <p className="text-center text-xl font-bold text-cyan-600 mb-4">
                 {t.info.locationValue}
-              </p>
-              <p className="text-center text-gray-600 font-medium">
-                {t.info.locationDesc}
               </p>
             </div>
           </motion.div>
