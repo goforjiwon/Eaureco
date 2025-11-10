@@ -176,13 +176,13 @@ export default function Problem() {
 
           <div className="grid lg:grid-cols-3 gap-6">
             {/* SAP Ice Packs */}
-            <div className="bg-white rounded-2xl shadow-xl border border-red-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl border border-red-100 overflow-hidden h-full flex flex-col">
               <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 text-center border-b border-red-100">
                 <Skull className="w-12 h-12 text-red-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.sap.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.sap.subtitle}</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <div className="space-y-4 mb-6">
                   {t.options.sap.pros.map((pro, idx) => (
                     <div key={idx} className="flex items-center gap-3 bg-emerald-50 p-3 rounded-lg border border-emerald-100">
@@ -205,13 +205,13 @@ export default function Problem() {
             </div>
 
             {/* Water Ice Packs */}
-            <div className="bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden h-full flex flex-col">
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 text-center border-b border-blue-100">
                 <Droplets className="w-12 h-12 text-blue-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.water.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.water.subtitle}</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <div className="space-y-4 mb-6">
                   {t.options.water.pros.map((pro, idx) => (
                     <div key={idx} className="flex items-center gap-3 bg-emerald-50 p-3 rounded-lg border border-emerald-100">
@@ -234,13 +234,13 @@ export default function Problem() {
             </div>
 
             {/* Other Eco Packs */}
-            <div className="bg-white rounded-2xl shadow-xl border border-amber-100 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-xl border border-amber-100 overflow-hidden h-full flex flex-col">
               <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 text-center border-b border-amber-100">
                 <DollarSign className="w-12 h-12 text-amber-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.eco.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.eco.subtitle}</p>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <div className="space-y-4 mb-6">
                   {t.options.eco.pros.map((pro, idx) => (
                     <div key={idx} className="flex items-center gap-3 bg-emerald-50 p-3 rounded-lg border border-emerald-100">
