@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Trash2, Skull, Droplets, Snowflake, TrendingDown, XCircle, DollarSign } from "lucide-react";
@@ -22,7 +23,7 @@ export default function Problem() {
         subtitle: "Every existing solution has critical flaws",
         sap: {
           title: "SAP Ice Packs",
-          subtitle: "Plastic-based polymers",
+          subtitle: "Super Absorbent Polymer - Plastic-based polymers",
           pros: ["Good performance", "Long lasting"],
           cons: ["Toxic to nature", "Clogs sewage plants", "Ends up in landfills", "Takes 100+ years to decompose"]
         },
@@ -77,7 +78,7 @@ export default function Problem() {
         subtitle: "Cada solución existente tiene fallas críticas",
         sap: {
           title: "Paquetes SAP",
-          subtitle: "Polímeros a base de plástico",
+          subtitle: "Polímero Superabsorbente - Polímeros a base de plástico",
           pros: ["Buen rendimiento", "Larga duración"],
           cons: ["Tóxico para la naturaleza", "Obstruye plantas de aguas residuales", "Termina en vertederos", "Tarda más de 100 años en descomponerse"]
         },
