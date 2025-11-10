@@ -17,6 +17,9 @@ export default function Contact() {
         email: "Email Us",
         emailValue: "goforjiwon@kaist.ac.kr",
         emailDesc: "Send us an email and we'll respond as soon as possible",
+        phone: "Call Us",
+        phoneValue: "+82 10 9404 1548",
+        phoneDesc: "Give us a call during business hours",
         location: "Location",
         locationValue: "Daejeon, South Korea",
         locationDesc: "Visit us at KAIST campus"
@@ -41,7 +44,7 @@ export default function Contact() {
       },
       cta: {
         title: "Ready to Go Green?",
-        subtitle: "Reach out to us at goforjiwon@kaist.ac.kr to start your sustainable cooling journey"
+        subtitle: "Reach out to us at goforjiwon@kaist.ac.kr or call +82 10 9404 1548 to start your sustainable cooling journey"
       },
       bottom: {
         tagline: "Stay Cool, Stay Green",
@@ -58,6 +61,9 @@ export default function Contact() {
         email: "Envíanos un Email",
         emailValue: "goforjiwon@kaist.ac.kr",
         emailDesc: "Envíanos un correo y responderemos lo antes posible",
+        phone: "Llámanos",
+        phoneValue: "+82 10 9404 1548",
+        phoneDesc: "Llámanos durante el horario de oficina",
         location: "Ubicación",
         locationValue: "Daejeon, Corea del Sur",
         locationDesc: "Visítanos en el campus KAIST"
@@ -82,7 +88,7 @@ export default function Contact() {
       },
       cta: {
         title: "¿Listo para Ser Ecológico?",
-        subtitle: "Contáctanos en goforjiwon@kaist.ac.kr para comenzar tu viaje de enfriamiento sostenible"
+        subtitle: "Contáctanos en goforjiwon@kaist.ac.kr o llama al +82 10 9404 1548 para comenzar tu viaje de enfriamiento sostenible"
       },
       bottom: {
         tagline: "Mantente Fresco, Mantente Verde",
@@ -113,7 +119,7 @@ export default function Contact() {
         </motion.div>
 
         {/* Main Contact Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Email Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -129,7 +135,7 @@ export default function Contact() {
               </h2>
               <a
                 href="mailto:goforjiwon@kaist.ac.kr"
-                className="block text-center text-2xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors mb-4"
+                className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors mb-4"
               >
                 {t.info.emailValue}
               </a>
@@ -139,12 +145,38 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Location Card */}
+          {/* Phone Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
+          >
+            <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Phone className="w-8 h-8 text-white" strokeWidth={2.5} />
+              </div>
+              <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
+                {t.info.phone}
+              </h2>
+              <a
+                href="tel:+821094041548"
+                className="block text-center text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors mb-4"
+              >
+                {t.info.phoneValue}
+              </a>
+              <p className="text-center text-gray-600 font-medium">
+                {t.info.phoneDesc}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Location Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -153,7 +185,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
                 {t.info.location}
               </h2>
-              <p className="text-center text-2xl font-bold text-cyan-600 mb-4">
+              <p className="text-center text-xl font-bold text-cyan-600 mb-4">
                 {t.info.locationValue}
               </p>
               <p className="text-center text-gray-600 font-medium">
