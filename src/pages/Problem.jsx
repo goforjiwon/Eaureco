@@ -23,7 +23,7 @@ export default function Problem() {
         subtitle: "Every existing solution has critical flaws",
         sap: {
           title: "SAP Ice Packs",
-          subtitle: "Super Absorbent Polymer - Plastic-based polymers",
+          subtitle: "Super Absorbent Polymer -\nPlastic-based polymers", // Modified line
           pros: ["Good performance", "Long lasting"],
           cons: ["Toxic to nature", "Clogs sewage plants", "Ends up in landfills", "Takes 100+ years to decompose"]
         },
@@ -78,7 +78,7 @@ export default function Problem() {
         subtitle: "Cada solución existente tiene fallas críticas",
         sap: {
           title: "Paquetes SAP",
-          subtitle: "Polímero Superabsorbente - Polímeros a base de plástico",
+          subtitle: "Polímero Superabsorbente -\nPolímeros a base de plástico", // Modified line
           pros: ["Buen rendimiento", "Larga duración"],
           cons: ["Tóxico para la naturaleza", "Obstruye plantas de aguas residuales", "Termina en vertederos", "Tarda más de 100 años en descomponerse"]
         },
@@ -180,7 +180,7 @@ export default function Problem() {
               <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 text-center border-b border-red-100 h-[200px] flex flex-col justify-center">
                 <Skull className="w-12 h-12 text-red-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.sap.title}</h3>
-                <p className="text-gray-600 text-sm mt-2">{t.options.sap.subtitle}</p>
+                <p className="text-gray-600 text-sm mt-2 whitespace-pre-line">{t.options.sap.subtitle}</p> {/* Added whitespace-pre-line to handle \n */}
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <div className="space-y-4 mb-6">
