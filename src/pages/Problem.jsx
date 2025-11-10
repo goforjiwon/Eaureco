@@ -177,7 +177,7 @@ export default function Problem() {
           <div className="grid lg:grid-cols-3 gap-6">
             {/* SAP Ice Packs */}
             <div className="bg-white rounded-2xl shadow-xl border border-red-100 overflow-hidden h-full flex flex-col">
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 text-center border-b border-red-100">
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 text-center border-b border-red-100 min-h-[180px] flex flex-col justify-center">
                 <Skull className="w-12 h-12 text-red-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.sap.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.sap.subtitle}</p>
@@ -206,7 +206,7 @@ export default function Problem() {
 
             {/* Water Ice Packs */}
             <div className="bg-white rounded-2xl shadow-xl border border-blue-100 overflow-hidden h-full flex flex-col">
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 text-center border-b border-blue-100">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 text-center border-b border-blue-100 min-h-[180px] flex flex-col justify-center">
                 <Droplets className="w-12 h-12 text-blue-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.water.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.water.subtitle}</p>
@@ -235,7 +235,7 @@ export default function Problem() {
 
             {/* Other Eco Packs */}
             <div className="bg-white rounded-2xl shadow-xl border border-amber-100 overflow-hidden h-full flex flex-col">
-              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 text-center border-b border-amber-100">
+              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 p-6 text-center border-b border-amber-100 min-h-[180px] flex flex-col justify-center">
                 <DollarSign className="w-12 h-12 text-amber-500 mx-auto mb-3" strokeWidth={2.5} />
                 <h3 className="text-2xl font-bold text-gray-900">{t.options.eco.title}</h3>
                 <p className="text-gray-600 text-sm mt-2">{t.options.eco.subtitle}</p>
