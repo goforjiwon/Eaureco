@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, MessageSquare } from "lucide-react";
@@ -32,15 +31,6 @@ export default function Contact() {
         cost: "Cost Effective",
         costDesc: "Competitive pricing without compromising quality"
       },
-      approach: {
-        badge: "How We Work",
-        consultation: "Free Consultation",
-        consultationDesc: "We'll discuss your cooling needs and challenges",
-        custom: "Custom Solution",
-        customDesc: "We tailor our ice packs to your specific requirements",
-        support: "Ongoing Support",
-        supportDesc: "We're here to help you succeed with sustainable cooling"
-      },
       cta: {
         title: "Ready to Go Green?",
         subtitle: "Reach out to us at goforjiwon@kaist.ac.kr or call +82 10 9404 1548 to start your sustainable cooling journey"
@@ -73,15 +63,6 @@ export default function Contact() {
         performanceDesc: "Enfriamiento superior que dura más y se congela más rápido",
         cost: "Costo Efectivo",
         costDesc: "Precios competitivos sin comprometer la calidad"
-      },
-      approach: {
-        badge: "Cómo Trabajamos",
-        consultation: "Consulta Gratis",
-        consultationDesc: "Discutiremos tus necesidades y desafíos de enfriamiento",
-        custom: "Solución Personalizada",
-        customDesc: "Adaptamos nuestros paquetes de hielo a tus requisitos específicos",
-        support: "Soporte Continuo",
-        supportDesc: "Estamos aquí para ayudarte a tener éxito con el enfriamiento sostenible"
       },
       cta: {
         title: "¿Listo para Ser Ecológico?",
@@ -219,50 +200,6 @@ export default function Contact() {
               <h3 className="text-xl font-bold mb-3 text-center">{t.why.cost}</h3>
               <p className="text-gray-600 text-center">
                 {t.why.costDesc}
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* How We Work */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="inline-block bg-gradient-to-r from-cyan-400 to-teal-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-white uppercase tracking-wider">{t.approach.badge}</h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                1
-              </div>
-              <h3 className="text-xl font-bold mb-3">{t.approach.consultation}</h3>
-              <p className="text-gray-600">
-                {t.approach.consultationDesc}
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                2
-              </div>
-              <h3 className="text-xl font-bold mb-3">{t.approach.custom}</h3>
-              <p className="text-gray-600">
-                {t.approach.customDesc}
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
-                3
-              </div>
-              <h3 className="text-xl font-bold mb-3">{t.approach.support}</h3>
-              <p className="text-gray-600">
-                {t.approach.supportDesc}
               </p>
             </div>
           </div>
