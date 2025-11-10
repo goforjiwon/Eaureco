@@ -31,10 +31,6 @@ export default function Contact() {
         cost: "Cost Effective",
         costDesc: "Competitive pricing without compromising quality"
       },
-      cta: {
-        title: "Ready to Go Green?",
-        subtitle: "Reach out to us at goforjiwon@kaist.ac.kr or call +82 10 9404 1548 to start your sustainable cooling journey"
-      },
       bottom: {
         tagline: "Stay Cool, Stay Green",
         desc: "Let's work together to create a green future for food delivery and cold chain logistics."
@@ -63,10 +59,6 @@ export default function Contact() {
         performanceDesc: "Enfriamiento superior que dura más y se congela más rápido",
         cost: "Costo Efectivo",
         costDesc: "Precios competitivos sin comprometer la calidad"
-      },
-      cta: {
-        title: "¿Listo para Ser Ecológico?",
-        subtitle: "Contáctanos en goforjiwon@kaist.ac.kr o llama al +82 10 9404 1548 para comenzar tu viaje de enfriamiento sostenible"
       },
       bottom: {
         tagline: "Mantente Fresco, Mantente Verde",
@@ -202,23 +194,6 @@ export default function Contact() {
                 {t.why.costDesc}
               </p>
             </div>
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              {t.cta.title}
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              {t.cta.subtitle}
-            </p>
           </div>
         </motion.div>
 
