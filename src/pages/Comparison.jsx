@@ -96,7 +96,7 @@ export default function Comparison() {
       eaureco: true,
       sap: false,
       water: false,
-      compost: true,
+      compost: "Plastic package",
     },
     {
       feature: t.table.freezing,
