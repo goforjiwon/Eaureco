@@ -315,10 +315,7 @@ export default function Comparison() {
                             <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} />
                           )
                         ) : (
-                          <div className="flex items-center justify-center gap-2">
-                            <XCircle className="w-5 h-5 text-red-500" strokeWidth={2.5} />
-                            <span className="font-medium text-gray-700">{row.compost}</span>
-                          </div>
+                          <span className="font-medium text-gray-700">{row.compost}</span>
                         )}
                       </td>
                     </tr>
