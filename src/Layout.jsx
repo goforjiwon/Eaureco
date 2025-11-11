@@ -19,6 +19,11 @@ export default function Layout({ children, currentPageName }) {
     localStorage.setItem('language', language);
   }, [language]);
 
+  // Scroll to top when location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'es' : 'en');
   };
