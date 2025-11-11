@@ -39,7 +39,8 @@ export default function Comparison() {
         reusable: "Reusable",
         positive: "Positive",
         negative: "Negative",
-        neutral: "Neutral"
+        neutral: "Neutral",
+        compostImpact: "Positive (but plastic package)"
       },
       summary: {
         title: "The Clear Winner",
@@ -78,7 +79,8 @@ export default function Comparison() {
         reusable: "Reutilizable",
         positive: "Positivo",
         negative: "Negativo",
-        neutral: "Neutral"
+        neutral: "Neutral",
+        compostImpact: "Positivo (pero empaque plástico)"
       },
       summary: {
         title: "El Claro Ganador",
@@ -124,7 +126,7 @@ export default function Comparison() {
       eaureco: t.table.positive,
       sap: t.table.negative,
       water: t.table.neutral,
-      compost: t.table.positive,
+      compost: t.table.compostImpact,
     },
   ];
 
