@@ -115,7 +115,7 @@ export default function Comparison() {
     {
       feature: t.table.cost,
       eaureco: true,
-      sap: true, // Changed from false to true
+      sap: true,
       water: true,
       compost: false,
     },
@@ -125,13 +125,6 @@ export default function Comparison() {
       sap: t.table.negative,
       water: t.table.neutral,
       compost: t.table.positive,
-    },
-    {
-      feature: t.table.reusable,
-      eaureco: true,
-      sap: true,
-      water: true,
-      compost: false,
     },
   ];
 
