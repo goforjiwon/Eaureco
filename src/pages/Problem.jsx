@@ -14,7 +14,7 @@ export default function Problem() {
         subtitle: "The cold chain industry is stuck with unsustainable options"
       },
       scale: {
-        line1: "1 Billion ice pack units/year in circulation",
+        line1: "1 Billion ice pack units/year circulating",
         line2: "in North America alone"
       },
       options: {
@@ -68,7 +68,7 @@ export default function Problem() {
         subtitle: "La industria de la cadena de frío está atrapada con opciones insostenibles"
       },
       scale: {
-        line1: "1 Billón de unidades de paquetes de hielo/año en circulación",
+        line1: "1 Billón de unidades de paquetes de hielo/año circulando",
         line2: "solo en América del Norte"
       },
       options: {
