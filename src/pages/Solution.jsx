@@ -1,7 +1,6 @@
-
 import React from "react";
 import { motion } from "framer-motion";
-import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2 } from "lucide-react";
+import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2, Globe } from "lucide-react";
 import { useLanguage } from "../Layout";
 
 export default function Solution() {
@@ -32,16 +31,10 @@ export default function Solution() {
       },
       turnover: {
         title: "Higher Turnover Rate",
-        // The original text had specific words bolded with <span> tags.
-        // For accurate translation and styling, these would ideally be structured differently
-        // (e.g., separate keys for bolded parts or using a rich text component).
-        // Adhering strictly to the provided outline, the desc string here
-        // does not contain those <span> tags.
         desc: "4x faster freezing means your ice packs are ready quicker. Process more orders and boost efficiency without extra freezer space."
       },
       disposal: {
         title: "Simple Disposal",
-        // Same note as turnover.desc regarding <span> tags.
         desc: "100% biodegradable from gel to outer package — no cutting, no separating. Just toss it away and let nature do the rest."
       },
       sargassum: {
@@ -57,6 +50,14 @@ export default function Solution() {
         sustainableDesc: "Made from renewable ocean waste, helping clean up beaches while creating value",
         costEfficient: "Cost-Efficient",
         costEfficientDesc: "Competitive pricing that doesn't compromise on performance or sustainability"
+      },
+      impact: {
+        badge: "Environmental Impact",
+        title: "The Power of Switching to Eaureco",
+        subtitle: "By replacing just 50% of ice packs in North America",
+        co2: "CO₂-equivalent/year",
+        credit: "Carbon Credit",
+        desc: "Join the movement towards a sustainable future"
       }
     },
     es: {
@@ -102,6 +103,14 @@ export default function Solution() {
         sustainableDesc: "Hecho de residuos oceánicos renovables, ayudando a limpiar las playas mientras se crea valor",
         costEfficient: "Costo-Eficiente",
         costEfficientDesc: "Precios competitivos que no comprometen el rendimiento ni la sostenibilidad"
+      },
+      impact: {
+        badge: "Impacto Ambiental",
+        title: "El Poder de Cambiar a Eaureco",
+        subtitle: "Al reemplazar solo el 50% de los paquetes de hielo en América del Norte",
+        co2: "equivalente-CO₂/año",
+        credit: "Crédito de Carbono",
+        desc: "Únete al movimiento hacia un futuro sostenible"
       }
     }
   };
@@ -292,8 +301,6 @@ export default function Solution() {
                 {t.turnover.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                {/* Note: The original had span tags for bolding. Following the outline,
-                    the translation strings do not contain them, so bolding is lost here. */}
                 {t.turnover.desc}
               </p>
             </div>
@@ -316,8 +323,6 @@ export default function Solution() {
                 {t.disposal.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                 {/* Note: The original had span tags for bolding. Following the outline,
-                    the translation strings do not contain them, so bolding is lost here. */}
                 {t.disposal.desc}
               </p>
             </div>
@@ -363,7 +368,8 @@ export default function Solution() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}>
+          viewport={{ once: true }}
+          className="mb-20">
 
           <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
             <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">{t.benefits.badge}</h2>
@@ -397,6 +403,53 @@ export default function Solution() {
               <h3 className="text-xl font-bold mb-3">{t.benefits.costEfficient}</h3>
               <p className="text-gray-600">
                 {t.benefits.costEfficientDesc}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Environmental Impact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}>
+
+          <div className="inline-block bg-gradient-to-r from-green-400 to-emerald-400 px-6 py-2 rounded-full mb-8 shadow-md">
+            <h2 className="text-lg font-bold text-white uppercase tracking-wider">{t.impact.badge}</h2>
+          </div>
+
+          <div 
+            className="relative rounded-3xl shadow-2xl overflow-hidden"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80')",
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-green-900/85 to-teal-900/90"></div>
+            
+            <div className="relative z-10 p-12 text-center">
+              <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">
+                {t.impact.title}
+              </h2>
+              <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+                {t.impact.subtitle}
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="text-7xl md:text-8xl font-bold neo-text text-white mb-2">2.54M</div>
+                  <p className="text-2xl font-semibold text-white/90 mb-1">tons</p>
+                  <p className="text-lg text-white/80">{t.impact.co2}</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <div className="text-5xl md:text-6xl font-bold neo-text text-lime-300 mb-3">US$ 12.7M</div>
+                  <p className="text-2xl font-semibold text-white/90">{t.impact.credit}</p>
+                </div>
+              </div>
+
+              <p className="text-xl text-white/90 font-medium">
+                {t.impact.desc}
               </p>
             </div>
           </div>
