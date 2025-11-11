@@ -100,10 +100,10 @@ export default function Comparison() {
     },
     {
       feature: t.table.freezing,
-      eaureco: "0.10",
-      sap: "0.033",
-      water: "0.025",
-      compost: "0.05",
+      eaureco: "0.25",
+      sap: "0.76",
+      water: "1.0",
+      compost: "0.5",
     },
     {
       feature: t.table.retention,
