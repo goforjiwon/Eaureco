@@ -14,16 +14,14 @@ export default function Problem() {
         subtitle: "The cold chain industry is stuck with unsustainable options"
       },
       scale: {
-        number: "1 Billion per year",
-        title: "Ice packs in circulation",
-        subtitle: "In North America alone"
+        text: "1 Billion ice pack units in circulation per year in North America alone"
       },
       options: {
         title: "Today's Options",
         subtitle: "Every existing solution has critical flaws",
         sap: {
           title: "SAP Ice Packs",
-          subtitle: "Super Absorbent Polymer -\nPlastic-based polymers", // Modified line
+          subtitle: "Super Absorbent Polymer -\nPlastic-based polymers",
           pros: ["Good performance", "Long lasting"],
           cons: ["Toxic to nature", "Clogs sewage plants", "Ends up in landfills", "Takes 100+ years to decompose"]
         },
@@ -69,16 +67,14 @@ export default function Problem() {
         subtitle: "La industria de la cadena de frío está atrapada con opciones insostenibles"
       },
       scale: {
-        number: "1 Billón por año",
-        title: "Paquetes de hielo en circulación",
-        subtitle: "Solo en América del Norte"
+        text: "1 Billón de unidades de paquetes de hielo en circulación por año solo en América del Norte"
       },
       options: {
         title: "Opciones Actuales",
         subtitle: "Cada solución existente tiene fallas críticas",
         sap: {
           title: "Paquetes SAP",
-          subtitle: "Polímero Superabsorbente -\nPolímeros a base de plástico", // Modified line
+          subtitle: "Polímero Superabsorbente -\nPolímeros a base de plástico",
           pros: ["Buen rendimiento", "Larga duración"],
           cons: ["Tóxico para la naturaleza", "Obstruye plantas de aguas residuales", "Termina en vertederos", "Tarda más de 100 años en descomponerse"]
         },
@@ -150,12 +146,8 @@ export default function Problem() {
         >
           <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl shadow-2xl p-12 text-center border border-orange-200">
             <AlertTriangle className="w-16 h-16 text-orange-600 mx-auto mb-6" strokeWidth={2} />
-            <div className="text-7xl font-bold neo-text text-gray-900 mb-4">{t.scale.number}</div>
-            <p className="text-3xl font-bold text-gray-900 mb-2">
-              {t.scale.title}
-            </p>
-            <p className="text-xl text-gray-700">
-              {t.scale.subtitle}
+            <p className="text-3xl md:text-4xl font-bold neo-text text-gray-900 max-w-4xl mx-auto leading-tight">
+              {t.scale.text}
             </p>
           </div>
         </motion.div>
