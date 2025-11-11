@@ -103,7 +103,7 @@ export default function Comparison() {
       eaureco: "0.25",
       sap: "0.76",
       water: "1.0",
-      compost: "0.5",
+      compost: ">1",
     },
     {
       feature: t.table.retention,
