@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -81,7 +82,7 @@ export default function Layout({ children, currentPageName }) {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center gap-1">
                 {navItems.map((item) => {
-                  const isActive = location.pathname === createPageUrl(item.path);
+                  const isActive = location.pathname === createPageUrl(item.path) || (item.path === "Home" && location.pathname === "/");
                   const Icon = item.icon;
                   return (
                     <Link
@@ -121,7 +122,7 @@ export default function Layout({ children, currentPageName }) {
             {/* Mobile Navigation */}
             <div className="md:hidden mt-4 pt-4 border-t border-gray-200 grid grid-cols-2 gap-2">
               {navItems.map((item) => {
-                const isActive = location.pathname === createPageUrl(item.path);
+                const isActive = location.pathname === createPageUrl(item.path) || (item.path === "Home" && location.pathname === "/");
                 const Icon = item.icon;
                 return (
                   <Link
