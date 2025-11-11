@@ -14,7 +14,8 @@ export default function Problem() {
         subtitle: "The cold chain industry is stuck with unsustainable options"
       },
       scale: {
-        text: "1 Billion ice pack units in circulation per year in North America alone"
+        line1: "1 Billion ice pack units/year in circulation",
+        line2: "in North America alone"
       },
       options: {
         title: "Today's Options",
@@ -67,7 +68,8 @@ export default function Problem() {
         subtitle: "La industria de la cadena de frío está atrapada con opciones insostenibles"
       },
       scale: {
-        text: "1 Billón de unidades de paquetes de hielo en circulación por año solo en América del Norte"
+        line1: "1 Billón de unidades de paquetes de hielo/año en circulación",
+        line2: "solo en América del Norte"
       },
       options: {
         title: "Opciones Actuales",
@@ -147,7 +149,9 @@ export default function Problem() {
           <div className="bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl shadow-2xl p-12 text-center border border-orange-200">
             <AlertTriangle className="w-16 h-16 text-orange-600 mx-auto mb-6" strokeWidth={2} />
             <p className="text-3xl md:text-4xl font-bold neo-text text-gray-900 max-w-4xl mx-auto leading-tight">
-              {t.scale.text}
+              {t.scale.line1}
+              <br />
+              {t.scale.line2}
             </p>
           </div>
         </motion.div>
