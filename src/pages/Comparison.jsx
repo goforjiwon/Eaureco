@@ -96,7 +96,7 @@ export default function Comparison() {
       eaureco: true,
       sap: false,
       water: false,
-      compost: "Plastic package",
+      compost: "(Plastic package)",
     },
     {
       feature: t.table.freezing,
@@ -316,7 +316,9 @@ export default function Comparison() {
                           )
                         ) : (
                           <div className="flex items-center justify-center gap-2">
-                            <XCircle className="w-5 h-5 text-red-500" strokeWidth={2.5} />
+                            {row.feature === t.table.biodegradable && !row.compost.startsWith("(") ? ( // This condition is specific to the "Biodegradable" feature and ensures it gets an XCircle only if the compost field indicates non-biodegradable plastic packaging, not if it's a number for freezing/retention
+                                <XCircle className="w-5 h-5 text-red-500" strokeWidth={2.5} />
+                            ) : null}
                             <span className="font-medium text-gray-700">{row.compost}</span>
                           </div>
                         )}
