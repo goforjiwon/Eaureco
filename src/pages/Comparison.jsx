@@ -14,7 +14,7 @@ export default function Comparison() {
         subtitle: "See how eaureco outperforms traditional ice pack solutions"
       },
       value: {
-        title: "Eaureco is Cheaper & More Effective",
+        title: "eaureco is Cheaper & More Effective",
         subtitle: "Our ice packs deliver superior performance while being better for the environment and your bottom line",
         cheap: "Cheap",
         effective: "Effective"
@@ -53,7 +53,7 @@ export default function Comparison() {
         subtitle: "Ve cómo eaureco supera a las soluciones tradicionales de paquetes de hielo"
       },
       value: {
-        title: "Eaureco es Más Barato y Más Efectivo",
+        title: "eaureco es Más Barato y Más Efectivo",
         subtitle: "Nuestros paquetes de hielo ofrecen un rendimiento superior mientras son mejores para el medio ambiente y tu negocio",
         cheap: "Económico",
         effective: "Efectivo"
