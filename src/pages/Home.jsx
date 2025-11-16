@@ -23,7 +23,7 @@ export default function Home() {
         retention: "Longer Retention",
         retentionDesc: "Keeps things cool for longer",
         emissions: "Lower Carbon Emissions",
-        emissionsDesc: "vs. traditional LDPE/Water ice packs"
+        emissionsDesc: "vs. traditional ice packs"
       },
       why: {
         badge: "Why Eaureco?",
@@ -57,7 +57,7 @@ export default function Home() {
         retention: "Mayor Retención",
         retentionDesc: "Mantiene las cosas frías por más tiempo",
         emissions: "Menores Emisiones de Carbono",
-        emissionsDesc: "vs. paquetes de hielo tradicionales LDPE/Agua"
+        emissionsDesc: "vs. paquetes de hielo tradicionales"
       },
       why: {
         badge: "¿Por Qué Eaureco?",
