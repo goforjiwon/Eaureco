@@ -552,11 +552,11 @@ export default function Solution() {
                   {t.esg.title}
                 </h2>
 
-                <div className="flex gap-3 mb-8 overflow-x-auto pb-2">
+                <div className="space-y-3 mb-8">
                   {t.esg.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-2 border border-white/30 flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 flex-shrink-0" strokeWidth={2.5} />
-                      <span className="text-sm font-medium whitespace-nowrap">{benefit}</span>
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                      <span className="text-lg font-medium">{benefit}</span>
                     </div>
                   ))}
                 </div>
