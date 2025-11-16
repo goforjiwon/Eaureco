@@ -544,7 +544,7 @@ export default function Solution() {
             <div className="grid md:grid-cols-2 gap-8 items-center p-12">
               {/* Left Content */}
               <div className="text-white">
-                <h2 className="text-3xl md:text-4xl font-bold neo-text mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold neo-text mb-8 leading-snug">
                   {t.esg.title}
                 </h2>
 
@@ -558,12 +558,12 @@ export default function Solution() {
                 </div>
 
                 <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/30 mb-6">
-                  <p className="text-2xl font-bold leading-relaxed">
+                  <p className="text-xl md:text-2xl font-bold leading-relaxed">
                     "{t.esg.quote}"
                   </p>
                 </div>
 
-                <p className="text-lg font-semibold opacity-90">
+                <p className="text-base md:text-lg font-semibold opacity-90">
                   {t.esg.subtitle}
                 </p>
               </div>
