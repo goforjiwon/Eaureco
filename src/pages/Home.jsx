@@ -175,7 +175,7 @@ export default function Home() {
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
                   <Clock className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
-                <div className="mt-4 mb-2 h-[48px]"></div>
+                <div className="mt-4 mb-2 h-[3rem]"></div>
                 <p className="text-lg font-semibold text-gray-800">{t.stats.retention}</p>
                 <p className="text-sm text-gray-600 mt-2">{t.stats.retentionDesc}</p>
               </div>
