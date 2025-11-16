@@ -194,6 +194,43 @@ export default function Solution() {
           </div>
         </motion.div>
 
+        {/* Product Images */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
+              <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/fdcd6e7b3_KakaoTalk_20251116_233030585_09.png"
+                  alt="eaureco ice pack"
+                  className="w-full h-auto" />
+              </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
+              <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/70751ff34_KakaoTalk_20251116_233030585_07.png"
+                  alt="eaureco ice pack gel"
+                  className="w-full h-auto" />
+              </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
+              <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/c7bdeb15b_KakaoTalk_20251116_233030585_06.png"
+                  alt="eaureco ice pack varieties"
+                  className="w-full h-auto" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Performance Comparison */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
