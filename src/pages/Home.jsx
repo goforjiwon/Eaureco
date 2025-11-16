@@ -1,8 +1,7 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ArrowRight, Recycle, Snowflake, Leaf, Clock } from "lucide-react";
+import { ArrowRight, Recycle, Snowflake, Leaf, Clock, TrendingDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../Layout";
 
@@ -22,7 +21,9 @@ export default function Home() {
         freezing: "Faster Freezing",
         freezingDesc: "Compared to water-based packs",
         retention: "Longer Retention",
-        retentionDesc: "Keeps things cool for longer"
+        retentionDesc: "Keeps things cool for longer",
+        emissions: "Lower Emissions",
+        emissionsDesc: "vs. traditional LDPE/Water ice packs"
       },
       why: {
         badge: "Why Eaureco?",
@@ -54,7 +55,9 @@ export default function Home() {
         freezing: "Congelación Más Rápida",
         freezingDesc: "Comparado con paquetes a base de agua",
         retention: "Mayor Retención",
-        retentionDesc: "Mantiene las cosas frías por más tiempo"
+        retentionDesc: "Mantiene las cosas frías por más tiempo",
+        emissions: "Menores Emisiones",
+        emissionsDesc: "vs. paquetes de hielo tradicionales LDPE/Agua"
       },
       why: {
         badge: "¿Por Qué Eaureco?",
@@ -130,7 +133,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -174,6 +177,22 @@ export default function Home() {
                 </div>
                 <p className="text-lg font-semibold text-gray-800">{t.stats.retention}</p>
                 <p className="text-sm text-gray-600 mt-2">{t.stats.retentionDesc}</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="relative group">
+              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <TrendingDown className="w-6 h-6 text-white" strokeWidth={2.5} />
+                </div>
+                <h3 className="text-5xl font-bold neo-text text-teal-600 mb-2 mt-4">63.4%</h3>
+                <p className="text-lg font-semibold text-gray-800">{t.stats.emissions}</p>
+                <p className="text-sm text-gray-600 mt-2">{t.stats.emissionsDesc}</p>
               </div>
             </motion.div>
           </div>
