@@ -60,6 +60,21 @@ export default function Solution() {
         desc: "Join the movement towards a sustainable future",
         emissions: "Lower Cold-Chain Emissions",
         emissionsDesc: "vs. traditional LDPE/Water ice packs"
+      },
+      esg: {
+        badge: "ESG COMPLIANCE",
+        title: "Eaureco reduces your cooling emissions by more than half, with zero changes to your operations.",
+        benefits: [
+          "Made from advanced biodegradable bio-materials",
+          "Breaks down naturally in <45 days",
+          "No microplastics, no toxic residues",
+          "Safe disposal options",
+          "Supports Scope 3 reductions and corporate ESG metrics"
+        ],
+        quote: "Switching to Eaureco saves as much CO₂ as planting 3 trees, for every 1,000 deliveries.",
+        subtitle: "Lower carbon. Lower cost. Zero operational trade-offs.",
+        saved: "187 kg CO₂e",
+        savedDesc: "Saved by 1,000 eaureco ice pack"
       }
     },
     es: {
@@ -115,6 +130,21 @@ export default function Solution() {
         desc: "Únete al movimiento hacia un futuro sostenible",
         emissions: "Menores Emisiones de Cadena de Frío",
         emissionsDesc: "vs. paquetes de hielo tradicionales LDPE/Agua"
+      },
+      esg: {
+        badge: "CUMPLIMIENTO ESG",
+        title: "Eaureco reduce tus emisiones de enfriamiento en más de la mitad, sin cambios en tus operaciones.",
+        benefits: [
+          "Hecho de biomateriales biodegradables avanzados",
+          "Se descompone naturalmente en <45 días",
+          "Sin microplásticos, sin residuos tóxicos",
+          "Opciones de eliminación seguras",
+          "Apoya las reducciones de Alcance 3 y las métricas ESG corporativas"
+        ],
+        quote: "Cambiar a Eaureco ahorra tanto CO₂ como plantar 3 árboles, por cada 1,000 entregas.",
+        subtitle: "Menor carbono. Menor costo. Cero compromisos operacionales.",
+        saved: "187 kg CO₂e",
+        savedDesc: "Ahorrado por 1,000 paquetes de hielo eaureco"
       }
     }
   };
@@ -499,6 +529,68 @@ export default function Solution() {
               <p className="text-xl text-white/90 font-medium">
                 {t.impact.desc}
               </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ESG Compliance Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20">
+
+          <div className="bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-8 items-center p-12">
+              {/* Left Content */}
+              <div className="text-white">
+                <div className="text-sm font-bold uppercase tracking-wider mb-6 opacity-90">
+                  {t.esg.badge}
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold neo-text mb-8 leading-tight">
+                  {t.esg.title}
+                </h2>
+
+                <div className="space-y-3 mb-8">
+                  {t.esg.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                      <span className="text-lg font-medium">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/30 mb-6">
+                  <p className="text-2xl font-bold leading-relaxed">
+                    "{t.esg.quote}"
+                  </p>
+                </div>
+
+                <p className="text-lg font-semibold opacity-90">
+                  {t.esg.subtitle}
+                </p>
+              </div>
+
+              {/* Right Content - Trees Illustration */}
+              <div className="relative">
+                <div className="text-center mb-8">
+                  <div className="inline-block bg-white/20 backdrop-blur rounded-2xl px-8 py-6 border border-white/30">
+                    <div className="text-6xl font-bold neo-text text-white mb-2">
+                      {t.esg.saved}
+                    </div>
+                    <p className="text-white font-semibold text-lg">
+                      {t.esg.savedDesc}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center items-end gap-4">
+                  <div className="text-8xl opacity-90">🌳</div>
+                  <div className="text-8xl">🌳</div>
+                  <div className="text-8xl opacity-90">🌳</div>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
