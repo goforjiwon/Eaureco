@@ -538,7 +538,7 @@ export default function Solution() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-20">
+          className="mt-20 max-w-6xl mx-auto">
 
           <div className="bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400 rounded-3xl shadow-2xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-8 items-center p-12">
