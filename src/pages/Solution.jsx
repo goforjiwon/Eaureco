@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2, Globe } from "lucide-react";
+import { Leaf, Droplets, Recycle, Snowflake, CheckCircle, Sparkles, TrendingUp, Trash2, Globe, TrendingDown } from "lucide-react";
 import { useLanguage } from "../Layout";
 
 export default function Solution() {
@@ -57,7 +57,9 @@ export default function Solution() {
         subtitle: "By replacing just 50% of ice packs in North America",
         co2: "CO₂-equivalent/year",
         credit: "Carbon Credit",
-        desc: "Join the movement towards a sustainable future"
+        desc: "Join the movement towards a sustainable future",
+        emissions: "Lower Cold-Chain Emissions",
+        emissionsDesc: "vs. traditional LDPE/Water ice packs"
       }
     },
     es: {
@@ -110,7 +112,9 @@ export default function Solution() {
         subtitle: "Al reemplazar solo el 50% de los paquetes de hielo en América del Norte",
         co2: "equivalente-CO₂/año",
         credit: "Crédito de Carbono",
-        desc: "Únete al movimiento hacia un futuro sostenible"
+        desc: "Únete al movimiento hacia un futuro sostenible",
+        emissions: "Menores Emisiones de Cadena de Frío",
+        emissionsDesc: "vs. paquetes de hielo tradicionales LDPE/Agua"
       }
     }
   };
@@ -435,16 +439,23 @@ export default function Solution() {
                 {t.impact.subtitle}
               </p>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+              <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="text-7xl md:text-8xl font-bold neo-text text-white mb-2">2.54M</div>
-                  <p className="text-2xl font-semibold text-white/90 mb-1">tons</p>
-                  <p className="text-lg text-white/80">{t.impact.co2}</p>
+                  <div className="text-6xl md:text-7xl font-bold neo-text text-white mb-2">2.54M</div>
+                  <p className="text-xl font-semibold text-white/90 mb-1">tons</p>
+                  <p className="text-base text-white/80">{t.impact.co2}</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="text-5xl md:text-6xl font-bold neo-text text-lime-300 mb-3">US$ 12.7M</div>
-                  <p className="text-2xl font-semibold text-white/90">{t.impact.credit}</p>
+                  <p className="text-xl font-semibold text-white/90">{t.impact.credit}</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                  <TrendingDown className="w-12 h-12 text-lime-300 mx-auto mb-3" strokeWidth={2.5} />
+                  <div className="text-6xl md:text-7xl font-bold neo-text text-white mb-2">63.4%</div>
+                  <p className="text-xl font-semibold text-white/90 mb-1">{t.impact.emissions}</p>
+                  <p className="text-sm text-white/80">{t.impact.emissionsDesc}</p>
                 </div>
               </div>
 
