@@ -22,7 +22,7 @@ export default function Home() {
         freezingDesc: "Compared to water-based packs",
         retention: "Longer Retention",
         retentionDesc: "Keeps things cool for longer",
-        emissions: "Lower Emissions",
+        emissions: "Lower Carbon Emissions",
         emissionsDesc: "vs. traditional LDPE/Water ice packs"
       },
       why: {
@@ -56,7 +56,7 @@ export default function Home() {
         freezingDesc: "Comparado con paquetes a base de agua",
         retention: "Mayor Retención",
         retentionDesc: "Mantiene las cosas frías por más tiempo",
-        emissions: "Menores Emisiones",
+        emissions: "Menores Emisiones de Carbono",
         emissionsDesc: "vs. paquetes de hielo tradicionales LDPE/Agua"
       },
       why: {
