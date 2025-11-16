@@ -544,10 +544,6 @@ export default function Solution() {
             <div className="grid md:grid-cols-2 gap-8 items-center p-12">
               {/* Left Content */}
               <div className="text-white">
-                <div className="text-sm font-bold uppercase tracking-wider mb-6 opacity-90">
-                  {t.esg.badge}
-                </div>
-                
                 <h2 className="text-3xl md:text-4xl font-bold neo-text mb-8 leading-tight">
                   {t.esg.title}
                 </h2>
