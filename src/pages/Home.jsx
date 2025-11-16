@@ -169,22 +169,6 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="relative group">
-              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Clock className="w-6 h-6 text-white" strokeWidth={2.5} />
-                </div>
-                <div className="mt-4 mb-2 h-[3rem]"></div>
-                <p className="text-lg font-semibold text-gray-800">{t.stats.retention}</p>
-                <p className="text-sm text-gray-600 mt-2">{t.stats.retentionDesc}</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               className="relative group">
               <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
