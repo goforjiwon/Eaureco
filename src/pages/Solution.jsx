@@ -254,7 +254,7 @@ export default function Solution() {
               <div className="text-center mt-6">
                 <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.small.name}</h3>
                 <p className="text-3xl font-bold text-teal-600 mb-3">{t.sizes.small.weight}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.small.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.small.desc}</p>
               </div>
             </div>
             <div>
@@ -270,7 +270,7 @@ export default function Solution() {
               <div className="text-center mt-6">
                 <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.medium.name}</h3>
                 <p className="text-3xl font-bold text-cyan-600 mb-3">{t.sizes.medium.weight}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.medium.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.medium.desc}</p>
               </div>
             </div>
             <div>
@@ -286,7 +286,7 @@ export default function Solution() {
               <div className="text-center mt-6">
                 <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.large.name}</h3>
                 <p className="text-3xl font-bold text-emerald-600 mb-3">{t.sizes.large.weight}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.large.desc}</p>
+                <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.large.desc}</p>
               </div>
             </div>
           </div>
