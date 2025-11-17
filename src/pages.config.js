@@ -3,7 +3,7 @@ import Problem from './pages/Problem';
 import Solution from './pages/Solution';
 import Comparison from './pages/Comparison';
 import Contact from './pages/Contact';
-import Layout from './Layout.jsx';
+import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
@@ -17,5 +17,5 @@ export const PAGES = {
 export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
-    Layout: Layout,
+    Layout: __Layout,
 };
