@@ -242,7 +242,7 @@ export default function Solution() {
           className="mb-20">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div>
-              <div className="relative group">
+              <div className="relative group h-80 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
@@ -258,7 +258,7 @@ export default function Solution() {
               </div>
             </div>
             <div>
-              <div className="relative group">
+              <div className="relative group h-80 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
@@ -274,7 +274,7 @@ export default function Solution() {
               </div>
             </div>
             <div>
-              <div className="relative group">
+              <div className="relative group h-80 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
