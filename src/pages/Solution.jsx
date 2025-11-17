@@ -21,6 +21,11 @@ export default function Solution() {
           { title: "From Ocean Waste", desc: "Made from sargassum seaweed collected from beaches" }
         ]
       },
+      sizes: {
+        large: { name: "LARGE", weight: "500g", desc: "Ideal for grocery delivery, seafood, pharmaceutical logistics" },
+        medium: { name: "MEDIUM", weight: "250g", desc: "Ideal for restaurants, food delivery, meal kits" },
+        small: { name: "SMALL", weight: "100g", desc: "Ideal for meal kits, bakeries, subscription boxes" }
+      },
       performance: {
         title: "Superior Performance",
         freezing: "Freezing Time",
