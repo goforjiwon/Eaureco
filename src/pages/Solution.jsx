@@ -243,18 +243,18 @@ export default function Solution() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div>
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/fdcd6e7b3_KakaoTalk_20251116_233030585_09.png"
-                    alt="eaureco ice pack large"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/c7bdeb15b_KakaoTalk_20251116_233030585_06.png"
+                    alt="eaureco ice pack small"
                     className="w-full h-auto" />
                 </div>
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.large.name}</h3>
-                <p className="text-3xl font-bold text-emerald-600 mb-3">{t.sizes.large.weight}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.large.desc}</p>
+                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.small.name}</h3>
+                <p className="text-3xl font-bold text-teal-600 mb-3">{t.sizes.small.weight}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.small.desc}</p>
               </div>
             </div>
             <div>
@@ -275,18 +275,18 @@ export default function Solution() {
             </div>
             <div>
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/c7bdeb15b_KakaoTalk_20251116_233030585_06.png"
-                    alt="eaureco ice pack small"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/fdcd6e7b3_KakaoTalk_20251116_233030585_09.png"
+                    alt="eaureco ice pack large"
                     className="w-full h-auto" />
                 </div>
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.small.name}</h3>
-                <p className="text-3xl font-bold text-teal-600 mb-3">{t.sizes.small.weight}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.small.desc}</p>
+                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.large.name}</h3>
+                <p className="text-3xl font-bold text-emerald-600 mb-3">{t.sizes.large.weight}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{t.sizes.large.desc}</p>
               </div>
             </div>
           </div>
