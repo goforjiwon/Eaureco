@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -71,12 +72,16 @@ export default function Layout({ children, currentPageName }) {
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link to={createPageUrl("Home")} className="flex items-center gap-2 group">
-                <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/73dda5cf3_Gemini_Generated_Image_annro4annro4annr.png" 
-                  alt="eaureco logo"
-                  className="h-12 w-auto group-hover:scale-105 transition-transform"
-                />
+              <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                  <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold neo-text text-gray-900">eaureco</h1>
+                  <p className="text-xs text-emerald-600 font-medium">
+                    {language === 'en' ? 'Stay Cool, Stay Green' : 'Mantente Fresco, Mantente Verde'}
+                  </p>
+                </div>
               </Link>
 
               {/* Desktop Navigation */}
