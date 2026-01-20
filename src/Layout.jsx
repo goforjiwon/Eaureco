@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Waves, Leaf, Scale, Mail, Globe } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 // Language Context
 export const LanguageContext = createContext();
@@ -22,13 +23,6 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
-  const toggleLanguage = () => {
-    const languages = ['en', 'es', 'ko'];
-    const currentIndex = languages.indexOf(language);
-    const nextIndex = (currentIndex + 1) % languages.length;
-    setLanguage(languages[nextIndex]);
-  };
 
   const navLabels = {
     en: {
@@ -105,7 +99,7 @@ export default function Layout({ children, currentPageName }) {
                 <div>
                   <h1 className="text-xl font-bold neo-text text-gray-900">eaureco</h1>
                   <p className="text-xs text-emerald-600 font-medium">
-                    {language === 'en' ? 'Stay Cool, Stay Green' : language === 'es' ? 'Mantente Fresco, Mantente Verde' : '시원하게, 친환경적으로'}
+                    Stay Cool, Stay Green
                   </p>
                 </div>
               </Link>
@@ -134,14 +128,25 @@ export default function Layout({ children, currentPageName }) {
                 })}
                 
                 {/* Language Toggle Button */}
-                <button
-                  onClick={toggleLanguage}
-                  className="ml-2 px-4 py-2 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all flex items-center gap-2"
-                  title={language === 'en' ? 'Switch Language' : language === 'es' ? 'Cambiar Idioma' : '언어 변경'}
-                >
-                  <Globe className="w-4 h-4" strokeWidth={2} />
-                  <span className="font-bold">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}</span>
-                </button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="ml-2 px-4 py-2 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all flex items-center gap-2">
+                      <Globe className="w-4 h-4" strokeWidth={2} />
+                      <span className="font-bold">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}</span>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => setLanguage('en')}>
+                      English (EN)
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLanguage('es')}>
+                      Español (ES)
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setLanguage('ko')}>
+                      한국어 (KO)
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
 
               {/* Mobile Menu Button */}
@@ -174,13 +179,19 @@ export default function Layout({ children, currentPageName }) {
               })}
               
               {/* Mobile Language Toggle */}
-              <button
-                onClick={toggleLanguage}
-                className="px-3 py-2 rounded-lg font-semibold text-sm bg-gray-100 text-gray-700 flex items-center gap-2 justify-center"
-              >
-                <Globe className="w-4 h-4" strokeWidth={2} />
-                {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}
-              </button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="px-3 py-2 rounded-lg font-semibold text-sm bg-gray-100 text-gray-700 flex items-center gap-2 justify-center">
+                    <Globe className="w-4 h-4" strokeWidth={2} />
+                    {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLanguage('es')}>Español</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setLanguage('ko')}>한국어</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </nav>
@@ -195,7 +206,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold neo-text text-white mb-2">eaureco</h2>
             <p className="text-white/90 font-medium text-lg mb-1">
-              {language === 'en' ? 'Stay Cool, Stay Green' : language === 'es' ? 'Mantente Fresco, Mantente Verde' : '시원하게, 친환경적으로'}
+              Stay Cool, Stay Green
             </p>
             <p className="text-white/75 text-sm">
               {language === 'en' 

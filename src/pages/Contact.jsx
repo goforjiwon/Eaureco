@@ -118,7 +118,7 @@ export default function Contact() {
         costDesc: "품질을 타협하지 않는 경쟁력 있는 가격"
       },
       bottom: {
-        tagline: "시원하게, 친환경적으로",
+        tagline: "Stay Cool, Stay Green",
         desc: "식품 배송 및 콜드체인 물류를 위한 친환경 미래를 함께 만들어갑시다."
       }
       }

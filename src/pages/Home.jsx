@@ -79,7 +79,7 @@ export default function Home() {
     },
     ko: {
       hero: {
-        tagline: "시원하게, 친환경적으로",
+        tagline: "Stay Cool, Stay Green",
         subtitle: "신선한 식품 배송 및 콜드체인 기업을 위한 지속 가능한 아이스팩",
         cta: "솔루션 알아보기"
       },
