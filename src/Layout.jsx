@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -25,15 +24,42 @@ export default function Layout({ children, currentPageName }) {
   }, [location.pathname]);
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'en' ? 'es' : 'en');
+    const languages = ['en', 'es', 'ko'];
+    const currentIndex = languages.indexOf(language);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    setLanguage(languages[nextIndex]);
+  };
+
+  const navLabels = {
+    en: {
+      home: "Home",
+      problem: "The Problem",
+      solution: "Our Solution",
+      comparison: "Comparison",
+      contact: "Contact"
+    },
+    es: {
+      home: "Inicio",
+      problem: "El Problema",
+      solution: "Nuestra Solución",
+      comparison: "Comparación",
+      contact: "Contacto"
+    },
+    ko: {
+      home: "홈",
+      problem: "문제점",
+      solution: "솔루션",
+      comparison: "비교",
+      contact: "연락처"
+    }
   };
 
   const navItems = [
-    { name: language === 'en' ? "Home" : "Inicio", path: "Home", icon: Waves },
-    { name: language === 'en' ? "The Problem" : "El Problema", path: "Problem", icon: Leaf },
-    { name: language === 'en' ? "Our Solution" : "Nuestra Solución", path: "Solution", icon: Leaf },
-    { name: language === 'en' ? "Comparison" : "Comparación", path: "Comparison", icon: Scale },
-    { name: language === 'en' ? "Contact" : "Contacto", path: "Contact", icon: Mail },
+    { name: navLabels[language].home, path: "Home", icon: Waves },
+    { name: navLabels[language].problem, path: "Problem", icon: Leaf },
+    { name: navLabels[language].solution, path: "Solution", icon: Leaf },
+    { name: navLabels[language].comparison, path: "Comparison", icon: Scale },
+    { name: navLabels[language].contact, path: "Contact", icon: Mail },
   ];
 
   return (
@@ -79,7 +105,7 @@ export default function Layout({ children, currentPageName }) {
                 <div>
                   <h1 className="text-xl font-bold neo-text text-gray-900">eaureco</h1>
                   <p className="text-xs text-emerald-600 font-medium">
-                    {language === 'en' ? 'Stay Cool, Stay Green' : 'Mantente Fresco, Mantente Verde'}
+                    {language === 'en' ? 'Stay Cool, Stay Green' : language === 'es' ? 'Mantente Fresco, Mantente Verde' : '시원하게, 친환경적으로'}
                   </p>
                 </div>
               </Link>
@@ -111,10 +137,10 @@ export default function Layout({ children, currentPageName }) {
                 <button
                   onClick={toggleLanguage}
                   className="ml-2 px-4 py-2 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all flex items-center gap-2"
-                  title={language === 'en' ? 'Switch to Spanish' : 'Cambiar a Inglés'}
+                  title={language === 'en' ? 'Switch Language' : language === 'es' ? 'Cambiar Idioma' : '언어 변경'}
                 >
                   <Globe className="w-4 h-4" strokeWidth={2} />
-                  <span className="font-bold">{language === 'en' ? 'ES' : 'EN'}</span>
+                  <span className="font-bold">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}</span>
                 </button>
               </div>
 
@@ -153,7 +179,7 @@ export default function Layout({ children, currentPageName }) {
                 className="px-3 py-2 rounded-lg font-semibold text-sm bg-gray-100 text-gray-700 flex items-center gap-2 justify-center"
               >
                 <Globe className="w-4 h-4" strokeWidth={2} />
-                {language === 'en' ? 'Español' : 'English'}
+                {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}
               </button>
             </div>
           </div>
@@ -169,12 +195,14 @@ export default function Layout({ children, currentPageName }) {
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold neo-text text-white mb-2">eaureco</h2>
             <p className="text-white/90 font-medium text-lg mb-1">
-              {language === 'en' ? 'Stay Cool, Stay Green' : 'Mantente Fresco, Mantente Verde'}
+              {language === 'en' ? 'Stay Cool, Stay Green' : language === 'es' ? 'Mantente Fresco, Mantente Verde' : '시원하게, 친환경적으로'}
             </p>
             <p className="text-white/75 text-sm">
               {language === 'en' 
                 ? 'Transforming ocean waste into sustainable cooling solutions'
-                : 'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles'}
+                : language === 'es'
+                ? 'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles'
+                : '해양 폐기물을 지속 가능한 냉각 솔루션으로 전환'}
             </p>
           </div>
         </footer>
