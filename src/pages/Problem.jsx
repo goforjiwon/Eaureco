@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, Trash2, Skull, Droplets, Snowflake, TrendingDown, XCircle, DollarSign } from "lucide-react";
@@ -114,6 +113,60 @@ export default function Problem() {
         title: "¿Pero Qué Tal Si No Tuvieras Que Elegir?",
         subtitle: "Descubre cómo eaureco ofrece rendimiento superior, sostenibilidad y asequibilidad — todo en una solución.",
         button: "Descubre Nuestra Solución →"
+      },
+      ko: {
+        header: {
+          title: "문제점",
+          subtitle: "콜드체인 산업은 지속 불가능한 옵션에 갇혀 있습니다"
+        },
+        scale: {
+          line1: "연간 10억 개의 아이스팩 유닛이 유통되고 있습니다",
+          line2: "북미만 해도"
+        },
+        options: {
+          title: "현재 옵션",
+          subtitle: "기존의 모든 솔루션에는 치명적인 결함이 있습니다",
+          sap: {
+            title: "SAP 아이스팩",
+            subtitle: "초흡수성 고분자 -\n플라스틱 기반 고분자",
+            pros: ["좋은 성능", "오래 지속"],
+            cons: ["자연에 유독함", "하수 처리장 막힘", "매립지로 귀결", "분해에 100년 이상 소요"]
+          },
+          water: {
+            title: "물팩",
+            subtitle: "100% 물 기반",
+            pros: ["친환경적", "안전한 폐기"],
+            cons: ["냉동 속도가 훨씬 느림", "보냉 시간 짧음", "콜드체인 표준을 충족하지 못함", "폐기를 위해 자르고 분리해야 함", "비즈니스에 비효율적"]
+          },
+          eco: {
+            title: "기타 에코 젤",
+            subtitle: "대안 솔루션",
+            pros: ["생분해 가능", "지속 가능한 재료"],
+            cons: ["너무 비싸", "SAP만큼 오래 지속되지 않음", "폐기를 위해 자르고 분리해야 함", "제한된 가용성", "확장하기 어려움"]
+          }
+        },
+        impact: {
+          title: "환경 비용",
+          years: "분해까지 걸리는 시간",
+          yearsDesc: "SAP 팩은 여러 세대 동안 매립지에 남아있습니다",
+          costs: "청소 비용",
+          costsDesc: "지방 자치 단체 하수 피해 및 매립지 관리",
+          damage: "지속적인 피해",
+          damageDesc: "미세 플라스틱과 독소가 생태계를 오염시킵니다"
+        },
+        stuck: {
+          title: "산업이 갇혀 있습니다",
+          subtitle: "기업은 환경적 책임과 운영 효율성 사이에서 선택해야 합니다",
+          performance: "성능을 선택하시겠습니까?",
+          performanceDesc: "플라스틱 SAP 팩으로 환경을 해칩니다",
+          sustainability: "지속 가능성을 선택하시겠습니까?",
+          sustainabilityDesc: "효율성을 희생하고 비용을 증가시킵니다"
+        },
+        cta: {
+          title: "하지만 선택하지 않아도 된다면?",
+          subtitle: "eaureco가 뛰어난 성능, 지속 가능성 및 경제성을 모두 하나의 솔루션으로 제공하는 방법을 알아보세요.",
+          button: "솔루션 알아보기 →"
+        }
       }
     }
   };

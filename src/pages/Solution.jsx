@@ -156,10 +156,85 @@ export default function Solution() {
         saved: "187 kg CO₂e",
         savedDesc: "Ahorrado por 1,000 paquetes de hielo eaureco"
       }
-    }
-  };
+      },
+      ko: {
+      header: {
+        title: "솔루션",
+        subtitle: "해양 폐기물을 활용한 콜드체인 혁명"
+      },
+      hero: {
+        badge: "Eaureco를 만나보세요",
+        title: "지속 가능한 냉각 솔루션",
+        features: [
+          { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
+          { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
+          { title: "해양 폐기물로 제작", desc: "해변에서 수집한 모자반 해조류로 제작" }
+        ]
+      },
+      sizes: {
+        large: { name: "대형", weight: "500g", desc: "식료품 배송, 해산물, 제약 물류에 이상적" },
+        medium: { name: "중형", weight: "250g", desc: "레스토랑, 음식 배달, 밀키트에 이상적" },
+        small: { name: "소형", weight: "100g", desc: "밀키트, 제과점, 구독 박스에 이상적" }
+      },
+      performance: {
+        title: "뛰어난 성능",
+        freezing: "냉동 시간",
+        retention: "더 오래 차갑게 유지",
+        water: "물",
+        sap: "SAP (플라스틱)",
+        note: "* SAP 및 eaureco의 4% 용액을 사용한 실험실 조건에서 수행된 실험"
+      },
+      turnover: {
+        title: "높은 회전율",
+        desc: "4배 빠른 냉동은 아이스팩이 더 빨리 준비됨을 의미합니다. 추가 냉동고 공간 없이 더 많은 주문을 처리하고 효율성을 높이세요."
+      },
+      disposal: {
+        title: "간편한 폐기",
+        desc: "젤부터 외부 포장까지 100% 생분해성 — 자르거나 분리할 필요 없이 그냥 버리면 자연이 처리합니다."
+      },
+      sargassum: {
+        badge: "폐기물에서 경이로움으로",
+        title: "수백만 톤이 밀려오고, 수백만의 세금이 처리에 낭비됩니다",
+        desc: "모자반 해조류는 막대한 환경 문제입니다. 엄청난 양이 해변에 밀려오며, 지역 사회는 청소 및 처리에 수백만 달러를 지출합니다. 우리는 이 폐기물을 귀중한 자원으로 변환합니다."
+      },
+      benefits: {
+        badge: "Eaureco를 선택하는 이유",
+        biodegradable: "생분해성",
+        biodegradableDesc: "환경에 해를 끼치지 않고 자연적으로 분해되는 100% 생분해성 재료",
+        sustainable: "지속 가능",
+        sustainableDesc: "재생 가능한 해양 폐기물로 제작되어 해변을 청소하면서 가치를 창출",
+        costEfficient: "비용 효율적",
+        costEfficientDesc: "성능이나 지속 가능성을 훼손하지 않는 경쟁력 있는 가격"
+      },
+      impact: {
+        badge: "환경 영향",
+        title: "Eaureco로 전환하는 힘",
+        subtitle: "북미에서 아이스팩의 50%만 교체해도",
+        co2: "CO₂ 상당량/년",
+        credit: "탄소 크레딧",
+        desc: "지속 가능한 미래를 향한 운동에 동참하세요",
+        emissions: "낮은 콜드체인 배출",
+        emissionsDesc: "기존 LDPE/물 아이스팩 대비"
+      },
+      esg: {
+        badge: "ESG 준수",
+        title: "Eaureco는 운영에 변화 없이 냉각 배출을 절반 이상 줄입니다.",
+        benefits: [
+          "고급 생분해성 바이오 소재로 제작",
+          "45일 이내에 자연 분해",
+          "미세 플라스틱 없음, 독성 잔류물 없음",
+          "안전한 폐기 옵션",
+          "범위 3 감축 및 기업 ESG 지표 지원"
+        ],
+        quote: "Eaureco로 전환하면 1,000건의 배송당 나무 3그루를 심는 것만큼 CO₂를 절약합니다.",
+        subtitle: "낮은 탄소. 낮은 비용. 운영상의 타협 제로.",
+        saved: "187 kg CO₂e",
+        savedDesc: "1,000개의 eaureco 아이스팩으로 절약"
+      }
+      }
+      };
 
-  const t = translations[language];
+      const t = translations[language];
 
   return (
     <div className="py-16 px-4">

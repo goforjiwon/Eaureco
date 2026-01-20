@@ -76,10 +76,44 @@ export default function Home() {
         subtitle: "Únete a nosotros en la revolución de soluciones de enfriamiento sostenibles",
         button: "Contáctanos"
       }
+    },
+    ko: {
+      hero: {
+        tagline: "시원하게, 친환경적으로",
+        subtitle: "신선한 식품 배송 및 콜드체인 기업을 위한 지속 가능한 아이스팩",
+        cta: "솔루션 알아보기"
+      },
+      stats: {
+        biodegradable: "생분해성",
+        biodegradableDesc: "내용물과 포장 모두",
+        freezing: "더 빠른 냉동",
+        freezingDesc: "물 기반 팩 대비",
+        retention: "더 긴 보냉",
+        retentionDesc: "더 오래 차갑게 유지",
+        emissions: "낮은 탄소 배출",
+        emissionsDesc: "기존 아이스팩 대비"
+      },
+      why: {
+        badge: "왜 Eaureco인가?",
+        title: "쓰레기를 보물로 바꿉니다",
+        description: "수백만 톤의 모자반 해조류가 해변에 밀려오며, 처리 비용으로 수백만 달러가 소요됩니다. 우리는 이 해양 폐기물을 고성능, 지속 가능하고 저렴한 아이스팩으로 변환합니다.",
+        sustainable: "지속 가능",
+        sustainableDesc: "재생 가능한 모자반 폐기물로 제작",
+        performance: "뛰어난 성능",
+        performanceDesc: "더 빠르게 얼고 더 오래 지속",
+        costEffective: "비용 효율적",
+        costEffectiveDesc: "기존 대안보다 저렴",
+        learnMore: "자세히 알아보기"
+      },
+      cta: {
+        title: "친환경으로 전환할 준비가 되셨나요?",
+        subtitle: "지속 가능한 냉각 솔루션 혁명에 동참하세요",
+        button: "문의하기"
+      }
     }
-  };
+    };
 
-  const t = translations[language];
+    const t = translations[language];
 
   return (
     <div className="min-h-screen">

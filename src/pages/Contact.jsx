@@ -84,10 +84,47 @@ export default function Contact() {
         tagline: "Mantente Fresco, Mantente Verde",
         desc: "Trabajemos juntos para crear un futuro verde para la entrega de alimentos y la logística de cadena de frío."
       }
-    }
-  };
+      },
+      ko: {
+      header: {
+        title: "연락처",
+        subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요? 상담해 드리겠습니다!"
+      },
+      info: {
+        badge: "문의하기",
+        email: "이메일 보내기",
+        emailValue: "goforjiwon@kaist.ac.kr",
+        location: "위치",
+        locationValue: "대전, 대한민국",
+        locationDesc: "KAIST 캠퍼스 방문"
+      },
+      form: {
+        title: "메시지 보내기",
+        name: "이름",
+        email: "이메일",
+        message: "메시지",
+        send: "메시지 전송",
+        sending: "전송 중...",
+        success: "메시지가 성공적으로 전송되었습니다!",
+        error: "메시지 전송에 실패했습니다. 다시 시도해주세요."
+      },
+      why: {
+        badge: "우리와 함께 일하는 이유",
+        sustainable: "지속 가능한 솔루션",
+        sustainableDesc: "해양을 정화하는 데 도움이 되는 100% 생분해성 아이스팩",
+        performance: "더 나은 성능",
+        performanceDesc: "더 오래 지속되고 더 빠르게 얼어붙는 우수한 냉각",
+        cost: "비용 효율적",
+        costDesc: "품질을 타협하지 않는 경쟁력 있는 가격"
+      },
+      bottom: {
+        tagline: "시원하게, 친환경적으로",
+        desc: "식품 배송 및 콜드체인 물류를 위한 친환경 미래를 함께 만들어갑시다."
+      }
+      }
+      };
 
-  const t = translations[language];
+      const t = translations[language];
 
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
