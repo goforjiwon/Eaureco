@@ -519,11 +519,7 @@ export default function Solution() {
               <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
                 {t.sargassum.title}
               </h3>
-
-              <p className="text-xl text-gray-600 mb-8">
-                {t.sargassum.desc}
-              </p>
-            </div>
+              </div>
 
             <div>
               <div className="relative group">
