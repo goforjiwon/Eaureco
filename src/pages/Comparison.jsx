@@ -85,45 +85,45 @@ export default function Comparison() {
         title: "El Claro Ganador",
         subtitle: "eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: sostenibilidad, rendimiento y costo-efectividad",
         button: "Contáctanos →"
+      }
+    },
+    ko: {
+      header: {
+        title: "비교",
+        subtitle: "eaureco가 기존 아이스팩 솔루션을 능가하는 방법을 확인하세요"
       },
-      ko: {
-        header: {
-          title: "비교",
-          subtitle: "eaureco가 기존 아이스팩 솔루션을 능가하는 방법을 확인하세요"
-        },
-        value: {
-          title: "eaureco는 더 저렴하고 더 효과적입니다",
-          subtitle: "우리의 아이스팩은 환경과 수익에 더 나은 뛰어난 성능을 제공합니다",
-          cheap: "저렴함",
-          effective: "효과적"
-        },
-        metrics: {
-          freezes: "더 빠르게 얼음",
-          freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
-          lasts: "더 오래 지속",
-          lastsDesc: "냉각 보유 시간(분)",
-          green: "100% 친환경",
-          greenTitle: "생분해성",
-          greenDesc: "내용물과 포장 모두 자연적으로 분해"
-        },
-        table: {
-          badge: "상세 비교",
-          feature: "특징",
-          biodegradable: "생분해성",
-          freezing: "냉동 속도",
-          retention: "보냉 시간",
-          cost: "비용 효율적",
-          impact: "환경 영향",
-          reusable: "재사용 가능",
-          positive: "긍정적",
-          negative: "부정적",
-          neutral: "중립"
-        },
-        summary: {
-          title: "명백한 승자",
-          subtitle: "eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다: 지속 가능성, 성능 및 비용 효율성",
-          button: "문의하기 →"
-        }
+      value: {
+        title: "eaureco는 더 저렴하고 더 효과적입니다",
+        subtitle: "우리의 아이스팩은 환경과 수익에 더 나은 뛰어난 성능을 제공합니다",
+        cheap: "저렴함",
+        effective: "효과적"
+      },
+      metrics: {
+        freezes: "더 빠르게 얼음",
+        freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
+        lasts: "더 오래 지속",
+        lastsDesc: "냉각 보유 시간(분)",
+        green: "100% 친환경",
+        greenTitle: "생분해성",
+        greenDesc: "내용물과 포장 모두 자연적으로 분해"
+      },
+      table: {
+        badge: "상세 비교",
+        feature: "특징",
+        biodegradable: "생분해성",
+        freezing: "냉동 속도",
+        retention: "보냉 시간",
+        cost: "비용 효율적",
+        impact: "환경 영향",
+        reusable: "재사용 가능",
+        positive: "긍정적",
+        negative: "부정적",
+        neutral: "중립"
+      },
+      summary: {
+        title: "명백한 승자",
+        subtitle: "eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다: 지속 가능성, 성능 및 비용 효율성",
+        button: "문의하기 →"
       }
     }
   };
