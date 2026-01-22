@@ -599,7 +599,7 @@ export default function Solution() {
             
             <div className="relative z-10 p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">
-                {t.impact.title}
+                eaureco 전환 효과
               </h2>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
