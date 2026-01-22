@@ -171,7 +171,6 @@ export default function Problem() {
           button: "솔루션 알아보기 →"
         }
       }
-    }
   };
 
   const t = translations[language];
