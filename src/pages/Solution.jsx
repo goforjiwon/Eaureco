@@ -542,7 +542,7 @@ export default function Solution() {
           className="mb-20">
 
           <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">{t.benefits.badge}</h2>
+            <h2 className="text-lg font-bold text-gray-900 tracking-wider">{t.benefits.badge}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
