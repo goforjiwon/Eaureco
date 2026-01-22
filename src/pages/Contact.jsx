@@ -10,7 +10,7 @@ export default function Contact() {
     en: {
       header: {
         title: "Contact Us",
-        subtitle: "Ready to make the switch to sustainable cooling? Let's talk!"
+        subtitle: "Ready to make the switch to sustainable cooling?"
       },
       info: {
         badge: "Get in Touch",
@@ -38,7 +38,7 @@ export default function Contact() {
     es: {
       header: {
         title: "Contáctanos",
-        subtitle: "¿Listo para cambiar a enfriamiento sostenible? ¡Hablemos!"
+        subtitle: "¿Listo para cambiar a enfriamiento sostenible?"
       },
       info: {
         badge: "Ponte en Contacto",
@@ -66,7 +66,7 @@ export default function Contact() {
       ko: {
       header: {
         title: "연락처",
-        subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요? 상담해 드리겠습니다!"
+        subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요?"
       },
       info: {
         badge: "문의하기",
