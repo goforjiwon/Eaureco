@@ -286,6 +286,7 @@ export default function Solution() {
                       </div>
                       <div>
                         <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
+                        <p className="text-gray-600">{feature.desc}</p>
                       </div>
                     </div>
                   );
