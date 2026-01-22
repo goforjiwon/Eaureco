@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { TrendingUp, CheckCircle, XCircle, DollarSign, Timer, Thermometer } from "lucide-react";
 import { useLanguage } from "../Layout";
+import { createPageUrl } from "@/utils";
 
 export default function Comparison() {
   const { language } = useLanguage();
@@ -377,16 +379,12 @@ export default function Comparison() {
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               {t.summary.subtitle}
             </p>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = '/Contact';
-              }}
+            <Link
+              to={createPageUrl("Contact")}
               className="inline-flex items-center gap-3 px-8 py-4 bg-white rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105"
             >
               {t.summary.button}
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
