@@ -168,7 +168,7 @@ export default function Solution() {
         features: [
           { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
           { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
-          { title: "해양 폐기물로 제작", desc: "해변에서 수집한 모자반 해조류로 제작" }
+          { title: "해양 폐기물로 제작", desc: "해변에서 수집한 버려지는 해조류로 제작" }
         ]
       },
       sizes: {
