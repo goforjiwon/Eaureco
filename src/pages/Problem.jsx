@@ -353,9 +353,6 @@ export default function Problem() {
         >
           <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl shadow-2xl p-12 text-center">
             <TrendingDown className="w-16 h-16 text-orange-300 mx-auto mb-6" strokeWidth={2} />
-            <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              {t.stuck.title}
-            </h2>
             <p className="text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               {t.stuck.subtitle}
             </p>
