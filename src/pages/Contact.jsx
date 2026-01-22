@@ -104,11 +104,6 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-3 rounded-full mb-6 shadow-lg">
-            <h1 className="text-5xl md:text-6xl font-bold neo-text text-gray-900">
-              {t.header.title}
-            </h1>
-          </div>
           <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
             {t.header.subtitle}
           </p>
