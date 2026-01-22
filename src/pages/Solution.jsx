@@ -455,12 +455,9 @@ export default function Solution() {
                   </div>
                 </div>
               </div>
-            </div>
-            <p className="text-sm text-gray-500 text-center mt-6">
-              {t.performance.note}
-            </p>
-          </div>
-        </motion.div>
+              </div>
+              </div>
+              </motion.div>
 
         {/* Business Benefit - Higher Turnover */}
         <motion.div
