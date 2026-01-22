@@ -115,9 +115,9 @@ export default function Problem() {
         title: "¿Pero Qué Tal Si No Tuvieras Que Elegir?",
         subtitle: "Descubre cómo eaureco ofrece rendimiento superior, sostenibilidad y asequibilidad — todo en una solución.",
         button: "Descubre Nuestra Solución →"
-        }
-        },
-        ko: {
+      }
+    },
+    ko: {
         header: {
           title: "문제점",
           subtitle: "콜드체인 산업은 지속 불가능한 옵션에 갇혀 있습니다"
