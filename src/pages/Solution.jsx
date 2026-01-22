@@ -213,7 +213,7 @@ export default function Solution() {
         co2: "CO₂ 상당량/년",
         credit: "탄소 크레딧",
         desc: "지속 가능한 미래를 향한 운동에 동참하세요",
-        emissions: "낮은 콜드체인 배출",
+        emissions: "탄소 배출량 감소",
         emissionsDesc: "기존 LDPE/물 아이스팩 대비"
       },
       esg: {
