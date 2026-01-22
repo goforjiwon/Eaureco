@@ -327,7 +327,7 @@ export default function Problem() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-200">
-              <div className="text-6xl font-bold neo-text text-orange-500 mb-3">100+</div>
+              <div className="text-6xl font-bold neo-text text-orange-500 mb-3">100년+</div>
               <p className="text-lg font-semibold text-gray-900 mb-2">{t.impact.years}</p>
               <p className="text-gray-600">{t.impact.yearsDesc}</p>
             </div>
