@@ -373,9 +373,6 @@ export default function Comparison() {
           viewport={{ once: true }}
         >
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl shadow-2xl p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-6">
-              {t.summary.title}
-            </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               {t.summary.subtitle}
             </p>
