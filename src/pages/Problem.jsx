@@ -131,7 +131,7 @@ export default function Problem() {
           subtitle: "기존의 모든 솔루션에는 치명적인 결함이 있습니다",
           sap: {
             title: "SAP 아이스팩",
-            subtitle: "초흡수성 고분자 -\n플라스틱 기반 고분자",
+            subtitle: "플라스틱 기반 고흡수성 폴리머",
             pros: ["좋은 성능", "오래 지속"],
             cons: ["자연에 유독함", "하수 처리장 막힘", "매립지로 귀결", "분해에 100년 이상 소요"]
           },
