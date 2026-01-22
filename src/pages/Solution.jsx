@@ -186,7 +186,7 @@ export default function Solution() {
       },
       turnover: {
         title: "높은 회전율",
-        desc: "4배 빠른 냉동은 아이스팩이 더 빨리 준비됨을 의미합니다. 추가 냉동고 공간 없이 더 많은 주문을 처리하고 효율성을 높이세요."
+        desc: "4배 빠른 냉동 시간으로 냉동고 공간을 효율화 하세요"
       },
       disposal: {
         title: "간편한 폐기",
