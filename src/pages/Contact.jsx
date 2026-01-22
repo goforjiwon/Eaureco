@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useLanguage } from "../Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { base44 } from "@/api/base44Client";
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -24,16 +20,7 @@ export default function Contact() {
         locationValue: "Daejeon, South Korea",
         locationDesc: "Visit us at KAIST campus"
       },
-      form: {
-        title: "Send Us a Message",
-        name: "Your Name",
-        email: "Your Email",
-        message: "Your Message",
-        send: "Send Message",
-        sending: "Sending...",
-        success: "Message sent successfully!",
-        error: "Failed to send message. Please try again."
-      },
+
       why: {
         badge: "Why Work With Us",
         sustainable: "Sustainable Solution",
@@ -61,16 +48,7 @@ export default function Contact() {
         locationValue: "Daejeon, Corea del Sur",
         locationDesc: "Visítanos en el campus KAIST"
       },
-      form: {
-        title: "Envíanos un Mensaje",
-        name: "Tu Nombre",
-        email: "Tu Email",
-        message: "Tu Mensaje",
-        send: "Enviar Mensaje",
-        sending: "Enviando...",
-        success: "¡Mensaje enviado exitosamente!",
-        error: "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
-      },
+
       why: {
         badge: "Por Qué Trabajar Con Nosotros",
         sustainable: "Solución Sostenible",
@@ -98,16 +76,7 @@ export default function Contact() {
         locationValue: "대전, 대한민국",
         locationDesc: "KAIST 캠퍼스 방문"
       },
-      form: {
-        title: "메시지 보내기",
-        name: "이름",
-        email: "이메일",
-        message: "메시지",
-        send: "메시지 전송",
-        sending: "전송 중...",
-        success: "메시지가 성공적으로 전송되었습니다!",
-        error: "메시지 전송에 실패했습니다. 다시 시도해주세요."
-      },
+
       why: {
         badge: "우리와 함께 일하는 이유",
         sustainable: "지속 가능한 솔루션",
@@ -126,31 +95,7 @@ export default function Contact() {
 
       const t = translations[language];
 
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [sending, setSending] = useState(false);
-  const [status, setStatus] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSending(true);
-    setStatus(null);
-
-    try {
-      await base44.integrations.Core.SendEmail({
-        to: "goforjiwon@kaist.ac.kr",
-        subject: `[Eaureco Website] Message from ${formData.name}`,
-        body: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      });
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setStatus("error");
-    } finally {
-      setSending(false);
-    }
-  };
-
-  return (
+        return (
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -216,76 +161,6 @@ export default function Contact() {
             </div>
           </motion.div>
         </div>
-
-        {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 max-w-2xl mx-auto"
-        >
-          <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100">
-            <h2 className="text-3xl font-bold neo-text text-gray-900 mb-8 text-center">
-              {t.form.title}
-            </h2>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  placeholder={t.form.name}
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  className="h-12 text-lg"
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder={t.form.email}
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  className="h-12 text-lg"
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder={t.form.message}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                  className="min-h-[150px] text-lg"
-                />
-              </div>
-
-              {status === "success" && (
-                <p className="text-emerald-600 font-semibold text-center">{t.form.success}</p>
-              )}
-              {status === "error" && (
-                <p className="text-red-600 font-semibold text-center">{t.form.error}</p>
-              )}
-
-              <Button
-                type="submit"
-                disabled={sending}
-                className="w-full h-14 text-lg font-bold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
-              >
-                {sending ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    {t.form.sending}
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5 mr-2" />
-                    {t.form.send}
-                  </>
-                )}
-              </Button>
-            </form>
-          </div>
-        </motion.div>
 
         {/* Why Work With Us */}
         <motion.div
