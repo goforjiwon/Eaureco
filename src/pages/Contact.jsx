@@ -164,10 +164,6 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-8 shadow-md">
-            <h2 className="text-lg font-bold text-gray-900 uppercase tracking-wider">{t.why.badge}</h2>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4 text-center">🌱</div>
