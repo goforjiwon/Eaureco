@@ -122,7 +122,7 @@ export default function Comparison() {
       },
       summary: {
         title: "명백한 승자",
-        subtitle: "eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다: 성능, 비용 효율성 및 지속 가능성",
+        subtitle: "성능, 비용 효율성 및 지속 가능성 - eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다",
         button: "문의하기 →"
       }
     }
