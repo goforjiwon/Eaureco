@@ -601,9 +601,6 @@ export default function Solution() {
               <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">
                 {t.impact.title}
               </h2>
-              <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-                {t.impact.subtitle}
-              </p>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
