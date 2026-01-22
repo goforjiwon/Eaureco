@@ -48,7 +48,7 @@ export default function Solution() {
         desc: "Sargassum seaweed is a massive environmental problem. It washes up on beaches in enormous quantities, costing communities millions in cleanup and disposal. We transform this waste into a valuable resource."
       },
       benefits: {
-        badge: "Why Choose Eaureco",
+        badge: "Why Choose eaureco",
         biodegradable: "Biodegradable",
         biodegradableDesc: "100% biodegradable materials that break down naturally without harming the environment",
         sustainable: "Sustainable",
@@ -123,7 +123,7 @@ export default function Solution() {
         desc: "Las algas sargazo son un problema ambiental masivo. Llegan a las playas en cantidades enormes, costando a las comunidades millones en limpieza y eliminación. Transformamos estos residuos en un recurso valioso."
       },
       benefits: {
-        badge: "Por Qué Elegir Eaureco",
+        badge: "Por Qué Elegir eaureco",
         biodegradable: "Biodegradable",
         biodegradableDesc: "Materiales 100% biodegradables que se descomponen naturalmente sin dañar el medio ambiente",
         sustainable: "Sostenible",
@@ -198,7 +198,7 @@ export default function Solution() {
         desc: "모자반 해조류는 막대한 환경 문제입니다. 엄청난 양이 해변에 밀려오며, 지역 사회는 청소 및 처리에 수백만 달러를 지출합니다. 우리는 이 폐기물을 귀중한 자원으로 변환합니다."
       },
       benefits: {
-        badge: "Eaureco를 선택하는 이유",
+        badge: "eaureco를 선택하는 이유",
         biodegradable: "생분해성",
         biodegradableDesc: "환경에 해를 끼치지 않고 자연적으로 분해되는 100% 생분해성 재료",
         sustainable: "지속 가능",
