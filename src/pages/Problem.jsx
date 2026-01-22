@@ -123,8 +123,8 @@ export default function Problem() {
           subtitle: "콜드체인 산업은 지속 불가능한 옵션에 갇혀 있습니다"
         },
         scale: {
-          line1: "연간 10억 개의 아이스팩 유닛이 유통되고 있습니다",
-          line2: "북미만 해도"
+          line1: "북미에서만 연간 10억 개의 아이스팩이 매립됩니다",
+          line2: ""
         },
         options: {
           title: "현재 옵션",
