@@ -570,7 +570,7 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">{t.benefits.costEfficient}</h3>
+              <h3 className="text-xl font-bold mb-3">비용 효율성</h3>
               <p className="text-gray-600">
                 {t.benefits.costEfficientDesc}
               </p>
