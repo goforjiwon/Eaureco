@@ -158,38 +158,7 @@ export default function Contact() {
         </div>
 
         {/* Why Work With Us */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">🌱</div>
-              <h3 className="text-xl font-bold mb-3 text-center">{t.why.sustainable}</h3>
-              <p className="text-gray-600 text-center">
-                {t.why.sustainableDesc}
-              </p>
-            </div>
 
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">⚡</div>
-              <h3 className="text-xl font-bold mb-3 text-center">{t.why.performance}</h3>
-              <p className="text-gray-600 text-center">
-                {t.why.performanceDesc}
-              </p>
-            </div>
-
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4 text-center">💰</div>
-              <h3 className="text-xl font-bold mb-3 text-center">{t.why.cost}</h3>
-              <p className="text-gray-600 text-center">
-                {t.why.costDesc}
-              </p>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Bottom Section */}
         <motion.div
