@@ -44,7 +44,7 @@ export default function Comparison() {
       },
       summary: {
         title: "The Clear Winner",
-        subtitle: "eaureco outperforms traditional ice packs in every category that matters: sustainability, performance, and cost-effectiveness",
+        subtitle: "eaureco outperforms traditional ice packs in every category that matters: performance, cost-effectiveness, and sustainability",
         button: "Get in Touch →"
       }
     },
@@ -83,7 +83,7 @@ export default function Comparison() {
       },
       summary: {
         title: "El Claro Ganador",
-        subtitle: "eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: sostenibilidad, rendimiento y costo-efectividad",
+        subtitle: "eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: rendimiento, costo-efectividad y sostenibilidad",
         button: "Contáctanos →"
       }
     },
@@ -122,7 +122,7 @@ export default function Comparison() {
       },
       summary: {
         title: "명백한 승자",
-        subtitle: "eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다: 지속 가능성, 성능 및 비용 효율성",
+        subtitle: "eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다: 성능, 비용 효율성 및 지속 가능성",
         button: "문의하기 →"
       }
     }
