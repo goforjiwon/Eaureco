@@ -304,7 +304,7 @@ export default function Comparison() {
                       <div className="font-semibold text-gray-900">{language === 'en' ? 'Water' : language === 'es' ? 'Agua' : '물'}</div>
                     </th>
                     <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
-                      <div className="font-semibold text-gray-900">{language === 'en' ? 'Compost' : language === 'es' ? 'Composta' : '퇴비'}</div>
+                      <div className="font-semibold text-gray-900">{language === 'en' ? 'Compost' : language === 'es' ? 'Composta' : '기타 친환경 아이스팩'}</div>
                     </th>
                   </tr>
                 </thead>
