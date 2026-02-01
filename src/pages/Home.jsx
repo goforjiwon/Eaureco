@@ -119,46 +119,24 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center px-4 py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-400">
-          {/* Wave pattern background */}
-          <div 
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 50 Q 30 30, 40 50 T 60 50' stroke='%23047857' fill='none' stroke-width='2'/%3E%3Cpath d='M20 70 Q 30 50, 40 70 T 60 70' stroke='%23047857' fill='none' stroke-width='2'/%3E%3C/svg%3E")`,
-              backgroundSize: '200px 200px'
-            }}
-          ></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/0885b584e_image.png')"
+          }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-teal-900/75 to-cyan-900/85"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center">
-            
-            {/* Logo Icon */}
-            <div className="w-32 h-32 md:w-40 md:h-40 mb-8 bg-gray-900/10 backdrop-blur-sm rounded-3xl flex items-center justify-center border-4 border-gray-900/20">
-              <svg className="w-20 h-20 md:w-24 md:h-24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 40 Q 30 25, 40 40 T 60 40 T 80 40" stroke="currentColor" strokeWidth="8" fill="none" className="text-gray-900"/>
-                <path d="M20 55 Q 30 40, 40 55 T 60 55 T 80 55" stroke="currentColor" strokeWidth="8" fill="none" className="text-gray-900"/>
-                <path d="M20 70 Q 30 55, 40 70 T 60 70 T 80 70" stroke="currentColor" strokeWidth="8" fill="none" className="text-gray-900"/>
-              </svg>
-            </div>
-
-            {/* Brand Name */}
-            <h1 className="text-6xl md:text-8xl font-bold neo-text text-gray-900 mb-4">
+            transition={{ duration: 0.8 }}>
+            <h1 className="text-7xl md:text-9xl font-bold neo-text text-white mb-6">
               eaureco
             </h1>
-            
-            {/* Korean Name */}
-            <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-12">
-              유레코
-            </p>
-
-            {/* Tagline */}
-            <div className="mb-6">
-              <p className="text-3xl md:text-5xl font-bold neo-text text-white mb-3">
+            <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-4 rounded-2xl shadow-2xl mb-8">
+              <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
                 {t.hero.tagline}
               </p>
             </div>
@@ -168,9 +146,21 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }} 
-            className="text-lg md:text-xl text-white font-medium mb-12 max-w-3xl mx-auto">
+            className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}>
+            <Link
+              to={createPageUrl("Solution")}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-xl font-bold text-lg text-gray-900 hover:shadow-2xl transition-all transform hover:scale-105">
+              {t.hero.cta}
+              <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
