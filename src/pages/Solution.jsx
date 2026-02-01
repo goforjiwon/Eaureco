@@ -297,9 +297,9 @@ export default function Solution() {
             <div className="order-1 md:order-2">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
-                <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl">
+                <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/37847a2b9_image.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/ad5e0c0a1_image.png"
                     alt="eaureco ice pack - Stay cool, Stay green"
                     className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
 
