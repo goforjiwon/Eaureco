@@ -94,7 +94,7 @@ export default function Layout({ children, currentPageName }) {
               {/* Logo */}
               <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/5e428b2a1_KakaoTalk_20260203_182916893_01.png" 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/6ed748c98_KakaoTalk_20260203_182916893.png" 
                   alt="eaureco logo" 
                   className="h-12 w-auto"
                 />
