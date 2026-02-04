@@ -132,9 +132,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}>
-            <h1 className="text-7xl md:text-9xl font-bold neo-text text-white mb-6">
-              eaureco
-            </h1>
+            <div className="mb-6 flex justify-center">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/225fd95bc_KakaoTalk_20260203_182916893_02.png" 
+                alt="eaureco" 
+                className="h-24 md:h-32 w-auto"
+              />
+            </div>
             <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-4 rounded-2xl shadow-2xl mb-8">
               <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
                 {t.hero.tagline}
