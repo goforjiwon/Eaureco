@@ -93,9 +93,11 @@ export default function Layout({ children, currentPageName }) {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
-                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                  <Waves className="w-5 h-5 text-white" strokeWidth={2.5} />
-                </div>
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/5e428b2a1_KakaoTalk_20260203_182916893_01.png" 
+                  alt="eaureco logo" 
+                  className="h-12 w-auto"
+                />
                 <div>
                   <h1 className="text-xl font-bold neo-text text-gray-900">eaureco</h1>
                   <p className="text-xs text-emerald-600 font-medium">
