@@ -206,7 +206,11 @@ export default function Layout({ children, currentPageName }) {
         {/* Footer */}
         <footer className="border-t border-gray-200 bg-gradient-to-r from-emerald-600 to-teal-600 py-12">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold neo-text text-white mb-2">eaureco</h2>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png" 
+              alt="eaureco" 
+              className="h-12 w-auto mx-auto mb-2"
+            />
             <p className="text-white/90 font-medium text-lg mb-1">
               Stay Cool, Stay Green
             </p>
