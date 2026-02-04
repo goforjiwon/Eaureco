@@ -134,7 +134,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}>
             <div className="mb-6 flex justify-center">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/225fd95bc_KakaoTalk_20260203_182916893_02.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png" 
                 alt="eaureco" 
                 className="h-24 md:h-32 w-auto"
               />
