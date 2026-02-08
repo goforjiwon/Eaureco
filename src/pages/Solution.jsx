@@ -517,7 +517,7 @@ export default function Solution() {
               </div>
               
               <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
-                {t.sargassum.title}
+                괭생이모자반 처리에 수십억 원의 낭비됩니다
               </h3>
               </div>
 
@@ -598,8 +598,8 @@ export default function Solution() {
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-green-900/85 to-teal-900/90"></div>
             
             <div className="relative z-10 p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">
-                eaureco 전환 효과
+              <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">Eaureco effect
+
               </h2>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
