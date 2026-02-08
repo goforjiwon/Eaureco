@@ -245,7 +245,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
                   <div className="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl">
                     <img
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/6ef0ecc32_image.png"
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/f58fa1b62_Gemini_Generated_Image_kc48lhkc48lhkc48.png"
                       alt="eaureco ice pack"
                       className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
                   </div>
