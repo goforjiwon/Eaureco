@@ -203,7 +203,7 @@ export default function Layout({ children, currentPageName }) {
         </nav>
 
         {/* Main Content */}
-        <main className="pb-12">
+        <main className="px-6 pb-12">
           {children}
         </main>
 
