@@ -184,7 +184,7 @@ export default function Problem() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-gradient-to-r from-orange-400 to-red-400 px-8 py-3 rounded-full mb-6 shadow-lg">
+          <div className="inline-block bg-gradient-to-r from-orange-400 to-red-400 px-10 py-4 rounded-full mb-6 shadow-lg">
             <h1 className="text-5xl md:text-6xl font-bold neo-text text-white">
               {t.header.title}
             </h1>
