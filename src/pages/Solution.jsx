@@ -517,7 +517,7 @@ export default function Solution() {
               </div>
               
               <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
-                괭생이모자반 처리에 수십억 원의 낭비됩니다
+                {t.sargassum.title}
               </h3>
               </div>
 
