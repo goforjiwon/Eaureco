@@ -5,7 +5,7 @@ import { useLanguage } from "../Layout";
 
 export default function Solution() {
   const { language } = useLanguage();
-  
+
   const translations = {
     en: {
       header: {
@@ -16,10 +16,10 @@ export default function Solution() {
         badge: "Meet Eaureco",
         title: "Your sustainable cooling solution",
         features: [
-          { title: "Organic Ice Pack", desc: "100% biodegradable, both content and packaging" },
-          { title: "Better Thermal Properties", desc: "Superior cooling performance that lasts longer" },
-          { title: "From Ocean Waste", desc: "Made from sargassum seaweed collected from beaches" }
-        ]
+        { title: "Organic Ice Pack", desc: "100% biodegradable, both content and packaging" },
+        { title: "Better Thermal Properties", desc: "Superior cooling performance that lasts longer" },
+        { title: "From Ocean Waste", desc: "Made from sargassum seaweed collected from beaches" }]
+
       },
       sizes: {
         large: { name: "LARGE", weight: "500g", desc: "Ideal for grocery delivery, seafood, pharmaceutical logistics" },
@@ -70,12 +70,12 @@ export default function Solution() {
         badge: "ESG COMPLIANCE",
         title: "Eaureco reduces your cooling emissions by more than half, with zero changes to your operations.",
         benefits: [
-          "Made from advanced biodegradable bio-materials",
-          "Breaks down naturally in <45 days",
-          "No microplastics, no toxic residues",
-          "Safe disposal options",
-          "Supports Scope 3 reductions and corporate ESG metrics"
-        ],
+        "Made from advanced biodegradable bio-materials",
+        "Breaks down naturally in <45 days",
+        "No microplastics, no toxic residues",
+        "Safe disposal options",
+        "Supports Scope 3 reductions and corporate ESG metrics"],
+
         quote: "Switching to Eaureco saves as much CO₂ as planting 3 trees, for every 1,000 deliveries.",
         subtitle: "Lower carbon. Lower cost. Zero operational trade-offs.",
         saved: "187 kg CO₂e",
@@ -91,10 +91,10 @@ export default function Solution() {
         badge: "Conoce Eaureco",
         title: "Tu solución de enfriamiento sostenible",
         features: [
-          { title: "Paquete de Hielo Orgánico", desc: "100% biodegradable, tanto contenido como empaque" },
-          { title: "Mejores Propiedades Térmicas", desc: "Rendimiento de enfriamiento superior que dura más" },
-          { title: "De Residuos Oceánicos", desc: "Hecho de algas sargazo recolectadas de las playas" }
-        ]
+        { title: "Paquete de Hielo Orgánico", desc: "100% biodegradable, tanto contenido como empaque" },
+        { title: "Mejores Propiedades Térmicas", desc: "Rendimiento de enfriamiento superior que dura más" },
+        { title: "De Residuos Oceánicos", desc: "Hecho de algas sargazo recolectadas de las playas" }]
+
       },
       sizes: {
         large: { name: "GRANDE", weight: "500g", desc: "Ideal para entrega de comestibles, mariscos, logística farmacéutica" },
@@ -145,19 +145,19 @@ export default function Solution() {
         badge: "CUMPLIMIENTO ESG",
         title: "Eaureco reduce tus emisiones de enfriamiento en más de la mitad, sin cambios en tus operaciones.",
         benefits: [
-          "Hecho de biomateriales biodegradables avanzados",
-          "Se descompone naturalmente en <45 días",
-          "Sin microplásticos, sin residuos tóxicos",
-          "Opciones de eliminación seguras",
-          "Apoya las reducciones de Alcance 3 y las métricas ESG corporativas"
-        ],
+        "Hecho de biomateriales biodegradables avanzados",
+        "Se descompone naturalmente en <45 días",
+        "Sin microplásticos, sin residuos tóxicos",
+        "Opciones de eliminación seguras",
+        "Apoya las reducciones de Alcance 3 y las métricas ESG corporativas"],
+
         quote: "Cambiar a Eaureco ahorra tanto CO₂ como plantar 3 árboles, por cada 1,000 entregas.",
         subtitle: "Menor carbono. Menor costo. Cero compromisos operacionales.",
         saved: "187 kg CO₂e",
         savedDesc: "Ahorrado por 1,000 paquetes de hielo eaureco"
       }
-      },
-      ko: {
+    },
+    ko: {
       header: {
         title: "솔루션",
         subtitle: "해양 폐기물을 활용한 콜드체인 혁명"
@@ -166,10 +166,10 @@ export default function Solution() {
         badge: "Eaureco를 만나보세요",
         title: "지속 가능한 냉각 솔루션",
         features: [
-          { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
-          { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
-          { title: "해양 폐기물로 제작", desc: "해변에서 수집한 버려지는 해조류로 제작" }
-        ]
+        { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
+        { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
+        { title: "해양 폐기물로 제작", desc: "해변에서 수집한 버려지는 해조류로 제작" }]
+
       },
       sizes: {
         large: { name: "대형", weight: "500g", desc: "식료품 배송, 해산물, 제약 물류에 이상적" },
@@ -220,21 +220,21 @@ export default function Solution() {
         badge: "ESG 준수",
         title: "Eaureco는 운영에 변화 없이 냉각 배출을 절반 이상 줄입니다.",
         benefits: [
-          "고급 생분해성 바이오 소재로 제작",
-          "45일 이내에 자연 분해",
-          "미세 플라스틱 없음, 독성 잔류물 없음",
-          "안전한 폐기 옵션",
-          "범위 3 감축 및 기업 ESG 지표 지원"
-        ],
+        "고급 생분해성 바이오 소재로 제작",
+        "45일 이내에 자연 분해",
+        "미세 플라스틱 없음, 독성 잔류물 없음",
+        "안전한 폐기 옵션",
+        "범위 3 감축 및 기업 ESG 지표 지원"],
+
         quote: "Eaureco로 전환하면 1,000건의 배송당 나무 3그루를 심는 것만큼 CO₂를 절약합니다.",
         subtitle: "낮은 탄소. 낮은 비용. 운영상의 타협 제로.",
         saved: "187 kg CO₂e",
         savedDesc: "1,000개의 eaureco 아이스팩으로 절약"
       }
-      }
-      };
+    }
+  };
 
-      const t = translations[language];
+  const t = translations[language];
 
   return (
     <div className="py-16 px-4">
@@ -278,7 +278,7 @@ export default function Solution() {
                   const colors = ['emerald', 'cyan', 'teal'];
                   const Icon = icons[idx];
                   const color = colors[idx];
-                  
+
                   return (
                     <div key={idx} className="flex items-start gap-4">
                       <div className={`w-10 h-10 bg-gradient-to-br from-${color}-400 to-${color}-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md`}>
@@ -288,8 +288,8 @@ export default function Solution() {
                         <h4 className="font-bold text-lg mb-1">{feature.title}</h4>
                         <p className="text-gray-600">{feature.desc}</p>
                       </div>
-                    </div>
-                  );
+                    </div>);
+
                 })}
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/b3663eadc_KakaoTalk_20260208_211839501.jpg"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/90700e7e5_Gemini_Generated_Image_qm6pmeqm6pmeqm6p.png"
                     alt="eaureco ice pack - Stay cool, Stay green"
                     className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
 
@@ -321,7 +321,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/67758a5c7_KakaoTalk_20260208_211707818_01.jpg"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/c7bdeb15b_KakaoTalk_20251116_233030585_06.png"
                     alt="eaureco ice pack small"
                     className="w-full h-auto" />
                 </div>
@@ -337,7 +337,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/212184110_KakaoTalk_20260208_211707818_02.jpg"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/70751ff34_KakaoTalk_20251116_233030585_07.png"
                     alt="eaureco ice pack medium"
                     className="w-full h-auto" />
                 </div>
@@ -353,7 +353,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/ed4e57b72_KakaoTalk_20260208_211707818_03.jpg"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/fdcd6e7b3_KakaoTalk_20251116_233030585_09.png"
                     alt="eaureco ice pack large"
                     className="w-full h-auto" />
                 </div>
@@ -517,7 +517,7 @@ export default function Solution() {
               </div>
               
               <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
-                {t.sargassum.title}
+                괭생이모자반 처리에 수십억 원의 낭비됩니다
               </h3>
               </div>
 
@@ -560,7 +560,7 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">🌱</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">sustainablility</h3>
+              <h3 className="text-xl font-bold mb-3">Sustainable</h3>
               <p className="text-gray-600">
                 {t.benefits.sustainableDesc}
               </p>
@@ -570,7 +570,7 @@ export default function Solution() {
               <div className="w-14 h-14 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">비용 효율성</h3>
+              <h3 className="text-xl font-bold mb-3">Cost Effective</h3>
               <p className="text-gray-600">
                 {t.benefits.costEfficientDesc}
               </p>
@@ -588,7 +588,7 @@ export default function Solution() {
             <h2 className="text-lg font-bold text-white uppercase tracking-wider">{t.impact.badge}</h2>
           </div>
 
-          <div 
+          <div
             className="relative rounded-3xl shadow-2xl overflow-hidden"
             style={{
               backgroundImage: "url('https://images.unsplash.com/photo-1511497584788-876760111969?w=1600&q=80')",
@@ -645,12 +645,12 @@ export default function Solution() {
                 </h2>
 
                 <div className="space-y-3 mb-8">
-                  {t.esg.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
+                  {t.esg.benefits.map((benefit, idx) =>
+                  <div key={idx} className="flex items-start gap-3">
                       <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                       <span className="text-lg font-medium">{benefit}</span>
                     </div>
-                  ))}
+                  )}
                 </div>
 
                 <div className="bg-white/20 backdrop-blur rounded-2xl p-6 border border-white/30 mb-6">
@@ -687,6 +687,6 @@ export default function Solution() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
