@@ -28,7 +28,7 @@ export default function Layout({ children, currentPageName }) {
     en: {
       home: "Home",
       problem: "Problem",
-      solution: "Our Solution",
+      solution: "Solution",
       comparison: "Comparison",
       contact: "Contact"
     },
