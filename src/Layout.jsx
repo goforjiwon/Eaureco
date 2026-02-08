@@ -27,7 +27,7 @@ export default function Layout({ children, currentPageName }) {
   const navLabels = {
     en: {
       home: "Home",
-      problem: "The Problem",
+      problem: "Problem",
       solution: "Our Solution",
       comparison: "Comparison",
       contact: "Contact"
