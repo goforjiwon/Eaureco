@@ -299,7 +299,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-2xl">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/90700e7e5_Gemini_Generated_Image_qm6pmeqm6pmeqm6p.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/b3663eadc_KakaoTalk_20260208_211839501.jpg"
                     alt="eaureco ice pack - Stay cool, Stay green"
                     className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
 
@@ -321,7 +321,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/c7bdeb15b_KakaoTalk_20251116_233030585_06.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/67758a5c7_KakaoTalk_20260208_211707818_01.jpg"
                     alt="eaureco ice pack small"
                     className="w-full h-auto" />
                 </div>
@@ -337,7 +337,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/70751ff34_KakaoTalk_20251116_233030585_07.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/212184110_KakaoTalk_20260208_211707818_02.jpg"
                     alt="eaureco ice pack medium"
                     className="w-full h-auto" />
                 </div>
@@ -353,7 +353,7 @@ export default function Solution() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl blur-xl opacity-50"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow">
                   <img
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/fdcd6e7b3_KakaoTalk_20251116_233030585_09.png"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/ed4e57b72_KakaoTalk_20260208_211707818_03.jpg"
                     alt="eaureco ice pack large"
                     className="w-full h-auto" />
                 </div>
