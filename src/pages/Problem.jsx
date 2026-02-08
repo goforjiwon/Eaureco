@@ -224,7 +224,7 @@ export default function Problem() {
             <p className="text-gray-500">{t.options.subtitle}</p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5">
             {/* SAP */}
             <OptionCard 
               icon={<Skull className="w-8 h-8 text-rose-500" />}
@@ -349,20 +349,20 @@ function OptionCard({ icon, title, subtitle, pros, cons, theme }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`rounded-2xl p-8 border ${themeColors[theme].replace('text-', 'border-')} hover:shadow-lg transition-all duration-300 bg-white`}
+      className={`rounded-xl p-5 border ${themeColors[theme].replace('text-', 'border-')} hover:shadow-md transition-all duration-300 bg-white`}
     >
-      <div className="mb-6">
-        <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${themeColors[theme]} bg-opacity-50`}>
-          {icon}
+      <div className="mb-4">
+        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${themeColors[theme]} bg-opacity-50`}>
+          {React.cloneElement(icon, { className: "w-5 h-5" })}
         </div>
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+        <h3 className="text-xl font-bold text-gray-900">{title}</h3>
         <p className="text-gray-500 text-sm mt-1">{subtitle}</p>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div>
-          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Pros</h4>
-          <ul className="space-y-2">
+          <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Pros</h4>
+          <ul className="space-y-1.5">
             {pros.map((pro, i) => (
               <li key={i} className="flex items-start gap-2 text-sm font-medium text-gray-700">
                 <span className="text-emerald-500 mt-0.5">●</span> {pro}
@@ -370,9 +370,9 @@ function OptionCard({ icon, title, subtitle, pros, cons, theme }) {
             ))}
           </ul>
         </div>
-        <div className="pt-6 border-t border-gray-100">
-          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Cons</h4>
-          <ul className="space-y-2">
+        <div className="pt-4 border-t border-gray-100">
+          <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Cons</h4>
+          <ul className="space-y-1.5">
             {cons.map((con, i) => (
               <li key={i} className="flex items-start gap-2 text-sm font-medium text-gray-700">
                 <span className="text-rose-500 mt-0.5">×</span> {con}
