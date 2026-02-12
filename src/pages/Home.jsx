@@ -28,9 +28,9 @@ export default function Home() {
       why: {
         badge: "Why Eaureco?",
         title: "We turn trash into treasure",
-        description: "Millions of tons of sargassum seaweed wash up on beaches, costing millions in disposal fees. We transform this ocean waste into high-performance, sustainable, and cheap ice packs.",
+        description: "We transform ocean waste into high-performance, sustainable, and cheap ice packs.",
         sustainable: "Sustainable",
-        sustainableDesc: "Made from renewable sargassum waste",
+        sustainableDesc: "Made from renewable ocean waste",
         performance: "Superior Performance",
         performanceDesc: "Freezes faster and lasts longer",
         costEffective: "Cost-Effective",
@@ -62,9 +62,9 @@ export default function Home() {
       why: {
         badge: "¿Por Qué Eaureco?",
         title: "Convertimos basura en tesoro",
-        description: "Millones de toneladas de algas sargazo llegan a las playas, costando millones en tarifas de eliminación. Transformamos estos residuos oceánicos en paquetes de hielo sostenibles, de alto rendimiento y económicos.",
+        description: "Transformamos residuos oceánicos en paquetes de hielo sostenibles, de alto rendimiento y económicos.",
         sustainable: "Sostenible",
-        sustainableDesc: "Hecho de residuos renovables de sargazo",
+        sustainableDesc: "Hecho de residuos oceánicos renovables",
         performance: "Rendimiento Superior",
         performanceDesc: "Se congela más rápido y dura más",
         costEffective: "Costo-Efectivo",
@@ -96,9 +96,9 @@ export default function Home() {
       why: {
         badge: "왜 Eaureco인가?",
         title: "쓰레기를 보물로 바꿉니다",
-        description: "수백만 톤의 모자반 해조류가 해변에 밀려오며, 처리 비용으로 수백만 달러가 소요됩니다. 우리는 이 해양 폐기물을 고성능, 지속 가능하고 저렴한 아이스팩으로 변환합니다.",
+        description: "우리는 해양 폐기물을 고성능, 지속 가능하고 저렴한 아이스팩으로 변환합니다.",
         sustainable: "지속 가능",
-        sustainableDesc: "재생 가능한 모자반 폐기물로 제작",
+        sustainableDesc: "재생 가능한 해양 폐기물로 제작",
         performance: "뛰어난 성능",
         performanceDesc: "더 빠르게 얼고 더 오래 지속",
         costEffective: "비용 효율적",
@@ -231,15 +231,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}>
               <div className="space-y-6">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 via-blue-100 to-teal-100 rounded-3xl blur-2xl opacity-60"></div>
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <img
-                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/5f7b251c8_image.png"
-                      alt="Sargassum seaweed on beach"
-                      className="w-full h-auto transform group-hover:scale-105 transition-transform duration-300" />
-                  </div>
-                </div>
+
 
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 via-teal-100 to-cyan-100 rounded-3xl blur-2xl opacity-60"></div>
