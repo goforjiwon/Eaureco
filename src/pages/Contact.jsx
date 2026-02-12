@@ -167,9 +167,11 @@ export default function Contact() {
           viewport={{ once: true }}
         >
           <div className="bg-gradient-to-br from-lime-50 to-emerald-50 rounded-3xl shadow-xl p-12 text-center border border-emerald-100">
-            <h2 className="text-4xl font-bold neo-text text-gray-900 mb-2">
-              eaureco
-            </h2>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png" 
+              alt="eaureco" 
+              className="h-16 md:h-20 w-auto mx-auto mb-4"
+            />
             <p className="text-2xl font-bold text-emerald-600 mb-4">{t.bottom.tagline}</p>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t.bottom.desc}</p>
           </div>
