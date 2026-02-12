@@ -103,7 +103,11 @@ export default function Layout({ children, currentPageName }) {
                   className="h-12 w-auto"
                 />
                 <div>
-                  <h1 className="text-xl font-bold neo-text text-gray-900">eaureco</h1>
+                  <img 
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png" 
+                    alt="eaureco" 
+                    className="h-6 w-auto mb-0.5"
+                  />
                   <p className="text-xs text-emerald-600 font-medium">
                     Stay Cool, Stay Green
                   </p>
