@@ -10,7 +10,7 @@ export default function Solution() {
     en: {
       header: {
         title: "Our Solution",
-        subtitle: "Revolutionizing cold chain by transforming ocean waste"
+        subtitle: "Revolutionizing cold chain with sustainable materials"
       },
       hero: {
         badge: "Meet Eaureco",
@@ -18,7 +18,7 @@ export default function Solution() {
         features: [
         { title: "Organic Ice Pack", desc: "100% biodegradable, both content and packaging" },
         { title: "Better Thermal Properties", desc: "Superior cooling performance that lasts longer" },
-        { title: "From Ocean Waste", desc: "Made from sargassum seaweed collected from beaches" }]
+        { title: "Sustainable Origin", desc: "Made from renewable bio-based materials" }]
 
       },
       sizes: {
@@ -52,7 +52,7 @@ export default function Solution() {
         biodegradable: "Biodegradable",
         biodegradableDesc: "100% biodegradable materials that break down naturally without harming the environment",
         sustainable: "Sustainable",
-        sustainableDesc: "Made from renewable ocean waste, helping clean up beaches while creating value",
+        sustainableDesc: "Made from renewable materials, creating value from nature",
         costEfficient: "Cost-Efficient",
         costEfficientDesc: "Competitive pricing that doesn't compromise on performance or sustainability"
       },
@@ -85,7 +85,7 @@ export default function Solution() {
     es: {
       header: {
         title: "Nuestra Solución",
-        subtitle: "Revolucionando la cadena de frío transformando residuos oceánicos"
+        subtitle: "Revolucionando la cadena de frío con materiales sostenibles"
       },
       hero: {
         badge: "Conoce Eaureco",
@@ -93,7 +93,7 @@ export default function Solution() {
         features: [
         { title: "Paquete de Hielo Orgánico", desc: "100% biodegradable, tanto contenido como empaque" },
         { title: "Mejores Propiedades Térmicas", desc: "Rendimiento de enfriamiento superior que dura más" },
-        { title: "De Residuos Oceánicos", desc: "Hecho de algas sargazo recolectadas de las playas" }]
+        { title: "Origen Sostenible", desc: "Hecho de materiales bio-basados renovables" }]
 
       },
       sizes: {
@@ -127,7 +127,7 @@ export default function Solution() {
         biodegradable: "Biodegradable",
         biodegradableDesc: "Materiales 100% biodegradables que se descomponen naturalmente sin dañar el medio ambiente",
         sustainable: "Sostenible",
-        sustainableDesc: "Hecho de residuos oceánicos renovables, ayudando a limpiar las playas mientras se crea valor",
+        sustainableDesc: "Hecho de materiales renovables, creando valor desde la naturaleza",
         costEfficient: "Costo-Eficiente",
         costEfficientDesc: "Precios competitivos que no comprometen el rendimiento ni la sostenibilidad"
       },
@@ -160,7 +160,7 @@ export default function Solution() {
     ko: {
       header: {
         title: "솔루션",
-        subtitle: "해양 폐기물을 활용한 콜드체인 혁명"
+        subtitle: "지속 가능한 소재를 활용한 콜드체인 혁명"
       },
       hero: {
         badge: "Eaureco를 만나보세요",
@@ -168,7 +168,7 @@ export default function Solution() {
         features: [
         { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
         { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
-        { title: "해양 폐기물로 제작", desc: "해변에서 수집한 버려지는 해조류로 제작" }]
+        { title: "지속 가능한 기원", desc: "재생 가능한 바이오 소재로 제작" }]
 
       },
       sizes: {
@@ -202,7 +202,7 @@ export default function Solution() {
         biodegradable: "생분해성",
         biodegradableDesc: "환경에 해를 끼치지 않고 자연적으로 분해되는 100% 생분해성 재료",
         sustainable: "지속 가능",
-        sustainableDesc: "재생 가능한 해양 폐기물로 제작되어 해변을 청소하면서 가치를 창출",
+        sustainableDesc: "재생 가능한 소재로 제작되어 가치를 창출",
         costEfficient: "비용 효율적",
         costEfficientDesc: "성능이나 지속 가능성을 훼손하지 않는 경쟁력 있는 가격"
       },
@@ -503,36 +503,7 @@ export default function Solution() {
           </div>
         </motion.div>
 
-        {/* The Sargassum Story */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20">
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block bg-gradient-to-r from-teal-400 to-cyan-400 px-6 py-2 rounded-full mb-6 shadow-md">
-                <h2 className="text-sm font-bold text-white uppercase tracking-wider">{t.sargassum.badge}</h2>
-              </div>
-              
-              <h3 className="text-4xl font-bold neo-text text-gray-900 mb-6">
-                {t.sargassum.title}
-              </h3>
-              </div>
-
-            <div>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-3xl transform group-hover:scale-105 transition-transform"></div>
-                <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/51931e2c4_image.png"
-                  alt="Sargassum seaweed on beach"
-                  className="relative w-full h-[400px] object-cover rounded-3xl shadow-2xl" />
-
-              </div>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Benefits Grid */}
         <motion.div
