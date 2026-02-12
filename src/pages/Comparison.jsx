@@ -12,10 +12,10 @@ export default function Comparison() {
     en: {
       header: {
         title: "Comparison",
-        subtitle: "See how eaureco outperforms traditional ice pack solutions"
+        subtitle: "See how Eaureco outperforms traditional ice pack solutions"
       },
       value: {
-        title: "eaureco is Cheaper & More Effective",
+        title: "Eaureco is Cheaper & More Effective",
         subtitle: "Our ice packs deliver superior performance while being better for the environment and your bottom line",
         cheap: "Cheap",
         effective: "Effective"
@@ -44,17 +44,17 @@ export default function Comparison() {
       },
       summary: {
         title: "The Clear Winner",
-        subtitle: "eaureco outperforms traditional ice packs in every category that matters: performance, cost-effectiveness, and sustainability",
+        subtitle: "Eaureco outperforms traditional ice packs in every category that matters: performance, cost-effectiveness, and sustainability",
         button: "Get in Touch →"
       }
     },
     es: {
       header: {
         title: "Comparación",
-        subtitle: "Ve cómo eaureco supera a las soluciones tradicionales de paquetes de hielo"
+        subtitle: "Ve cómo Eaureco supera a las soluciones tradicionales de paquetes de hielo"
       },
       value: {
-        title: "eaureco es Más Barato y Más Efectivo",
+        title: "Eaureco es Más Barato y Más Efectivo",
         subtitle: "Nuestros paquetes de hielo ofrecen un rendimiento superior mientras son mejores para el medio ambiente y tu negocio",
         cheap: "Económico",
         effective: "Efectivo"
@@ -83,17 +83,17 @@ export default function Comparison() {
       },
       summary: {
         title: "El Claro Ganador",
-        subtitle: "eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: rendimiento, costo-efectividad y sostenibilidad",
+        subtitle: "Eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: rendimiento, costo-efectividad y sostenibilidad",
         button: "Contáctanos →"
       }
     },
     ko: {
       header: {
         title: "비교",
-        subtitle: "eaureco가 기존 아이스팩 솔루션을 능가하는 방법을 확인하세요"
+        subtitle: "Eaureco가 기존 아이스팩 솔루션을 능가하는 방법을 확인하세요"
       },
       value: {
-        title: "eaureco는 더 저렴하고 더 효과적입니다",
+        title: "Eaureco는 더 저렴하고 더 효과적입니다",
         subtitle: "우리의 아이스팩은 환경과 수익에 더 나은 뛰어난 성능을 제공합니다",
         cheap: "저렴함",
         effective: "효과적"
@@ -122,7 +122,7 @@ export default function Comparison() {
       },
       summary: {
         title: "명백한 승자",
-        subtitle: "성능, 비용 효율성 및 지속 가능성 - eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다",
+        subtitle: "성능, 비용 효율성 및 지속 가능성 - Eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다",
         button: "문의하기 →"
       }
     }
