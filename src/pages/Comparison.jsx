@@ -295,7 +295,7 @@ export default function Comparison() {
                       <span className="font-bold text-lg text-gray-900">{t.table.feature}</span>
                     </th>
                     <th className="px-6 py-5 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l border-gray-200">
-                      <div className="font-bold text-xl neo-text text-emerald-600">EAURECO</div>
+                      <div className="font-bold text-xl neo-text text-emerald-600">Eaureco</div>
                     </th>
                     <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
                       <div className="font-semibold text-gray-900">SAP ({language === 'en' ? 'Plastic' : language === 'es' ? 'Plástico' : '플라스틱'})</div>
