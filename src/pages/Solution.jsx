@@ -240,20 +240,20 @@ export default function Solution() {
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16">
+        
 
-          <div className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 rounded-full mb-6 shadow-lg">
-            <h1 className="text-5xl md:text-6xl font-bold neo-text text-white">
-              {t.header.title}
-            </h1>
-          </div>
-          <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
-            {t.header.subtitle}
-          </p>
-        </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
 
         {/* Hero Product Section */}
         <motion.div
