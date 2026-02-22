@@ -71,12 +71,12 @@ export default function Layout({ children, currentPageName }) {
   };
 
   const navItems = [
-    { name: navLabels[language].home, sectionId: "home", icon: Waves },
-    { name: navLabels[language].problem, sectionId: "problem", icon: Leaf },
-    { name: navLabels[language].solution, sectionId: "solution", icon: Leaf },
-    { name: navLabels[language].comparison, sectionId: "comparison", icon: Scale },
-    { name: navLabels[language].contact, sectionId: "contact", icon: Mail },
-  ];
+  { name: navLabels[language].home, sectionId: "home", icon: Waves },
+  { name: navLabels[language].problem, sectionId: "problem", icon: Leaf },
+  { name: navLabels[language].solution, sectionId: "solution", icon: Leaf },
+  { name: navLabels[language].comparison, sectionId: "comparison", icon: Scale },
+  { name: navLabels[language].contact, sectionId: "contact", icon: Mail }];
+
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -126,17 +126,17 @@ export default function Layout({ children, currentPageName }) {
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
-                <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/6ed748c98_KakaoTalk_20260203_182916893.png" 
-                  alt="eaureco logo" 
-                  className="h-12 w-auto"
-                />
+                
+
+
+
+
                 <div>
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png" 
-                    alt="eaureco" 
-                    className="h-6 w-auto mb-0.5"
-                  />
+                  <img
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png"
+                    alt="eaureco"
+                    className="h-6 w-auto mb-0.5" />
+
                   <p className="text-xs text-emerald-600 font-medium">
                     Stay Cool, Stay Green
                   </p>
@@ -153,17 +153,17 @@ export default function Layout({ children, currentPageName }) {
                       key={item.sectionId}
                       onClick={() => scrollToSection(item.sectionId)}
                       className={`px-4 py-2 rounded-lg font-semibold transition-all ${
-                        isActive
-                          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md"
-                          : "text-gray-700 hover:bg-gray-100"
-                      }`}
-                    >
+                      isActive ?
+                      "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md" :
+                      "text-gray-700 hover:bg-gray-100"}`
+                      }>
+
                       <div className="flex items-center gap-2">
                         <Icon className="w-4 h-4" strokeWidth={2} />
                         {item.name}
                       </div>
-                    </button>
-                  );
+                    </button>);
+
                 })}
                 
                 {/* Language Toggle Button */}
@@ -204,17 +204,17 @@ export default function Layout({ children, currentPageName }) {
                     key={item.sectionId}
                     onClick={() => scrollToSection(item.sectionId)}
                     className={`px-3 py-2 rounded-lg font-semibold text-sm ${
-                      isActive
-                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white"
-                        : "bg-gray-100 text-gray-700"
-                    }`}
-                  >
+                    isActive ?
+                    "bg-gradient-to-r from-emerald-500 to-teal-500 text-white" :
+                    "bg-gray-100 text-gray-700"}`
+                    }>
+
                     <div className="flex items-center gap-2 justify-center">
                       <Icon className="w-4 h-4" strokeWidth={2} />
                       {item.name}
                     </div>
-                  </button>
-                );
+                  </button>);
+
               })}
               
               {/* Mobile Language Toggle */}
@@ -243,24 +243,24 @@ export default function Layout({ children, currentPageName }) {
         {/* Footer */}
         <footer className="border-t border-gray-200 bg-gradient-to-r from-emerald-600 to-teal-600 py-12">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png" 
-              alt="eaureco" 
-              className="h-12 w-auto mx-auto mb-2"
-            />
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png"
+              alt="eaureco"
+              className="h-12 w-auto mx-auto mb-2" />
+
             <p className="text-white/90 font-medium text-lg mb-1">
               Stay Cool, Stay Green
             </p>
             <p className="text-white/75 text-sm">
-              {language === 'en' 
-                ? 'Transforming ocean waste into sustainable cooling solutions'
-                : language === 'es'
-                ? 'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles'
-                : '해양 폐기물을 지속 가능한 냉각 솔루션으로 전환'}
+              {language === 'en' ?
+              'Transforming ocean waste into sustainable cooling solutions' :
+              language === 'es' ?
+              'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles' :
+              '해양 폐기물을 지속 가능한 냉각 솔루션으로 전환'}
             </p>
           </div>
         </footer>
       </div>
-    </LanguageContext.Provider>
-  );
+    </LanguageContext.Provider>);
+
 }
