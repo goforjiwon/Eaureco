@@ -1056,7 +1056,7 @@ export default function Home() {
               className="flex justify-center"
             >
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                <Snowflake className="w-16 h-16 text-emerald-600 mx-auto" strokeWidth={2} />
+                <Leaf className="w-16 h-16 text-emerald-600 mx-auto" strokeWidth={2} />
               </div>
             </motion.div>
           </motion.div>
