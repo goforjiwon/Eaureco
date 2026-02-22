@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Timer, Thermometer, CheckCircle, Mail, MapPin, TrendingUp, Scale } from "lucide-react";
+import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Timer, Thermometer, CheckCircle, Mail, MapPin, TrendingUp, Scale, Leaf } from "lucide-react";
 import { useLanguage } from "../Layout";
 
 export default function Home() {
