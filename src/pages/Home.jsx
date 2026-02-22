@@ -1033,43 +1033,30 @@ export default function Home() {
         </section>
 
         {/* Breakthrough Transition */}
-        <section className="relative py-32 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900"></div>
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-          
+        <section className="relative py-32 px-6 overflow-hidden bg-gradient-to-br from-slate-50 via-gray-50 to-stone-100">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 max-w-5xl mx-auto text-center"
+            className="max-w-5xl mx-auto text-center"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-400 to-teal-400 mb-8 tracking-tight">
-                {t.problem.breakthrough.title}
-              </h2>
-              <p className="text-2xl md:text-3xl text-white/90 font-medium mb-12 max-w-3xl mx-auto">
-                {t.problem.breakthrough.subtitle}
-              </p>
-            </motion.div>
+            <h2 className="text-6xl md:text-8xl font-black text-gray-900 mb-8 tracking-tight">
+              {t.problem.breakthrough.title}
+            </h2>
+            <p className="text-2xl md:text-3xl text-gray-600 font-medium mb-12 max-w-3xl mx-auto">
+              {t.problem.breakthrough.subtitle}
+            </p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
               className="flex justify-center"
             >
-              <div className="inline-block relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-2xl blur-xl opacity-60 animate-pulse"></div>
-                <div className="relative bg-gradient-to-r from-lime-400 to-emerald-400 px-12 py-6 rounded-2xl">
-                  <Snowflake className="w-16 h-16 text-gray-900 mx-auto" strokeWidth={2.5} />
-                </div>
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
+                <Snowflake className="w-16 h-16 text-emerald-600 mx-auto" strokeWidth={2} />
               </div>
             </motion.div>
           </motion.div>
