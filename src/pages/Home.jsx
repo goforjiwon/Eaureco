@@ -112,8 +112,9 @@ export default function Home() {
         performance: {
           badge: "Performance Data",
           title: "Superior Cold Chain Performance",
-          efficiency: "Higher Efficiency",
-          efficiencyDesc: "A fulfillment center using 10,000 packs per day cuts its pack inventory from 40,000 units to 20,000 — without changing a single delivery.",
+          efficiency: "50% Less Inventory",
+          efficiencyDesc: "10,000 packs/day",
+          efficiencyDetail: "Cut pack inventory from 40,000 to 20,000 units without changing deliveries",
           lasts: "Lasts Longer",
           lastsDesc: "260 minutes of cooling retention time",
           green: "100% Green",
@@ -324,8 +325,9 @@ export default function Home() {
         performance: {
           badge: "Datos de Rendimiento",
           title: "Rendimiento Superior de la Cadena de Frío",
-          efficiency: "Mayor Eficiencia",
-          efficiencyDesc: "Un centro de distribución que usa 10,000 paquetes por día reduce su inventario de paquetes de 40,000 unidades a 20,000, sin cambiar ni una sola entrega.",
+          efficiency: "50% Menos Inventario",
+          efficiencyDesc: "10,000 paquetes/día",
+          efficiencyDetail: "Reduce el inventario de 40,000 a 20,000 unidades sin cambiar entregas",
           lasts: "Dura Más Tiempo",
           lastsDesc: "260 minutos de tiempo de retención de enfriamiento",
           green: "100% Verde",
@@ -536,8 +538,9 @@ export default function Home() {
         performance: {
           badge: "성능 데이터",
           title: "우수한 콜드체인 성능",
-          efficiency: "높은 효율성",
-          efficiencyDesc: "하루 10,000개의 팩을 사용하는 물류 센터가 단 하나의 배송도 변경하지 않고 팩 재고를 40,000개에서 20,000개로 줄입니다.",
+          efficiency: "재고 50% 감소",
+          efficiencyDesc: "하루 10,000개 팩",
+          efficiencyDetail: "배송 변경 없이 재고를 40,000개에서 20,000개로 감축",
           lasts: "더 오래 지속",
           lastsDesc: "260분의 냉각 보유 시간",
           green: "100% 친환경",
@@ -1060,12 +1063,20 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}>
               <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
-                <TrendingUp className="w-12 h-12 text-emerald-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 text-white" strokeWidth={2.5} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Typical usage</p>
+                    <p className="text-sm font-bold text-emerald-600">{t.solution.performance.efficiencyDesc}</p>
+                  </div>
+                </div>
+                <h3 className="text-4xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">
                   {t.solution.performance.efficiency}
                 </h3>
-                <p className="text-base text-gray-700 leading-relaxed font-medium">
-                  {t.solution.performance.efficiencyDesc}
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {t.solution.performance.efficiencyDetail}
                 </p>
               </div>
             </motion.div>
