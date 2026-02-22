@@ -198,11 +198,16 @@ export default function Layout({ children, currentPageName }) {
             <div className="md:hidden mt-4 pt-4 border-t border-gray-200 grid grid-cols-2 gap-2">
               {navItems.map((item) => {
                 const Icon = item.icon;
+                const isActive = activeSection === item.sectionId;
                 return (
                   <button
                     key={item.sectionId}
                     onClick={() => scrollToSection(item.sectionId)}
-                    className="px-3 py-2 rounded-lg font-semibold text-sm bg-gray-100 text-gray-700"
+                    className={`px-3 py-2 rounded-lg font-semibold text-sm ${
+                      isActive
+                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white"
+                        : "bg-gray-100 text-gray-700"
+                    }`}
                   >
                     <div className="flex items-center gap-2 justify-center">
                       <Icon className="w-4 h-4" strokeWidth={2} />
