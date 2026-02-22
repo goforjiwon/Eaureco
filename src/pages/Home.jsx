@@ -88,10 +88,9 @@ export default function Home() {
           sustainability: "Sustainability",
           sustainabilityDesc: "Means sacrificing efficiency"
         },
-        ctaBtn: {
-          title: "Stop Compromising",
-          subtitle: "Eaureco delivers performance and sustainability in one package.",
-          button: "See the Solution"
+        breakthrough: {
+          title: "Until Now.",
+          subtitle: "Introducing the breakthrough that changes everything"
         }
       },
       solution: {
@@ -301,10 +300,9 @@ export default function Home() {
           sustainability: "Sostenibilidad",
           sustainabilityDesc: "Significa sacrificar eficiencia"
         },
-        ctaBtn: {
-          title: "Deja de Comprometerte",
-          subtitle: "Eaureco ofrece rendimiento y sostenibilidad en un solo paquete.",
-          button: "Ver la Solución"
+        breakthrough: {
+          title: "Hasta Ahora.",
+          subtitle: "Presentamos el avance que lo cambia todo"
         }
       },
       solution: {
@@ -514,10 +512,9 @@ export default function Home() {
           sustainability: "지속 가능성",
           sustainabilityDesc: "효율성 희생을 의미"
         },
-        ctaBtn: {
-          title: "타협하지 마세요",
-          subtitle: "Eaureco는 성능과 지속 가능성을 하나의 패키지로 제공합니다.",
-          button: "솔루션 보기"
+        breakthrough: {
+          title: "이제는 가능합니다.",
+          subtitle: "모든 것을 바꾸는 혁신을 소개합니다"
         }
       },
       solution: {
@@ -1034,10 +1031,53 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Breakthrough Transition */}
+        <section className="relative py-32 px-6 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-emerald-900 to-teal-900"></div>
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative z-10 max-w-5xl mx-auto text-center"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-400 to-teal-400 mb-8 tracking-tight">
+                {t.problem.breakthrough.title}
+              </h2>
+              <p className="text-2xl md:text-3xl text-white/90 font-medium mb-12 max-w-3xl mx-auto">
+                {t.problem.breakthrough.subtitle}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="flex justify-center"
+            >
+              <div className="inline-block relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-2xl blur-xl opacity-60 animate-pulse"></div>
+                <div className="relative bg-gradient-to-r from-lime-400 to-emerald-400 px-12 py-6 rounded-2xl">
+                  <Snowflake className="w-16 h-16 text-gray-900 mx-auto" strokeWidth={2.5} />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </section>
       </section>
 
       {/* SOLUTION SECTION */}
-      <section id="solution" className="py-16 px-4">
+      <section id="solution" className="py-16 px-4 bg-gradient-to-br from-white via-emerald-50/30 to-teal-50/30">
         <div className="max-w-7xl mx-auto">
           {/* Hero Product Section */}
           <motion.div
