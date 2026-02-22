@@ -5,7 +5,7 @@ import { useLanguage } from "../Layout";
 
 export default function Home() {
   const { language } = useLanguage();
-  
+
   const translations = {
     en: {
       hero: {
@@ -651,50 +651,50 @@ export default function Home() {
   const t = translations[language];
 
   const comparisonData = [
-    {
-      feature: t.comparison.table.biodegradable,
-      eaureco: true,
-      sap: false,
-      water: false,
-      compost: "(Plastic package)"
-    },
-    {
-      feature: t.comparison.table.freezing,
-      eaureco: "0.25",
-      sap: "0.76",
-      water: "1.0",
-      compost: ">1"
-    },
-    {
-      feature: t.comparison.table.retention,
-      eaureco: "260 min",
-      sap: "220 min",
-      water: "180 min",
-      compost: "200 min"
-    },
-    {
-      feature: t.comparison.table.cost,
-      eaureco: true,
-      sap: true,
-      water: true,
-      compost: false
-    },
-    {
-      feature: t.comparison.table.impact,
-      eaureco: t.comparison.table.positive,
-      sap: t.comparison.table.negative,
-      water: t.comparison.table.neutral,
-      compost: t.comparison.table.positive
-    }
-  ];
+  {
+    feature: t.comparison.table.biodegradable,
+    eaureco: true,
+    sap: false,
+    water: false,
+    compost: "(Plastic package)"
+  },
+  {
+    feature: t.comparison.table.freezing,
+    eaureco: "0.25",
+    sap: "0.76",
+    water: "1.0",
+    compost: ">1"
+  },
+  {
+    feature: t.comparison.table.retention,
+    eaureco: "260 min",
+    sap: "220 min",
+    water: "180 min",
+    compost: "200 min"
+  },
+  {
+    feature: t.comparison.table.cost,
+    eaureco: true,
+    sap: true,
+    water: true,
+    compost: false
+  },
+  {
+    feature: t.comparison.table.impact,
+    eaureco: t.comparison.table.positive,
+    sap: t.comparison.table.negative,
+    water: t.comparison.table.neutral,
+    compost: t.comparison.table.positive
+  }];
 
-  const OptionCard = ({ icon, title, subtitle, pros, cons, theme }) => (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow border border-gray-100"
-    >
+
+  const OptionCard = ({ icon, title, subtitle, pros, cons, theme }) =>
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow border border-gray-100">
+
       <div className={`inline-flex p-3 rounded-lg mb-4 ${theme === 'red' ? 'bg-rose-100' : theme === 'blue' ? 'bg-blue-100' : 'bg-teal-100'}`}>
         {icon}
       </div>
@@ -704,26 +704,26 @@ export default function Home() {
       <div className="space-y-3">
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Pros</p>
-          {pros.map((pro, i) => (
-            <div key={i} className="flex items-start gap-2 mb-1">
+          {pros.map((pro, i) =>
+        <div key={i} className="flex items-start gap-2 mb-1">
               <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
               <p className="text-sm text-gray-700">{pro}</p>
             </div>
-          ))}
+        )}
         </div>
         
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Cons</p>
-          {cons.map((con, i) => (
-            <div key={i} className="flex items-start gap-2 mb-1">
+          {cons.map((con, i) =>
+        <div key={i} className="flex items-start gap-2 mb-1">
               <XCircle className="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" />
               <p className="text-sm text-gray-700">{con}</p>
             </div>
-          ))}
+        )}
         </div>
       </div>
-    </motion.div>
-  );
+    </motion.div>;
+
 
   return (
     <div className="min-h-screen">
@@ -743,11 +743,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}>
             <div className="mb-6 flex justify-center">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png" 
-                alt="eaureco" 
-                className="h-24 md:h-32 w-auto"
-              />
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png"
+                alt="eaureco"
+                className="h-24 md:h-32 w-auto" />
+
             </div>
             <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-4 rounded-2xl shadow-2xl mb-8">
               <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
@@ -759,7 +759,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }} 
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-white/95 font-medium mb-12 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </motion.p>
@@ -767,58 +767,58 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative group">
-              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Recycle className="w-6 h-6 text-white" strokeWidth={2.5} />
-                </div>
-                <h3 className="text-5xl font-bold neo-text text-emerald-600 mb-2 mt-4">100%</h3>
-                <p className="text-lg font-semibold text-gray-800">{t.stats.biodegradable}</p>
-                <p className="text-sm text-gray-600 mt-2">{t.stats.biodegradableDesc}</p>
-              </div>
-            </motion.div>
+      
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="relative group">
-              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <Snowflake className="w-6 h-6 text-white" strokeWidth={2.5} />
-                </div>
-                <h3 className="text-5xl font-bold neo-text text-cyan-600 mb-2 mt-4">4x</h3>
-                <p className="text-lg font-semibold text-gray-800">{t.stats.freezing}</p>
-                <p className="text-sm text-gray-600 mt-2">{t.stats.freezingDesc}</p>
-              </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="relative group">
-              <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-teal-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg">
-                  <TrendingDown className="w-6 h-6 text-white" strokeWidth={2.5} />
-                </div>
-                <h3 className="text-5xl font-bold neo-text text-teal-600 mb-2 mt-4">63.4%</h3>
-                <p className="text-lg font-semibold text-gray-800">{t.stats.emissions}</p>
-                <p className="text-sm text-gray-600 mt-2">{t.stats.emissionsDesc}</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Why Eaureco Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-emerald-50">
@@ -891,8 +891,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-8"
-            >
+              className="mb-8">
+
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 leading-tight">
                 {t.problem.header.title}
               </h1>
@@ -906,12 +906,12 @@ export default function Home() {
         {/* Scale Statistic */}
         <section className="py-20 px-6 bg-gray-900 text-white overflow-hidden relative">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center relative z-10"
-          >
+            className="max-w-4xl mx-auto text-center relative z-10">
+
             <div className="flex flex-col items-center justify-center gap-4">
               <AlertTriangle className="w-12 h-12 text-orange-500 mb-2" />
               <span className="text-7xl md:text-9xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
@@ -933,30 +933,30 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-5">
-              <OptionCard 
+              <OptionCard
                 icon={<Skull className="w-8 h-8 text-rose-500" />}
                 title={t.problem.options.sap.title}
                 subtitle={t.problem.options.sap.subtitle}
                 pros={t.problem.options.sap.pros}
                 cons={t.problem.options.sap.cons}
-                theme="red"
-              />
-              <OptionCard 
+                theme="red" />
+
+              <OptionCard
                 icon={<Droplets className="w-8 h-8 text-blue-500" />}
                 title={t.problem.options.water.title}
                 subtitle={t.problem.options.water.subtitle}
                 pros={t.problem.options.water.pros}
                 cons={t.problem.options.water.cons}
-                theme="blue"
-              />
-              <OptionCard 
+                theme="blue" />
+
+              <OptionCard
                 icon={<Snowflake className="w-8 h-8 text-teal-500" />}
                 title={t.problem.options.eco.title}
                 subtitle={t.problem.options.eco.subtitle}
                 pros={t.problem.options.eco.pros}
                 cons={t.problem.options.eco.cons}
-                theme="teal"
-              />
+                theme="teal" />
+
             </div>
           </div>
         </section>
@@ -968,36 +968,36 @@ export default function Home() {
           </div>
 
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
-            >
+              className="bg-white p-8 rounded-xl shadow-lg text-center">
+
               <Trash2 className="w-12 h-12 text-gray-700 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.years}</h3>
               <p className="text-gray-600">{t.problem.impact.yearsDesc}</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
-            >
+              className="bg-white p-8 rounded-xl shadow-lg text-center">
+
               <DollarSign className="w-12 h-12 text-gray-700 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.costs}</h3>
               <p className="text-gray-600">{t.problem.impact.costsDesc}</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-white p-8 rounded-xl shadow-lg text-center"
-            >
+              className="bg-white p-8 rounded-xl shadow-lg text-center">
+
               <AlertTriangle className="w-12 h-12 text-gray-700 mx-auto mb-4" />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.damage}</h3>
               <p className="text-gray-600">{t.problem.impact.damageDesc}</p>
@@ -1012,22 +1012,22 @@ export default function Home() {
             <p className="text-xl text-gray-500 mb-12">{t.problem.stuck.subtitle}</p>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 p-8 rounded-xl"
-              >
+                className="bg-gray-50 p-8 rounded-xl">
+
                 <h3 className="text-2xl font-bold mb-3">{t.problem.stuck.performance}</h3>
                 <p className="text-gray-600">{t.problem.stuck.performanceDesc}</p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 p-8 rounded-xl"
-              >
+                className="bg-gray-50 p-8 rounded-xl">
+
                 <h3 className="text-2xl font-bold mb-3">{t.problem.stuck.sustainability}</h3>
                 <p className="text-gray-600">{t.problem.stuck.sustainabilityDesc}</p>
               </motion.div>
@@ -1360,41 +1360,41 @@ export default function Home() {
                   </thead>
                   <tbody>
                     {comparisonData.map((row, index) =>
-                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
                         <td className="px-6 py-4 font-semibold text-gray-900 bg-gray-50">
                           {row.feature}
                         </td>
                         <td className="px-6 py-4 text-center bg-gradient-to-br from-emerald-50/50 to-lime-50/50 border-l border-gray-200">
                           {typeof row.eaureco === 'boolean' ?
-                            row.eaureco ?
-                              <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                              <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-bold text-lg text-emerald-600">{row.eaureco}</span>
-                          }
+                        row.eaureco ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-bold text-lg text-emerald-600">{row.eaureco}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.sap === 'boolean' ?
-                            row.sap ?
-                              <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                              <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.sap}</span>
-                          }
+                        row.sap ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.sap}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.water === 'boolean' ?
-                            row.water ?
-                              <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                              <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.water}</span>
-                          }
+                        row.water ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.water}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.compost === 'boolean' ?
-                            row.compost ?
-                              <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                              <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.compost}</span>
-                          }
+                        row.compost ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.compost}</span>
+                        }
                         </td>
                       </tr>
                     )}
@@ -1426,8 +1426,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            className="text-center mb-16">
+
             <p className="text-2xl font-medium text-gray-700 max-w-3xl mx-auto">
               {t.contact.header.subtitle}
             </p>
@@ -1439,8 +1439,8 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
+
               <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
@@ -1450,8 +1450,8 @@ export default function Home() {
                 </h2>
                 <a
                   href="mailto:goforjiwon@kaist.ac.kr"
-                  className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
-                >
+                  className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors">
+
                   {t.contact.info.emailValue}
                 </a>
               </div>
@@ -1462,8 +1462,8 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
+              transition={{ delay: 0.1 }}>
+
               <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
@@ -1485,14 +1485,14 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
+
             <div className="bg-gradient-to-br from-lime-50 to-emerald-50 rounded-3xl shadow-xl p-12 text-center border border-emerald-100">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png" 
-                alt="eaureco" 
-                className="h-16 md:h-20 w-auto mx-auto mb-4"
-              />
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png"
+                alt="eaureco"
+                className="h-16 md:h-20 w-auto mx-auto mb-4" />
+
               <p className="text-2xl font-bold text-emerald-600 mb-4">{t.contact.bottom.tagline}</p>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t.contact.bottom.desc}</p>
             </div>
@@ -1506,6 +1506,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
