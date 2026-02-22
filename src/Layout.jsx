@@ -14,6 +14,7 @@ export default function Layout({ children, currentPageName }) {
   const [language, setLanguage] = useState(() => {
     return localStorage.getItem('language') || 'en';
   });
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     localStorage.setItem('language', language);
@@ -23,6 +24,27 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  // Track active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'problem', 'solution', 'comparison', 'contact'];
+      const scrollPosition = window.scrollY + 100; // offset for header
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLabels = {
     en: {
@@ -125,11 +147,16 @@ export default function Layout({ children, currentPageName }) {
               <div className="hidden md:flex items-center gap-1">
                 {navItems.map((item) => {
                   const Icon = item.icon;
+                  const isActive = activeSection === item.sectionId;
                   return (
                     <button
                       key={item.sectionId}
                       onClick={() => scrollToSection(item.sectionId)}
-                      className="px-4 py-2 rounded-lg font-semibold transition-all text-gray-700 hover:bg-gray-100"
+                      className={`px-4 py-2 rounded-lg font-semibold transition-all ${
+                        isActive
+                          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md"
+                          : "text-gray-700 hover:bg-gray-100"
+                      }`}
                     >
                       <div className="flex items-center gap-2">
                         <Icon className="w-4 h-4" strokeWidth={2} />
