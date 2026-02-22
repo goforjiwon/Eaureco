@@ -49,12 +49,19 @@ export default function Layout({ children, currentPageName }) {
   };
 
   const navItems = [
-    { name: navLabels[language].home, path: "Home", icon: Waves },
-    { name: navLabels[language].problem, path: "Problem", icon: Leaf },
-    { name: navLabels[language].solution, path: "Solution", icon: Leaf },
-    { name: navLabels[language].comparison, path: "Comparison", icon: Scale },
-    { name: navLabels[language].contact, path: "Contact", icon: Mail },
+    { name: navLabels[language].home, sectionId: "home", icon: Waves },
+    { name: navLabels[language].problem, sectionId: "problem", icon: Leaf },
+    { name: navLabels[language].solution, sectionId: "solution", icon: Leaf },
+    { name: navLabels[language].comparison, sectionId: "comparison", icon: Scale },
+    { name: navLabels[language].contact, sectionId: "contact", icon: Mail },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
@@ -117,23 +124,18 @@ export default function Layout({ children, currentPageName }) {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center gap-1">
                 {navItems.map((item) => {
-                  const isActive = location.pathname === createPageUrl(item.path) || (item.path === "Home" && location.pathname === "/");
                   const Icon = item.icon;
                   return (
-                    <Link
-                      key={item.path}
-                      to={createPageUrl(item.path)}
-                      className={`px-4 py-2 rounded-lg font-semibold transition-all ${
-                        isActive
-                          ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md"
-                          : "text-gray-700 hover:bg-gray-100"
-                      }`}
+                    <button
+                      key={item.sectionId}
+                      onClick={() => scrollToSection(item.sectionId)}
+                      className="px-4 py-2 rounded-lg font-semibold transition-all text-gray-700 hover:bg-gray-100"
                     >
                       <div className="flex items-center gap-2">
                         <Icon className="w-4 h-4" strokeWidth={2} />
                         {item.name}
                       </div>
-                    </Link>
+                    </button>
                   );
                 })}
                 
