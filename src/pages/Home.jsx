@@ -1039,8 +1039,8 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-5xl mx-auto text-center"
-          >
+            className="max-w-5xl mx-auto text-center">
+
             <h2 className="text-6xl md:text-8xl font-black text-gray-900 mb-8 tracking-tight">
               {t.problem.breakthrough.title}
             </h2>
@@ -1053,11 +1053,11 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="flex justify-center"
-            >
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                <Leaf className="w-16 h-16 text-emerald-600 mx-auto" strokeWidth={2} />
-              </div>
+              className="flex justify-center">
+
+              
+
+
             </motion.div>
           </motion.div>
         </section>
