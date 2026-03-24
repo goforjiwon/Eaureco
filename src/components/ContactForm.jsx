@@ -74,10 +74,11 @@ Message:
 ${form.message}
     `.trim();
 
-    await base44.integrations.Core.SendEmail({
-      to: "goforjiwon@kaist.ac.kr",
-      subject: `New Contact Form Submission from ${form.name}`,
-      body
+    await base44.functions.invoke('sendContactEmail', {
+      name: form.name,
+      email: form.email,
+      company: form.company,
+      message: form.message
     });
 
     setStatus("success");
