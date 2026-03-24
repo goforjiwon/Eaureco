@@ -64,7 +64,7 @@ export default function ContactForm({ language }) {
     e.preventDefault();
     setStatus("loading");
 
-    await base44.functions.invoke('sendContactEmail', {
+    await base44.entities.ContactSubmission.create({
       name: form.name,
       email: form.email,
       company: form.company,
