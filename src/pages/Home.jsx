@@ -1461,6 +1461,9 @@ export default function Home() {
             </p>
           </motion.div>
 
+          {/* Contact Form */}
+          <ContactForm t={t} language={language} />
+
           {/* Main Contact Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
             {/* Email Card */}
