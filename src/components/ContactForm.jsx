@@ -63,17 +63,6 @@ export default function ContactForm({ language }) {
     e.preventDefault();
     setStatus("loading");
 
-    const body = `
-New inquiry from the Eaureco website:
-
-Name: ${form.name}
-Email: ${form.email}
-Company: ${form.company || "N/A"}
-
-Message:
-${form.message}
-    `.trim();
-
     await base44.functions.invoke('sendContactEmail', {
       name: form.name,
       email: form.email,
