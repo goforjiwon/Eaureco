@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Send, Loader2, CheckCircle } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 
+
 const formLabels = {
   en: {
     title: "Send Us a Message",
