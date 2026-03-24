@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Timer, Thermometer, CheckCircle, Mail, MapPin, TrendingUp, Scale, Leaf } from "lucide-react";
+import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Timer, Thermometer, CheckCircle, Mail, MapPin, TrendingUp, Scale, Leaf, Send, Loader2 } from "lucide-react";
 import { useLanguage } from "../Layout";
+import { base44 } from "@/api/base44Client";
 
 export default function Home() {
   const { language } = useLanguage();
