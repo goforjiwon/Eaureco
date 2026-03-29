@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 
@@ -23,41 +23,18 @@ export default function Contact() {
         </motion.div>
 
         {/* Main Contact Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-          {/* Email Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
-              </div>
-              <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
-                {t.info.email}
-              </h2>
-              <a
-                href="mailto:goforjiwon@kaist.ac.kr"
-                className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
-              >
-                {t.info.emailValue}
-              </a>
-            </div>
-          </motion.div>
-
+        <div className="mb-16 max-w-sm mx-auto">
           {/* Location Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
           >
             <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
-              <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
                 {t.info.location}
               </h2>
               <p className="text-center text-xl font-bold text-cyan-600 mb-4">

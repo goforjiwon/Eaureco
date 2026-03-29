@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Recycle, Snowflake, TrendingDown, Trash2, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Scale, Leaf, Thermometer, CheckCircle } from "lucide-react";
+import { Recycle, Snowflake, TrendingDown, Trash2, Droplets, XCircle, DollarSign, MapPin, TrendingUp, Scale, Leaf, Thermometer, CheckCircle } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
-import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -623,37 +622,13 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Contact Form */}
-          <ContactForm t={t} language={language} />
-
           {/* Main Contact Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-            {/* Email Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}>
-              <div className="content-card p-10 h-full">
-                <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-                  {t.contact.info.email}
-                </h2>
-                <a
-                  href="mailto:goforjiwon@kaist.ac.kr"
-                  className="block text-center text-xl font-bold text-emerald-600 hover:text-emerald-700 transition-colors">
-                  {t.contact.info.emailValue}
-                </a>
-              </div>
-            </motion.div>
-
+          <div className="mb-16 max-w-sm mx-auto">
             {/* Location Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}>
+              viewport={{ once: true }}>
               <div className="content-card p-10 h-full">
                 <div className="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
