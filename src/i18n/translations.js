@@ -20,27 +20,27 @@ export const translations = {
         biodegradable: "Biodegradable",
         biodegradableDesc: "Both content and packaging",
         freezing: "Faster Freezing",
-        freezingDesc: "Compared to water-based packs",
+        freezingDesc: "Measured against equal-size water packs in the same freezer cycle",
         retention: "Longer Retention",
-        retentionDesc: "Keeps things cool for longer",
+        retentionDesc: "Up to 260 minutes in insulated parcel tests at room temperature",
         emissions: "Lower Carbon Emissions",
         emissionsDesc: "vs. traditional ice packs"
       },
       why: {
         badge: "Why Eaureco?",
-        title: "Sustainable Innovation",
-        description: "We create high-performance, sustainable, and affordable ice packs.",
+        title: "Built for Cold Chain Operations",
+        description: "Designed for teams that track pack turnover, delivery temperature, and disposal steps.",
         sustainable: "Sustainable",
         sustainableDesc: "Made from renewable materials",
-        performance: "Superior Performance",
-        performanceDesc: "Freezes faster and lasts longer",
+        performance: "Operational Performance",
+        performanceDesc: "Freezes in shorter cycles and holds cooling through last-mile delivery windows",
         costEffective: "Cost-Effective",
-        costEffectiveDesc: "Cheaper than traditional alternatives",
+        costEffectiveDesc: "Lower pack inventory and fewer disposal handoffs reduce operating cost",
         learnMore: "Learn More"
       },
       cta: {
-        title: "Ready to Go Green?",
-        subtitle: "Join us in revolutionizing sustainable cooling solutions",
+        title: "Plan Operations, Cost, and Compliance",
+        subtitle: "Review pack turnover, disposal workflow, and ESG reporting fit with your current routes",
         button: "Get in Touch"
       },
       problem: {
@@ -198,8 +198,8 @@ export const translations = {
           neutral: "Neutral"
         },
         summary: {
-          title: "The Clear Winner",
-          subtitle: "Eaureco outperforms traditional ice packs in every category that matters: performance, cost-effectiveness, and sustainability",
+          title: "Operations, Cost, Compliance, Disposal",
+          subtitle: "Compare freezing cycle time, cooling duration, unit economics, and end-of-life handling in one view",
           button: "Get in Touch →"
         }
       },
@@ -232,27 +232,27 @@ export const translations = {
         biodegradable: "Biodegradable",
         biodegradableDesc: "Tanto contenido como empaque",
         freezing: "Congelación Más Rápida",
-        freezingDesc: "Comparado con paquetes a base de agua",
+        freezingDesc: "Medido frente a paquetes de agua del mismo tamaño en el mismo ciclo de congelador",
         retention: "Mayor Retención",
-        retentionDesc: "Mantiene las cosas frías por más tiempo",
+        retentionDesc: "Hasta 260 minutos en pruebas de paquete aislado a temperatura ambiente",
         emissions: "Menores Emisiones de Carbono",
         emissionsDesc: "vs. paquetes de hielo tradicionales"
       },
       why: {
         badge: "¿Por Qué Eaureco?",
-        title: "Innovación Sostenible",
-        description: "Creamos paquetes de hielo sostenibles, de alto rendimiento y económicos.",
+        title: "Diseñado para Operaciones de Cadena de Frío",
+        description: "Pensado para equipos que controlan rotación de paquetes, temperatura de entrega y pasos de descarte.",
         sustainable: "Sostenible",
         sustainableDesc: "Hecho de materiales renovables",
-        performance: "Rendimiento Superior",
-        performanceDesc: "Se congela más rápido y dura más",
+        performance: "Rendimiento Operativo",
+        performanceDesc: "Se congela en ciclos más cortos y mantiene frío durante ventanas de última milla",
         costEffective: "Costo-Efectivo",
-        costEffectiveDesc: "Más barato que las alternativas tradicionales",
+        costEffectiveDesc: "Menor inventario de paquetes y menos etapas de descarte reducen el costo operativo",
         learnMore: "Aprende Más"
       },
       cta: {
-        title: "¿Listo para Ser Ecológico?",
-        subtitle: "Únete a nosotros en la revolución de soluciones de enfriamiento sostenibles",
+        title: "Planifica Operación, Costo y Cumplimiento",
+        subtitle: "Revisa rotación de paquetes, flujo de descarte y encaje con reportes ESG en tus rutas actuales",
         button: "Contáctanos"
       },
       problem: {
@@ -410,8 +410,8 @@ export const translations = {
           neutral: "Neutral"
         },
         summary: {
-          title: "El Claro Ganador",
-          subtitle: "Eaureco supera a los paquetes de hielo tradicionales en todas las categorías que importan: rendimiento, costo-efectividad y sostenibilidad",
+          title: "Operación, Costo, Cumplimiento y Descarte",
+          subtitle: "Compara tiempo de congelación, duración de enfriamiento, economía por unidad y manejo al final de vida en una sola vista",
           button: "Contáctanos →"
         }
       },
@@ -444,27 +444,27 @@ export const translations = {
         biodegradable: KO_SHARED.biodegradable,
         biodegradableDesc: "내용물과 포장 모두",
         freezing: "더 빠른 냉동",
-        freezingDesc: "물 기반 팩 대비",
+        freezingDesc: "동일 크기 물 팩과 같은 냉동 사이클에서 측정",
         retention: "더 긴 보냉",
-        retentionDesc: "더 오래 차갑게 유지",
+        retentionDesc: "상온 기준 단열 포장 테스트에서 최대 260분 유지",
         emissions: "낮은 탄소 배출",
         emissionsDesc: "기존 아이스팩 대비"
       },
       why: {
         badge: "왜 Eaureco인가?",
-        title: "지속 가능한 혁신",
-        description: "우리는 고성능의 지속 가능하고 저렴한 아이스팩을 만듭니다.",
+        title: "콜드체인 운영에 맞춘 설계",
+        description: "팩 회전율, 배송 온도, 폐기 절차를 관리하는 운영팀 기준으로 설계했습니다.",
         sustainable: "지속 가능",
         sustainableDesc: "재생 가능한 재료로 제작",
-        performance: "뛰어난 성능",
-        performanceDesc: "더 빠르게 얼고 더 오래 지속",
+        performance: "운영 성능",
+        performanceDesc: "더 짧은 냉동 사이클로 준비되고 라스트마일 배송 구간까지 보냉 유지",
         costEffective: "비용 효율적",
-        costEffectiveDesc: "기존 대안보다 저렴",
+        costEffectiveDesc: "필요 재고와 폐기 처리 단계를 줄여 운영 비용을 낮춤",
         learnMore: "자세히 알아보기"
       },
       cta: {
-        title: "친환경으로 전환할 준비가 되셨나요?",
-        subtitle: "지속 가능한 냉각 솔루션 혁명에 동참하세요",
+        title: "운영·비용·컴플라이언스를 함께 검토",
+        subtitle: "현재 배송 경로 기준으로 팩 회전율, 폐기 흐름, ESG 보고 적합성을 점검하세요",
         button: "문의하기"
       },
       problem: {
@@ -622,8 +622,8 @@ export const translations = {
           neutral: "중립"
         },
         summary: {
-          title: "명백한 승자",
-          subtitle: "성능, 비용 효율성 및 지속 가능성 - Eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다",
+          title: "운영·비용·컴플라이언스·폐기 비교",
+          subtitle: "냉동 소요 시간, 보냉 지속 시간, 단가 구조, 사용 후 처리 방식을 한 화면에서 비교하세요",
           button: "문의하기 →"
         }
       },
