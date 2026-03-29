@@ -2,98 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import { useLanguage } from "../Layout";
+import { getT } from "@/i18n/translations";
 
 export default function Contact() {
   const { language } = useLanguage();
-  
-  const translations = {
-    en: {
-      header: {
-        title: "Contact Us",
-        subtitle: "Ready to make the switch to sustainable cooling?"
-      },
-      info: {
-        badge: "Get in Touch",
-        email: "Email Us",
-        emailValue: "goforjiwon@kaist.ac.kr",
-        location: "Location",
-        locationValue: "Daejeon, South Korea",
-        locationDesc: "Visit us at KAIST campus"
-      },
-
-      why: {
-        badge: "Why Work With Us",
-        sustainable: "Sustainable Solution",
-        sustainableDesc: "100% biodegradable ice packs that help clean our oceans",
-        performance: "Better Performance",
-        performanceDesc: "Superior cooling that lasts longer and freezes faster",
-        cost: "Cost Effective",
-        costDesc: "Competitive pricing without compromising quality"
-      },
-      bottom: {
-        tagline: "Stay Cool, Stay Green",
-        desc: "Let's work together to create a green future for food delivery and cold chain logistics."
-      }
-    },
-    es: {
-      header: {
-        title: "Contáctanos",
-        subtitle: "¿Listo para cambiar a enfriamiento sostenible?"
-      },
-      info: {
-        badge: "Ponte en Contacto",
-        email: "Envíanos un Email",
-        emailValue: "goforjiwon@kaist.ac.kr",
-        location: "Ubicación",
-        locationValue: "Daejeon, Corea del Sur",
-        locationDesc: "Visítanos en el campus KAIST"
-      },
-
-      why: {
-        badge: "Por Qué Trabajar Con Nosotros",
-        sustainable: "Solución Sostenible",
-        sustainableDesc: "Paquetes de hielo 100% biodegradables que ayudan a limpiar nuestros océanos",
-        performance: "Mejor Rendimiento",
-        performanceDesc: "Enfriamiento superior que dura más y se congela más rápido",
-        cost: "Costo Efectivo",
-        costDesc: "Precios competitivos sin comprometer la calidad"
-      },
-      bottom: {
-        tagline: "Mantente Fresco, Mantente Verde",
-        desc: "Trabajemos juntos para crear un futuro verde para la entrega de alimentos y la logística de cadena de frío."
-      }
-      },
-      ko: {
-      header: {
-        title: "연락처",
-        subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요?"
-      },
-      info: {
-        badge: "문의하기",
-        email: "이메일 보내기",
-        emailValue: "goforjiwon@kaist.ac.kr",
-        location: "위치",
-        locationValue: "대전, 대한민국",
-        locationDesc: "KAIST 캠퍼스 방문"
-      },
-
-      why: {
-        badge: "우리와 함께 일하는 이유",
-        sustainable: "지속 가능한 솔루션",
-        sustainableDesc: "해양을 정화하는 데 도움이 되는 100% 생분해성 아이스팩",
-        performance: "더 나은 성능",
-        performanceDesc: "더 오래 지속되고 더 빠르게 얼어붙는 우수한 냉각",
-        cost: "비용 효율적",
-        costDesc: "품질을 타협하지 않는 경쟁력 있는 가격"
-      },
-      bottom: {
-        tagline: "Stay Cool, Stay Green",
-        desc: "식품 배송 및 콜드체인 물류를 위한 친환경 미래를 함께 만들어갑시다."
-      }
-      }
-      };
-
-      const t = translations[language];
+  const t = getT(language).contact;
 
         return (
     <div className="py-16 px-4">
