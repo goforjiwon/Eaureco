@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Timer, Thermometer, CheckCircle, Mail, MapPin, TrendingUp, Scale, Leaf, Send, Loader2 } from "lucide-react";
+import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Scale, Leaf, Send, Loader2 } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 import { base44 } from "@/api/base44Client";
@@ -662,59 +662,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-
-          {/* Performance Metrics */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
-                <Timer className="w-12 h-12 text-emerald-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">
-                  {t.comparison.metrics.freezes}
-                </h3>
-                <p className="text-6xl font-bold neo-text text-gray-900 mb-2">4x</p>
-                <p className="text-gray-600 font-medium">
-                  {t.comparison.metrics.freezesDesc}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
-                <Thermometer className="w-12 h-12 text-cyan-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-3">
-                  {t.comparison.metrics.lasts}
-                </h3>
-                <p className="text-6xl font-bold neo-text text-gray-900 mb-2">260</p>
-                <p className="text-gray-600 font-medium">
-                  {t.comparison.metrics.lastsDesc}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50 hover:shadow-2xl transition-shadow">
-                <CheckCircle className="w-12 h-12 text-lime-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent mb-3">
-                  {t.comparison.metrics.green}
-                </h3>
-                <p className="text-3xl font-bold neo-text text-gray-900 mb-2">{t.comparison.metrics.greenTitle}</p>
-                <p className="text-gray-600 font-medium">
-                  {t.comparison.metrics.greenDesc}
-                </p>
-              </div>
-            </motion.div>
-          </div>
 
           {/* Detailed Comparison Table */}
           <motion.div
