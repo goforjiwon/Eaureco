@@ -62,17 +62,28 @@ export default function ContactForm({ language }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (status === "loading") {
+      return;
+    }
+
     setStatus("loading");
 
-    await base44.entities.ContactSubmission.create({
-      name: form.name,
-      email: form.email,
-      company: form.company,
-      message: form.message
-    });
+    try {
+      await base44.entities.ContactSubmission.create({
+        name: form.name,
+        email: form.email,
+        company: form.company,
+        message: form.message
+      });
 
-    setStatus("success");
-    setForm({ name: "", email: "", company: "", message: "" });
+      setStatus("success");
+      setForm({ name: "", email: "", company: "", message: "" });
+    } catch {
+      setStatus("error");
+    } finally {
+      // Keep this block to guarantee consistent submit lifecycle handling.
+    }
   };
 
   return (
@@ -91,6 +102,12 @@ export default function ContactForm({ language }) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            {status === "error" && (
+              <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+                {labels.error}
+              </div>
+            )}
+
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">{labels.name} *</label>
