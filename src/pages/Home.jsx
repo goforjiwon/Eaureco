@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Recycle, Snowflake, TrendingDown, Trash2, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Scale, Leaf, Thermometer, CheckCircle } from "lucide-react";
+import { Recycle, Snowflake, TrendingDown, Trash2, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Leaf, Thermometer, CheckCircle, FlaskConical, Waves, Package } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 
@@ -52,14 +52,58 @@ export default function Home() {
     }
   ];
 
-  const OptionCard = ({ icon, title, subtitle, pros, cons, theme }) =>
+  const optionCards = [
+    {
+      icon: FlaskConical,
+      title: t.problem.options.sap.title,
+      subtitle: t.problem.options.sap.subtitle,
+      pros: t.problem.options.sap.pros,
+      cons: t.problem.options.sap.cons,
+      theme: "red"
+    },
+    {
+      icon: Waves,
+      title: t.problem.options.water.title,
+      subtitle: t.problem.options.water.subtitle,
+      pros: t.problem.options.water.pros,
+      cons: t.problem.options.water.cons,
+      theme: "blue"
+    },
+    {
+      icon: Package,
+      title: t.problem.options.eco.title,
+      subtitle: t.problem.options.eco.subtitle,
+      pros: t.problem.options.eco.pros,
+      cons: t.problem.options.eco.cons,
+      theme: "teal"
+    }
+  ];
+
+  const impactMetrics = [
+    { icon: Trash2, value: t.problem.impact.years, description: t.problem.impact.yearsDesc },
+    { icon: DollarSign, value: t.problem.impact.costs, description: t.problem.impact.costsDesc },
+    { icon: Leaf, value: t.problem.impact.damage, description: t.problem.impact.damageDesc }
+  ];
+
+  const themeClasses = {
+    red: "bg-rose-50 border border-rose-100 text-rose-700",
+    blue: "bg-sky-50 border border-sky-100 text-sky-700",
+    teal: "bg-teal-50 border border-teal-100 text-teal-700"
+  };
+
+  const IconBadge = ({ icon: Icon, theme = "teal", className = "w-7 h-7" }) =>
+    <div className={`inline-flex p-3.5 rounded-xl shadow-sm ${themeClasses[theme]}`}>
+      <Icon className={className} strokeWidth={2} />
+    </div>;
+
+  const OptionCard = ({ icon: Icon, title, subtitle, pros, cons, theme }) =>
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="content-card p-6">
-      <div className={`inline-flex p-3 rounded-lg mb-4 ${theme === 'red' ? 'bg-rose-100' : theme === 'blue' ? 'bg-blue-100' : 'bg-teal-100'}`}>
-        {icon}
+      <div className="mb-4">
+        <IconBadge icon={Icon} theme={theme} />
       </div>
       <h3 className="text-xl font-bold mb-1">{title}</h3>
       <p className="text-gray-500 text-sm mb-4">{subtitle}</p>
@@ -234,27 +278,16 @@ export default function Home() {
               <p className="text-gray-500">{t.problem.options.subtitle}</p>
             </div>
             <div className="grid md:grid-cols-3 gap-5">
-              <OptionCard
-                icon={<Scale className="w-8 h-8 text-rose-500" strokeWidth={2} />}
-                title={t.problem.options.sap.title}
-                subtitle={t.problem.options.sap.subtitle}
-                pros={t.problem.options.sap.pros}
-                cons={t.problem.options.sap.cons}
-                theme="red" />
-              <OptionCard
-                icon={<Droplets className="w-8 h-8 text-blue-500" />}
-                title={t.problem.options.water.title}
-                subtitle={t.problem.options.water.subtitle}
-                pros={t.problem.options.water.pros}
-                cons={t.problem.options.water.cons}
-                theme="blue" />
-              <OptionCard
-                icon={<Snowflake className="w-8 h-8 text-teal-500" />}
-                title={t.problem.options.eco.title}
-                subtitle={t.problem.options.eco.subtitle}
-                pros={t.problem.options.eco.pros}
-                cons={t.problem.options.eco.cons}
-                theme="teal" />
+              {optionCards.map((option) =>
+                <OptionCard
+                  key={option.title}
+                  icon={option.icon}
+                  title={option.title}
+                  subtitle={option.subtitle}
+                  pros={option.pros}
+                  cons={option.cons}
+                  theme={option.theme} />
+              )}
             </div>
           </div>
         </section>
@@ -265,35 +298,22 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">{t.problem.impact.title}</h2>
           </div>
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="content-card p-8 text-center">
-              <Trash2 {...iconPresets.stat} />
-              <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.years}</h3>
-              <p className="text-gray-600">{t.problem.impact.yearsDesc}</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="content-card p-8 text-center">
-              <DollarSign {...iconPresets.stat} />
-              <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.costs}</h3>
-              <p className="text-gray-600">{t.problem.impact.costsDesc}</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="content-card p-8 text-center">
-              <Leaf {...iconPresets.stat} />
-              <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.damage}</h3>
-              <p className="text-gray-600">{t.problem.impact.damageDesc}</p>
-            </motion.div>
+            {impactMetrics.map((metric, index) => {
+              const MetricIcon = metric.icon;
+              return (
+                <motion.div
+                  key={metric.value}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="content-card p-8 text-center">
+                  <MetricIcon {...iconPresets.stat} />
+                  <h3 className="text-4xl font-bold text-gray-900 mb-2">{metric.value}</h3>
+                  <p className="text-gray-600">{metric.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </section>
 
