@@ -123,7 +123,7 @@ export const translations = {
           },
           disposal: {
             title: "Zero Disposal Cost",
-            desc: "Flush it down the toilet or toss in compost. No special handling, no disposal fees, no environmental guilt"
+            desc: "Toss in compost. No special handling, no disposal fees, no environmental guilt"
           }
         },
         general: {
@@ -335,7 +335,7 @@ export const translations = {
           },
           disposal: {
             title: "Costo Cero de Eliminación",
-            desc: "Tíralo por el inodoro o al compost. Sin manejo especial, sin tarifas de eliminación, sin culpa ambiental"
+            desc: "Tíralo al compost. Sin manejo especial, sin tarifas de eliminación, sin culpa ambiental"
           }
         },
         general: {
@@ -547,7 +547,7 @@ export const translations = {
           },
           disposal: {
             title: "제로 폐기 비용",
-            desc: "화장실에 버리거나 퇴비에 버리세요. 특별한 처리, 폐기 비용, 환경적 죄책감이 없습니다"
+            desc: "퇴비에 버리세요. 특별한 처리, 폐기 비용, 환경적 죄책감이 없습니다"
           }
         },
         general: {
