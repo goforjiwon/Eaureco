@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Recycle, Snowflake, TrendingDown, AlertTriangle, Trash2, Skull, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Scale, Leaf, Send, Loader2, Thermometer, CheckCircle } from "lucide-react";
+import { Recycle, Snowflake, TrendingDown, Trash2, Droplets, XCircle, DollarSign, Mail, MapPin, TrendingUp, Scale, Leaf, Thermometer, CheckCircle } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 import { base44 } from "@/api/base44Client";
@@ -9,6 +9,12 @@ import ContactForm from "../components/ContactForm";
 export default function Home() {
   const { language } = useLanguage();
   const t = getT(language).home;
+  const iconPresets = {
+    bullet: { className: "w-4 h-4 mt-0.5 flex-shrink-0", strokeWidth: 2 },
+    feature: { className: "w-5 h-5 flex-shrink-0", strokeWidth: 2 },
+    stat: { className: "w-10 h-10 mx-auto mb-4 text-gray-700", strokeWidth: 2 },
+    metadata: { className: "w-7 h-7 text-white", strokeWidth: 2.25 }
+  };
 
   const comparisonData = [
   {
@@ -66,7 +72,7 @@ export default function Home() {
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Pros</p>
           {pros.map((pro, i) =>
         <div key={i} className="flex items-start gap-2 mb-1">
-              <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+              <CheckCircle {...iconPresets.bullet} className={`${iconPresets.bullet.className} text-emerald-500`} />
               <p className="text-sm text-gray-700">{pro}</p>
             </div>
         )}
@@ -76,7 +82,7 @@ export default function Home() {
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Cons</p>
           {cons.map((con, i) =>
         <div key={i} className="flex items-start gap-2 mb-1">
-              <XCircle className="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" />
+              <XCircle {...iconPresets.bullet} className={`${iconPresets.bullet.className} text-rose-500`} />
               <p className="text-sm text-gray-700">{con}</p>
             </div>
         )}
@@ -209,7 +215,7 @@ export default function Home() {
                 <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">{t.why.badge}</h2>
               </div>
               
-              <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
+              <h3 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
                 {t.why.title}
               </h3>
               
@@ -218,6 +224,21 @@ export default function Home() {
               </p>
 
               <div className="space-y-4">
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2.5">
+                    <Leaf {...iconPresets.feature} className={`${iconPresets.feature.className} text-emerald-600`} /> {t.why.sustainable}
+                  </h4>
+                  <p className="text-gray-700">{t.why.sustainableDesc}</p>
+                </div>
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2.5">
+                    <Snowflake {...iconPresets.feature} className={`${iconPresets.feature.className} text-cyan-600`} /> {t.why.performance}
+                  </h4>
+                  <p className="text-gray-700">{t.why.performanceDesc}</p>
+                </div>
+                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2.5">
+                    <Scale {...iconPresets.feature} className={`${iconPresets.feature.className} text-lime-600`} /> {t.why.costEffective}
                 <div className="content-card p-5">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
                     <span className="text-emerald-600">♻️</span> {t.why.sustainable}
@@ -253,10 +274,10 @@ export default function Home() {
               viewport={{ once: true }}
               className="mb-8">
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-gray-900 leading-tight">
                 {t.problem.header.title}
               </h1>
-              <p className="text-2xl text-gray-500 font-medium max-w-2xl mx-auto">
+              <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
                 {t.problem.header.subtitle}
               </p>
             </motion.div>
@@ -273,11 +294,11 @@ export default function Home() {
             className="max-w-4xl mx-auto text-center relative z-10">
 
             <div className="flex flex-col items-center justify-center gap-4">
-              <AlertTriangle className="w-12 h-12 text-orange-500 mb-2" />
-              <span className="text-7xl md:text-9xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+              <Thermometer className="w-10 h-10 text-orange-400 mb-2" strokeWidth={2} />
+              <span className="text-5xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
                 {t.problem.scale.line1}
               </span>
-              <span className="text-xl md:text-2xl text-gray-400 font-light tracking-wide uppercase">
+              <span className="text-lg md:text-xl text-gray-400 font-medium tracking-wide uppercase">
                 {t.problem.scale.line2}
               </span>
             </div>
@@ -294,7 +315,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-5">
               <OptionCard
-                icon={<Skull className="w-8 h-8 text-rose-500" />}
+                icon={<Scale className="w-8 h-8 text-rose-500" strokeWidth={2} />}
                 title={t.problem.options.sap.title}
                 subtitle={t.problem.options.sap.subtitle}
                 pros={t.problem.options.sap.pros}
@@ -334,7 +355,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="content-card p-8 text-center">
 
-              <Trash2 className="w-12 h-12 text-gray-700 mx-auto mb-4" />
+              <Trash2 {...iconPresets.stat} />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.years}</h3>
               <p className="text-gray-600">{t.problem.impact.yearsDesc}</p>
             </motion.div>
@@ -346,7 +367,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="content-card p-8 text-center">
 
-              <DollarSign className="w-12 h-12 text-gray-700 mx-auto mb-4" />
+              <DollarSign {...iconPresets.stat} />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.costs}</h3>
               <p className="text-gray-600">{t.problem.impact.costsDesc}</p>
             </motion.div>
@@ -358,7 +379,7 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="content-card p-8 text-center">
 
-              <AlertTriangle className="w-12 h-12 text-gray-700 mx-auto mb-4" />
+              <Leaf {...iconPresets.stat} />
               <h3 className="text-4xl font-bold text-gray-900 mb-2">{t.problem.impact.damage}</h3>
               <p className="text-gray-600">{t.problem.impact.damageDesc}</p>
             </motion.div>
@@ -404,10 +425,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-5xl mx-auto text-center">
 
-            <h2 className="text-6xl md:text-8xl font-black text-gray-900 mb-8 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
               {t.problem.breakthrough.title}
             </h2>
-            <p className="text-2xl md:text-3xl text-gray-600 font-medium mb-12 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 font-medium mb-10 max-w-3xl mx-auto">
               {t.problem.breakthrough.subtitle}
             </p>
 
@@ -725,6 +746,9 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}>
 
+              <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Mail {...iconPresets.metadata} />
               <div className="content-card p-10 h-full">
                 <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
@@ -748,6 +772,9 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}>
 
+              <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100 h-full hover:shadow-3xl transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <MapPin {...iconPresets.metadata} />
               <div className="content-card p-10 h-full">
                 <div className="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
