@@ -87,7 +87,6 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
       <div className="min-h-screen bg-slate-50">
         <style>{`
           @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
