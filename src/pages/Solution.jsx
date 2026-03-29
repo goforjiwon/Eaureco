@@ -40,7 +40,7 @@ export default function Solution() {
                 <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider">{t.hero.badge}</h2>
               </div>
               
-              <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
+              <h3 className="text-5xl font-bold text-display text-gray-900 mb-6 leading-tight">
                 {t.hero.title}
               </h3>
 
@@ -99,7 +99,7 @@ export default function Solution() {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.small.name}</h3>
+                <h3 className="text-2xl font-bold text-display text-gray-900 mb-2">{t.sizes.small.name}</h3>
                 <p className="text-3xl font-bold text-teal-600 mb-3">{t.sizes.small.weight}</p>
                 <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.small.desc}</p>
               </div>
@@ -115,7 +115,7 @@ export default function Solution() {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.medium.name}</h3>
+                <h3 className="text-2xl font-bold text-display text-gray-900 mb-2">{t.sizes.medium.name}</h3>
                 <p className="text-3xl font-bold text-cyan-600 mb-3">{t.sizes.medium.weight}</p>
                 <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.medium.desc}</p>
               </div>
@@ -131,7 +131,7 @@ export default function Solution() {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-2">{t.sizes.large.name}</h3>
+                <h3 className="text-2xl font-bold text-display text-gray-900 mb-2">{t.sizes.large.name}</h3>
                 <p className="text-3xl font-bold text-emerald-600 mb-3">{t.sizes.large.weight}</p>
                 <p className="text-sm text-gray-600 leading-relaxed mx-auto">{t.sizes.large.desc}</p>
               </div>
@@ -147,14 +147,14 @@ export default function Solution() {
           className="mb-20">
 
           <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-100">
-            <h2 className="text-4xl font-bold neo-text text-gray-900 mb-8 text-center">
+            <h2 className="text-4xl font-bold text-display text-gray-900 mb-8 text-center">
               {t.performance.title}
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Freezes Faster */}
               <div>
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">
+                <h3 className="text-2xl font-bold text-display bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">
                   {t.performance.freezing}
                 </h3>
                 <div className="space-y-4">
@@ -192,7 +192,7 @@ export default function Solution() {
 
               {/* Stays Cool Longer */}
               <div>
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-6">
+                <h3 className="text-2xl font-bold text-display bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-6">
                   {t.performance.retention}
                 </h3>
                 <div className="space-y-4">
@@ -243,7 +243,7 @@ export default function Solution() {
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <TrendingUp className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
-              <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-display text-gray-900 mb-4">
                 {t.turnover.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -265,7 +265,7 @@ export default function Solution() {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Trash2 className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
-              <h2 className="text-4xl font-bold neo-text text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-display text-gray-900 mb-4">
                 {t.disposal.title}
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -289,7 +289,7 @@ export default function Solution() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="surface-elevated rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">♻️</span>
               </div>
@@ -299,7 +299,7 @@ export default function Solution() {
               </p>
             </div>
 
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="surface-elevated rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">🌱</span>
               </div>
@@ -309,7 +309,7 @@ export default function Solution() {
               </p>
             </div>
 
-            <div className="nav-glass rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="surface-elevated rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="w-14 h-14 bg-gradient-to-br from-lime-400 to-lime-500 rounded-xl flex items-center justify-center mb-6 shadow-md">
                 <span className="text-3xl">💰</span>
               </div>
@@ -341,25 +341,25 @@ export default function Solution() {
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-green-900/85 to-teal-900/90"></div>
             
             <div className="relative z-10 p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold neo-text text-white mb-4">Eaureco effect
+              <h2 className="text-4xl md:text-5xl font-bold text-display text-white mb-4">Eaureco effect
 
               </h2>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="text-6xl md:text-7xl font-bold neo-text text-white mb-2">2.54M</div>
+                  <div className="text-6xl md:text-7xl font-bold text-display text-white mb-2">2.54M</div>
                   <p className="text-xl font-semibold text-white/90 mb-1">tons</p>
                   <p className="text-base text-white/80">{t.impact.co2}</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="text-5xl md:text-6xl font-bold neo-text text-lime-300 mb-3">US$ 12.7M</div>
+                  <div className="text-5xl md:text-6xl font-bold text-display text-lime-300 mb-3">US$ 12.7M</div>
                   <p className="text-xl font-semibold text-white/90">{t.impact.credit}</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <TrendingDown className="w-12 h-12 text-lime-300 mx-auto mb-3" strokeWidth={2.5} />
-                  <div className="text-6xl md:text-7xl font-bold neo-text text-white mb-2">63.4%</div>
+                  <div className="text-6xl md:text-7xl font-bold text-display text-white mb-2">63.4%</div>
                   <p className="text-xl font-semibold text-white/90 mb-1">{t.impact.emissions}</p>
                   <p className="text-sm text-white/80">{t.impact.emissionsDesc}</p>
                 </div>
@@ -383,7 +383,7 @@ export default function Solution() {
             <div className="grid md:grid-cols-2 gap-8 items-center p-12">
               {/* Left Content */}
               <div className="text-white">
-                <h2 className="text-2xl md:text-3xl font-bold neo-text mb-8 leading-normal">
+                <h2 className="text-2xl md:text-3xl font-bold text-display mb-8 leading-normal">
                   {t.esg.title}
                 </h2>
 
@@ -411,7 +411,7 @@ export default function Solution() {
               <div className="relative">
                 <div className="text-center mb-8">
                   <div className="inline-block bg-white/20 backdrop-blur rounded-2xl px-8 py-6 border border-white/30">
-                    <div className="text-6xl font-bold neo-text text-white mb-2">
+                    <div className="text-6xl font-bold text-display text-white mb-2">
                       {t.esg.saved}
                     </div>
                     <p className="text-white font-semibold text-lg">

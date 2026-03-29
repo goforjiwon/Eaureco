@@ -34,7 +34,7 @@ export default function Contact() {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
-              <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
+              <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
                 {t.info.email}
               </h2>
               <a
@@ -57,7 +57,7 @@ export default function Contact() {
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
               </div>
-              <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
+              <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
                 {t.info.location}
               </h2>
               <p className="text-center text-xl font-bold text-cyan-600 mb-4">

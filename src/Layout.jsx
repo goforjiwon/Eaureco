@@ -88,38 +88,6 @@ export default function Layout({ children, currentPageName }) {
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-        <style>{`
-          @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-          :root {
-            --neo-green: #10b981;
-            --neo-lime: #84cc16;
-            --neo-teal: #14b8a6;
-            --neo-dark: #065f46;
-            --neo-light: #d1fae5;
-          }
-
-          * {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-          }
-
-          .nav-glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-          }
-
-          .neo-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          }
-
-          .neo-text {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            letter-spacing: -0.02em;
-          }
-        `}</style>
-
         {/* Navigation */}
         <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200/50">
           <div className="max-w-7xl mx-auto px-6 py-4">

@@ -110,7 +110,7 @@ export default function Home() {
 
             </div>
             <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-8 py-4 rounded-2xl shadow-2xl mb-8">
-              <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
+              <p className="text-2xl md:text-4xl font-bold text-display text-gray-900">
                 {t.hero.tagline}
               </p>
             </div>
@@ -206,10 +206,10 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}>
               <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-6">
-                <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">{t.why.badge}</h2>
+                <h2 className="text-sm font-bold text-display text-gray-900 uppercase tracking-wider">{t.why.badge}</h2>
               </div>
               
-              <h3 className="text-5xl font-bold neo-text text-gray-900 mb-6 leading-tight">
+              <h3 className="text-5xl font-bold text-display text-gray-900 mb-6 leading-tight">
                 {t.why.title}
               </h3>
               
@@ -218,19 +218,19 @@ export default function Home() {
               </p>
 
               <div className="space-y-4">
-                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                <div className="surface-elevated rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
                     <span className="text-emerald-600">♻️</span> {t.why.sustainable}
                   </h4>
                   <p className="text-gray-700">{t.why.sustainableDesc}</p>
                 </div>
-                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                <div className="surface-elevated rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
                     <span className="text-cyan-600">❄️</span> {t.why.performance}
                   </h4>
                   <p className="text-gray-700">{t.why.performanceDesc}</p>
                 </div>
-                <div className="nav-glass rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
+                <div className="surface-elevated rounded-xl shadow-md p-5 hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
                     <span className="text-lime-600">$</span> {t.why.costEffective}
                   </h4>
@@ -439,7 +439,7 @@ export default function Home() {
               <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
                 <p className="text-sm font-bold uppercase tracking-wider">{t.solution.hero.badge}</p>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 neo-text">{t.solution.hero.title}</h1>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-display">{t.solution.hero.title}</h1>
               <p className="text-2xl font-medium mb-8 max-w-3xl mx-auto">
                 {t.solution.hero.tagline}
               </p>
@@ -452,12 +452,12 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50 hover:shadow-2xl transition-shadow">
+              <div className="surface-elevated rounded-2xl shadow-xl p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50 hover:shadow-2xl transition-shadow">
                 <CheckCircle className="w-12 h-12 text-lime-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent mb-3">
+                <h3 className="text-2xl font-bold text-display bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent mb-3">
                   {t.solution.performance.green}
                 </h3>
-                <p className="text-3xl font-bold neo-text text-gray-900 mb-2">{t.solution.performance.greenTitle}</p>
+                <p className="text-3xl font-bold text-display text-gray-900 mb-2">{t.solution.performance.greenTitle}</p>
                 <p className="text-gray-600 font-medium">
                   {t.solution.performance.greenDesc}
                 </p>
@@ -473,7 +473,7 @@ export default function Home() {
               viewport={{ once: true }}>
               <div className="bg-white rounded-2xl shadow-xl p-10 h-full hover:shadow-2xl transition-shadow">
                 <Recycle className="w-10 h-10 text-cyan-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-display text-gray-900 mb-4">
                   {t.solution.benefits.disposal.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -490,10 +490,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="mb-20">
             <div className="inline-block bg-gradient-to-r from-lime-400 to-emerald-400 px-6 py-2 rounded-full mb-8">
-              <h2 className="text-sm font-bold neo-text text-gray-900 uppercase tracking-wider">{t.solution.general.badge}</h2>
+              <h2 className="text-sm font-bold text-display text-gray-900 uppercase tracking-wider">{t.solution.general.badge}</h2>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-12">{t.solution.general.title}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-display text-gray-900 mb-12">{t.solution.general.title}</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl shadow-lg p-6">
@@ -526,7 +526,7 @@ export default function Home() {
                 <h2 className="text-sm font-bold text-white uppercase tracking-wider">{t.solution.impact.badge}</h2>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-4">{t.solution.impact.title}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-display text-gray-900 mb-4">{t.solution.impact.title}</h2>
               <p className="text-xl text-gray-700 mb-12 max-w-3xl">{t.solution.impact.subtitle}</p>
 
               <div className="grid md:grid-cols-3 gap-8">
@@ -564,7 +564,7 @@ export default function Home() {
               <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
                 <h2 className="text-sm font-bold uppercase tracking-wider">{t.solution.esg.badge}</h2>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 neo-text">{t.solution.esg.title}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-display">{t.solution.esg.title}</h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto text-white/90">
                 {t.solution.esg.subtitle}
               </p>
@@ -584,7 +584,7 @@ export default function Home() {
             className="mb-16">
             <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl shadow-2xl p-12 border border-emerald-100">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-display text-gray-900 mb-6">
                   {t.comparison.value.title}
                 </h2>
                 <p className="text-xl text-gray-700 mb-8">
@@ -595,11 +595,11 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-8">
                     <div className="text-center">
                       <DollarSign className="w-12 h-12 text-emerald-600 mx-auto mb-3" strokeWidth={2} />
-                      <p className="text-3xl font-bold neo-text text-emerald-600">{t.comparison.value.cheap}</p>
+                      <p className="text-3xl font-bold text-display text-emerald-600">{t.comparison.value.cheap}</p>
                     </div>
                     <div className="text-center">
                       <TrendingUp className="w-12 h-12 text-cyan-600 mx-auto mb-3" strokeWidth={2} />
-                      <p className="text-3xl font-bold neo-text text-cyan-600">{t.comparison.value.effective}</p>
+                      <p className="text-3xl font-bold text-display text-cyan-600">{t.comparison.value.effective}</p>
                     </div>
                   </div>
                 </div>
@@ -626,7 +626,7 @@ export default function Home() {
                         <span className="font-bold text-lg text-gray-900">{t.comparison.table.feature}</span>
                       </th>
                       <th className="px-6 py-5 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l border-gray-200">
-                        <div className="font-bold text-xl neo-text text-emerald-600">Eaureco</div>
+                        <div className="font-bold text-xl text-display text-emerald-600">Eaureco</div>
                       </th>
                       <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
                         <div className="font-semibold text-gray-900">SAP ({language === 'en' ? 'Plastic' : language === 'es' ? 'Plástico' : '플라스틱'})</div>
@@ -729,7 +729,7 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Mail className="w-8 h-8 text-white" strokeWidth={2.5} />
                 </div>
-                <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
+                <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
                   {t.contact.info.email}
                 </h2>
                 <a
@@ -752,7 +752,7 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <MapPin className="w-8 h-8 text-white" strokeWidth={2.5} />
                 </div>
-                <h2 className="text-3xl font-bold neo-text text-gray-900 mb-4 text-center">
+                <h2 className="text-3xl font-bold text-display text-gray-900 mb-4 text-center">
                   {t.contact.info.location}
                 </h2>
                 <p className="text-center text-xl font-bold text-cyan-600 mb-4">

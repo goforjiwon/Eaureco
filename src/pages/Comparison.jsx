@@ -76,7 +76,7 @@ export default function Comparison() {
 
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl shadow-2xl p-12 border border-emerald-100">
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold neo-text text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-display text-gray-900 mb-6">
                 {t.value.title}
               </h2>
               <p className="text-xl text-gray-700 mb-8">
@@ -87,11 +87,11 @@ export default function Comparison() {
                 <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
                     <DollarSign className="w-12 h-12 text-emerald-600 mx-auto mb-3" strokeWidth={2} />
-                    <p className="text-3xl font-bold neo-text text-emerald-600">{t.value.cheap}</p>
+                    <p className="text-3xl font-bold text-display text-emerald-600">{t.value.cheap}</p>
                   </div>
                   <div className="text-center">
                     <TrendingUp className="w-12 h-12 text-cyan-600 mx-auto mb-3" strokeWidth={2} />
-                    <p className="text-3xl font-bold neo-text text-cyan-600">{t.value.effective}</p>
+                    <p className="text-3xl font-bold text-display text-cyan-600">{t.value.effective}</p>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ export default function Comparison() {
                       <span className="font-bold text-lg text-gray-900">{t.table.feature}</span>
                     </th>
                     <th className="px-6 py-5 text-center bg-gradient-to-br from-emerald-50 to-lime-50 border-l border-gray-200">
-                      <div className="font-bold text-xl neo-text text-emerald-600">Eaureco</div>
+                      <div className="font-bold text-xl text-display text-emerald-600">Eaureco</div>
                     </th>
                     <th className="px-6 py-5 text-center bg-gray-50 border-l border-gray-200">
                       <div className="font-semibold text-gray-900">SAP ({language === 'en' ? 'Plastic' : language === 'es' ? 'Plástico' : '플라스틱'})</div>
