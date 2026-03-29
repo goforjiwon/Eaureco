@@ -447,52 +447,11 @@ export default function Home() {
           </motion.div>
 
           {/* Performance Comparison */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-1 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="w-6 h-6 text-white" strokeWidth={2.5} />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Typical usage</p>
-                    <p className="text-sm font-bold text-emerald-600">{t.solution.performance.efficiencyDesc}</p>
-                  </div>
-                </div>
-                <h3 className="text-4xl font-bold neo-text bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3">
-                  {t.solution.performance.efficiency}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {t.solution.performance.efficiencyDetail}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}>
-              <div className="nav-glass rounded-2xl shadow-xl p-8 h-full hover:shadow-2xl transition-shadow">
-                <Thermometer className="w-12 h-12 text-cyan-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-cyan-600 to-teal-600 bg-clip-text text-transparent mb-3">
-                  {t.solution.performance.lasts}
-                </h3>
-                <p className="text-6xl font-bold neo-text text-gray-900 mb-2">260</p>
-                <p className="text-gray-600 font-medium">
-                  {t.solution.performance.lastsDesc}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}>
               <div className="nav-glass rounded-2xl shadow-xl p-8 h-full bg-gradient-to-br from-lime-50 to-emerald-50 hover:shadow-2xl transition-shadow">
                 <CheckCircle className="w-12 h-12 text-lime-600 mb-4" strokeWidth={2} />
                 <h3 className="text-2xl font-bold neo-text bg-gradient-to-r from-lime-600 to-emerald-600 bg-clip-text text-transparent mb-3">
