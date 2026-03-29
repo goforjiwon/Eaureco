@@ -547,7 +547,7 @@ export const translations = {
           },
           disposal: {
             title: "제로 폐기 비용",
-            desc: "퇴비에 버리세요. 특별한 처리, 폐기 비용, 환경적 죄책감이 없습니다"
+            desc: "퇴비로 배출하세요. 별도 처리나 폐기 비용이 들지 않아 운영 부담을 줄일 수 있습니다"
           }
         },
         general: {
@@ -556,9 +556,9 @@ export const translations = {
           perf: "우수한 성능",
           perfDesc: "냉동 속도 및 보냉 시간에서 기존 옵션을 능가",
           cost: "비용 효율적",
-          costDesc: "품질이나 지속 가능성을 타협하지 않는 경쟁력 있는 가격",
+          costDesc: "품질과 지속 가능성을 모두 고려한 경쟁력 있는 가격",
           eco: "100% 친환경",
-          ecoDesc: "환경 영향 제로의 완전 생분해성",
+          ecoDesc: "환경 부담을 줄이는 완전 생분해 소재",
           safe: "안전하고 편리함",
           safeDesc: "무독성, 쉬운 폐기, 사용이 간편함"
         },
@@ -587,12 +587,12 @@ export const translations = {
         },
         value: {
           title: "Eaureco는 더 저렴하고 더 효과적입니다",
-          subtitle: "우리의 아이스팩은 환경과 수익에 더 나은 뛰어난 성능을 제공합니다",
+          subtitle: "Eaureco 아이스팩은 환경성과 수익성 모두에서 더 나은 성능을 제공합니다",
           cheap: "저렴함",
           effective: "효과적"
         },
         metrics: {
-          freezes: "더 빠르게 얼음",
+          freezes: "더 빠른 냉동",
           freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
           lasts: "더 오래 지속",
           lastsDesc: "냉각 보유 시간(분)",
@@ -965,7 +965,7 @@ export const translations = {
         features: [
         { title: "유기농 아이스팩", desc: "내용물과 포장 모두 100% 생분해성" },
         { title: "우수한 열 특성", desc: "더 오래 지속되는 뛰어난 냉각 성능" },
-        { title: "지속 가능한 기원", desc: "재생 가능한 바이오 소재로 제작" }]
+        { title: "지속 가능한 원료", desc: "재생 가능한 바이오 소재로 제작" }]
 
       },
       sizes: {
@@ -990,7 +990,7 @@ export const translations = {
         desc: "젤부터 외부 포장까지 100% 생분해성 — 자르거나 분리할 필요 없이 그냥 버리면 자연이 처리합니다."
       },
       sargassum: {
-        badge: "폐기물에서 경이로움으로",
+        badge: "폐기물의 가치 전환",
         title: "수백만 톤이 밀려오고, 수백만의 세금이 처리에 낭비됩니다",
         desc: "모자반 해조류는 막대한 환경 문제입니다. 엄청난 양이 해변에 밀려오며, 지역 사회는 청소 및 처리에 수백만 달러를 지출합니다. 우리는 이 폐기물을 귀중한 자원으로 변환합니다."
       },
@@ -1024,7 +1024,7 @@ export const translations = {
         "범위 3 감축 및 기업 ESG 지표 지원"],
 
         quote: "Eaureco로 전환하면 1,000건의 배송당 나무 3그루를 심는 것만큼 CO₂를 절약합니다.",
-        subtitle: "낮은 탄소. 낮은 비용. 운영상의 타협 제로.",
+        subtitle: "낮은 탄소. 낮은 비용. 운영상 타협 없음.",
         saved: "187 kg CO₂e",
         savedDesc: "1,000개의 eaureco 아이스팩으로 절약"
       }
@@ -1116,12 +1116,12 @@ export const translations = {
       },
       value: {
         title: "Eaureco는 더 저렴하고 더 효과적입니다",
-        subtitle: "우리의 아이스팩은 환경과 수익에 더 나은 뛰어난 성능을 제공합니다",
+        subtitle: "Eaureco 아이스팩은 환경성과 수익성 모두에서 더 나은 성능을 제공합니다",
         cheap: "저렴함",
         effective: "효과적"
       },
       metrics: {
-        freezes: "더 빠르게 얼음",
+        freezes: "더 빠른 냉동",
         freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
         lasts: "더 오래 지속",
         lastsDesc: "냉각 보유 시간(분)",
@@ -1227,7 +1227,7 @@ export const translations = {
         performance: "더 나은 성능",
         performanceDesc: "더 오래 지속되고 더 빠르게 얼어붙는 우수한 냉각",
         cost: "비용 효율적",
-        costDesc: "품질을 타협하지 않는 경쟁력 있는 가격"
+        costDesc: "품질을 유지하면서도 경쟁력 있는 가격"
       },
       bottom: {
         tagline: "Stay Cool, Stay Green",
