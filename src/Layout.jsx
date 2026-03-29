@@ -104,8 +104,10 @@ export default function Layout({ children, currentPageName }) {
           }
 
           .nav-glass {
-            background: rgba(255, 255, 255, 0.92);
-            border: 1px solid #e5e7eb;
+            background: rgba(248, 250, 252, 0.88);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
           }
 
           .neo-shadow {
@@ -118,36 +120,40 @@ export default function Layout({ children, currentPageName }) {
           }
 
           .section-surface {
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
+            background:
+              radial-gradient(circle at 20% -15%, rgba(20, 184, 166, 0.07), transparent 45%),
+              radial-gradient(circle at 90% 0%, rgba(16, 185, 129, 0.08), transparent 42%),
+              #ffffff;
+            border-top: 1px solid rgba(226, 232, 240, 0.9);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
           }
 
           .section-muted {
-            background: #f8fafc;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
+            background:
+              linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+            border-top: 1px solid rgba(226, 232, 240, 0.9);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
           }
 
           .content-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
+            background: linear-gradient(180deg, #ffffff 0%, #fcfefe 100%);
+            border: 1px solid #e2e8f0;
             border-radius: 1rem;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
           }
 
           .highlight-card {
-            background: #ecfdf5;
-            border: 1px solid #a7f3d0;
+            background: linear-gradient(135deg, #ecfdf5 0%, #ccfbf1 100%);
+            border: 1px solid #99f6e4;
             border-radius: 1rem;
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+            box-shadow: 0 20px 44px rgba(13, 148, 136, 0.16);
           }
 
           .accent-pill {
             display: inline-block;
-            background: #dcfce7;
+            background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
             color: #065f46;
-            border: 1px solid #a7f3d0;
+            border: 1px solid #86efac;
             border-radius: 9999px;
             padding: 0.35rem 0.9rem;
             font-size: 0.75rem;
@@ -158,7 +164,7 @@ export default function Layout({ children, currentPageName }) {
         `}</style>
 
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white/95 border-b border-gray-200">
+        <nav className="sticky top-0 z-50 nav-glass border-b border-slate-200/80">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
@@ -191,8 +197,8 @@ export default function Layout({ children, currentPageName }) {
                       onClick={() => scrollToSection(item.sectionId)}
                       className={`px-4 py-2 rounded-lg font-semibold transition-all ${
                       isActive ?
-                      "bg-emerald-600 text-white shadow-sm" :
-                      "text-gray-700 hover:bg-gray-100"}`
+                      "bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md" :
+                      "text-slate-700 hover:bg-slate-100"}`
                       }>
 
                       <div className="flex items-center gap-2">
@@ -206,7 +212,7 @@ export default function Layout({ children, currentPageName }) {
                 {/* Language Toggle Button */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <button className="ml-2 px-4 py-2 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-700 transition-all flex items-center gap-2">
+                    <button className="ml-2 px-4 py-2 rounded-lg font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-2 border border-slate-200">
                       <Globe className="w-4 h-4" strokeWidth={2} />
                       <span className="font-bold">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}</span>
                     </button>
@@ -278,7 +284,7 @@ export default function Layout({ children, currentPageName }) {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-gray-200 bg-emerald-700 py-12">
+        <footer className="border-t border-emerald-900/40 bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-700 py-12">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png"
