@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -109,6 +111,12 @@ button:focus-visible {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --accent-primary: #10b981;
+    --accent-secondary: #14b8a6;
+    --accent-highlight: #84cc16;
+    --surface-elevated: rgba(255, 255, 255, 0.85);
+    --surface-elevated-border: rgba(255, 255, 255, 0.5);
+    --text-display-tracking: -0.02em;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -151,8 +159,26 @@ button:focus-visible {
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .surface-elevated {
+    background: var(--surface-elevated);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--surface-elevated-border);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  }
+
+  .text-display {
+    letter-spacing: var(--text-display-tracking);
   }
 }
