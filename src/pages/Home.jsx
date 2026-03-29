@@ -466,22 +466,7 @@ export default function Home() {
           </div>
 
           {/* Business Benefits */}
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}>
-              <div className="bg-white rounded-2xl shadow-xl p-10 h-full hover:shadow-2xl transition-shadow">
-                <TrendingUp className="w-10 h-10 text-emerald-600 mb-4" strokeWidth={2} />
-                <h3 className="text-2xl font-bold neo-text text-gray-900 mb-4">
-                  {t.solution.benefits.turnover.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {t.solution.benefits.turnover.desc}
-                </p>
-              </div>
-            </motion.div>
-
+          <div className="grid md:grid-cols-1 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
