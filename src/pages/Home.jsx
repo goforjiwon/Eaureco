@@ -94,7 +94,7 @@ export default function Home() {
           style={{
             backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/0885b584e_image.png')"
           }}>
-          <div className="absolute inset-0 bg-emerald-950/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/88 via-emerald-900/78 to-teal-900/74"></div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -108,8 +108,8 @@ export default function Home() {
                 alt="eaureco"
                 className="h-24 md:h-32 w-auto" />
             </div>
-            <div className="inline-block bg-emerald-300 px-8 py-4 rounded-2xl mb-8">
-              <p className="text-2xl md:text-4xl font-bold neo-text text-gray-900">
+            <div className="inline-block bg-white/90 border border-emerald-100 px-8 py-4 rounded-2xl mb-8 shadow-2xl backdrop-blur-sm">
+              <p className="text-2xl md:text-4xl font-bold neo-text text-emerald-950">
                 {t.hero.tagline}
               </p>
             </div>
@@ -164,19 +164,19 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="content-card p-5">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
-                    <span className="text-emerald-600">♻️</span> {t.why.sustainable}
+                    <Recycle className="w-5 h-5 text-emerald-600" strokeWidth={2} /> {t.why.sustainable}
                   </h4>
                   <p className="text-gray-700">{t.why.sustainableDesc}</p>
                 </div>
                 <div className="content-card p-5">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
-                    <span className="text-cyan-600">❄️</span> {t.why.performance}
+                    <Snowflake className="w-5 h-5 text-cyan-600" strokeWidth={2} /> {t.why.performance}
                   </h4>
                   <p className="text-gray-700">{t.why.performanceDesc}</p>
                 </div>
                 <div className="content-card p-5">
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
-                    <span className="text-lime-600">$</span> {t.why.costEffective}
+                    <TrendingDown className="w-5 h-5 text-lime-600" strokeWidth={2} /> {t.why.costEffective}
                   </h4>
                   <p className="text-gray-700">{t.why.costEffectiveDesc}</p>
                 </div>
