@@ -437,14 +437,14 @@ export const translations = {
     ko: {
       hero: {
         tagline: KO_SHARED.stayCoolStayGreen,
-        subtitle: "신선한 식품 배송 및 콜드체인 기업을 위한 지속 가능한 아이스팩",
+        subtitle: "신선식품 배송과 콜드체인 운영을 위한 지속 가능한 아이스팩",
         cta: "솔루션 알아보기"
       },
       stats: {
         biodegradable: KO_SHARED.biodegradable,
         biodegradableDesc: "내용물과 포장 모두",
         freezing: "더 빠른 냉동",
-        freezingDesc: "동일 크기 물 팩과 같은 냉동 사이클에서 측정",
+        freezingDesc: "같은 크기의 물 팩과 동일한 냉동 조건에서 측정",
         retention: "더 긴 보냉",
         retentionDesc: "상온 기준 단열 포장 테스트에서 최대 260분 유지",
         emissions: "낮은 탄소 배출",
@@ -457,9 +457,9 @@ export const translations = {
         sustainable: "지속 가능",
         sustainableDesc: "재생 가능한 재료로 제작",
         performance: "운영 성능",
-        performanceDesc: "더 짧은 냉동 사이클로 준비되고 라스트마일 배송 구간까지 보냉 유지",
+        performanceDesc: "더 짧은 냉동 사이클로 준비되고, 라스트마일 배송 구간까지 보냉을 유지합니다",
         costEffective: "비용 효율적",
-        costEffectiveDesc: "필요 재고와 폐기 처리 단계를 줄여 운영 비용을 낮춤",
+        costEffectiveDesc: "필요 재고와 폐기 처리 단계를 줄여 운영 비용을 낮춥니다",
         learnMore: "자세히 알아보기"
       },
       cta: {
@@ -478,7 +478,7 @@ export const translations = {
         },
         options: {
           title: "실패한 기존 솔루션",
-          subtitle: "모든 기존 옵션에는 치명적인 타협점이 있습니다.",
+          subtitle: "기존 옵션마다 치명적인 한계가 있습니다.",
           sap: {
             title: "SAP 아이스팩",
             subtitle: "플라스틱 기반 폴리머",
@@ -522,7 +522,7 @@ export const translations = {
       },
       solution: {
         header: {
-          title: "우리의 솔루션",
+          title: "Eaureco 솔루션",
           subtitle: "타협 없는 고성능 지속 가능한 아이스팩"
         },
         hero: {
@@ -531,31 +531,31 @@ export const translations = {
           tagline: "더 나은 성능. 더 낮은 비용. 제로 폐기물."
         },
         sizes: {
-          badge: "이용 가능한 크기",
+          badge: "제공 크기",
           title: "모든 필요에 맞는 유연한 옵션",
-          subtitle: "비즈니스 요구 사항에 맞는 크기를 선택하세요"
+          subtitle: "운영 환경에 맞는 크기를 선택하세요"
         },
         performance: {
           badge: "성능 데이터",
           title: "우수한 콜드체인 성능",
           efficiency: "재고 50% 감소",
-          efficiencyDesc: "하루 10,000개 팩",
-          efficiencyDetail: "배송 변경 없이 재고를 40,000개에서 20,000개로 감축",
+          efficiencyDesc: "하루 10,000개 기준",
+          efficiencyDetail: "배송 방식은 그대로 두고 재고를 40,000개에서 20,000개로 줄였습니다",
           lasts: "더 오래 지속",
-          lastsDesc: "260분의 냉각 보유 시간",
+          lastsDesc: "최대 260분 보냉 유지",
           green: KO_SHARED.ecoFriendly,
           greenTitle: "생분해성",
-          greenDesc: "내용물과 포장이 모두 자연적으로 분해"
+          greenDesc: "내용물과 포장재가 모두 자연 분해됩니다"
         },
         benefits: {
           badge: "비즈니스 혜택",
           turnover: {
             title: "더 빠른 회전율",
-            desc: "대안보다 4배 빠르게 얼어 더 빠른 재입고 주기와 더 높은 처리량 제공"
+            desc: "기존 대안보다 4배 빠르게 얼어 재입고 주기를 단축하고 처리량을 높입니다"
           },
           disposal: {
             title: "제로 폐기 비용",
-            desc: "퇴비로 배출하세요. 별도 처리나 폐기 비용이 들지 않아 운영 부담을 줄일 수 있습니다"
+            desc: "퇴비로 버릴 수 있어 별도 처리 과정이나 폐기 비용이 들지 않습니다"
           }
         },
         general: {
@@ -987,7 +987,7 @@ export const translations = {
         retention: "더 오래 차갑게 유지",
         water: "물",
         sap: "SAP (플라스틱)",
-        note: "* SAP 및 eaureco의 4% 용액을 사용한 실험실 조건에서 수행된 실험"
+        note: "* SAP와 Eaureco 4% 용액을 동일한 실험실 조건에서 비교한 결과입니다."
       },
       turnover: {
         title: "높은 회전율",
@@ -995,35 +995,35 @@ export const translations = {
       },
       disposal: {
         title: "간편한 폐기",
-        desc: "젤부터 외부 포장까지 100% 생분해성 — 자르거나 분리할 필요 없이 그냥 버리면 자연이 처리합니다."
+        desc: "젤부터 외부 포장까지 100% 생분해되어, 자르거나 분리할 필요 없이 간편하게 폐기할 수 있습니다."
       },
       sargassum: {
         badge: "폐기물의 가치 전환",
-        title: "수백만 톤이 밀려오고, 수백만의 세금이 처리에 낭비됩니다",
-        desc: "모자반 해조류는 막대한 환경 문제입니다. 엄청난 양이 해변에 밀려오며, 지역 사회는 청소 및 처리에 수백만 달러를 지출합니다. 우리는 이 폐기물을 귀중한 자원으로 변환합니다."
+        title: "수백만 톤이 해변으로 밀려오고, 막대한 세금이 처리에 쓰입니다",
+        desc: "모자반은 심각한 환경 문제입니다. 대량으로 해변에 유입되며 지역 사회는 수거와 처리에 큰 비용을 부담합니다. Eaureco는 이 폐기물을 가치 있는 자원으로 바꿉니다."
       },
       benefits: {
         badge: "eaureco를 선택하는 이유",
         biodegradable: KO_SHARED.biodegradable,
         biodegradableDesc: "환경에 해를 끼치지 않고 자연적으로 분해되는 100% 생분해성 재료",
         sustainable: "지속 가능",
-        sustainableDesc: "재생 가능한 소재로 제작되어 가치를 창출",
+        sustainableDesc: "재생 가능한 소재를 활용해 지속 가능한 가치를 만듭니다",
         costEfficient: "비용 효율적",
         costEfficientDesc: "성능이나 지속 가능성을 훼손하지 않는 경쟁력 있는 가격"
       },
       impact: {
         badge: "환경 영향",
-        title: "Eaureco로 전환하는 힘",
+        title: "Eaureco 전환이 만드는 변화",
         subtitle: "북미에서 아이스팩의 50%만 교체해도",
         co2: "CO₂ 상당량/년",
         credit: "탄소 크레딧",
-        desc: "지속 가능한 미래를 향한 운동에 동참하세요",
+        desc: "지속 가능한 미래를 만드는 변화에 함께하세요",
         emissions: "탄소 배출량 감소",
         emissionsDesc: "기존 LDPE/물 아이스팩 대비"
       },
       esg: {
         badge: "ESG 준수",
-        title: "Eaureco는 운영에 변화 없이 냉각 배출을 절반 이상 줄입니다.",
+        title: "운영 방식은 그대로, 냉각 관련 배출은 절반 이상 줄일 수 있습니다.",
         benefits: [
         "고급 생분해성 바이오 소재로 제작",
         "45일 이내에 자연 분해",
@@ -1032,7 +1032,7 @@ export const translations = {
         "범위 3 감축 및 기업 ESG 지표 지원"],
 
         quote: "Eaureco로 전환하면 1,000건의 배송당 나무 3그루를 심는 것만큼 CO₂를 절약합니다.",
-        subtitle: "낮은 탄소. 낮은 비용. 운영상 타협 없음.",
+        subtitle: "탄소는 낮추고 비용은 줄이되, 운영은 그대로 유지하세요.",
         saved: "187 kg CO₂e",
         savedDesc: "Eaureco 아이스팩 1,000개 사용 기준 절감량"
       }
@@ -1120,22 +1120,22 @@ export const translations = {
     ko: {
       header: {
         title: "비교",
-        subtitle: "Eaureco가 기존 아이스팩 솔루션을 능가하는 방법을 확인하세요"
+        subtitle: "Eaureco가 기존 아이스팩보다 어떤 점에서 더 나은지 확인해 보세요"
       },
       value: {
-        title: "Eaureco는 더 저렴하고 더 효과적입니다",
-        subtitle: "Eaureco 아이스팩은 환경성과 수익성 모두에서 더 나은 성능을 제공합니다",
-        cheap: "저렴함",
+        title: "Eaureco는 더 합리적이고 더 효과적입니다",
+        subtitle: "환경성과 경제성을 모두 만족하는 성능을 제공합니다",
+        cheap: "합리적",
         effective: "효과적"
       },
       metrics: {
         freezes: "더 빠른 냉동",
-        freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
+        freezesDesc: "물 기반 아이스팩 대비 더 빠른 냉동 속도",
         lasts: "더 오래 지속",
-        lastsDesc: "냉각 보유 시간(분)",
+        lastsDesc: "보냉 유지 시간(분)",
         green: "100% 친환경",
         greenTitle: "생분해성",
-        greenDesc: "내용물과 포장 모두 자연적으로 분해"
+        greenDesc: "내용물과 포장재가 모두 자연 분해됩니다"
       },
       table: {
         badge: "상세 비교",
@@ -1146,13 +1146,13 @@ export const translations = {
         cost: "비용 효율적",
         impact: "환경 영향",
         reusable: "재사용 가능",
-        positive: "긍정적",
-        negative: "부정적",
+        positive: "우수",
+        negative: "미흡",
         neutral: "중립"
       },
       summary: {
-        title: "명백한 승자",
-        subtitle: "성능, 비용 효율성 및 지속 가능성 - Eaureco는 중요한 모든 범주에서 기존 아이스팩을 능가합니다",
+        title: "더 나은 선택",
+        subtitle: "성능, 비용 효율, 지속 가능성까지 핵심 지표 전반에서 Eaureco가 앞섭니다",
         button: "문의하기 →"
       }
     }
@@ -1216,7 +1216,7 @@ export const translations = {
       },
       ko: {
       header: {
-        title: "연락처",
+        title: "문의하기",
         subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요?"
       },
       info: {
@@ -1225,15 +1225,15 @@ export const translations = {
         emailValue: "goforjiwon@kaist.ac.kr",
         location: "위치",
         locationValue: "대전, 대한민국",
-        locationDesc: "KAIST 캠퍼스 방문"
+        locationDesc: "KAIST 캠퍼스에서 만나보실 수 있습니다"
       },
 
       why: {
-        badge: "우리와 함께 일하는 이유",
+        badge: "왜 Eaureco와 함께해야 할까요?",
         sustainable: "지속 가능한 솔루션",
-        sustainableDesc: "해양을 정화하는 데 도움이 되는 100% 생분해성 아이스팩",
+        sustainableDesc: "해양 오염 저감에 기여하는 100% 생분해성 아이스팩",
         performance: "더 나은 성능",
-        performanceDesc: "더 오래 유지되고 더 빠르게 냉동되는 안정적인 보냉 성능",
+        performanceDesc: "더 오래 보냉되고 더 빠르게 냉동되는 안정적인 성능",
         cost: "비용 효율적",
         costDesc: "품질을 유지하면서도 경쟁력 있는 가격"
       },

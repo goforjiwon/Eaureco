@@ -12,6 +12,7 @@ const formLabels = {
     company: "Company (optional)",
     message: "Message",
     send: "Send Message",
+    sending: "Sending...",
     success: "Message sent! We'll get back to you soon.",
     error: "Something went wrong. Please try again.",
     placeholder: {
@@ -28,6 +29,7 @@ const formLabels = {
     company: "Empresa (opcional)",
     message: "Mensaje",
     send: "Enviar Mensaje",
+    sending: "Enviando...",
     success: "¡Mensaje enviado! Te responderemos pronto.",
     error: "Algo salió mal. Por favor intenta de nuevo.",
     placeholder: {
@@ -38,19 +40,20 @@ const formLabels = {
     }
   },
   ko: {
-    title: "메시지 보내기",
+    title: "문의 남기기",
     name: "이름",
     email: "이메일",
-    company: "회사 (선택사항)",
+    company: "회사 (선택)",
     message: "메시지",
-    send: "메시지 전송",
-    success: "메시지가 전송되었습니다! 곧 연락드리겠습니다.",
-    error: "오류가 발생했습니다. 다시 시도해주세요.",
+    send: "문의 보내기",
+    sending: "전송 중...",
+    success: "문의가 접수되었습니다. 빠르게 연락드리겠습니다.",
+    error: "전송 중 문제가 발생했어요. 잠시 후 다시 시도해 주세요.",
     placeholder: {
       name: "홍길동",
       email: "hong@company.com",
       company: "회사명",
-      message: "콜드체인 필요 사항을 알려주세요..."
+      message: "콜드체인 운영에서 필요한 내용을 알려주세요..."
     }
   }
 };
@@ -161,7 +164,7 @@ export default function ContactForm({ language }) {
               disabled={status === "loading"}
               className="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all flex items-center justify-center gap-2 disabled:opacity-60">
               {status === "loading" ? (
-                <><Loader2 className="w-5 h-5 animate-spin" /> Sending...</>
+                <><Loader2 className="w-5 h-5 animate-spin" /> {labels.sending}</>
               ) : (
                 <><Send className="w-5 h-5" /> {labels.send}</>
               )}
