@@ -87,7 +87,7 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
-      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
+      <div className="min-h-screen bg-slate-50">
         <style>{`
           @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
@@ -104,10 +104,8 @@ export default function Layout({ children, currentPageName }) {
           }
 
           .nav-glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid #e5e7eb;
           }
 
           .neo-shadow {
@@ -118,10 +116,49 @@ export default function Layout({ children, currentPageName }) {
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
             letter-spacing: -0.02em;
           }
+
+          .section-surface {
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+          }
+
+          .section-muted {
+            background: #f8fafc;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+          }
+
+          .content-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+          }
+
+          .highlight-card {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+          }
+
+          .accent-pill {
+            display: inline-block;
+            background: #dcfce7;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+            border-radius: 9999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+          }
         `}</style>
 
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200/50">
+        <nav className="sticky top-0 z-50 bg-white/95 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
@@ -154,7 +191,7 @@ export default function Layout({ children, currentPageName }) {
                       onClick={() => scrollToSection(item.sectionId)}
                       className={`px-4 py-2 rounded-lg font-semibold transition-all ${
                       isActive ?
-                      "bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md" :
+                      "bg-emerald-600 text-white shadow-sm" :
                       "text-gray-700 hover:bg-gray-100"}`
                       }>
 
@@ -205,7 +242,7 @@ export default function Layout({ children, currentPageName }) {
                     onClick={() => scrollToSection(item.sectionId)}
                     className={`px-3 py-2 rounded-lg font-semibold text-sm ${
                     isActive ?
-                    "bg-gradient-to-r from-emerald-500 to-teal-500 text-white" :
+                    "bg-emerald-600 text-white" :
                     "bg-gray-100 text-gray-700"}`
                     }>
 
@@ -241,7 +278,7 @@ export default function Layout({ children, currentPageName }) {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-gray-200 bg-gradient-to-r from-emerald-600 to-teal-600 py-12">
+        <footer className="border-t border-gray-200 bg-emerald-700 py-12">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png"
