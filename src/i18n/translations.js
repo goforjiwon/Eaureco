@@ -1,10 +1,18 @@
 // Shared page translations with safe fallback support
 
+const KO_SHARED = {
+  biodegradable: "생분해성",
+  ecoFriendly: "100% 친환경",
+  costEffective: "비용 효율적",
+  contactCta: "문의하기",
+  stayCoolStayGreen: "Stay Cool, Stay Green",
+};
+
 export const translations = {
   home: {
     en: {
       hero: {
-        tagline: "Stay Cool, Stay Green",
+        tagline: KO_SHARED.stayCoolStayGreen,
         subtitle: "Sustainable ice packs for fresh food delivery and cold chain companies",
         cta: "Discover Our Solution"
       },
@@ -209,7 +217,7 @@ export const translations = {
           locationDesc: "Visit us at KAIST campus"
         },
         bottom: {
-          tagline: "Stay Cool, Stay Green",
+          tagline: KO_SHARED.stayCoolStayGreen,
           desc: "Let's work together to create a green future for food delivery and cold chain logistics."
         }
       }
@@ -428,12 +436,12 @@ export const translations = {
     },
     ko: {
       hero: {
-        tagline: "Stay Cool, Stay Green",
+        tagline: KO_SHARED.stayCoolStayGreen,
         subtitle: "신선한 식품 배송 및 콜드체인 기업을 위한 지속 가능한 아이스팩",
         cta: "솔루션 알아보기"
       },
       stats: {
-        biodegradable: "생분해성",
+        biodegradable: KO_SHARED.biodegradable,
         biodegradableDesc: "내용물과 포장 모두",
         freezing: "더 빠른 냉동",
         freezingDesc: "물 기반 팩 대비",
@@ -535,7 +543,7 @@ export const translations = {
           efficiencyDetail: "배송 변경 없이 재고를 40,000개에서 20,000개로 감축",
           lasts: "더 오래 지속",
           lastsDesc: "260분의 냉각 보유 시간",
-          green: "100% 친환경",
+          green: KO_SHARED.ecoFriendly,
           greenTitle: "생분해성",
           greenDesc: "내용물과 포장이 모두 자연적으로 분해"
         },
@@ -555,7 +563,7 @@ export const translations = {
           title: "필요한 모든 것",
           perf: "우수한 성능",
           perfDesc: "냉동 속도 및 보냉 시간에서 기존 옵션을 능가",
-          cost: "비용 효율적",
+          cost: KO_SHARED.costEffective,
           costDesc: "품질과 지속 가능성을 모두 고려한 경쟁력 있는 가격",
           eco: "100% 친환경",
           ecoDesc: "환경 부담을 줄이는 완전 생분해 소재",
@@ -596,17 +604,17 @@ export const translations = {
           freezesDesc: "물 기반 아이스팩보다 빠른 냉동",
           lasts: "더 오래 지속",
           lastsDesc: "냉각 보유 시간(분)",
-          green: "100% 친환경",
+          green: KO_SHARED.ecoFriendly,
           greenTitle: "생분해성",
           greenDesc: "내용물과 포장 모두 자연적으로 분해"
         },
         table: {
           badge: "상세 비교",
           feature: "특징",
-          biodegradable: "생분해성",
+          biodegradable: KO_SHARED.biodegradable,
           freezing: "냉동 속도",
           retention: "보냉 시간",
-          cost: "비용 효율적",
+          cost: KO_SHARED.costEffective,
           impact: "환경 영향",
           reusable: "재사용 가능",
           positive: "긍정적",
@@ -625,7 +633,7 @@ export const translations = {
           subtitle: "지속 가능한 냉각으로 전환할 준비가 되셨나요?"
         },
         info: {
-          badge: "문의하기",
+          badge: KO_SHARED.contactCta,
           email: "이메일 보내기",
           emailValue: "goforjiwon@kaist.ac.kr",
           location: "위치",
@@ -633,7 +641,7 @@ export const translations = {
           locationDesc: "KAIST 캠퍼스 방문"
         },
         bottom: {
-          tagline: "Stay Cool, Stay Green",
+          tagline: KO_SHARED.stayCoolStayGreen,
           desc: "식품 배송 및 콜드체인 물류를 위한 친환경 미래를 함께 만들어갑시다."
         }
       }
@@ -983,7 +991,7 @@ export const translations = {
       },
       turnover: {
         title: "높은 회전율",
-        desc: "4배 빠른 냉동 시간으로 냉동고 공간을 효율화 하세요"
+        desc: "대안 대비 4배 빠른 냉동 속도로 재입고 주기를 단축하고 처리량을 높일 수 있습니다."
       },
       disposal: {
         title: "간편한 폐기",
@@ -996,7 +1004,7 @@ export const translations = {
       },
       benefits: {
         badge: "eaureco를 선택하는 이유",
-        biodegradable: "생분해성",
+        biodegradable: KO_SHARED.biodegradable,
         biodegradableDesc: "환경에 해를 끼치지 않고 자연적으로 분해되는 100% 생분해성 재료",
         sustainable: "지속 가능",
         sustainableDesc: "재생 가능한 소재로 제작되어 가치를 창출",
@@ -1026,7 +1034,7 @@ export const translations = {
         quote: "Eaureco로 전환하면 1,000건의 배송당 나무 3그루를 심는 것만큼 CO₂를 절약합니다.",
         subtitle: "낮은 탄소. 낮은 비용. 운영상 타협 없음.",
         saved: "187 kg CO₂e",
-        savedDesc: "1,000개의 eaureco 아이스팩으로 절약"
+        savedDesc: "Eaureco 아이스팩 1,000개 사용 기준 절감량"
       }
     }
   },
@@ -1132,7 +1140,7 @@ export const translations = {
       table: {
         badge: "상세 비교",
         feature: "특징",
-        biodegradable: "생분해성",
+        biodegradable: KO_SHARED.biodegradable,
         freezing: "냉동 속도",
         retention: "보냉 시간",
         cost: "비용 효율적",
@@ -1174,7 +1182,7 @@ export const translations = {
         costDesc: "Competitive pricing without compromising quality"
       },
       bottom: {
-        tagline: "Stay Cool, Stay Green",
+        tagline: KO_SHARED.stayCoolStayGreen,
         desc: "Let's work together to create a green future for food delivery and cold chain logistics."
       }
     },
@@ -1225,12 +1233,12 @@ export const translations = {
         sustainable: "지속 가능한 솔루션",
         sustainableDesc: "해양을 정화하는 데 도움이 되는 100% 생분해성 아이스팩",
         performance: "더 나은 성능",
-        performanceDesc: "더 오래 지속되고 더 빠르게 얼어붙는 우수한 냉각",
+        performanceDesc: "더 오래 유지되고 더 빠르게 냉동되는 안정적인 보냉 성능",
         cost: "비용 효율적",
         costDesc: "품질을 유지하면서도 경쟁력 있는 가격"
       },
       bottom: {
-        tagline: "Stay Cool, Stay Green",
+        tagline: KO_SHARED.stayCoolStayGreen,
         desc: "식품 배송 및 콜드체인 물류를 위한 친환경 미래를 함께 만들어갑시다."
       }
       }
