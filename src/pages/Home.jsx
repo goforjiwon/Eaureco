@@ -15,75 +15,75 @@ export default function Home() {
   };
 
   const comparisonData = [
-    {
-      feature: t.comparison.table.biodegradable,
-      eaureco: true,
-      sap: false,
-      water: false,
-      compost: "(Plastic package)"
-    },
-    {
-      feature: t.comparison.table.freezing,
-      eaureco: "0.25",
-      sap: "0.76",
-      water: "1.0",
-      compost: ">1"
-    },
-    {
-      feature: t.comparison.table.retention,
-      eaureco: "260 min",
-      sap: "220 min",
-      water: "180 min",
-      compost: "200 min"
-    },
-    {
-      feature: t.comparison.table.cost,
-      eaureco: true,
-      sap: true,
-      water: true,
-      compost: false
-    },
-    {
-      feature: t.comparison.table.impact,
-      eaureco: t.comparison.table.positive,
-      sap: t.comparison.table.negative,
-      water: t.comparison.table.neutral,
-      compost: t.comparison.table.positive
-    }
-  ];
+  {
+    feature: t.comparison.table.biodegradable,
+    eaureco: true,
+    sap: false,
+    water: false,
+    compost: "(Plastic package)"
+  },
+  {
+    feature: t.comparison.table.freezing,
+    eaureco: "0.25",
+    sap: "0.76",
+    water: "1.0",
+    compost: ">1"
+  },
+  {
+    feature: t.comparison.table.retention,
+    eaureco: "260 min",
+    sap: "220 min",
+    water: "180 min",
+    compost: "200 min"
+  },
+  {
+    feature: t.comparison.table.cost,
+    eaureco: true,
+    sap: true,
+    water: true,
+    compost: false
+  },
+  {
+    feature: t.comparison.table.impact,
+    eaureco: t.comparison.table.positive,
+    sap: t.comparison.table.negative,
+    water: t.comparison.table.neutral,
+    compost: t.comparison.table.positive
+  }];
+
 
   const optionCards = [
-    {
-      icon: FlaskConical,
-      title: t.problem.options.sap.title,
-      subtitle: t.problem.options.sap.subtitle,
-      pros: t.problem.options.sap.pros,
-      cons: t.problem.options.sap.cons,
-      theme: "red"
-    },
-    {
-      icon: Waves,
-      title: t.problem.options.water.title,
-      subtitle: t.problem.options.water.subtitle,
-      pros: t.problem.options.water.pros,
-      cons: t.problem.options.water.cons,
-      theme: "blue"
-    },
-    {
-      icon: Package,
-      title: t.problem.options.eco.title,
-      subtitle: t.problem.options.eco.subtitle,
-      pros: t.problem.options.eco.pros,
-      cons: t.problem.options.eco.cons,
-      theme: "teal"
-    }
-  ];
+  {
+    icon: FlaskConical,
+    title: t.problem.options.sap.title,
+    subtitle: t.problem.options.sap.subtitle,
+    pros: t.problem.options.sap.pros,
+    cons: t.problem.options.sap.cons,
+    theme: "red"
+  },
+  {
+    icon: Waves,
+    title: t.problem.options.water.title,
+    subtitle: t.problem.options.water.subtitle,
+    pros: t.problem.options.water.pros,
+    cons: t.problem.options.water.cons,
+    theme: "blue"
+  },
+  {
+    icon: Package,
+    title: t.problem.options.eco.title,
+    subtitle: t.problem.options.eco.subtitle,
+    pros: t.problem.options.eco.pros,
+    cons: t.problem.options.eco.cons,
+    theme: "teal"
+  }];
+
 
   const impactMetrics = [
-    { icon: Trash2, value: t.problem.impact.years, description: t.problem.impact.yearsDesc },
-    { icon: DollarSign, value: t.problem.impact.costs, description: t.problem.impact.costsDesc },
-    { icon: Leaf, value: t.problem.impact.damage, description: t.problem.impact.damageDesc }
-  ];
+  { icon: Trash2, value: t.problem.impact.years, description: t.problem.impact.yearsDesc },
+  { icon: DollarSign, value: t.problem.impact.costs, description: t.problem.impact.costsDesc },
+  { icon: Leaf, value: t.problem.impact.damage, description: t.problem.impact.damageDesc }];
+
 
   const themeClasses = {
     red: "bg-rose-50 border border-rose-100 text-rose-700",
@@ -92,16 +92,16 @@ export default function Home() {
   };
 
   const IconBadge = ({ icon: Icon, theme = "teal", className = "w-7 h-7" }) =>
-    <div className={`inline-flex p-3.5 rounded-xl shadow-sm ${themeClasses[theme]}`}>
+  <div className={`inline-flex p-3.5 rounded-xl shadow-sm ${themeClasses[theme]}`}>
       <Icon className={className} strokeWidth={2} />
     </div>;
 
   const OptionCard = ({ icon: Icon, title, subtitle, pros, cons, theme }) =>
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="content-card p-6">
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="content-card p-6">
       <div className="mb-4">
         <IconBadge icon={Icon} theme={theme} />
       </div>
@@ -111,20 +111,20 @@ export default function Home() {
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Pros</p>
           {pros.map((pro, i) =>
-            <div key={i} className="flex items-start gap-2 mb-1">
+        <div key={i} className="flex items-start gap-2 mb-1">
               <CheckCircle {...iconPresets.bullet} className={`${iconPresets.bullet.className} text-emerald-500`} />
               <p className="text-sm text-gray-700">{pro}</p>
             </div>
-          )}
+        )}
         </div>
         <div>
           <p className="text-xs font-semibold text-gray-400 uppercase mb-2">Cons</p>
           {cons.map((con, i) =>
-            <div key={i} className="flex items-start gap-2 mb-1">
+        <div key={i} className="flex items-start gap-2 mb-1">
               <XCircle {...iconPresets.bullet} className={`${iconPresets.bullet.className} text-rose-500`} />
               <p className="text-sm text-gray-700">{con}</p>
             </div>
-          )}
+        )}
         </div>
       </div>
     </motion.div>;
@@ -216,14 +216,14 @@ export default function Home() {
                   <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
                     <Snowflake className="w-5 h-5 text-cyan-600" strokeWidth={2} /> {t.why.performance}
                   </h4>
-                  <p className="text-gray-700">{t.why.performanceDesc}</p>
+                  
                 </div>
-                <div className="content-card p-5">
-                  <h4 className="font-bold text-lg mb-1 flex items-center gap-2">
-                    <TrendingDown className="w-5 h-5 text-lime-600" strokeWidth={2} /> {t.why.costEffective}
-                  </h4>
-                  <p className="text-gray-700">{t.why.costEffectiveDesc}</p>
-                </div>
+                
+
+
+
+
+                
               </div>
             </motion.div>
           </div>
@@ -279,14 +279,14 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-3 gap-5">
               {optionCards.map((option) =>
-                <OptionCard
-                  key={option.title}
-                  icon={option.icon}
-                  title={option.title}
-                  subtitle={option.subtitle}
-                  pros={option.pros}
-                  cons={option.cons}
-                  theme={option.theme} />
+              <OptionCard
+                key={option.title}
+                icon={option.icon}
+                title={option.title}
+                subtitle={option.subtitle}
+                pros={option.pros}
+                cons={option.cons}
+                theme={option.theme} />
               )}
             </div>
           </div>
@@ -311,8 +311,8 @@ export default function Home() {
                   <MetricIcon {...iconPresets.stat} />
                   <h3 className="text-4xl font-bold text-gray-900 mb-2">{metric.value}</h3>
                   <p className="text-gray-600">{metric.description}</p>
-                </motion.div>
-              );
+                </motion.div>);
+
             })}
           </div>
         </section>
@@ -570,41 +570,41 @@ export default function Home() {
                   </thead>
                   <tbody>
                     {comparisonData.map((row, index) =>
-                      <tr key={index} className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
                         <td className="px-6 py-4 font-semibold text-gray-900 bg-gray-50">
                           {row.feature}
                         </td>
                         <td className="px-6 py-4 text-center bg-emerald-50/50 border-l border-gray-200">
                           {typeof row.eaureco === 'boolean' ?
-                            row.eaureco ?
-                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-bold text-lg text-emerald-600">{row.eaureco}</span>
-                          }
+                        row.eaureco ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-bold text-lg text-emerald-600">{row.eaureco}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.sap === 'boolean' ?
-                            row.sap ?
-                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.sap}</span>
-                          }
+                        row.sap ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.sap}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.water === 'boolean' ?
-                            row.water ?
-                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.water}</span>
-                          }
+                        row.water ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.water}</span>
+                        }
                         </td>
                         <td className="px-6 py-4 text-center border-l border-gray-200">
                           {typeof row.compost === 'boolean' ?
-                            row.compost ?
-                            <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
-                            <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
-                            <span className="font-medium text-gray-700">{row.compost}</span>
-                          }
+                        row.compost ?
+                        <CheckCircle className="w-7 h-7 text-emerald-600 mx-auto" strokeWidth={2.5} /> :
+                        <XCircle className="w-7 h-7 text-red-500 mx-auto" strokeWidth={2.5} /> :
+                        <span className="font-medium text-gray-700">{row.compost}</span>
+                        }
                         </td>
                       </tr>
                     )}
@@ -708,6 +708,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
