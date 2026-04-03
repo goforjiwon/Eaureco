@@ -758,7 +758,7 @@ export const translations = {
     },
     ko: {
       header: {
-        title: "지금까지 아이스팩 시장은 '성능이냐 환경이냐' 둘 중 하나를 골라야 했습니다.",
+        title: "성능 VS 환경",
         subtitle: ""
       },
       scale: {
