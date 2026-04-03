@@ -12,7 +12,8 @@ export const useLanguage = () => useContext(LanguageContext);
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();
   const [language, setLanguage] = useState(() => {
-    return localStorage.getItem('language') || 'en';
+    const stored = localStorage.getItem('language');
+    return stored === 'ko' ? 'en' : (stored || 'en');
   });
   const [activeSection, setActiveSection] = useState('home');
 
@@ -62,11 +63,11 @@ export default function Layout({ children, currentPageName }) {
       contact: "Contacto"
     },
     ko: {
-      home: "홈",
-      problem: "문제",
-      solution: "솔루션",
-      comparison: "비교",
-      contact: "연락처"
+      home: "Home",
+      problem: "Problem",
+      solution: "Solution",
+      comparison: "Comparison",
+      contact: "Contact"
     }
   };
 
@@ -214,7 +215,7 @@ export default function Layout({ children, currentPageName }) {
                   <DropdownMenuTrigger asChild>
                     <button className="ml-2 px-4 py-2 rounded-lg font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-2 border border-slate-200">
                       <Globe className="w-4 h-4" strokeWidth={2} />
-                      <span className="font-bold">{language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}</span>
+                      <span className="font-bold">{language === 'en' ? 'EN' : 'ES'}</span>
                     </button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
@@ -224,9 +225,6 @@ export default function Layout({ children, currentPageName }) {
                     <DropdownMenuItem onClick={() => setLanguage('es')}>
                       Español (ES)
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setLanguage('ko')}>
-                      한국어 (KO)
-                    </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
@@ -234,6 +232,7 @@ export default function Layout({ children, currentPageName }) {
               {/* Mobile Menu Button */}
               <button className="md:hidden px-4 py-2 bg-emerald-500 text-white rounded-lg font-semibold">
                 {language === 'en' ? 'Menu' : 'Menú'}
+
               </button>
             </div>
 
@@ -265,13 +264,12 @@ export default function Layout({ children, currentPageName }) {
                 <DropdownMenuTrigger asChild>
                   <button className="px-3 py-2 rounded-lg font-semibold text-sm bg-gray-100 text-gray-700 flex items-center gap-2 justify-center">
                     <Globe className="w-4 h-4" strokeWidth={2} />
-                    {language === 'en' ? 'EN' : language === 'es' ? 'ES' : 'KO'}
+                    {language === 'en' ? 'EN' : 'ES'}
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem onClick={() => setLanguage('en')}>English</DropdownMenuItem>
                   <DropdownMenuItem onClick={() => setLanguage('es')}>Español</DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setLanguage('ko')}>한국어</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -297,9 +295,7 @@ export default function Layout({ children, currentPageName }) {
             <p className="text-white/75 text-sm">
               {language === 'en' ?
               'Transforming ocean waste into sustainable cooling solutions' :
-              language === 'es' ?
-              'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles' :
-              '바다를 덮는 해조류가 아이스팩이 됩니다'}
+              'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles'}
             </p>
           </div>
         </footer>

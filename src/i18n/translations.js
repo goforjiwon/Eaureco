@@ -436,8 +436,8 @@ export const translations = {
     },
     ko: {
       hero: {
-        tagline: KO_SHARED.stayCoolStayGreen,
-        subtitle: "더 빨리 얼고, 더 오래 가고, 다 쓰면 자연으로 돌아가는 아이스팩",
+        tagline: "Stay Cool, Stay Green",
+        subtitle: "Sustainable ice packs for fresh food delivery and cold chain companies",
         cta: "솔루션 알아보기"
       },
       stats: {
@@ -1269,7 +1269,7 @@ const mergeWithFallback = (fallback, current) => {
 };
 
 export const getT = (language) => {
-  const langKey = language && language in translations.home ? language : 'en';
+  const langKey = (language === 'en' || language === 'es') ? language : 'en';
 
   return {
     home: mergeWithFallback(translations.home.en, translations.home[langKey]),
