@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { TrendingUp, XCircle, DollarSign } from "lucide-react";
+import { TrendingUp, XCircle, DollarSign, CheckCircle } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 import { createPageUrl } from "@/utils";

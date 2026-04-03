@@ -299,7 +299,7 @@ export default function Layout({ children, currentPageName }) {
               'Transforming ocean waste into sustainable cooling solutions' :
               language === 'es' ?
               'Transformando residuos oceánicos en soluciones de enfriamiento sostenibles' :
-              '해양 폐기물을 지속 가능한 냉각 솔루션으로 전환'}
+              '바다를 덮는 해조류가 아이스팩이 됩니다'}
             </p>
           </div>
         </footer>
