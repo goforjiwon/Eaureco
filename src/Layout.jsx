@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Waves, Leaf, Scale, Mail, Globe } from "lucide-react";
+import { House, AlertTriangle, Lightbulb, BarChart2, Mail, Globe } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 // Language Context
@@ -72,10 +72,10 @@ export default function Layout({ children, currentPageName }) {
   };
 
   const navItems = [
-  { name: navLabels[language].home, sectionId: "home", icon: Waves },
-  { name: navLabels[language].problem, sectionId: "problem", icon: Leaf },
-  { name: navLabels[language].solution, sectionId: "solution", icon: Leaf },
-  { name: navLabels[language].comparison, sectionId: "comparison", icon: Scale },
+  { name: navLabels[language].home, sectionId: "home", icon: House },
+  { name: navLabels[language].problem, sectionId: "problem", icon: AlertTriangle },
+  { name: navLabels[language].solution, sectionId: "solution", icon: Lightbulb },
+  { name: navLabels[language].comparison, sectionId: "comparison", icon: BarChart2 },
   { name: navLabels[language].contact, sectionId: "contact", icon: Mail }];
 
 
