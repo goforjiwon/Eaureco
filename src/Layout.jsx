@@ -63,7 +63,7 @@ export default function Layout({ children, currentPageName }) {
     },
     ko: {
       home: "홈",
-      problem: "문제점",
+      problem: "문제",
       solution: "솔루션",
       comparison: "비교",
       contact: "연락처"
