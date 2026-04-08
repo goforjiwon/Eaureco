@@ -3,50 +3,47 @@ import { motion } from "framer-motion";
 
 export default function HeroSection({ t }) {
   return (
-    <section id="home" className="relative min-h-[85vh] flex items-center justify-center px-4 py-20 overflow-hidden section-surface">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/0885b584e_image.png')"
-        }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/90 via-emerald-900/80 to-teal-900/75"></div>
-      </div>
-
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
+    <section id="home" className="relative min-h-[80vh] flex items-center justify-center px-4 py-24 section-surface">
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}>
-          <div className="mb-6 flex justify-center">
+          transition={{ duration: 0.8, ease: "easeOut" }}>
+
+          <div className="mb-12 flex justify-center">
             <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/802916f9d_KakaoTalk_20260203_182916893_03.png"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png"
               alt="eaureco"
-              className="h-24 md:h-32 w-auto" />
+              className="h-12 md:h-16 w-auto grayscale contrast-125 opacity-80" />
           </div>
-          <p className="text-lg text-emerald-300 font-semibold tracking-wider uppercase mb-6">
+
+          <p className="text-sm text-teal-800 font-semibold tracking-widest uppercase mb-6">
             {t.tagline}
           </p>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight neo-text">
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-slate-900 mb-8 leading-tight tracking-tight">
             {t.title}
           </h1>
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-white/90 font-medium mb-10 max-w-3xl mx-auto leading-relaxed">
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-lg md:text-xl text-slate-500 font-normal mb-14 max-w-2xl mx-auto leading-relaxed">
           {t.subtitle}
         </motion.p>
 
-        <motion.a
-          href="mailto:goforjiwon@kaist.ac.kr"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="inline-block px-8 py-4 bg-white text-emerald-900 font-bold text-lg rounded-xl hover:shadow-2xl transition-all transform hover:scale-105">
-          {t.cta}
-        </motion.a>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}>
+          <a
+            href="mailto:goforjiwon@kaist.ac.kr"
+            className="inline-block px-10 py-4 bg-slate-900 text-white font-medium text-sm tracking-wide rounded-sm hover:bg-teal-900 transition-colors">
+            {t.cta}
+          </a>
+        </motion.div>
       </div>
     </section>
   );
