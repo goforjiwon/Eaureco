@@ -11,7 +11,7 @@ export default function HeroSection({ t }) {
         style={{
           backgroundImage: "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/0885b584e_image.png')"
         }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/88 via-slate-900/78 to-teal-950/72"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/60 via-slate-900/50 to-teal-950/45"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
