@@ -65,35 +65,43 @@ export default function Layout({ children, currentPageName }) {
       <div className="min-h-screen bg-white">
         <style>{`
           .nav-glass {
-            background: rgba(255, 255, 255, 0.98);
-            border-bottom: 1px solid #f1f5f9;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
           }
 
           .section-surface {
-            background: #ffffff;
+            background: radial-gradient(circle at top center, rgba(20, 184, 166, 0.02), transparent 70%), #ffffff;
             border-bottom: 1px solid #f8fafc;
           }
 
           .section-muted {
-            background: #fafafa;
-            border-bottom: 1px solid #f1f5f9;
+            background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+            border-bottom: 1px solid #e2e8f0;
           }
 
           .content-card {
             background: #ffffff;
-            border: 1px solid #f1f5f9;
-            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
           }
 
           .highlight-card {
-            background: #f8fafc;
-            border-left: 3px solid #0f766e;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #0f766e;
             padding: 2rem;
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
           }
 
           .accent-pill {
             display: inline-block;
             color: #0f766e;
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -101,11 +109,9 @@ export default function Layout({ children, currentPageName }) {
           }
         `}</style>
 
-        {/* Navigation */}
         <nav className="sticky top-0 z-50 nav-glass">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              {/* Logo */}
               <button onClick={() => scrollToSection('home')} className="flex items-center gap-3 group">
                 <div>
                   <img
@@ -118,7 +124,6 @@ export default function Layout({ children, currentPageName }) {
                 </div>
               </button>
 
-              {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-4">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.sectionId;
@@ -138,7 +143,6 @@ export default function Layout({ children, currentPageName }) {
 
                 <div className="w-px h-4 bg-slate-200 mx-2"></div>
 
-                {/* Language Toggle */}
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <button className="text-sm text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-1.5">
@@ -153,7 +157,6 @@ export default function Layout({ children, currentPageName }) {
                 </DropdownMenu>
               </div>
 
-              {/* Mobile Menu Button */}
               <button
                 className="lg:hidden text-slate-600 p-2"
                 onClick={() => setMobileOpen(!mobileOpen)}>
@@ -161,7 +164,6 @@ export default function Layout({ children, currentPageName }) {
               </button>
             </div>
 
-            {/* Mobile Navigation */}
             {mobileOpen && (
               <div className="lg:hidden mt-4 pt-4 border-t border-slate-100 flex flex-col gap-4 pb-4">
                 {navItems.map((item) => {
@@ -182,10 +184,8 @@ export default function Layout({ children, currentPageName }) {
           </div>
         </nav>
 
-        {/* Main Content */}
         <main>{children}</main>
 
-        {/* Footer */}
         <footer className="bg-slate-900 py-16">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <img
