@@ -13,7 +13,7 @@ export default function AboutSection({ t }) {
           <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
             {t.desc}
           </p>
-          <div className="highlight-card p-8 inline-block">
+          <div className="highlight-card p-8 inline-block min-w-xs w-80 md:w-[480px]">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png"
               alt="eaureco"
