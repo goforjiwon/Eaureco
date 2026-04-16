@@ -43,7 +43,13 @@ export default function ProblemSection({ t }) {
           viewport={{ once: true }}
           className="text-center">
           <div className="highlight-card inline-block max-w-2xl text-left">
-            <p className="text-lg font-medium text-slate-700 leading-relaxed">{t.bottom}</p>
+            <p className="text-lg font-medium text-slate-700 leading-relaxed">
+              {t.bottom.includes('오래') ? (
+                <>
+                  {t.bottom.split('오래')[0]}<br />오래{t.bottom.split('오래')[1]}
+                </>
+              ) : t.bottom}
+            </p>
           </div>
         </motion.div>
       </div>
