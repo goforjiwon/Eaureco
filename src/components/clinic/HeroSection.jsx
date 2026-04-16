@@ -32,7 +32,12 @@ export default function HeroSection({ t }) {
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-8 leading-tight tracking-tight">
-            {t.title}
+            {t.title.includes('얼려도 부드럽게,') ? (
+              <>
+                얼려도 부드럽게,<br />
+                {t.title.replace('얼려도 부드럽게, ', '')}
+              </>
+            ) : t.title}
           </h1>
         </motion.div>
 
