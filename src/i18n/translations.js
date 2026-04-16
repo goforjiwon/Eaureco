@@ -156,7 +156,7 @@ export const translations = {
     },
     ko: {
       title: "회사 소개",
-      desc: "Eaureco는 KAIST에서 시작된 소재 스타트업입니다. 해양 침입종인 괭생이모자반(Sargassum)에서 추출한 알긴산을 활용하여 기존에 없던 냉찜질 소재를 개발했습니다."
+      desc: "Eaureco는 KAIST에서 시작된 소재 스타트업입니다. 해양 자원에서 추출한 알긴산을 활용하여 기존에 없던 냉찜질 소재를 개발했습니다."
     }
   }
 };
