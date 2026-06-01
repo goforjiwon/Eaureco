@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { TrendingUp, XCircle, DollarSign, CheckCircle } from "lucide-react";
+import { TrendingUp, XCircle, DollarSign, CheckCircle, Linkedin } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 import { createPageUrl } from "@/utils";
@@ -208,6 +208,19 @@ export default function Comparison() {
             </Link>
           </div>
         </motion.div>
+
+        {/* LinkedIn */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://linkedin.com/company/eaureco"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors text-sm"
+          >
+            <Linkedin className="w-4 h-4" />
+            <span>linkedin.com/company/eaureco</span>
+          </a>
+        </div>
       </div>
     </div>);
 
