@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 
@@ -90,8 +90,21 @@ export default function Contact() {
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t.bottom.desc}</p>
           </div>
           
+          {/* LinkedIn */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://linkedin.com/company/eaureco"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors text-sm"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>linkedin.com/company/eaureco</span>
+            </a>
+          </div>
+
           {/* Copyright Notice */}
-          <div className="mt-8 text-center">
+          <div className="mt-4 text-center">
             <p className="text-sm text-gray-600">
               © 2025 eaureco. All rights reserved. Content may not be copied or reproduced without permission.
             </p>
