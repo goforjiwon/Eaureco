@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,35 +7,44 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 20% 15%;
+    /* Warm, natural near-white with a faint green undertone */
+    --background: 150 33% 99%;
+    --foreground: 185 30% 13%;
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 185 30% 13%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
-    
-    --primary: 175 70% 15%; 
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 175 70% 15%;
-    
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    
-    --accent: 210 40% 96%;
-    --accent-foreground: 175 70% 15%;
-    
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 185 30% 13%;
+
+    /* Deep ocean teal — the credible brand anchor */
+    --primary: 176 60% 19%;
+    --primary-foreground: 150 40% 98%;
+
+    --secondary: 150 24% 96%;
+    --secondary-foreground: 176 60% 19%;
+
+    --muted: 150 24% 96%;
+    --muted-foreground: 190 12% 42%;
+
+    --accent: 150 24% 95%;
+    --accent-foreground: 176 60% 19%;
+
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 175 70% 15%;
-    
-    --radius: 0.3rem;
-    
-    --text-display-tracking: -0.01em;
+
+    --border: 160 18% 90%;
+    --input: 160 18% 90%;
+    --ring: 168 55% 32%;
+
+    --radius: 0.75rem;
+
+    --text-display-tracking: -0.02em;
+
+    /* Brand tokens used by custom component classes */
+    --brand-deep: 176 60% 14%;
+    --brand: 173 64% 24%;
+    --brand-leaf: 152 52% 40%;
+    --brand-sea: 188 60% 38%;
+    --sand: 40 32% 96%;
   }
 }
 
@@ -45,14 +55,140 @@
   }
   body {
     @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv01";
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight text-slate-900;
+    @apply tracking-tight;
+    color: hsl(var(--brand-deep));
+  }
+  ::selection {
+    background: hsl(var(--brand-leaf) / 0.22);
   }
 }
 
 @layer components {
+  /* Warm serif for display headings; Pretendard falls back for Korean glyphs */
+  .font-display {
+    font-family: 'Fraunces', 'Pretendard', Georgia, serif;
+    letter-spacing: var(--text-display-tracking);
+    font-optical-sizing: auto;
+  }
+
   .shadow-soft {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 2px 10px rgba(13, 47, 43, 0.04);
+  }
+
+  /* Glassy sticky nav */
+  .nav-glass {
+    background: rgba(252, 254, 253, 0.82);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid hsl(var(--border) / 0.7);
+  }
+
+  /* Section surfaces */
+  .section-surface {
+    background:
+      radial-gradient(60rem 32rem at 50% -10%, hsl(var(--brand-leaf) / 0.06), transparent 70%),
+      hsl(var(--background));
+  }
+
+  .section-muted {
+    background:
+      linear-gradient(to bottom, hsl(var(--sand)), hsl(150 24% 97%));
+    border-top: 1px solid hsl(var(--border) / 0.6);
+    border-bottom: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  .section-deep {
+    background:
+      radial-gradient(70rem 40rem at 80% 0%, hsl(var(--brand) / 0.55), transparent 60%),
+      linear-gradient(160deg, hsl(var(--brand-deep)), hsl(176 60% 11%));
+    color: hsl(150 40% 96%);
+  }
+
+  /* Cards */
+  .content-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    box-shadow: 0 1px 2px rgba(13, 47, 43, 0.03), 0 10px 30px -18px rgba(13, 47, 43, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .content-card:hover {
+    transform: translateY(-3px);
+    border-color: hsl(var(--brand-leaf) / 0.5);
+    box-shadow: 0 1px 2px rgba(13, 47, 43, 0.04), 0 22px 44px -24px rgba(13, 47, 43, 0.28);
+  }
+
+  .highlight-card {
+    background: linear-gradient(135deg, hsl(var(--brand) / 0.06), hsl(var(--brand-sea) / 0.05));
+    border: 1px solid hsl(var(--brand-leaf) / 0.28);
+    border-left: 4px solid hsl(var(--brand));
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 18px 40px -28px rgba(13, 47, 43, 0.3);
+  }
+
+  /* Eyebrow pill */
+  .accent-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: hsl(var(--brand));
+    background: hsl(var(--brand-leaf) / 0.1);
+    border: 1px solid hsl(var(--brand-leaf) / 0.28);
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    background: hsl(var(--brand));
+    color: hsl(var(--primary-foreground));
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 12px 26px -12px hsl(var(--brand) / 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .btn-primary:hover {
+    background: hsl(var(--brand-deep));
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px -12px hsl(var(--brand) / 0.8);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    background: transparent;
+    color: hsl(var(--brand-deep));
+    border: 1px solid hsl(var(--border));
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  }
+  .btn-ghost:hover {
+    border-color: hsl(var(--brand-leaf) / 0.6);
+    background: hsl(var(--brand-leaf) / 0.06);
+  }
+
+  .eco-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--brand-leaf) / 0.4), transparent);
   }
 }
