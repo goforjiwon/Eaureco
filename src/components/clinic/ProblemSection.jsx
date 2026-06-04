@@ -1,39 +1,46 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Snowflake, Box, Heart } from "lucide-react";
 
 export default function ProblemSection({ t }) {
   return (
-    <section id="problem" className="py-32 px-4 section-muted">
+    <section id="problem" className="py-28 px-4 section-muted">
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20">
-          <h2 className="text-2xl md:text-3xl font-medium text-slate-900 tracking-tight">
+          className="text-center mb-16">
+          <span className="accent-pill mb-5">The problem</span>
+          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground tracking-tight max-w-2xl mx-auto leading-tight">
             {t.title}
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="content-card p-10">
-            <h3 className="text-lg font-semibold text-slate-900 mb-4 tracking-wide">{t.ice.name}</h3>
-            <div className="w-6 h-px bg-slate-300 mb-6"></div>
-            <p className="text-slate-500 text-base leading-relaxed">{t.ice.desc}</p>
+            className="content-card p-9">
+            <div className="inline-flex p-3 rounded-xl bg-secondary text-muted-foreground mb-5">
+              <Snowflake className="w-6 h-6" strokeWidth={1.75} />
+            </div>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{t.ice.name}</h3>
+            <p className="text-muted-foreground text-base leading-relaxed">{t.ice.desc}</p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            className="content-card p-10">
-            <h3 className="text-lg font-semibold text-slate-900 mb-4 tracking-wide">{t.sap.name}</h3>
-            <div className="w-6 h-px bg-slate-300 mb-6"></div>
-            <p className="text-slate-500 text-base leading-relaxed">{t.sap.desc}</p>
+            transition={{ delay: 0.08 }}
+            className="content-card p-9">
+            <div className="inline-flex p-3 rounded-xl bg-secondary text-muted-foreground mb-5">
+              <Box className="w-6 h-6" strokeWidth={1.75} />
+            </div>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{t.sap.name}</h3>
+            <p className="text-muted-foreground text-base leading-relaxed">{t.sap.desc}</p>
           </motion.div>
         </div>
 
@@ -41,9 +48,10 @@ export default function ProblemSection({ t }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center">
-          <div className="highlight-card inline-block max-w-2xl text-left">
-            <p className="text-lg font-medium text-slate-700 leading-relaxed">
+          className="flex justify-center">
+          <div className="highlight-card flex items-start gap-4 max-w-2xl text-left">
+            <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.75} />
+            <p className="text-lg font-medium text-foreground leading-relaxed">
               {t.bottom.includes('오래') ? (
                 <>
                   {t.bottom.split('오래')[0]}<br />오래{t.bottom.split('오래')[1]}

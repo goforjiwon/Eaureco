@@ -4,28 +4,26 @@ import { Hand, Timer, Zap } from "lucide-react";
 
 export default function AdvantagesSection({ t }) {
   const items = [
-    { icon: Hand, ...t.flexible, theme: "bg-emerald-50 border-emerald-100 text-emerald-600" },
-    { icon: Timer, ...t.lasting, theme: "bg-cyan-50 border-cyan-100 text-cyan-600" },
-    { icon: Zap, ...t.fast, theme: "bg-amber-50 border-amber-100 text-amber-600" },
+    { icon: Hand, ...t.flexible },
+    { icon: Timer, ...t.lasting },
+    { icon: Zap, ...t.fast },
   ];
 
   return (
-    <section id="advantages" className="py-24 px-4 section-surface">
+    <section id="advantages" className="py-28 px-4 section-surface">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16">
-          <div className="accent-pill mb-4">
-            <span className="text-sm font-bold uppercase tracking-wider">Eaureco</span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 neo-text">
+          <span className="accent-pill mb-5">Why eaureco</span>
+          <h2 className="font-display text-3xl md:text-5xl font-medium text-foreground leading-tight">
             {t.title}
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {items.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -35,12 +33,12 @@ export default function AdvantagesSection({ t }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="content-card p-8 text-center">
-                <div className={`inline-flex p-4 rounded-2xl border mb-6 ${item.theme}`}>
-                  <Icon className="w-8 h-8" strokeWidth={2} />
+                className="content-card p-8">
+                <div className="inline-flex p-3.5 rounded-2xl bg-primary/[0.07] border border-primary/10 text-primary mb-6">
+                  <Icon className="w-7 h-7" strokeWidth={1.75} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
               </motion.div>
             );
           })}

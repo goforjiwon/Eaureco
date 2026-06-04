@@ -3,6 +3,7 @@ import { useLanguage } from "../Layout";
 import { getT } from "@/i18n/translations";
 import HeroSection from "@/components/clinic/HeroSection";
 import ProblemSection from "@/components/clinic/ProblemSection";
+import SustainabilitySection from "@/components/clinic/SustainabilitySection";
 import AdvantagesSection from "@/components/clinic/AdvantagesSection";
 import UseCasesSection from "@/components/clinic/UseCasesSection";
 import ProductSection from "@/components/clinic/ProductSection";
@@ -16,6 +17,7 @@ export default function Home() {
     <div className="min-h-screen">
       <HeroSection t={t.hero} />
       <ProblemSection t={t.problem} />
+      <SustainabilitySection t={t.sustainability} />
       <AdvantagesSection t={t.advantages} />
       <UseCasesSection t={t.useCases} />
       <ProductSection t={t.product} />
