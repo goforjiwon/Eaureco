@@ -4,41 +4,43 @@ import { Leaf, ArrowRight, Check } from "lucide-react";
 
 const HERO_BG =
   "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/0885b584e_image.png";
-const LOGO_URL =
-  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png";
 
 export default function HeroSection({ t }) {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center justify-center px-4 py-28 overflow-hidden">
+    <section id="home" className="relative min-h-[94vh] flex items-center justify-center px-4 py-28 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${HERO_BG}')` }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#06201d]/85 via-[#073a35]/72 to-[#0a4c45]/60"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(70rem_40rem_at_50%_120%,rgba(16,185,129,0.18),transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#051d1a]/88 via-[#07322c]/75 to-[#0a463f]/62"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(64rem_40rem_at_50%_118%,rgba(16,185,129,0.20),transparent_62%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(40rem_30rem_at_18%_8%,rgba(110,231,183,0.10),transparent_60%)]"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      {/* Organic wave accent at the base — a quiet brand signature, not a logo watermark */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
+        <svg viewBox="0 0 1440 90" className="w-full h-14 md:h-20 text-white/[0.07]" preserveAspectRatio="none">
+          <path d="M0 46 C200 14 420 78 720 46 C1020 14 1240 78 1440 46 V90 H0 Z" fill="currentColor" />
+        </svg>
+      </div>
+
+      <div className="relative z-20 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}>
 
-          <div className="mb-8 flex justify-center">
-            <img src={LOGO_URL} alt="eaureco" className="h-11 md:h-14 w-auto brightness-0 invert opacity-95" />
-          </div>
-
           <div className="mb-7 flex justify-center">
-            <span className="inline-flex items-center gap-2 text-[13px] font-medium text-emerald-100 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-1.5">
-              <Leaf className="w-3.5 h-3.5 text-emerald-300" />
+            <span className="inline-flex items-center gap-2 text-[13px] font-medium text-emerald-50 bg-white/[0.08] border border-white/20 backdrop-blur-sm rounded-full px-4 py-1.5">
+              <Leaf className="w-3.5 h-3.5 text-emerald-300" strokeWidth={1.75} />
               {t.badge}
             </span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-6xl lg:text-[4.25rem] font-medium text-white mb-7 leading-[1.05]">
+          <h1 className="font-display text-[2.6rem] leading-[1.04] md:text-6xl lg:text-[4.4rem] font-medium text-white mb-7">
             {t.title.includes('얼려도 부드럽게,') ? (
               <>
                 얼려도 부드럽게,<br />
-                {t.title.replace('얼려도 부드럽게, ', '')}
+                <span className="text-emerald-50/95">{t.title.replace('얼려도 부드럽게, ', '')}</span>
               </>
             ) : t.title}
           </h1>

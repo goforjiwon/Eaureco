@@ -1,12 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Hand, Timer, Zap } from "lucide-react";
+import { IconFlexCurve, IconFlowTime, IconFrost } from "./OrganicIcons";
+
+const Accent = () => (
+  <span className="block w-7 h-[3px] rounded-full bg-[hsl(var(--brand-leaf)/0.45)] mb-6" />
+);
 
 export default function AdvantagesSection({ t }) {
   const items = [
-    { icon: Hand, ...t.flexible },
-    { icon: Timer, ...t.lasting },
-    { icon: Zap, ...t.fast },
+    { Icon: IconFlexCurve, ...t.flexible },
+    { Icon: IconFlowTime, ...t.lasting },
+    { Icon: IconFrost, ...t.fast },
   ];
 
   return (
@@ -25,7 +29,7 @@ export default function AdvantagesSection({ t }) {
 
         <div className="grid md:grid-cols-3 gap-6">
           {items.map((item, i) => {
-            const Icon = item.icon;
+            const Icon = item.Icon;
             return (
               <motion.div
                 key={i}
@@ -34,9 +38,8 @@ export default function AdvantagesSection({ t }) {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="content-card p-8">
-                <div className="inline-flex p-3.5 rounded-2xl bg-primary/[0.07] border border-primary/10 text-primary mb-6">
-                  <Icon className="w-7 h-7" strokeWidth={1.75} />
-                </div>
+                <Icon className="w-8 h-8 text-primary mb-5" strokeWidth={1.6} />
+                <Accent />
                 <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
               </motion.div>

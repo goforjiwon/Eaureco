@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FlaskConical, Waves, HeartPulse } from "lucide-react";
+import { IconFlask, IconOcean, IconPulseHeart } from "./OrganicIcons";
 
-const pillarIcons = [FlaskConical, Waves, HeartPulse];
+const pillarIcons = [IconFlask, IconOcean, IconPulseHeart];
 
 export default function AboutSection({ t }) {
   return (
@@ -23,7 +23,7 @@ export default function AboutSection({ t }) {
         {Array.isArray(t.pillars) && (
           <div className="grid md:grid-cols-3 gap-6 mt-14">
             {t.pillars.map((p, i) => {
-              const Icon = pillarIcons[i] || FlaskConical;
+              const Icon = pillarIcons[i] || IconFlask;
               return (
                 <motion.div
                   key={i}
@@ -32,9 +32,10 @@ export default function AboutSection({ t }) {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   className="content-card p-7 text-center">
-                  <div className="inline-flex p-3.5 rounded-2xl bg-primary/[0.07] border border-primary/10 text-primary mb-5">
-                    <Icon className="w-6 h-6" strokeWidth={1.75} />
+                  <div className="flex justify-center mb-5">
+                    <Icon className="w-8 h-8 text-primary" strokeWidth={1.6} />
                   </div>
+                  <span className="block w-7 h-[3px] rounded-full bg-[hsl(var(--brand-leaf)/0.45)] mx-auto mb-5" />
                   <h3 className="text-lg font-semibold text-foreground mb-2">{p.title}</h3>
                   <p className="text-muted-foreground text-[15px] leading-relaxed">{p.desc}</p>
                 </motion.div>

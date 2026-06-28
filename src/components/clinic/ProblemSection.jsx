@@ -1,6 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Snowflake, Box, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import { IconIce, IconHardPack } from "./OrganicIcons";
+
+const Accent = () => (
+  <span className="block w-7 h-[3px] rounded-full bg-[hsl(var(--brand-leaf)/0.45)] mb-6" />
+);
 
 export default function ProblemSection({ t }) {
   return (
@@ -23,9 +28,8 @@ export default function ProblemSection({ t }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="content-card p-9">
-            <div className="inline-flex p-3 rounded-xl bg-secondary text-muted-foreground mb-5">
-              <Snowflake className="w-6 h-6" strokeWidth={1.75} />
-            </div>
+            <IconIce className="w-8 h-8 text-[hsl(var(--brand-sea))] mb-5" strokeWidth={1.6} />
+            <Accent />
             <h3 className="text-lg font-semibold text-foreground mb-3">{t.ice.name}</h3>
             <p className="text-muted-foreground text-base leading-relaxed">{t.ice.desc}</p>
           </motion.div>
@@ -36,9 +40,8 @@ export default function ProblemSection({ t }) {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: 0.08 }}
             className="content-card p-9">
-            <div className="inline-flex p-3 rounded-xl bg-secondary text-muted-foreground mb-5">
-              <Box className="w-6 h-6" strokeWidth={1.75} />
-            </div>
+            <IconHardPack className="w-8 h-8 text-[hsl(var(--brand-sea))] mb-5" strokeWidth={1.6} />
+            <Accent />
             <h3 className="text-lg font-semibold text-foreground mb-3">{t.sap.name}</h3>
             <p className="text-muted-foreground text-base leading-relaxed">{t.sap.desc}</p>
           </motion.div>

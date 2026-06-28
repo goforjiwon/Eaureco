@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Waves, FlaskConical, Sparkles, Leaf } from "lucide-react";
+import { Leaf } from "lucide-react";
+import { IconWave, IconKelp, IconBeads } from "./OrganicIcons";
 
-const stepIcons = [Waves, FlaskConical, Sparkles];
+const stepIcons = [IconWave, IconKelp, IconBeads];
 
 export default function SustainabilitySection({ t }) {
   return (
@@ -16,7 +17,7 @@ export default function SustainabilitySection({ t }) {
           viewport={{ once: true }}
           className="max-w-3xl">
           <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-emerald-300 bg-emerald-400/10 border border-emerald-300/25 rounded-full px-3.5 py-1.5">
-            <Leaf className="w-3.5 h-3.5" />
+            <Leaf className="w-3.5 h-3.5" strokeWidth={1.75} />
             {t.eyebrow}
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-medium text-white mt-6 leading-tight">
@@ -29,7 +30,7 @@ export default function SustainabilitySection({ t }) {
 
         <div className="grid md:grid-cols-3 gap-6 mt-16">
           {t.steps.map((s, i) => {
-            const Icon = stepIcons[i] || Sparkles;
+            const Icon = stepIcons[i] || IconBeads;
             return (
               <motion.div
                 key={i}
@@ -37,13 +38,12 @@ export default function SustainabilitySection({ t }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative rounded-2xl bg-white/[0.06] border border-white/10 p-7 backdrop-blur-sm">
+                className="relative rounded-[1.4rem] bg-white/[0.055] border border-white/10 p-7 backdrop-blur-sm">
                 <div className="flex items-center justify-between mb-5">
-                  <div className="inline-flex p-3 rounded-xl bg-emerald-400/15 border border-emerald-300/25 text-emerald-200">
-                    <Icon className="w-6 h-6" strokeWidth={1.75} />
-                  </div>
+                  <Icon className="w-8 h-8 text-emerald-200" strokeWidth={1.6} />
                   <span className="font-display text-2xl text-white/25">{s.step}</span>
                 </div>
+                <span className="block w-7 h-[3px] rounded-full bg-emerald-300/35 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">{s.title}</h3>
                 <p className="text-white/65 text-[15px] leading-relaxed">{s.desc}</p>
               </motion.div>
@@ -55,7 +55,7 @@ export default function SustainabilitySection({ t }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-px mt-12 rounded-2xl overflow-hidden border border-white/10 bg-white/10">
+          className="grid grid-cols-1 sm:grid-cols-3 gap-px mt-12 rounded-[1.4rem] overflow-hidden border border-white/10 bg-white/10">
           {t.stats.map((stat, i) => (
             <div key={i} className="bg-[#08322d]/60 px-6 py-8 text-center">
               <div className="font-display text-3xl md:text-4xl text-emerald-300 mb-2">{stat.value}</div>
