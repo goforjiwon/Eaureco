@@ -11,9 +11,10 @@ export default function HeroSection({ t }) {
   return (
     <section id="home" className="relative min-h-[94vh] flex items-center justify-center px-4 py-28 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${HERO_BG}')` }}>
-        {/* Soft light overlay — fades the photo lighter for dark-text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-white/75 to-[#e7f3ee]/80"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(64rem_40rem_at_50%_120%,rgba(16,185,129,0.10),transparent_62%)]"></div>
+        {/* Strong dark overlay — darkest behind the centered text for white-text legibility */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(46rem_34rem_at_50%_50%,rgba(2,20,18,0.88),transparent_72%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/55"></div>
       </div>
 
       <div className="relative z-20 max-w-4xl mx-auto text-center">
