@@ -7,6 +7,7 @@ import SustainabilitySection from "@/components/clinic/SustainabilitySection";
 import AdvantagesSection from "@/components/clinic/AdvantagesSection";
 import UseCasesSection from "@/components/clinic/UseCasesSection";
 import ProductSection from "@/components/clinic/ProductSection";
+import VisionSection from "@/components/clinic/VisionSection";
 import AboutSection from "@/components/clinic/AboutSection";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <AdvantagesSection t={t.advantages} />
       <UseCasesSection t={t.useCases} />
       <ProductSection t={t.product} />
+      <VisionSection t={t.vision} />
       <AboutSection t={t.about} />
     </div>
   );

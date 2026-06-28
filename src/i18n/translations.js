@@ -30,7 +30,7 @@ export const translations = {
       cta: "Request Samples",
       ctaSecondary: "See how it's made",
       trust: [
-        "Natural alginate gel",
+        "Seaweed-derived gel",
         "Korean patent filed",
         "Born at KAIST"
       ]
@@ -43,7 +43,7 @@ export const translations = {
       cta: "샘플 요청하기",
       ctaSecondary: "제조 과정 보기",
       trust: [
-        "천연 알긴산 젤",
+        "해조류 유래 젤",
         "한국 특허 출원",
         "KAIST 출발"
       ]
@@ -79,11 +79,11 @@ export const translations = {
     en: {
       eyebrow: "Circular by design",
       title: "A cold pack that starts by cleaning the ocean.",
-      subtitle: "Sargassum is an invasive seaweed that smothers coastlines and chokes marine life. We harvest it, extract its natural alginate, and turn a coastal problem into a medical-grade material — no petroleum-based gels required.",
+      subtitle: "Sargassum is an invasive seaweed that smothers coastlines and chokes marine life. We harvest it, extract a natural seaweed-derived material, and turn a coastal problem into a medical-grade material — no petroleum-based gels required.",
       steps: [
         { step: "01", title: "Recover", desc: "Invasive Sargassum is collected before it washes ashore and rots into ocean waste." },
-        { step: "02", title: "Refine", desc: "We extract alginate — a natural polymer from seaweed — using a low-impact process." },
-        { step: "03", title: "Reimagine", desc: "The alginate becomes a soft, long-lasting cold-therapy gel for clinics and patients." }
+        { step: "02", title: "Refine", desc: "We extract a natural seaweed-derived polymer using a low-impact process." },
+        { step: "03", title: "Reimagine", desc: "It becomes a soft, long-lasting cold-therapy gel for clinics and patients." }
       ],
       stats: [
         { value: "100%", label: "Seaweed-derived gel core" },
@@ -94,11 +94,11 @@ export const translations = {
     ko: {
       eyebrow: "설계부터 순환",
       title: "바다를 정화하며 시작되는 냉찜질팩.",
-      subtitle: "괭생이모자반(Sargassum)은 해안을 뒤덮고 해양 생태계를 위협하는 침입성 해조류입니다. 우리는 이를 수거해 천연 알긴산을 추출하고, 해안의 골칫거리를 의료용 소재로 바꿉니다. 석유 기반 젤은 필요하지 않습니다.",
+      subtitle: "괭생이모자반(Sargassum)은 해안을 뒤덮고 해양 생태계를 위협하는 침입성 해조류입니다. 우리는 이를 수거해 천연 해조류 유래 소재를 추출하고, 해안의 골칫거리를 의료용 소재로 바꿉니다. 석유 기반 젤은 필요하지 않습니다.",
       steps: [
         { step: "01", title: "회수", desc: "해안으로 밀려와 썩어 해양 폐기물이 되기 전에 침입성 괭생이모자반을 수거합니다." },
-        { step: "02", title: "정제", desc: "저부하 공정으로 해조류 유래 천연 고분자인 알긴산을 추출합니다." },
-        { step: "03", title: "재탄생", desc: "추출한 알긴산은 부드럽고 오래가는 냉찜질 젤이 되어 클리닉과 환자에게 전달됩니다." }
+        { step: "02", title: "정제", desc: "저부하 공정으로 해조류 유래 천연 고분자를 추출합니다." },
+        { step: "03", title: "재탄생", desc: "추출한 소재는 부드럽고 오래가는 냉찜질 젤이 되어 클리닉과 환자에게 전달됩니다." }
       ],
       stats: [
         { value: "100%", label: "해조류 유래 젤 코어" },
@@ -175,7 +175,7 @@ export const translations = {
     en: {
       title: "Product",
       contents: "Contents",
-      contentsValue: "Natural alginate gel beads (derived from seaweed)",
+      contentsValue: "Natural seaweed-derived gel beads",
       packaging: "Packaging",
       packagingValue: "Durable medical-grade pouch",
       sizes: "Sizes",
@@ -188,7 +188,7 @@ export const translations = {
     ko: {
       title: "제품 정보",
       contents: "내용물",
-      contentsValue: "천연 알긴산 젤 비드 (해조류 유래 소재)",
+      contentsValue: "천연 해조류 유래 젤 비드",
       packaging: "외포장",
       packagingValue: "의료용 고내구성 파우치",
       sizes: "사이즈",
@@ -199,13 +199,37 @@ export const translations = {
       email: "goforjiwon@kaist.ac.kr"
     }
   },
+  vision: {
+    en: {
+      eyebrow: "Our Vision",
+      title: "Turning the ocean's burden into everyday materials",
+      desc: "Every year, millions of tons of seaweed wash ashore from Jeju to Florida and Puerto Rico, cleared away at enormous cost. In the same window, billions of petroleum-based ice packs and gels are used once and sent to landfill. Eaureco turns this discarded ocean resource into fully biodegradable materials, solving both problems at once.",
+      tagline: "Stay cool, stay green.",
+      points: [
+        "Born from ocean waste",
+        "100% biodegradable, content and packaging",
+        "Beyond cold packs: cold chain and hygiene materials"
+      ]
+    },
+    ko: {
+      eyebrow: "비전",
+      title: "바다의 짐을 일상의 쓸모로",
+      desc: "매년 수백만 톤의 해조류가 제주에서 플로리다, 푸에르토리코까지 전 세계 해안으로 밀려와 막대한 비용을 들여 폐기됩니다. 같은 시간, 수십억 개의 석유 기반 아이스팩과 젤이 단 한 번 쓰이고 매립지로 향합니다. Eaureco는 버려지던 바다의 자원을 완전히 생분해되는 소재로 바꿔 이 두 문제를 동시에 풉니다.",
+      tagline: "차갑게, 그리고 깨끗하게.",
+      points: [
+        "바다 폐기물에서 시작합니다",
+        "내용물과 포장까지 100% 생분해됩니다",
+        "냉찜질팩을 넘어 콜드체인과 위생 소재로 확장합니다"
+      ]
+    }
+  },
   about: {
     en: {
       eyebrow: "Our story",
       title: "A materials startup born at KAIST.",
-      desc: "Eaureco develops a new class of cold-therapy materials from alginate extracted from Sargassum — an invasive seaweed that damages coastlines worldwide. By engineering with nature instead of against it, we replace petroleum-based gels with a soft, high-performance material that helps patients heal.",
+      desc: "Eaureco develops a new class of cold-therapy materials from a seaweed-derived material extracted from Sargassum — an invasive seaweed that damages coastlines worldwide. By engineering with nature instead of against it, we replace petroleum-based gels with a soft, high-performance material that helps patients heal.",
       pillars: [
-        { title: "Science-led", desc: "Built on patent-pending alginate gel research from KAIST labs." },
+        { title: "Science-led", desc: "Built on patent-pending seaweed-derived gel research from KAIST labs." },
         { title: "Ocean-positive", desc: "Every pack starts by removing invasive seaweed from coastlines." },
         { title: "Patient-first", desc: "Soft conformity and longer-lasting cold for real clinical comfort." }
       ]
@@ -213,9 +237,9 @@ export const translations = {
     ko: {
       eyebrow: "우리의 이야기",
       title: "KAIST에서 시작된 소재 스타트업.",
-      desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 알긴산으로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드럽고 고성능인 소재로 대체해 환자의 회복을 돕습니다.",
+      desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 해조류 유래 소재로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드럽고 고성능인 소재로 대체해 환자의 회복을 돕습니다.",
       pillars: [
-        { title: "과학 기반", desc: "KAIST 연구실의 특허 출원 알긴산 젤 기술을 토대로 합니다." },
+        { title: "과학 기반", desc: "KAIST 연구실의 특허 출원 해조류 유래 젤 기술을 토대로 합니다." },
         { title: "바다에 이로운", desc: "모든 팩은 해안의 침입성 해조류를 제거하는 데서 시작됩니다." },
         { title: "환자 중심", desc: "부드러운 밀착과 더 오래가는 냉기로 실제 임상 편안함을 제공합니다." }
       ]
@@ -233,6 +257,7 @@ export const getT = (language) => {
     advantages: translations.advantages[lang],
     useCases: translations.useCases[lang],
     product: translations.product[lang],
+    vision: translations.vision[lang],
     about: translations.about[lang],
   };
 };
