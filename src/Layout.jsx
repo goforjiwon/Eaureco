@@ -217,6 +217,11 @@ export default function Layout({ children }) {
                 {language === 'ko' ? '한국 특허 출원 완료 · 2026' : 'Korean patent filed · 2026'}
               </p>
             </div>
+
+            <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-white/40 text-xs">
+              <p>사업자등록번호: 109-34-09676</p>
+              <p>대표자: 박지원</p>
+            </div>
           </div>
         </footer>
       </div>
