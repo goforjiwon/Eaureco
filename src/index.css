@@ -8,43 +8,44 @@
 @layer base {
   :root {
     /* Warm, natural near-white with a faint green undertone */
-    --background: 150 33% 99%;
-    --foreground: 185 30% 13%;
+    /* Warm, natural near-white with a faint green undertone */
+    --background: 150 30% 99%;
+    --foreground: 186 34% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 185 30% 13%;
+    --card-foreground: 186 34% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 185 30% 13%;
+    --popover-foreground: 186 34% 12%;
 
     /* Deep ocean teal — the credible brand anchor */
-    --primary: 176 60% 19%;
+    --primary: 176 58% 19%;
     --primary-foreground: 150 40% 98%;
 
-    --secondary: 150 24% 96%;
-    --secondary-foreground: 176 60% 19%;
+    --secondary: 150 22% 95%;
+    --secondary-foreground: 176 58% 18%;
 
-    --muted: 150 24% 96%;
-    --muted-foreground: 190 12% 42%;
+    --muted: 150 18% 95%;
+    --muted-foreground: 188 14% 36%;
 
-    --accent: 150 24% 95%;
-    --accent-foreground: 176 60% 19%;
+    --accent: 150 22% 94%;
+    --accent-foreground: 176 58% 18%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 160 18% 90%;
-    --input: 160 18% 90%;
-    --ring: 168 55% 32%;
+    --border: 158 16% 88%;
+    --input: 158 16% 88%;
+    --ring: 168 50% 30%;
 
     --radius: 0.75rem;
 
     --text-display-tracking: -0.02em;
 
     /* Brand tokens used by custom component classes */
-    --brand-deep: 176 60% 14%;
-    --brand: 173 64% 24%;
-    --brand-leaf: 152 52% 40%;
-    --brand-sea: 188 60% 38%;
-    --sand: 40 32% 96%;
+    --brand-deep: 176 56% 12%;
+    --brand: 173 58% 22%;
+    --brand-leaf: 152 48% 34%;
+    --brand-sea: 188 54% 32%;
+    --sand: 40 30% 95%;
   }
 }
 
@@ -86,18 +87,15 @@
     border-bottom: 1px solid hsl(var(--border) / 0.7);
   }
 
-  /* Section surfaces */
+  /* Section surfaces — clean solid backgrounds */
   .section-surface {
-    background:
-      radial-gradient(60rem 32rem at 50% -10%, hsl(var(--brand-leaf) / 0.06), transparent 70%),
-      hsl(var(--background));
+    background: hsl(var(--background));
   }
 
   .section-muted {
-    background:
-      linear-gradient(to bottom, hsl(var(--sand)), hsl(150 24% 97%));
-    border-top: 1px solid hsl(var(--border) / 0.6);
-    border-bottom: 1px solid hsl(var(--border) / 0.6);
+    background: hsl(var(--sand));
+    border-top: 1px solid hsl(var(--border) / 0.7);
+    border-bottom: 1px solid hsl(var(--border) / 0.7);
   }
 
   .section-deep {
@@ -190,26 +188,5 @@
   .eco-divider {
     height: 1px;
     background: linear-gradient(to right, transparent, hsl(var(--brand-leaf) / 0.4), transparent);
-  }
-
-  /* Subtle natural paper grain layered over light sections — adds tactile warmth */
-  .section-surface,
-  .section-muted {
-    position: relative;
-  }
-  .section-surface::before,
-  .section-muted::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.4;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.18 0 0 0 0 0.16 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    mix-blend-mode: multiply;
-  }
-
-  /* Deeper, warmer card shadow with a faint green undertone */
-  .content-card {
-    box-shadow: 0 1px 2px rgba(13, 47, 43, 0.04), 0 14px 34px -20px rgba(13, 47, 43, 0.22);
   }
 }
