@@ -2,49 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 import { IconFlexCurve, IconFlowTime, IconFrost } from "./OrganicIcons";
 
-const Accent = () => (
-  <span className="block w-7 h-[3px] rounded-full bg-[hsl(var(--brand-leaf)/0.45)] mb-6" />
-);
-
 export default function AdvantagesSection({ t }) {
   const items = [
     { Icon: IconFlexCurve, ...t.flexible },
     { Icon: IconFlowTime, ...t.lasting },
     { Icon: IconFrost, ...t.fast },
   ];
+  const isKorean = t.title === "세 가지 장점";
 
   return (
-    <section id="advantages" className="py-28 px-4 section-surface">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16">
-          <span className="accent-pill mb-5">Why eaureco</span>
-          <h2 className="font-display text-3xl md:text-5xl font-medium text-foreground leading-tight">
-            {t.title}
-          </h2>
-        </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {items.map((item, i) => {
-            const Icon = item.Icon;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="content-card p-8">
-                <Icon className="w-8 h-8 text-primary mb-5" strokeWidth={1.6} />
-                <Accent />
-                <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
-            );
-          })}
+    <section id="advantages" className="section-surface py-20 lg:py-24 border-b border-border">
+      <div className="site-shell grid lg:grid-cols-[.8fr_2.2fr] gap-12 lg:gap-16 items-start">
+        <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-4xl md:text-5xl leading-[1.02]">
+          {isKorean ? <>세 가지 장점.<br />더 나은 냉찜질.</> : <>Three Advantages.<br />One better cold therapy.</>}
+        </motion.h2>
+        <div className="grid md:grid-cols-3 border-y border-border">
+          {items.map(({ Icon, title, desc }, index) => (
+            <motion.article key={title} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="py-7 md:px-7 first:pl-0 md:border-r last:border-0 border-border">
+              <Icon className="w-10 h-10 text-primary" strokeWidth={1.45} />
+              <h3 className="mt-6 font-semibold text-base">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{desc}</p>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>
