@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { IconFaceProfile, IconTooth, IconJoint } from "./OrganicIcons";
-import clinicalUse from "@/assets/brand/eaureco-clinical-use.webp";
+import BrandImage from "./BrandImage";
 
 export default function UseCasesSection({ t }) {
   const isKorean = t.title === "사용 분야";
@@ -16,7 +16,7 @@ export default function UseCasesSection({ t }) {
     <section id="usecases" className="section-muted">
       <div className="grid lg:grid-cols-[1.08fr_.92fr]">
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[560px] lg:min-h-[760px] overflow-hidden">
-          <img src={clinicalUse} alt="Eaureco cold pack used for facial cold therapy" className="absolute inset-0 w-full h-full object-cover object-left" />
+          <BrandImage kind="clinical" alt="Eaureco cold pack used for facial cold therapy" className="absolute inset-0 w-full h-full object-cover object-left" />
         </motion.div>
         <div className="px-6 py-20 lg:py-24 lg:pl-16 lg:pr-[max(5vw,calc((100vw-84rem)/2))] flex flex-col justify-center">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

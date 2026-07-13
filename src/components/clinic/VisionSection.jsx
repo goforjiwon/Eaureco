@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { IconOcean, IconFlask, IconPulseHeart } from "./OrganicIcons";
-import sargassum from "@/assets/brand/sargassum-underwater.webp";
+import BrandImage from "./BrandImage";
 
 const pointIcons = [IconOcean, IconFlask, IconPulseHeart];
 
 export default function VisionSection({ t }) {
   return (
     <section id="vision" className="section-deep relative overflow-hidden">
-      <img src={sargassum} alt="" className="absolute inset-y-0 right-0 w-[52%] h-full object-cover opacity-55" />
+      <BrandImage kind="sargassum" alt="" sizes="(min-width: 1024px) 52vw, 100vw" className="absolute inset-y-0 right-0 w-[52%] h-full object-cover opacity-55" />
       <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--brand-deep))] via-[hsl(var(--brand-deep))] to-transparent" />
       <div className="site-shell relative py-24 lg:py-32">
         <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl">

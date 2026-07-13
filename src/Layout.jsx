@@ -3,11 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowUpRight, Globe, Menu, X, Mail, MapPin } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { getT } from "@/i18n/translations";
+import logoUrl from "@/assets/brand/eaureco-logo.png";
 
 export const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
-
-const LOGO_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/690e0407081d3063332a3e99/19088c638_KakaoTalk_20260203_182916893_02.png";
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -79,7 +78,7 @@ export default function Layout({ children }) {
         <nav className={`sticky top-0 z-50 nav-glass ${scrolled ? "shadow-soft" : ""}`}>
           <div className="site-shell h-[76px] flex items-center justify-between">
             <button onClick={() => scrollToSection("home")} className="flex items-center gap-4 group" aria-label="Eaureco home">
-              <img src={LOGO_URL} alt="eaureco" className="h-8 w-auto" />
+              <img src={logoUrl} alt="eaureco" width="916" height="220" decoding="async" className="h-8 w-auto" />
               <span className="hidden sm:block h-5 w-px bg-border" />
               <span className="hidden sm:block text-[9px] text-muted-foreground font-semibold tracking-[0.22em] uppercase">
                 Engineered from Nature
@@ -142,7 +141,7 @@ export default function Layout({ children }) {
           <div className="site-shell py-12">
             <div className="grid lg:grid-cols-[1.35fr_.8fr_1fr] gap-10 items-start">
               <div>
-                <img src={LOGO_URL} alt="eaureco" className="h-9 w-auto brightness-0 invert" />
+                <img src={logoUrl} alt="eaureco" width="916" height="220" loading="lazy" decoding="async" className="h-9 w-auto brightness-0 invert" />
                 <p className="mt-5 max-w-md text-sm leading-7 text-white/60">
                   {language === "ko" ? "침입성 해조류를 회수해, 얼려도 부드러운 차세대 냉찜질 소재로 되살립니다." : "We recover invasive seaweed and transform it into next-generation cold therapy that stays soft when frozen."}
                 </p>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import sargassum from "@/assets/brand/sargassum-underwater.webp";
+import BrandImage from "./BrandImage";
 
 export default function SustainabilitySection({ t }) {
   return (
@@ -33,7 +33,7 @@ export default function SustainabilitySection({ t }) {
         </div>
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[500px] lg:min-h-full">
-          <img src={sargassum} alt="Sargassum seaweed underwater" className="absolute inset-0 w-full h-full object-cover" />
+          <BrandImage kind="sargassum" alt="Sargassum seaweed underwater" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-[hsl(var(--brand-deep))] to-transparent" />
         </motion.div>
       </div>
