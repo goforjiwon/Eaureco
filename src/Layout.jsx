@@ -143,7 +143,7 @@ export default function Layout({ children }) {
               <div>
                 <img src={logoUrl} alt="eaureco" width="916" height="220" loading="lazy" decoding="async" className="h-9 w-auto brightness-0 invert" />
                 <p className="mt-5 max-w-md text-sm leading-7 text-white/60">
-                  {language === "ko" ? "침입성 해조류를 회수해, 얼려도 부드러운 차세대 냉찜질 소재로 되살립니다." : "We recover invasive seaweed and transform it into next-generation cold therapy that stays soft when frozen."}
+                  {language === "ko" ? "침입성 해조류를 회수해, 얼려도 부드러운 차세대 냉찜질 소재로 되살립니다." : "We recover invasive seaweed and transform it into a next-generation cold pack that stays soft when frozen."}
                 </p>
               </div>
               <div>
@@ -154,13 +154,13 @@ export default function Layout({ children }) {
               </div>
               <div className="space-y-3 text-sm text-white/65">
                 <a href="mailto:goforjiwon@kaist.ac.kr" className="flex items-center gap-2 hover:text-white"><Mail className="w-4 h-4" />goforjiwon@kaist.ac.kr</a>
-                <p className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0" />KAIST, Daejeon, Republic of Korea</p>
+                <p className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0" />{language === "ko" ? "대한민국 세종특별자치시" : "Sejong, Republic of Korea"}</p>
               </div>
             </div>
             <div className="eco-divider my-8" />
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
               <p>© {new Date().getFullYear()} eaureco. All rights reserved.</p>
-              <p>{language === "ko" ? "사업자등록번호 109-34-09676 · 대표자 박지원" : "Korean patent filed · Business No. 109-34-09676"}</p>
+              <p>{language === "ko" ? "상호 유레코(Eaureco) · 대표자 박지원 · 사업자등록번호 109-34-09676 · 본 제품은 의료기기가 아닙니다" : "Korean patent application filed · Business Reg. No. 109-34-09676 · Not a medical device"}</p>
             </div>
           </div>
         </footer>

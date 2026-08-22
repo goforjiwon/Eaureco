@@ -23,7 +23,7 @@ export default function ProductSection({ t }) {
             <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-5xl md:text-7xl leading-none">
               {isKorean ? "제품 사양" : "Product Specifications"}
             </motion.h2>
-            <p className="mt-5 text-muted-foreground">{isKorean ? "자연에서 시작해, 임상을 위해 설계했습니다." : "Thoughtfully made. Clinically minded."}</p>
+            <p className="mt-5 text-muted-foreground">{isKorean ? "자연에서 시작해, 클리닉 현장에 맞게 설계했습니다." : "Thoughtfully made. Built for clinic use."}</p>
             <div className="mt-10 border-y border-border divide-y divide-border">
               {specs.map((spec) => (
                 <div key={spec.label} className="grid sm:grid-cols-[9rem_1fr] gap-2 sm:gap-6 py-5">
@@ -32,6 +32,7 @@ export default function ProductSection({ t }) {
                 </div>
               ))}
             </div>
+            <p className="mt-5 text-xs leading-5 text-muted-foreground">{t.disclaimer}</p>
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
               <a href={`mailto:${t.email}`} className="btn-primary group">{isKorean ? "샘플 요청" : "Request Samples"}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></a>
               <a href={`mailto:${t.email}`} className="text-sm font-medium text-primary hover:underline">{t.email}</a>

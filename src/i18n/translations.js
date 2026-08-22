@@ -32,7 +32,7 @@ export const translations = {
       trust: [
         "Seaweed-derived gel",
         "Korean patent filed",
-        "Born at KAIST"
+        "Founded at KAIST"
       ]
     },
     ko: {
@@ -45,13 +45,13 @@ export const translations = {
       trust: [
         "해조류 유래 젤",
         "한국 특허 출원",
-        "KAIST 출발"
+        "KAIST 창업"
       ]
     }
   },
   problem: {
     en: {
-      title: "Is your current cold therapy actually comfortable for patients?",
+      title: "Is your current cold pack actually comfortable for patients?",
       ice: {
         name: "Ice",
         desc: "Rigid, melts into a wet mess, doesn't conform to the skin."
@@ -72,37 +72,37 @@ export const translations = {
         name: "SAP 젤팩",
         desc: "냉동하면 돌덩이처럼 굳어서 얼굴이나 발목 곡면에 맞지 않습니다."
       },
-      bottom: "시술 후 부기를 빼야 하는 환자에게는 피부에 밀착되면서 오래 지속되는 냉기가 필요합니다."
+      bottom: "시술 후 회복 중인 환자에게는 피부에 밀착되면서 오래 지속되는 냉기가 필요합니다."
     }
   },
   sustainability: {
     en: {
       eyebrow: "Circular by design",
       title: "A cold pack that starts by cleaning the ocean.",
-      subtitle: "Sargassum is an invasive seaweed that smothers coastlines and chokes marine life. We harvest it, extract a natural seaweed-derived material, and turn a coastal problem into a medical-grade material — no petroleum-based gels required.",
+      subtitle: "Sargassum is an invasive seaweed that smothers coastlines and chokes marine life. We harvest it, extract a natural seaweed-derived material, and turn a coastal problem into a clinic-ready cooling material — no petroleum-based gels required.",
       steps: [
         { step: "01", title: "Recover", desc: "Invasive Sargassum is collected before it washes ashore and rots into ocean waste." },
-        { step: "02", title: "Refine", desc: "We extract a natural seaweed-derived polymer using a low-impact process." },
-        { step: "03", title: "Reimagine", desc: "It becomes a soft, long-lasting cold-therapy gel for clinics and patients." }
+        { step: "02", title: "Refine", desc: "We extract alginate, a natural seaweed-derived polymer, using a water-based process." },
+        { step: "03", title: "Reimagine", desc: "It becomes a soft, long-lasting cold-pack gel for clinics and patients." }
       ],
       stats: [
         { value: "100%", label: "Seaweed-derived gel core" },
-        { value: "0", label: "Petroleum-based SAP polymers" },
+        { value: "0", label: "Petroleum-based SAP in the gel" },
         { value: "Invasive", label: "Species turned into resource" }
       ]
     },
     ko: {
       eyebrow: "설계부터 순환",
       title: "바다를 정화하며 시작되는 냉찜질팩.",
-      subtitle: "괭생이모자반(Sargassum)은 해안을 뒤덮고 해양 생태계를 위협하는 침입성 해조류입니다. 우리는 이를 수거해 천연 해조류 유래 소재를 추출하고, 해안의 골칫거리를 의료용 소재로 바꿉니다. 석유 기반 젤은 필요하지 않습니다.",
+      subtitle: "괭생이모자반(Sargassum)은 해안을 뒤덮고 해양 생태계를 위협하는 침입성 해조류입니다. 우리는 이를 수거해 천연 해조류 유래 소재를 추출하고, 해안의 골칫거리를 클리닉용 냉찜질 소재로 바꿉니다. 석유 기반 젤은 필요하지 않습니다.",
       steps: [
         { step: "01", title: "회수", desc: "해안으로 밀려와 썩어 해양 폐기물이 되기 전에 침입성 괭생이모자반을 수거합니다." },
-        { step: "02", title: "정제", desc: "저부하 공정으로 해조류 유래 천연 고분자를 추출합니다." },
+        { step: "02", title: "정제", desc: "수계 공정으로 해조류 유래 천연 고분자인 알긴산을 추출합니다." },
         { step: "03", title: "재탄생", desc: "추출한 소재는 부드럽고 오래가는 냉찜질 젤이 되어 클리닉과 환자에게 전달됩니다." }
       ],
       stats: [
         { value: "100%", label: "해조류 유래 젤 코어" },
-        { value: "0", label: "석유 기반 SAP 고분자" },
+        { value: "0", label: "젤 내 석유계 SAP" },
         { value: "침입종", label: "자원으로 전환" }
       ]
     }
@@ -116,11 +116,11 @@ export const translations = {
       },
       lasting: {
         title: "Long-Lasting Cold",
-        desc: "Maintains therapeutic temperature longer than conventional gel packs. Patients get effective cold therapy without frequent replacements."
+        desc: "Stays cold through a full cooling session, so packs are swapped out less often."
       },
       fast: {
-        title: "Fast Freeze Time",
-        desc: "Freezes faster than standard gel packs, so your freezer turns over quicker. No shortage of packs on busy days."
+        title: "Quick Turnaround",
+        desc: "Refreezes in a standard clinic freezer, so packs cycle back into use on busy days."
       }
     },
     ko: {
@@ -131,11 +131,11 @@ export const translations = {
       },
       lasting: {
         title: "오래가는 냉기",
-        desc: "기존 젤팩 대비 더 오래 지속되는 냉각 효과. 환자가 자주 교체할 필요 없이 충분한 시간 동안 냉찜질을 유지할 수 있습니다."
+        desc: "냉찜질 한 세션을 버틸 만큼 냉기가 유지되어, 팩을 자주 갈아 끼우지 않아도 됩니다."
       },
       fast: {
-        title: "빠른 냉동",
-        desc: "일반 젤팩 대비 빠르게 얼어 냉동고 회전이 빨라집니다. 환자가 많은 날에도 팩이 부족하지 않습니다."
+        title: "빠른 회전",
+        desc: "일반 냉동고에서 다시 얼려 바로 재사용할 수 있어, 환자가 많은 날에도 팩 회전이 끊기지 않습니다."
       }
     }
   },
@@ -144,7 +144,7 @@ export const translations = {
       title: "Use Cases",
       plastic: {
         title: "Plastic Surgery / Dermatology",
-        desc: "Post-op facial swelling, post-laser heat relief. Soft conformity to facial contours."
+        desc: "Post-op facial cooling, post-laser cooling. Soft conformity to facial contours."
       },
       dental: {
         title: "Dental",
@@ -152,14 +152,14 @@ export const translations = {
       },
       ortho: {
         title: "Orthopedics",
-        desc: "Ankle sprains, post-fracture swelling, cellulitis. Conforms to ankles, knees, and wrists."
+        desc: "Ankle sprains, post-op swelling, everyday recovery. Conforms to ankles, knees, and wrists."
       }
     },
     ko: {
       title: "사용 분야",
       plastic: {
         title: "성형외과 / 피부과",
-        desc: "수술 후 얼굴 부기 냉각, 레이저 시술 후 열기 제거. 얼굴 곡면에 맞는 부드러운 밀착."
+        desc: "수술 후 얼굴 냉각, 레이저 시술 후 냉각. 얼굴 곡면에 맞는 부드러운 밀착."
       },
       dental: {
         title: "치과",
@@ -167,7 +167,7 @@ export const translations = {
       },
       ortho: {
         title: "정형외과",
-        desc: "발목 염좌, 골절 후 부종, 봉와직염(cellulitis) 등 사지 냉찜질. 발목, 무릎, 손목 등 굴곡이 있는 부위에 밀착."
+        desc: "발목 염좌, 수술 후 부기 관리, 일상 회복기 냉찜질. 발목, 무릎, 손목 등 굴곡이 있는 부위에 밀착."
       }
     }
   },
@@ -175,27 +175,29 @@ export const translations = {
     en: {
       title: "Product",
       contents: "Contents",
-      contentsValue: "Natural seaweed-derived gel beads",
+      contentsValue: "Calcium-alginate gel beads (seaweed-derived alginate + purified water)",
       packaging: "Packaging",
-      packagingValue: "Durable medical-grade pouch",
+      packagingValue: "Durable multi-layer plastic pouch (not biodegradable)",
       sizes: "Sizes",
-      sizesValue: "Small (~13×10cm, for facial use), medium/large available on request",
+      sizesValue: "Eye-mask type approx. 20×9cm (120g) · Square pack approx. 12×10cm (100g) · Other sizes on request",
       patent: "Patent",
       patentValue: "Korean patent filed (January 2026)",
       contactLabel: "For samples and bulk orders:",
+      disclaimer: "Eaureco cold packs are general consumer goods, not a licensed medical device. They are not intended to diagnose, treat, cure, or prevent any disease. Please follow your clinician's guidance on post-procedure cooling.",
       email: "goforjiwon@kaist.ac.kr"
     },
     ko: {
       title: "제품 정보",
       contents: "내용물",
-      contentsValue: "천연 해조류 유래 젤 비드",
+      contentsValue: "칼슘 알긴산 젤 비드 (해조류 유래 알긴산 + 정제수)",
       packaging: "외포장",
-      packagingValue: "의료용 고내구성 파우치",
+      packagingValue: "고내구성 다층 플라스틱 파우치 (생분해되지 않음)",
       sizes: "사이즈",
-      sizesValue: "소형 (약 13×10cm, 안면용), 중형/대형 주문 제작 가능",
+      sizesValue: "아이마스크형 약 20×9cm(120g) · 사각팩 약 12×10cm(100g) · 그 외 사이즈 주문 제작 가능",
       patent: "특허",
       patentValue: "한국 특허 출원 완료 (2026년 1월)",
       contactLabel: "샘플 요청 및 대량 주문 문의",
+      disclaimer: "본 제품은 「의료기기법」상 의료기기가 아닌 일반 공산품이며, 질병의 진단·치료·경감·처치 또는 예방을 목적으로 하지 않습니다. 시술 후 냉찜질 방법은 담당 의료진의 안내를 따라 주십시오.",
       email: "goforjiwon@kaist.ac.kr"
     }
   },
@@ -203,22 +205,22 @@ export const translations = {
     en: {
       eyebrow: "Our Vision",
       title: "Turning the ocean's burden into everyday materials",
-      desc: "Every year, millions of tons of seaweed wash ashore from Jeju to Florida and Puerto Rico, cleared away at enormous cost. In the same window, billions of petroleum-based ice packs and gels are used once and sent to landfill. Eaureco turns this discarded ocean resource into fully biodegradable materials, solving both problems at once.",
-      tagline: "Stay cool, stay green.",
+      desc: "Every year large volumes of sargassum wash ashore from Jeju to Florida and Puerto Rico, cleared away at significant public cost. Over the same period, single-use petroleum-based ice packs and gels are thrown away at scale. Eaureco turns this discarded ocean resource into a seaweed-derived gel that replaces the petroleum-based SAP inside the pack.",
+      tagline: "Cold that performs, without petroleum SAP.",
       points: [
         "Born from ocean waste",
-        "100% biodegradable, content and packaging",
+        "Biodegradable seaweed-derived gel inside; the pouch is plastic and is not biodegradable",
         "Beyond cold packs: cold chain and hygiene materials"
       ]
     },
     ko: {
       eyebrow: "비전",
       title: "바다의 짐을 일상의 쓸모로",
-      desc: "매년 수백만 톤의 해조류가 제주에서 플로리다, 푸에르토리코까지 전 세계 해안으로 밀려와 막대한 비용을 들여 폐기됩니다. 같은 시간, 수십억 개의 석유 기반 아이스팩과 젤이 단 한 번 쓰이고 매립지로 향합니다. Eaureco는 버려지던 바다의 자원을 완전히 생분해되는 소재로 바꿔 이 두 문제를 동시에 풉니다.",
-      tagline: "차갑게, 그리고 깨끗하게.",
+      desc: "매년 대량의 괭생이모자반이 제주에서 플로리다, 푸에르토리코까지 해안으로 밀려와 상당한 비용을 들여 처리됩니다. 같은 기간, 한 번 쓰고 버려지는 석유계 아이스팩과 젤도 대량으로 폐기됩니다. Eaureco는 버려지던 바다의 자원을, 팩 내부의 석유계 SAP를 대체하는 해조류 유래 젤로 바꿉니다.",
+      tagline: "석유계 SAP 없이, 필요한 냉기만.",
       points: [
         "바다 폐기물에서 시작합니다",
-        "내용물과 포장까지 100% 생분해됩니다",
+        "내부 젤은 해조류 유래 생분해성 소재이며, 외포장 파우치는 플라스틱으로 생분해되지 않습니다",
         "냉찜질팩을 넘어 콜드체인과 위생 소재로 확장합니다"
       ]
     }
@@ -226,22 +228,22 @@ export const translations = {
   about: {
     en: {
       eyebrow: "Our story",
-      title: "A materials startup born at KAIST.",
-      desc: "Eaureco develops a new class of cold-therapy materials from a seaweed-derived material extracted from Sargassum — an invasive seaweed that damages coastlines worldwide. By engineering with nature instead of against it, we replace petroleum-based gels with a soft, high-performance material that helps patients heal.",
+      title: "A materials startup founded by a KAIST researcher.",
+      desc: "Eaureco develops a new class of cold-pack materials from a seaweed-derived material extracted from Sargassum — an invasive seaweed that damages coastlines worldwide. By engineering with nature instead of against it, we replace petroleum-based gels with a soft material that keeps post-procedure cooling comfortable.",
       pillars: [
-        { title: "Science-led", desc: "Built on patent-pending seaweed-derived gel research from KAIST labs." },
+        { title: "Science-led", desc: "Built on our own seaweed-derived gel process, filed as a Korean patent application in January 2026." },
         { title: "Ocean-positive", desc: "Every pack starts by removing invasive seaweed from coastlines." },
-        { title: "Patient-first", desc: "Soft conformity and longer-lasting cold for real clinical comfort." }
+        { title: "Patient-first", desc: "Soft conformity and cold that lasts, for comfort after a procedure." }
       ]
     },
     ko: {
       eyebrow: "우리의 이야기",
-      title: "KAIST에서 시작된 소재 스타트업.",
-      desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 해조류 유래 소재로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드럽고 고성능인 소재로 대체해 환자의 회복을 돕습니다.",
+      title: "KAIST 연구자가 창업한 소재 스타트업.",
+      desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 해조류 유래 소재로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드러운 소재로 대체해 시술 후 냉찜질을 한결 편안하게 만듭니다.",
       pillars: [
-        { title: "과학 기반", desc: "KAIST 연구실의 특허 출원 해조류 유래 젤 기술을 토대로 합니다." },
+        { title: "과학 기반", desc: "자체 개발한 해조류 유래 젤 공정을 토대로 하며, 2026년 1월 한국 특허를 출원했습니다." },
         { title: "바다에 이로운", desc: "모든 팩은 해안의 침입성 해조류를 제거하는 데서 시작됩니다." },
-        { title: "환자 중심", desc: "부드러운 밀착과 더 오래가는 냉기로 실제 임상 편안함을 제공합니다." }
+        { title: "환자 중심", desc: "부드러운 밀착과 오래가는 냉기로 시술 후 시간을 편안하게 만듭니다." }
       ]
     }
   }
