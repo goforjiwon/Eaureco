@@ -19,26 +19,26 @@ export default function ProblemSection({ t, priority = false }) {
 
           <div>
             <div className="grid md:grid-cols-[.72fr_.72fr_1fr] border-y border-border">
-              {[{ Icon: IconIce, ...t.ice }, { Icon: IconHardPack, ...t.sap }].map(({ Icon, name, desc }, index) => (
-                <motion.article key={name} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="px-6 py-8 md:border-r border-border">
+              {[{ Icon: IconIce, ...t.ice }, { Icon: IconHardPack, ...t.sap }].map(({ Icon, name, desc }, index) =>
+              <motion.article key={name} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="px-6 py-8 md:border-r border-border">
                   <Icon className="w-9 h-9 text-[hsl(var(--brand-sea))]" strokeWidth={1.5} />
                   <h3 className="mt-8 text-base font-semibold">{name}</h3>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{desc}</p>
                 </motion.article>
-              ))}
+              )}
               <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative min-h-[250px] bg-white overflow-hidden">
                 <BrandImage kind="product" priority={priority} alt="Eaureco flexible cold pack" sizes="(min-width: 1024px) 24vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-[70%_38%]" />
               </motion.div>
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-center justify-between gap-6 py-7 border-b border-border">
               <p className="font-display text-2xl md:text-4xl leading-tight max-w-2xl">{t.bottom}</p>
-              <button onClick={() => document.getElementById("sustainability")?.scrollIntoView({ behavior: "smooth" })} className="btn-ghost shrink-0">
+              <button onClick={() => document.getElementById("sustainability")?.scrollIntoView({ behavior: "smooth" })} className="btn-ghost shrink-0 hidden">
                 {isKorean ? "제조 과정 보기" : "See how it’s made"}<ArrowRight className="w-4 h-4" />
               </button>
             </motion.div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
