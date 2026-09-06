@@ -29,9 +29,11 @@ export default function HeroSection({ t }) {
             <a href="mailto:goforjiwon@kaist.ac.kr" className="btn-primary group">
               {t.cta}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <button onClick={() => scrollTo("sustainability")} className="btn-ghost group">
-              {t.ctaSecondary}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            {t.ctaSecondary && (
+              <button onClick={() => scrollTo("sustainability")} className="btn-ghost group">
+                {t.ctaSecondary}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
+            )}
           </motion.div>
           {Array.isArray(t.trust) && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7, delay: .42 }} className="mt-10 grid sm:grid-cols-3 gap-3 border-t border-border pt-5">
