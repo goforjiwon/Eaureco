@@ -32,9 +32,9 @@ export default function ProblemSection({ t, priority = false }) {
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-center justify-between gap-6 py-7 border-b border-border">
               <p className="font-display text-2xl md:text-4xl leading-tight max-w-2xl">{t.bottom}</p>
-              <button onClick={() => document.getElementById("sustainability")?.scrollIntoView({ behavior: "smooth" })} className="btn-ghost shrink-0 hidden">
-                {isKorean ? "제조 과정 보기" : "See how it’s made"}<ArrowRight className="w-4 h-4" />
-              </button>
+              
+
+              
             </motion.div>
           </div>
         </div>
