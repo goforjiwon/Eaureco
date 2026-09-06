@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import BrandImage from "./BrandImage";
 
-export default function SustainabilitySection({ t }) {
+export default function SustainabilitySection({ t, priority = false }) {
   return (
     <section id="sustainability" className="section-deep overflow-hidden">
       <div className="grid lg:grid-cols-[1.04fr_.96fr] min-h-[760px]">
@@ -32,8 +32,8 @@ export default function SustainabilitySection({ t }) {
           </div>
         </div>
 
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[500px] lg:min-h-full">
-          <BrandImage kind="sargassum" alt="Sargassum seaweed underwater" className="absolute inset-0 w-full h-full object-cover" />
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[320px] sm:min-h-[500px] lg:min-h-full">
+          <BrandImage kind="sargassum" priority={priority} alt="Sargassum seaweed underwater" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-[hsl(var(--brand-deep))] to-transparent" />
         </motion.div>
       </div>

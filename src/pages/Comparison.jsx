@@ -10,7 +10,7 @@ export default function Comparison() {
 
   return (
     <div className="min-h-screen overflow-x-clip">
-      <ProblemSection t={t.problem} />
+      <ProblemSection t={t.problem} priority />
       <AdvantagesSection t={t.advantages} />
     </div>
   );

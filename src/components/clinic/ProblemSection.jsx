@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { IconIce, IconHardPack } from "./OrganicIcons";
 import BrandImage from "./BrandImage";
 
-export default function ProblemSection({ t }) {
+export default function ProblemSection({ t, priority = false }) {
   const isKorean = t.ice.name === "얼음";
   return (
     <section id="problem" className="section-muted py-24 lg:py-32 overflow-hidden">
@@ -27,7 +27,7 @@ export default function ProblemSection({ t }) {
                 </motion.article>
               ))}
               <motion.div initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative min-h-[250px] bg-white overflow-hidden">
-                <BrandImage kind="product" alt="Eaureco flexible cold pack" sizes="(min-width: 1024px) 24vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-[70%_38%]" />
+                <BrandImage kind="product" priority={priority} alt="Eaureco flexible cold pack" sizes="(min-width: 1024px) 24vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-[70%_38%]" />
               </motion.div>
             </div>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-center justify-between gap-6 py-7 border-b border-border">

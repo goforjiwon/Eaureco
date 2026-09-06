@@ -9,7 +9,7 @@ export default function AboutSection({ t }) {
     <section id="about" className="section-surface py-24 lg:py-32">
       <div className="site-shell">
         <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20">
-          <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-5xl md:text-7xl leading-[.98] max-w-[12ch]">{t.title}</motion.h2>
+          <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-5xl md:text-7xl leading-[1.04] max-w-[16ch]">{t.title}</motion.h2>
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <p className="text-lg leading-8 text-muted-foreground">{t.desc}</p>
             <div className="mt-10 border-y border-border divide-y divide-border">

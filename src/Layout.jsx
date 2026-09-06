@@ -1,6 +1,8 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUpRight, Globe, Menu, X, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Globe, Mail, MapPin } from "lucide-react";
+import { MotionConfig } from "framer-motion";
+import MobileNavigation from "@/components/site/MobileNavigation";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { getT } from "@/i18n/translations";
 import logoUrl from "@/assets/brand/eaureco-logo.png";
@@ -35,22 +37,28 @@ export default function Layout({ children }) {
   }, [location.pathname, location.hash]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let frameId;
+    const updatePosition = () => {
+      frameId = null;
       setScrolled(window.scrollY > 8);
-      const sections = ["home", "problem", "sustainability", "advantages", "usecases", "product", "about"];
-      const position = window.scrollY + 140;
-      for (let i = sections.length - 1; i >= 0; i -= 1) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= position) {
-          setActiveSection(sections[i]);
-          break;
-        }
+      const sections = ["home", "problem", "sustainability", "advantages", "usecases", "product", "vision", "about"]
+        .map((id) => document.getElementById(id)).filter(Boolean);
+      let current = sections[0]?.id || "home";
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= 140) current = section.id;
       }
+      setActiveSection(current);
+    };
+    const handleScroll = () => {
+      if (frameId == null) frameId = window.requestAnimationFrame(updatePosition);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    updatePosition();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (frameId != null) window.cancelAnimationFrame(frameId);
+    };
+  }, [location.pathname]);
 
   const t = getT(language).nav;
   const navItems = [
@@ -59,36 +67,39 @@ export default function Layout({ children }) {
     { name: t.advantages, sectionId: "advantages" },
     { name: t.useCases, sectionId: "usecases" },
     { name: t.product, sectionId: "product" },
+    { name: getT(language).vision.eyebrow, sectionId: "vision" },
     { name: t.about, sectionId: "about" },
   ];
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (section && location.hash === `#${sectionId}`) {
+      section.scrollIntoView({ block: "start" });
     } else {
-      navigate(`/#${sectionId}`);
+      navigate(`${section ? location.pathname : "/"}#${sectionId}`);
     }
     setMobileOpen(false);
   };
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
+      <MotionConfig reducedMotion="user">
       <div className="min-h-screen bg-background">
-        <nav className={`sticky top-0 z-50 nav-glass ${scrolled ? "shadow-soft" : ""}`}>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-primary focus:px-5 focus:py-3 focus:text-primary-foreground">{language === "ko" ? "본문으로 바로가기" : "Skip to content"}</a>
+        <nav aria-label={language === "ko" ? "주 메뉴" : "Main navigation"} className={`sticky top-0 z-50 nav-glass ${scrolled ? "shadow-soft" : ""}`}>
           <div className="site-shell h-[76px] flex items-center justify-between">
             <button onClick={() => scrollToSection("home")} className="flex items-center gap-4 group" aria-label="Eaureco home">
-              <img src={logoUrl} alt="eaureco" width="916" height="220" decoding="async" className="h-8 w-auto" />
+              <img src={logoUrl} alt="eaureco" width="916" height="220" decoding="async" className="h-6 sm:h-8 w-auto" />
               <span className="hidden sm:block h-5 w-px bg-border" />
               <span className="hidden sm:block text-[9px] text-muted-foreground font-semibold tracking-[0.22em] uppercase">
                 Engineered from Nature
               </span>
             </button>
 
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden xl:flex items-center gap-6">
               <div className="flex items-center gap-6">
                 {navItems.map((item) => (
-                  <button key={item.sectionId} onClick={() => scrollToSection(item.sectionId)} className={`relative py-7 text-[13px] transition-colors ${activeSection === item.sectionId ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"}`}>
+                  <button key={item.sectionId} onClick={() => scrollToSection(item.sectionId)} aria-current={activeSection === item.sectionId ? "location" : undefined} className={`relative py-7 text-[13px] transition-colors ${activeSection === item.sectionId ? "text-primary font-semibold" : "text-muted-foreground hover:text-foreground"}`}>
                     {item.name}
                     {activeSection === item.sectionId && <span className="absolute bottom-0 inset-x-0 h-[2px] bg-primary" />}
                   </button>
@@ -110,32 +121,13 @@ export default function Layout({ children }) {
               </a>
             </div>
 
-            <button className="lg:hidden p-2 text-foreground" aria-label="Toggle menu" onClick={() => setMobileOpen(!mobileOpen)}>
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <MobileNavigation open={mobileOpen} onOpenChange={setMobileOpen} items={[{ name: t.home, sectionId: "home" }, ...navItems]} activeSection={activeSection} onNavigate={scrollToSection} language={language} setLanguage={setLanguage} cta={t.cta} />
           </div>
 
-          {mobileOpen && (
-            <div className="lg:hidden bg-white border-t border-border px-4 py-4 shadow-xl">
-              <div className="grid gap-1">
-                {navItems.map((item) => (
-                  <button key={item.sectionId} onClick={() => scrollToSection(item.sectionId)} className={`text-left px-3 py-3 rounded-lg text-sm ${activeSection === item.sectionId ? "bg-secondary text-primary font-semibold" : "text-muted-foreground"}`}>
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-              <div className="flex items-center justify-between gap-4 mt-4 pt-4 border-t border-border">
-                <div className="flex gap-3 text-sm">
-                  <button onClick={() => setLanguage("en")} className={language === "en" ? "font-bold" : "text-muted-foreground"}>EN</button>
-                  <button onClick={() => setLanguage("ko")} className={language === "ko" ? "font-bold" : "text-muted-foreground"}>KR</button>
-                </div>
-                <a href="mailto:goforjiwon@kaist.ac.kr" className="btn-primary !min-h-[44px] !py-2">{t.cta}</a>
-              </div>
-            </div>
-          )}
+
         </nav>
 
-        <main>{children}</main>
+        <main id="main-content" tabIndex={-1}>{children}</main>
 
         <footer className="section-deep border-t border-white/10">
           <div className="site-shell py-12">
@@ -165,6 +157,7 @@ export default function Layout({ children }) {
           </div>
         </footer>
       </div>
+      </MotionConfig>
     </LanguageContext.Provider>
   );
 }

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import BrandImage from "./BrandImage";
 
-export default function ProductSection({ t }) {
+export default function ProductSection({ t, priority = false }) {
   const specs = [
     { label: t.contents, value: t.contentsValue },
     { label: t.packaging, value: t.packagingValue },
@@ -17,7 +17,7 @@ export default function ProductSection({ t }) {
       <div className="site-shell">
         <div className="grid lg:grid-cols-[1.05fr_.95fr] gap-12 lg:gap-20 items-center">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative aspect-[4/3] overflow-hidden rounded-[1.15rem] bg-[hsl(var(--mist))] image-lift">
-            <BrandImage kind="product" alt="Eaureco product specifications" className="absolute inset-0 w-full h-full object-cover object-center" />
+            <BrandImage kind="product" priority={priority} alt="Eaureco product specifications" className="absolute inset-0 w-full h-full object-cover object-center" />
           </motion.div>
           <div>
             <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-5xl md:text-7xl leading-none">

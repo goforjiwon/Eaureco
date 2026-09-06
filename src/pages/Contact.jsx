@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen overflow-x-clip">
-      <ProductSection t={t.product} />
+      <ProductSection t={t.product} priority />
       <AboutSection t={t.about} />
     </div>
   );

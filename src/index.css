@@ -72,6 +72,21 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: hsl(var(--brand-deep));
+    text-wrap: balance;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 639px) {
+    section h2.font-display {
+      font-size: clamp(2.25rem, 9vw, 3rem);
+      line-height: 1.08;
+      max-width: 100%;
+    }
   }
 
   ::selection {

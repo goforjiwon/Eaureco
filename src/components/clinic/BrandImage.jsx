@@ -47,7 +47,8 @@ export default function BrandImage({
         width={image.width}
         height={image.height}
         loading={priority ? "eager" : "lazy"}
-        fetchPriority={priority ? "high" : "low"}
+        fetchPriority={priority ? "high" : "auto"}
+        sizes={sizes}
         decoding="async"
         className={className}
       />

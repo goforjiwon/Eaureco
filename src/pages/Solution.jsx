@@ -11,7 +11,7 @@ export default function Solution() {
 
   return (
     <div className="min-h-screen overflow-x-clip">
-      <SustainabilitySection t={t.sustainability} />
+      <SustainabilitySection t={t.sustainability} priority />
       <AdvantagesSection t={t.advantages} />
       <ProductSection t={t.product} />
     </div>

@@ -9,15 +9,15 @@ export default function HeroSection({ t }) {
 
   return (
     <section id="home" className="relative overflow-hidden bg-white">
-      <div className="site-shell grid lg:min-h-[calc(100svh-240px)] lg:grid-cols-[.88fr_1.12fr] items-center gap-10 lg:gap-16 py-16 lg:py-8">
+      <div className="site-shell grid lg:min-h-[calc(100svh-240px)] lg:grid-cols-[.88fr_1.12fr] items-center gap-10 lg:gap-10 xl:gap-16 py-10 sm:py-16 lg:py-8">
         <div className="relative z-10 pt-4 lg:pt-0">
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: .75, ease: "easeOut" }}
             className={`font-display text-[hsl(var(--brand-deep))] ${isKorean
-              ? "text-[3.2rem] sm:text-6xl lg:text-[3.75rem] leading-[1.08] max-w-full"
-              : "text-[3.2rem] sm:text-7xl xl:text-[5.6rem] leading-[.93] max-w-[12ch]"
+              ? "text-[2.6rem] sm:text-6xl lg:text-[3.4rem] xl:text-[3.75rem] leading-[1.08] max-w-full"
+              : "text-[2.8rem] sm:text-7xl lg:text-6xl xl:text-[5.6rem] leading-[1.02] max-w-[12ch]"
             }`}
           >
             {t.title}
@@ -25,7 +25,7 @@ export default function HeroSection({ t }) {
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7, delay: .18 }} className="mt-7 max-w-xl text-base md:text-lg leading-8 text-muted-foreground">
             {t.subtitle}
           </motion.p>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7, delay: .3 }} className="mt-8 flex flex-col sm:flex-row gap-3">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .7, delay: .3 }} className="mt-8 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
             <a href="mailto:goforjiwon@kaist.ac.kr" className="btn-primary group">
               {t.cta}<ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
@@ -44,7 +44,7 @@ export default function HeroSection({ t }) {
           )}
         </div>
 
-        <motion.div initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease: "easeOut" }} className="relative min-h-[430px] lg:min-h-[650px] overflow-hidden rounded-[1.25rem] image-lift bg-[#eef3ef]">
+        <motion.div initial={{ opacity: 0, scale: .98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .9, ease: "easeOut" }} className="relative min-h-[300px] sm:min-h-[430px] lg:min-h-[560px] xl:min-h-[650px] overflow-hidden rounded-[1.25rem] image-lift bg-[#eef3ef]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_12%,rgba(82,156,153,.36),transparent_36%),linear-gradient(145deg,#f4f6f3_0%,#dce8e3_68%,#b8d6d2_100%)]" />
           <div className="absolute right-0 -bottom-24 w-[56%] h-[62%] rounded-full border-[80px] border-white/20" />
           <BrandImage kind="product" priority alt="Eaureco seaweed-derived cold therapy product family" className="absolute inset-0 w-full h-full object-cover object-center mix-blend-multiply" />

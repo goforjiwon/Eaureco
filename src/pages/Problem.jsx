@@ -10,7 +10,7 @@ export default function Problem() {
 
   return (
     <div className="min-h-screen overflow-x-clip">
-      <ProblemSection t={t.problem} />
+      <ProblemSection t={t.problem} priority />
       <SustainabilitySection t={t.sustainability} />
     </div>
   );

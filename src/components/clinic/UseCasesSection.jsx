@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { IconFaceProfile, IconTooth, IconJoint } from "./OrganicIcons";
 import BrandImage from "./BrandImage";
 
@@ -15,7 +14,7 @@ export default function UseCasesSection({ t }) {
   return (
     <section id="usecases" className="section-muted">
       <div className="grid lg:grid-cols-[1.08fr_.92fr]">
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[560px] lg:min-h-[760px] overflow-hidden">
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="relative min-h-[360px] sm:min-h-[560px] lg:min-h-[760px] overflow-hidden">
           <BrandImage kind="clinical" alt="Eaureco cold pack used for facial cold therapy" className="absolute inset-0 w-full h-full object-cover object-left" />
         </motion.div>
         <div className="px-6 py-20 lg:py-24 lg:pl-16 lg:pr-[max(5vw,calc((100vw-84rem)/2))] flex flex-col justify-center">
@@ -25,10 +24,9 @@ export default function UseCasesSection({ t }) {
           </motion.div>
           <div className="rule-list mt-10 border-y border-border">
             {cases.map(({ Icon, title, desc }, index) => (
-              <motion.article key={title} initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="grid grid-cols-[48px_1fr_auto] gap-5 py-7 items-start group">
+              <motion.article key={title} initial={{ opacity: 0, x: 15 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * .08 }} className="grid grid-cols-[32px_minmax(0,1fr)] sm:grid-cols-[48px_minmax(0,1fr)] gap-4 sm:gap-5 py-7 items-start">
                 <Icon className="w-8 h-8 text-primary" strokeWidth={1.45} />
                 <div><h3 className="font-semibold text-lg">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground max-w-lg">{desc}</p></div>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
               </motion.article>
             ))}
           </div>
