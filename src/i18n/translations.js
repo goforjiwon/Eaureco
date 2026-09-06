@@ -223,7 +223,7 @@ export const translations = {
   about: {
     en: {
       eyebrow: "Our story",
-      title: "A materials startup founded by a KAIST researcher.",
+      title: "A materials startup founded by KAIST researchers.",
       desc: "Eaureco develops a new class of cold-pack materials from a seaweed-derived material extracted from Sargassum — an invasive seaweed that damages coastlines worldwide. By engineering with nature instead of against it, we replace petroleum-based gels with a soft material that keeps post-procedure cooling comfortable.",
       pillars: [
         { title: "Science-led", desc: "Built on our own seaweed-derived gel process, filed as a Korean patent application in January 2026." },
@@ -233,7 +233,7 @@ export const translations = {
     },
     ko: {
       eyebrow: "Our story",
-      title: "A materials startup founded by a KAIST researcher.",
+      title: "A materials startup founded by KAIST researchers.",
       desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 해조류 유래 소재로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드러운 소재로 대체해 시술 후 냉찜질을 한결 편안하게 만듭니다.",
       pillars: [
         { title: "과학 기반", desc: "자체 개발한 해조류 유래 젤 공정을 토대로 하며, 2026년 1월 한국 특허를 출원했습니다." },
