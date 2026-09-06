@@ -4,7 +4,7 @@ import { IconFaceProfile, IconTooth, IconJoint } from "./OrganicIcons";
 import BrandImage from "./BrandImage";
 
 export default function UseCasesSection({ t }) {
-  const isKorean = t.title === "사용 분야";
+  const isKorean = t.plastic.title === "성형외과 / 피부과";
   const cases = [
     { Icon: IconFaceProfile, ...t.plastic },
     { Icon: IconTooth, ...t.dental },

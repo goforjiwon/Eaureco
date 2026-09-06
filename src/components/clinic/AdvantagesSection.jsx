@@ -8,13 +8,12 @@ export default function AdvantagesSection({ t }) {
     { Icon: IconFlowTime, ...t.lasting },
     { Icon: IconFrost, ...t.fast },
   ];
-  const isKorean = t.title === "세 가지 장점";
 
   return (
     <section id="advantages" className="section-surface py-20 lg:py-24 border-b border-border">
       <div className="site-shell grid lg:grid-cols-[.8fr_2.2fr] gap-12 lg:gap-16 items-start">
         <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-4xl md:text-5xl leading-[1.02]">
-          {isKorean ? <>세 가지 장점.<br />더 나은 냉찜질팩.</> : <>Three Advantages.<br />One better cold pack.</>}
+          Three Advantages.<br />One better cold pack.
         </motion.h2>
         <div className="grid md:grid-cols-3 border-y border-border">
           {items.map(({ Icon, title, desc }, index) => (

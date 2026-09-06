@@ -6,11 +6,10 @@ import BrandImage from "./BrandImage";
 export default function ProductSection({ t, priority = false }) {
   const specs = [
     { label: t.contents, value: t.contentsValue },
-    { label: t.packaging, value: t.packagingValue },
     { label: t.sizes, value: t.sizesValue },
     { label: t.patent, value: t.patentValue },
   ];
-  const isKorean = t.title === "제품 정보";
+  const isKorean = t.contents === "내용물";
 
   return (
     <section id="product" className="section-surface py-24 lg:py-32">
@@ -21,7 +20,7 @@ export default function ProductSection({ t, priority = false }) {
           </motion.div>
           <div>
             <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="font-display text-5xl md:text-7xl leading-none">
-              {isKorean ? "제품 사양" : "Product Specifications"}
+              Product Specifications
             </motion.h2>
             <p className="mt-5 text-muted-foreground">{isKorean ? "자연에서 시작해, 클리닉 현장에 맞게 설계했습니다." : "Thoughtfully made. Built for clinic use."}</p>
             <div className="mt-10 border-y border-border divide-y divide-border">

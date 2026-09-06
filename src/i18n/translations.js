@@ -11,13 +11,13 @@ export const translations = {
       cta: "Request Samples"
     },
     ko: {
-      home: "홈",
-      problem: "문제점",
-      sustainability: "지속가능성",
-      advantages: "장점",
-      useCases: "적용 분야",
-      product: "제품 정보",
-      about: "회사 소개",
+      home: "Home",
+      problem: "Problem",
+      sustainability: "Sustainability",
+      advantages: "Advantages",
+      useCases: "Use Cases",
+      product: "Product",
+      about: "About",
       cta: "샘플 요청"
     }
   },
@@ -63,7 +63,7 @@ export const translations = {
       bottom: "After a procedure, patients need cooling that hugs the skin and lasts."
     },
     ko: {
-      title: "지금 클리닉에서 쓰는 냉찜질, 환자에게 편한가요?",
+      title: "Is your current cold pack actually comfortable for patients?",
       ice: {
         name: "얼음",
         desc: "딱딱하고, 녹으면 물이 흐르고, 피부에 밀착이 안 됩니다."
@@ -92,8 +92,8 @@ export const translations = {
       ]
     },
     ko: {
-      eyebrow: "설계부터 순환",
-      title: "바다를 정화하며 시작되는 냉찜질팩.",
+      eyebrow: "Circular by design",
+      title: "A cold pack that starts by cleaning the ocean.",
       subtitle: "괭생이모자반(Sargassum)은 해안을 뒤덮고 해양 생태계를 위협하는 침입성 해조류입니다. 우리는 이를 수거해 천연 해조류 유래 소재를 추출하고, 해안의 골칫거리를 클리닉용 냉찜질 소재로 바꿉니다. 석유 기반 젤은 필요하지 않습니다.",
       steps: [
         { step: "01", title: "회수", desc: "해안으로 밀려와 썩어 해양 폐기물이 되기 전에 침입성 괭생이모자반을 수거합니다." },
@@ -124,7 +124,7 @@ export const translations = {
       }
     },
     ko: {
-      title: "세 가지 장점",
+      title: "Three Advantages",
       flexible: {
         title: "유연한 밀착",
         desc: "얼려도 부드럽고 유연하게 유지됩니다. 얼굴, 발목, 관절 등 곡면에 빈틈 없이 밀착되어 냉기가 고르게 전달됩니다."
@@ -156,7 +156,7 @@ export const translations = {
       }
     },
     ko: {
-      title: "사용 분야",
+      title: "Use Cases",
       plastic: {
         title: "성형외과 / 피부과",
         desc: "수술 후 얼굴 냉각, 레이저 시술 후 냉각. 얼굴 곡면에 맞는 부드러운 밀착."
@@ -176,8 +176,6 @@ export const translations = {
       title: "Product",
       contents: "Contents",
       contentsValue: "Calcium-alginate gel beads (seaweed-derived alginate + purified water)",
-      packaging: "Packaging",
-      packagingValue: "Durable multi-layer plastic pouch (not biodegradable)",
       sizes: "Sizes",
       sizesValue: "Eye-mask type approx. 20×9cm (120g) · Square pack approx. 12×10cm (100g) · Other sizes on request",
       patent: "Patent",
@@ -187,11 +185,9 @@ export const translations = {
       email: "goforjiwon@kaist.ac.kr"
     },
     ko: {
-      title: "제품 정보",
+      title: "Product",
       contents: "내용물",
       contentsValue: "칼슘 알긴산 젤 비드 (해조류 유래 알긴산 + 정제수)",
-      packaging: "외포장",
-      packagingValue: "고내구성 다층 플라스틱 파우치 (생분해되지 않음)",
       sizes: "사이즈",
       sizesValue: "아이마스크형 약 20×9cm(120g) · 사각팩 약 12×10cm(100g) · 그 외 사이즈 주문 제작 가능",
       patent: "특허",
@@ -209,19 +205,19 @@ export const translations = {
       tagline: "Cold that performs, without petroleum SAP.",
       points: [
         "Born from ocean waste",
-        "Biodegradable seaweed-derived gel inside; the pouch is plastic and is not biodegradable",
-        "Beyond cold packs: cold chain and hygiene materials"
+        "Biodegradable seaweed-derived gel inside",
+        "Beyond cold packs: hygiene materials"
       ]
     },
     ko: {
-      eyebrow: "비전",
-      title: "바다의 짐을 일상의 쓸모로",
+      eyebrow: "Our Vision",
+      title: "Turning the ocean's burden into everyday materials",
       desc: "매년 대량의 괭생이모자반이 제주에서 플로리다, 푸에르토리코까지 해안으로 밀려와 상당한 비용을 들여 처리됩니다. 같은 기간, 한 번 쓰고 버려지는 석유계 아이스팩과 젤도 대량으로 폐기됩니다. Eaureco는 버려지던 바다의 자원을, 팩 내부의 석유계 SAP를 대체하는 해조류 유래 젤로 바꿉니다.",
       tagline: "석유계 SAP 없이, 필요한 냉기만.",
       points: [
         "바다 폐기물에서 시작합니다",
-        "내부 젤은 해조류 유래 생분해성 소재이며, 외포장 파우치는 플라스틱으로 생분해되지 않습니다",
-        "냉찜질팩을 넘어 콜드체인과 위생 소재로 확장합니다"
+        "내부 젤은 해조류 유래 생분해성 소재입니다",
+        "냉찜질팩을 넘어 위생 소재로 확장합니다"
       ]
     }
   },
@@ -237,8 +233,8 @@ export const translations = {
       ]
     },
     ko: {
-      eyebrow: "우리의 이야기",
-      title: "KAIST 연구자가 창업한 소재 스타트업.",
+      eyebrow: "Our story",
+      title: "A materials startup founded by a KAIST researcher.",
       desc: "Eaureco는 전 세계 해안을 위협하는 침입성 해조류 괭생이모자반에서 추출한 해조류 유래 소재로 새로운 냉찜질 소재를 개발합니다. 자연을 거스르지 않고 자연과 함께 설계하여, 석유 기반 젤을 부드러운 소재로 대체해 시술 후 냉찜질을 한결 편안하게 만듭니다.",
       pillars: [
         { title: "과학 기반", desc: "자체 개발한 해조류 유래 젤 공정을 토대로 하며, 2026년 1월 한국 특허를 출원했습니다." },
